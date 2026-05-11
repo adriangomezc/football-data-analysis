@@ -87,7 +87,7 @@ The upper-right quadrant highlights the most complete modern centre-backs.
 
 ---
 
-# Adrián Gómez Conde
+# Author
 
 Adrián Gómez Conde
 

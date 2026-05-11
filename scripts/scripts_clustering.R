@@ -1,6 +1,7 @@
 library(tidyverse)
-library(viridis)
 library(ggrepel)
+library(viridis)
+library(cluster)
 
 # -----------------------------
 # Load data
@@ -33,7 +34,7 @@ pca_data <- df_scouting %>%
 pca_scaled <- scale(pca_data)
 
 # -----------------------------
-# K selection (silhouette + elbow)
+# K selection (elbow + silhouette)
 # -----------------------------
 set.seed(123)
 wss <- sapply(2:8, function(k) {
@@ -42,7 +43,7 @@ wss <- sapply(2:8, function(k) {
 
 sil <- sapply(2:8, function(k) {
   km <- kmeans(pca_scaled, centers = k, nstart = 25)
-  ss <- cluster::silhouette(km$cluster, dist(pca_scaled))
+  ss <- silhouette(km$cluster, dist(pca_scaled))
   mean(ss[, 3])
 })
 
@@ -55,9 +56,13 @@ set.seed(123)
 km_res <- kmeans(pca_scaled, centers = k_opt, nstart = 25)
 
 # -----------------------------
-# PCA
+# PCA + explained variance
 # -----------------------------
 pca_res <- prcomp(pca_scaled, center = TRUE, scale. = TRUE)
+pca_var <- summary(pca_res)$importance[2, 1:2] * 100
+pc1_var <- round(pca_var[1], 1)
+pc2_var <- round(pca_var[2], 1)
+
 df_pca <- as.data.frame(pca_res$x[, 1:2])
 df_pca$Cluster <- factor(km_res$cluster)
 
@@ -88,11 +93,14 @@ write.csv(cluster_profiles, "outputs/cluster_profiles.csv", row.names = FALSE)
 # Visualization: PCA clusters
 # -----------------------------
 plot2 <- ggplot(df_pca, aes(x = PC1, y = PC2, color = Cluster)) +
-  geom_point(alpha = 0.8, size = 2) +
+  geom_point(alpha = 0.85, size = 2) +
   scale_color_viridis_d() +
   labs(
     title = "PCA clustering of centre-back profiles",
-    subtitle = paste("K-means clustering (k =", k_opt, ") on standardized metrics"),
+    subtitle = paste0(
+      "K-means clustering (k = ", k_opt,
+      ") | PC1 ", pc1_var, "%, PC2 ", pc2_var, "%"
+    ),
     x = "PC1",
     y = "PC2"
   ) +

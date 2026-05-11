@@ -1,16 +1,12 @@
 library(tidyverse)
-library(ggrepel)
 library(viridis)
+library(ggrepel)
 library(cluster)
 
-# -----------------------------
 # Load data
-# -----------------------------
 df <- read.csv("data/player_stats_2024_2025.csv")
 
-# -----------------------------
 # Feature engineering
-# -----------------------------
 df_scouting <- df %>%
   filter(Pos == "DF") %>%
   filter(Age <= 28) %>%
@@ -25,17 +21,13 @@ df_scouting <- df %>%
   ) %>%
   drop_na()
 
-# -----------------------------
 # Scaling
-# -----------------------------
 pca_data <- df_scouting %>%
   select(Progression_90, Def_Actions_90, KP_90, Cmp.)
 
 pca_scaled <- scale(pca_data)
 
-# -----------------------------
 # K selection (elbow + silhouette)
-# -----------------------------
 set.seed(123)
 wss <- sapply(2:8, function(k) {
   kmeans(pca_scaled, centers = k, nstart = 25)$tot.withinss
@@ -49,15 +41,11 @@ sil <- sapply(2:8, function(k) {
 
 k_opt <- which.max(sil) + 1
 
-# -----------------------------
 # Final k-means
-# -----------------------------
 set.seed(123)
 km_res <- kmeans(pca_scaled, centers = k_opt, nstart = 25)
 
-# -----------------------------
 # PCA + explained variance
-# -----------------------------
 pca_res <- prcomp(pca_scaled, center = TRUE, scale. = TRUE)
 pca_var <- summary(pca_res)$importance[2, 1:2] * 100
 pc1_var <- round(pca_var[1], 1)
@@ -66,17 +54,13 @@ pc2_var <- round(pca_var[2], 1)
 df_pca <- as.data.frame(pca_res$x[, 1:2])
 df_pca$Cluster <- factor(km_res$cluster)
 
-# -----------------------------
 # Merge cluster labels
-# -----------------------------
 df_clusters <- df_scouting %>%
   mutate(Cluster = factor(km_res$cluster))
 
 write.csv(df_clusters, "outputs/clustered_defenders.csv", row.names = FALSE)
 
-# -----------------------------
-# Cluster interpretation table
-# -----------------------------
+# Cluster interpretation
 cluster_profiles <- df_clusters %>%
   group_by(Cluster) %>%
   summarise(
@@ -89,9 +73,7 @@ cluster_profiles <- df_clusters %>%
 
 write.csv(cluster_profiles, "outputs/cluster_profiles.csv", row.names = FALSE)
 
-# -----------------------------
-# Visualization: PCA clusters
-# -----------------------------
+# PCA plot
 plot2 <- ggplot(df_pca, aes(x = PC1, y = PC2, color = Cluster)) +
   geom_point(alpha = 0.85, size = 2) +
   scale_color_viridis_d() +

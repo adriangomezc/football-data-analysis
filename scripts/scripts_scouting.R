@@ -2,14 +2,10 @@ library(tidyverse)
 library(ggrepel)
 library(viridis)
 
-# -----------------------------
 # Load data
-# -----------------------------
 df <- read.csv("data/player_stats_2024_2025.csv")
 
-# -----------------------------
-# Filter and feature engineering
-# -----------------------------
+# Filter + feature engineering
 df_scouting <- df %>%
   filter(Pos == "DF") %>%
   filter(Age <= 28) %>%
@@ -28,26 +24,19 @@ df_scouting <- df %>%
   ) %>%
   arrange(desc(Modern_CB_Score))
 
-# -----------------------------
-# Top 15 ranking export
-# -----------------------------
+# Top 15
 top_players <- df_scouting %>%
   select(Player, Squad, Age, Progression_90, Def_Actions_90, KP_90, Modern_CB_Score) %>%
   head(15)
 
 write.csv(top_players, "outputs/top15_modern_cb.csv", row.names = FALSE)
 
-# -----------------------------
-# Visualization: scouting matrix
-# -----------------------------
+# Scouting plot
 mean_x <- mean(df_scouting$Def_Actions_90, na.rm = TRUE)
 mean_y <- mean(df_scouting$Progression_90, na.rm = TRUE)
 
-plot1 <- ggplot(df_scouting,
-       aes(x = Def_Actions_90, y = Progression_90)) +
-  annotate("rect",
-           xmin = mean_x, xmax = Inf,
-           ymin = mean_y, ymax = Inf,
+plot1 <- ggplot(df_scouting, aes(x = Def_Actions_90, y = Progression_90)) +
+  annotate("rect", xmin = mean_x, xmax = Inf, ymin = mean_y, ymax = Inf,
            fill = "darkgreen", alpha = 0.08) +
   geom_point(aes(color = Modern_CB_Score), size = 3, alpha = 0.8) +
   geom_vline(xintercept = mean_x, linetype = "dashed", color = "grey50") +

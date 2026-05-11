@@ -1,25 +1,41 @@
+# =============================
+# scripts/scouting.R
+# =============================
+
 library(tidyverse)
 library(ggrepel)
 library(viridis)
 
+# -----------------------------
+# Load data
+# -----------------------------
+
 df <- read.csv("data/player_stats_2024_2025.csv")
 
+# -----------------------------
+# Feature engineering
+# -----------------------------
+
 df_scouting <- df %>%
+  
   filter(Pos == "DF") %>%
   filter(Age <= 28) %>%
   filter(Min >= 900) %>%
   filter(Crs <= 15) %>%
+  
   mutate(
+    
     # Per 90 metrics
     PrgP_90 = (PrgP / Min) * 90,
     PrgC_90 = (PrgC / Min) * 90,
-    KP_90   = (KP / Min) * 90,
     
-    Tkl_90   = (Tkl / Min) * 90,
-    Int_90   = (Int / Min) * 90,
+    KP_90 = (KP / Min) * 90,
+    
+    Tkl_90 = (Tkl / Min) * 90,
+    Int_90 = (Int / Min) * 90,
     Recov_90 = (Recov / Min) * 90,
     
-    # Composite metrics
+    # Composite variables
     Defensive_Intensity =
       (0.45 * Tkl_90) +
       (0.30 * Int_90) +
@@ -35,20 +51,53 @@ df_scouting <- df %>%
     Passing_Security =
       Cmp.,
     
-    # Final weighted score
+    Progressive_Defender_Index =
+      (0.6 * Ball_Progression) +
+      (0.4 * Passing_Security),
+    
+    Defensive_Aggression =
+      Tkl_90 + Int_90,
+    
+    Ball_Retention =
+      Passing_Security * Recov_90,
+    
+    # Final score
     Modern_CB_Score =
       (0.40 * Ball_Progression) +
       (0.35 * Defensive_Intensity) +
       (0.15 * Creative_Involvement) +
       (0.10 * Passing_Security)
+    
   ) %>%
+  
   arrange(desc(Modern_CB_Score))
 
+# -----------------------------
+# Export top players
+# -----------------------------
+
 top_players <- df_scouting %>%
-  select(Player, Squad, Age, Ball_Progression, Defensive_Intensity, Creative_Involvement, Modern_CB_Score) %>%
+  select(
+    Player,
+    Squad,
+    Age,
+    Ball_Progression,
+    Defensive_Intensity,
+    Creative_Involvement,
+    Passing_Security,
+    Modern_CB_Score
+  ) %>%
   head(15)
 
-write.csv(top_players, "outputs/top15_modern_cb.csv", row.names = FALSE)
+write.csv(
+  top_players,
+  "outputs/top15_modern_cb.csv",
+  row.names = FALSE
+)
+
+# -----------------------------
+# Visualization
+# -----------------------------
 
 plot1 <- ggplot(
   df_scouting,
@@ -101,8 +150,17 @@ plot1 <- ggplot(
   
   theme(
     legend.position = "bottom",
-    plot.title = element_text(face = "bold", size = 18),
+    plot.title = element_text(
+      face = "bold",
+      size = 18
+    ),
     panel.grid.minor = element_blank()
   )
 
-ggsave("outputs/modern_cb_scouting.png", plot1, width = 10, height = 7, dpi = 300)
+ggsave(
+  "outputs/modern_cb_scouting.png",
+  plot1,
+  width = 10,
+  height = 7,
+  dpi = 300
+)

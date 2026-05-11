@@ -283,35 +283,29 @@ ggsave(
 )
 
 # -----------------------------
-# Radar chart for cluster profiles
+# Radar chart using standardized values
 # -----------------------------
 
-library(fmsb)
-
-radar_data <- cluster_profiles %>%
-  select(
-    Ball_Progression,
-    Defensive_Intensity,
-    Creative_Involvement,
-    Passing_Security
+radar_data <- df_clusters %>%
+  group_by(Cluster_Label) %>%
+  summarise(
+    Ball_Progression = mean(Ball_Progression),
+    Defensive_Intensity = mean(Defensive_Intensity),
+    Creative_Involvement = mean(Creative_Involvement),
+    Passing_Security = mean(Passing_Security)
   )
 
-# Convert rownames
-radar_df <- as.data.frame(radar_data)
+# Scale variables
+radar_scaled <- radar_data %>%
+  column_to_rownames("Cluster_Label") %>%
+  scale() %>%
+  as.data.frame()
 
-rownames(radar_df) <- cluster_profiles$Cluster_Label
-
-# Add max/min rows REQUIRED by fmsb
+# Add max/min rows required by fmsb
 radar_plot <- rbind(
-  rep(
-    max(radar_df) * 1.2,
-    ncol(radar_df)
-  ),
-  rep(
-    min(radar_df) * 0.8,
-    ncol(radar_df)
-  ),
-  radar_df
+  rep(2, ncol(radar_scaled)),
+  rep(-2, ncol(radar_scaled)),
+  radar_scaled
 )
 
 png(
@@ -322,34 +316,32 @@ png(
 
 radarchart(
   radar_plot,
+  
   axistype = 1,
   
-  pcol = viridis(nrow(radar_df)),
+  pcol = viridis(nrow(radar_scaled)),
   pfcol = scales::alpha(
-    viridis(nrow(radar_df)),
+    viridis(nrow(radar_scaled)),
     0.25
   ),
   
   plwd = 3,
-  plty = 1,
   
   cglcol = "grey80",
   cglty = 1,
-  axislabcol = "grey30",
   
-  vlcex = 1.1,
+  vlcex = 1.2,
   
-  title = "Tactical cluster profiles"
+  title = "Standardized tactical cluster profiles"
 )
 
 legend(
   "topright",
-  legend = rownames(radar_df),
-  col = viridis(nrow(radar_df)),
+  legend = rownames(radar_scaled),
+  col = viridis(nrow(radar_scaled)),
   lty = 1,
   lwd = 3,
-  bty = "n",
-  cex = 1
+  bty = "n"
 )
 
 dev.off()

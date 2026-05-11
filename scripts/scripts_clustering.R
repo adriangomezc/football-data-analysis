@@ -89,3 +89,21 @@ plot2 <- ggplot(df_pca, aes(x = PC1, y = PC2, color = Cluster)) +
   theme_minimal(base_size = 12)
 
 ggsave("outputs/pca_clusters.png", plot2, width = 9, height = 6, dpi = 300)
+
+# -----------------------------
+# Tactical labels for clusters
+# -----------------------------
+cluster_labels <- c(
+  "1" = "Progressive enforcers",
+  "2" = "Low involvement defenders"
+)
+
+df_clusters <- df_clusters %>%
+  mutate(Cluster_Label = cluster_labels[as.character(Cluster)])
+
+write.csv(df_clusters, "outputs/clustered_defenders_labeled.csv", row.names = FALSE)
+
+cluster_profiles <- cluster_profiles %>%
+  mutate(Cluster_Label = cluster_labels[as.character(Cluster)])
+
+write.csv(cluster_profiles, "outputs/cluster_profiles_labeled.csv", row.names = FALSE)

@@ -1,61 +1,134 @@
-# Identifying modern ball‑playing centre‑backs
+# Identifying modern ball-playing centre-backs
 
-This project applies a full multivariate scouting pipeline to identify modern centre‑backs who combine defensive output with progressive ball progression.
+This project applies a multivariate statistical scouting framework to identify modern centre-backs capable of combining defensive solidity with progressive ball progression.
 
----
-
-## Pipeline
-
-1. Feature engineering  
-2. Per‑90 normalization  
-3. Scaling  
-4. PCA  
-5. K‑means clustering  
-6. Interpretation of clusters  
-7. Visualization  
+The analysis focuses on identifying players who simultaneously contribute to defensive actions, progression through passing/carrying and creative involvement in possession.
 
 ---
 
-## Filters
+# Methodology
 
-- Position = DF  
-- Age ≤ 28  
-- Min ≥ 900  
-- Low crossing volume (anti‑fullback filter)
+## 1. Data filtering
 
----
+Players were filtered using the following criteria:
 
-## Outputs
-
-- `outputs/modern_cb_scouting.png` → scouting matrix  
-- `outputs/pca_clusters.png` → PCA clusters  
-- `outputs/top15_modern_cb.csv` → top ranked players  
-- `outputs/clustered_defenders.csv` → full dataset with cluster labels  
-- `outputs/cluster_profiles.csv` → cluster interpretation table  
+- Position = DF
+- Age ≤ 28
+- Minutes played ≥ 900
+- Low crossing volume filter to remove full-backs
 
 ---
 
-## How to run
+## 2. Feature engineering
 
-```bash
-Rscript scripts/scouting.R
-Rscript scripts/clustering.R
-```
+Several composite variables were constructed to better capture modern centre-back profiles.
+
+### Ball progression
+
+Weighted combination of:
+
+- Progressive passes
+- Progressive carries
+
+### Defensive intensity
+
+Weighted combination of:
+
+- Tackles
+- Interceptions
+- Recoveries
+
+### Creative involvement
+
+Measured using key passes per 90.
+
+### Passing security
+
+Measured through pass completion percentage.
 
 ---
 
-## Technologies
+## 3. Standardisation
 
-- R  
-- tidyverse  
-- ggplot2  
-- ggrepel  
-- viridis  
-- cluster  
+All variables were standardised before multivariate analysis using z-score scaling.
 
 ---
 
-## Author
+## 4. Principal component analysis (PCA)
 
-Adrián Gómez Conde  
-MSc Biostatistics candidate | statistical modelling and data analysis
+PCA was applied to:
+
+- Reduce dimensionality
+- Identify latent player archetypes
+- Explore correlations between tactical variables
+
+---
+
+## 5. K-means clustering
+
+K-means clustering was used to identify groups of centre-backs with similar statistical profiles.
+
+The optimal number of clusters was selected using silhouette analysis.
+
+---
+
+# Outputs
+
+## Scouting matrix
+
+`outputs/modern_cb_scouting.png`
+
+Visual representation of defensive intensity vs ball progression.
+
+---
+
+## PCA clusters
+
+`outputs/pca_clusters.png`
+
+Projection of player profiles onto principal component space.
+
+---
+
+## PCA biplot
+
+`outputs/pca_biplot.png`
+
+Interpretation of variable loadings and player archetypes.
+
+---
+
+## Cluster profiles
+
+`outputs/cluster_profiles.csv`
+
+Summary statistics for each tactical cluster.
+
+---
+
+## Top ranked players
+
+`outputs/top15_modern_cb.csv`
+
+Highest scoring centre-backs according to the composite scouting metric.
+
+---
+
+# Technologies
+
+- R
+- tidyverse
+- ggplot2
+- factoextra
+- cluster
+- ggrepel
+- viridis
+
+---
+
+# Author
+
+Adrián Gómez Conde
+
+MSc Biostatistics candidate  
+Statistical modelling, multivariate analysis and applied sports analytics

@@ -150,7 +150,30 @@ ggsave(
   dpi = 300
 )
 
-k_opt <- which.max(gap_stat$Tab[, "gap"])
+candidate_k <- 2:8
+
+sil_scores <- sapply(candidate_k, function(k) {
+  
+  km <- kmeans(
+    pca_scaled,
+    centers = k,
+    nstart = 25
+  )
+  
+  ss <- silhouette(
+    km$cluster,
+    dist(pca_scaled)
+  )
+  
+  mean(ss[, 3])
+  
+})
+
+k_opt <- candidate_k[which.max(sil_scores)]
+
+k_opt
+
+cat("\nOptimal k selected:", k_opt, "\n")
 
 # -----------------------------
 # Final k-means

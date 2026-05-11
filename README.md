@@ -1,58 +1,34 @@
-# Identifying modern ball-playing centre-backs
+# Identifying modern ball‑playing centre‑backs
 
-This project applies statistical profiling, PCA and clustering to identify modern centre-backs who combine defensive solidity with progressive ball progression.
-
-The analysis uses FBref-style player data and focuses on defenders under 28 with sufficient minutes played.
-
----
-
-## Project objective
-
-Modern football increasingly demands centre-backs who:
-
-- defend proactively  
-- progress the ball under pressure  
-- contribute to build-up play  
-
-This project identifies those profiles using:
-
-- per-90 statistical metrics  
-- a weighted scouting score  
-- multivariate clustering  
+This project applies a full multivariate scouting pipeline to identify modern centre‑backs who combine defensive output with progressive ball progression.
 
 ---
 
 ## Pipeline
 
 1. Feature engineering  
-2. Per-90 normalization  
+2. Per‑90 normalization  
 3. Scaling  
 4. PCA  
-5. K-means clustering  
+5. K‑means clustering  
 6. Interpretation of clusters  
 7. Visualization  
 
 ---
 
-## Methodology
+## Filters
 
-### Filtering
 - Position = DF  
 - Age ≤ 28  
 - Min ≥ 900  
-- Low crossing volume (anti-fullback filter)
-
-### Custom metrics
-- Progression per 90 = progressive passes + progressive carries  
-- Defensive actions per 90 = tackles + interceptions + recoveries  
-- Modern CB score = weighted combination of progression, defense and key passes  
+- Low crossing volume (anti‑fullback filter)
 
 ---
 
 ## Outputs
 
 - `outputs/modern_cb_scouting.png` → scouting matrix  
-- `outputs/pca_clusters.png` → PCA clustering  
+- `outputs/pca_clusters.png` → PCA clusters  
 - `outputs/top15_modern_cb.csv` → top ranked players  
 - `outputs/clustered_defenders.csv` → full dataset with cluster labels  
 - `outputs/cluster_profiles.csv` → cluster interpretation table  

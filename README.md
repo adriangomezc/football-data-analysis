@@ -2,7 +2,7 @@
 
 This project applies a multivariate statistical scouting framework to identify modern centre-backs capable of combining defensive solidity with progressive ball progression.
 
-The analysis focuses on identifying players who simultaneously contribute to defensive actions, progression through passing/carrying and creative involvement in possession.
+The analysis focuses on profiling defenders through dimensionality reduction, clustering and composite tactical metrics.
 
 ---
 
@@ -21,7 +21,7 @@ Players were filtered using the following criteria:
 
 ## 2. Feature engineering
 
-Several composite variables were constructed to better capture modern centre-back profiles.
+Several advanced tactical indicators were constructed from raw event data.
 
 ### Ball progression
 
@@ -44,13 +44,25 @@ Measured using key passes per 90.
 
 ### Passing security
 
-Measured through pass completion percentage.
+Measured using pass completion percentage.
+
+### Progressive defender index
+
+Composite variable integrating progression and passing reliability.
+
+### Defensive aggression
+
+Combined tackle and interception volume.
+
+### Ball retention
+
+Proxy metric for possession recovery and passing retention.
 
 ---
 
 ## 3. Standardisation
 
-All variables were standardised before multivariate analysis using z-score scaling.
+All variables were standardised using z-score scaling prior to multivariate analysis.
 
 ---
 
@@ -59,14 +71,15 @@ All variables were standardised before multivariate analysis using z-score scali
 PCA was applied to:
 
 - Reduce dimensionality
-- Identify latent player archetypes
-- Explore correlations between tactical variables
+- Explore latent tactical structures
+- Identify relationships between defensive and progression variables
+- Visualise player archetypes in reduced-dimensional space
 
 ---
 
 ## 5. K-means clustering
 
-K-means clustering was used to identify groups of centre-backs with similar statistical profiles.
+K-means clustering was used to identify centre-back archetypes with similar tactical profiles.
 
 The optimal number of clusters was selected using silhouette analysis.
 
@@ -78,7 +91,7 @@ The optimal number of clusters was selected using silhouette analysis.
 
 `outputs/modern_cb_scouting.png`
 
-Visual representation of defensive intensity vs ball progression.
+Multivariate scouting visualization using progression and defensive intensity.
 
 ---
 
@@ -86,7 +99,7 @@ Visual representation of defensive intensity vs ball progression.
 
 `outputs/pca_clusters.png`
 
-Projection of player profiles onto principal component space.
+Projection of player profiles into principal component space.
 
 ---
 
@@ -94,7 +107,23 @@ Projection of player profiles onto principal component space.
 
 `outputs/pca_biplot.png`
 
-Interpretation of variable loadings and player archetypes.
+Visual interpretation of PCA loadings and tactical relationships.
+
+---
+
+## Correlation heatmap
+
+`outputs/correlation_heatmap.png`
+
+Correlation structure between engineered tactical variables.
+
+---
+
+## Radar chart
+
+`outputs/cluster_radar.png`
+
+Standardized tactical profiles for each cluster.
 
 ---
 
@@ -102,7 +131,7 @@ Interpretation of variable loadings and player archetypes.
 
 `outputs/cluster_profiles.csv`
 
-Summary statistics for each tactical cluster.
+Summary statistics for each tactical archetype.
 
 ---
 
@@ -121,9 +150,27 @@ Highest scoring centre-backs according to the composite scouting metric.
 - ggplot2
 - factoextra
 - cluster
+- corrplot
+- fmsb
 - ggrepel
 - viridis
-- scales
+
+---
+
+# Repository structure
+
+```text
+football-data-analysis/
+│
+├── data/
+├── outputs/
+├── scripts/
+│   ├── scouting.R
+│   └── clustering.R
+│
+├── README.md
+└── .gitignore
+```
 
 ---
 

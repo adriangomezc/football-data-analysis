@@ -65,6 +65,10 @@ The analysis identified two major tactical archetypes among modern centre-backs:
 The PCA projection strongly suggested that progression-related metrics, rather than purely defensive actions, explain most of the variability between centre-back profiles in the modern game.
 
 ---
+## 📄 In-depth Tactical Report
+
+For a comprehensive breakdown of the player profiles, case studies (e.g., Nico Schlotterbeck, Pau Cubarsí), and tactical insights derived from the PCA and clustering, please read the full **[Tactical Analysis and Profiling Report](docs/TACTICAL_ANALYSIS.md)**.
+---
 
 # Outputs
 

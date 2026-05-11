@@ -123,6 +123,7 @@ Highest scoring centre-backs according to the composite scouting metric.
 - cluster
 - ggrepel
 - viridis
+- scales
 
 ---
 

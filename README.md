@@ -1,94 +1,74 @@
 # Identifying Modern Ball-Playing Centre-Backs
 
-This project applies statistical profiling and football scouting methodology to identify modern centre-backs capable of combining defensive solidity with progressive ball progression.
+This project applies statistical profiling, PCA and clustering to identify modern centre-backs who combine defensive solidity with progressive ball progression.
 
-The analysis focuses on players from Europe's top leagues using advanced passing and defensive metrics derived from FBref data.
+The analysis uses FBref-style player data and focuses on defenders under 28 with sufficient minutes played.
 
 ---
 
-# Project Objective
+# Project objective
 
-Modern football increasingly demands centre-backs who can:
+Modern football increasingly demands centre-backs who:
 
-- defend proactively
-- progress the ball under pressure
-- contribute to build-up play
-- initiate attacking sequences
+- defend proactively  
+- progress the ball under pressure  
+- contribute to build-up play  
 
-This project aims to identify players who excel in both defensive activity and progression metrics.
+This project identifies those profiles using a combination of:
+
+- per-90 statistical metrics  
+- a weighted scouting score  
+- multivariate clustering  
 
 ---
 
 # Methodology
 
-Players were filtered using the following criteria:
+## Filtering
+- Position = DF  
+- Age ≤ 28  
+- Min ≥ 900  
+- Low crossing volume (anti-fullback filter)
 
-- Position = Defender (DF)
-- Age ≤ 28
-- Minimum 900 minutes played
-- Low crossing volume to exclude attacking fullbacks
-
-Custom per-90 metrics were created to evaluate:
-
-- Progressive passing
-- Progressive carries
-- Defensive activity
-- Chance creation
-
-A custom scoring model was then applied to rank player profiles.
+## Custom metrics
+- Progression per 90 = progressive passes + progressive carries  
+- Defensive actions per 90 = tackles + interceptions + recoveries  
+- Modern CB score = weighted combination of progression, defense and key passes  
 
 ---
 
-# Key Metrics
+# Advanced analysis
 
-## Progression per 90
-Combination of:
-- Progressive passes
-- Progressive carries
+## PCA + k-means clustering
+To demonstrate multivariate profiling:
 
-## Defensive actions per 90
-Combination of:
-- Tackles
-- Interceptions
-- Recoveries
-
-## Modern CB Score
-Weighted model combining:
-- progression
-- defensive activity
-- key passing contribution
+- PCA reduces the metric space  
+- K-means groups defenders into distinct archetypes  
+- Clusters reveal different tactical profiles  
 
 ---
 
-# Visualization
+# Outputs
 
-The scatterplot identifies defenders who perform above average in both:
-
-- defensive activity
-- ball progression
-
-The upper-right quadrant highlights the most complete modern centre-backs.
+- `outputs/modern_cb_scouting.png` → scouting matrix  
+- `outputs/pca_clusters.png` → PCA clustering  
+- `outputs/top15_modern_cb.csv` → top ranked players  
+- `outputs/clustered_defenders.csv` → full dataset with cluster labels  
 
 ---
 
-# Technologies Used
+# Technologies
 
-- R
-- tidyverse
-- ggplot2
-- ggrepel
-- viridis
-
----
-
-# Output Example
-
-![Scouting Plot](outputs/modern_cb_scouting.png)
+- R  
+- tidyverse  
+- ggplot2  
+- ggrepel  
+- viridis  
+- factoextra  
 
 ---
 
 # Author
 
-Adrián Gómez Conde
-
-MSc Biostatistics candidate focused on statistical modelling, data analysis and football analytics.
+Adrián Gómez Conde  
+MSc Biostatistics candidate | Statistical modelling and data analysis

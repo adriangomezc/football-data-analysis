@@ -14,7 +14,9 @@ required_packages <- c(
   "proxy",
   "caret",
   "randomForest",
-  "xgboost"
+  "xgboost",
+  "coop",
+  "dplyr"
 )
 
 installed <- rownames(installed.packages())

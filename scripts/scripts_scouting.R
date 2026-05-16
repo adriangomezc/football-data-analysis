@@ -1,6 +1,6 @@
 # =========================================================
 # scripts_scouting.R
-# Recruitment and Scouting Analytics Pipeline
+# Advanced Recruitment and Scouting Analytics
 # =========================================================
 
 source("scripts/setup_packages.R")
@@ -12,7 +12,22 @@ dir.create("outputs/tables", recursive = TRUE, showWarnings = FALSE)
 # LOAD DATA
 # =========================================================
 
-data <- read.csv("data/processed/defenders_processed.csv")
+data <- read.csv("data/All_Players_1992-2025.csv")
+
+# =========================================================
+# FILTER DEFENDERS
+# =========================================================
+
+# =========================================================
+# FILTER DEFENDERS
+# =========================================================
+
+data <- data %>%
+  filter(
+    as.numeric(substr(Season, 1, 4)) >= 2023,
+    grepl("DF", Pos),
+    Min >= 900
+  )
 
 # =========================================================
 # FEATURE ENGINEERING
@@ -21,43 +36,101 @@ data <- read.csv("data/processed/defenders_processed.csv")
 data <- data %>%
   mutate(
     
-    opponent_possession = 100 - team_possession,
+    # Per90 metrics
+    progressive_passes_per90 = PrgP * 90/ `Min`,
+    progressive_carries_per90 = PrgC * 90/ `Min`,
+    key_passes_per90 = KP * 90/ `Min`,
+    tackles_per90 = Tkl * 90/ `Min`,
+    interceptions_per90 = Int * 90/ `Min`,
+    recoveries_per90 = Recov * 90/ `Min`,
+    crosses_per90 = Crs *90 / `Min`,
     
-    padj_tackles =
-      tackles_per90 / (opponent_possession / 50),
+    # Passing efficiency
+    pass_completion = Cmp.,
     
-    padj_interceptions =
-      interceptions_per90 / (opponent_possession / 50),
+    # Proxy possession-adjusted defending
+    defensive_actions =
+      tackles_per90 +
+      interceptions_per90 +
+      recoveries_per90,
     
-    # Age score for recruitment value
+    # Progressive profile
+    progression_score =
+      progressive_passes_per90 * 0.50 +
+      progressive_carries_per90 * 0.30 +
+      key_passes_per90 * 0.20,
+    
+    # Defensive profile
+    defending_score =
+      tackles_per90 * 0.35 +
+      interceptions_per90 * 0.35 +
+      recoveries_per90 * 0.30,
+    
+    # Ball progression proxy
+    xT_proxy =
+      progressive_passes_per90 * 0.60 +
+      progressive_carries_per90 * 0.40,
+    
+    # Age value
     age_score =
       case_when(
-        age <= 21 ~ 1.00,
-        age <= 24 ~ 0.90,
-        age <= 27 ~ 0.75,
-        age <= 30 ~ 0.55,
+        Age <= 21 ~ 1.00,
+        Age <= 24 ~ 0.90,
+        Age <= 27 ~ 0.75,
+        Age <= 30 ~ 0.55,
         TRUE ~ 0.30
       ),
     
-    # Progressive value
-    progression_score =
-      progressive_passes_per90 +
-      carries_per90 +
-      xT_per90,
-    
-    # Defensive value
-    defending_score =
-      padj_tackles +
-      padj_interceptions +
-      aerial_duels_won_pct,
-    
-    # Composite scouting score
+    # Recruitment score
     scouting_score =
-      as.numeric(scale(xT_per90)) * 0.30 +
-      as.numeric(scale(progressive_passes_per90)) * 0.25 +
-      as.numeric(scale(padj_interceptions)) * 0.20 +
-      as.numeric(scale(aerial_duels_won_pct)) * 0.15 +
-      as.numeric(scale(age_score)) * 0.10
+      as.numeric(scale(xT_proxy)) * 0.30 +
+      as.numeric(scale(defending_score)) * 0.30 +
+      as.numeric(scale(pass_completion)) * 0.20 +
+      as.numeric(scale(age_score)) * 0.20
+  )
+
+# =========================================================
+# AGGREGATE LAST 4 YEARS PER PLAYER
+# =========================================================
+
+data <- data %>%
+  group_by(Player) %>%
+  # Nos quedamos con el equipo y liga más recientes, la edad actual, y promediamos sus métricas
+  summarise(
+    Squad = last(Squad),
+    League = last(League),
+    Age = max(Age),
+    across(
+      c(progressive_passes_per90:scouting_score), 
+      \(x) mean(x, na.rm = TRUE)
+    )
+  ) %>%
+  ungroup()
+
+# =========================================================
+# ROLE CLASSIFICATION
+# =========================================================
+
+data <- data %>%
+  mutate(
+    role_profile =
+      case_when(
+        
+        progression_score >= quantile(progression_score, 0.75) &
+          defending_score >= quantile(defending_score, 0.60)
+        ~ "Elite Progressive CB",
+        
+        progression_score >= quantile(progression_score, 0.75)
+        ~ "Ball Progressor",
+        
+        defending_score >= quantile(defending_score, 0.75)
+        ~ "Defensive Stopper",
+        
+        pass_completion >= quantile(pass_completion, 0.75)
+        ~ "Possession Defender",
+        
+        TRUE ~ "Balanced Defender"
+      )
   )
 
 # =========================================================
@@ -66,210 +139,234 @@ data <- data %>%
 
 top_targets <- data %>%
   arrange(desc(scouting_score)) %>%
-  slice(1:20)
+  select(
+    Player,
+    Squad,
+    League,
+    Age,
+    role_profile,
+    scouting_score,
+    xT_proxy,
+    defending_score,
+    pass_completion
+  ) %>%
+  head(25)
 
 write.csv(
   top_targets,
-  "outputs/tables/top_scouting_targets.csv",
+  "outputs/tables/top_recruitment_targets.csv",
   row.names = FALSE
 )
 
 # =========================================================
-# VISUALIZATION
+# MARKET INEFFICIENCY TARGETS
+# Young + High Output
 # =========================================================
 
-p1 <- ggplot(
-  top_targets,
-  aes(
-    x = reorder(player, scouting_score),
-    y = scouting_score,
-    fill = league
-  )
-) +
-  
-  geom_col() +
-  
-  coord_flip() +
-  
-  theme_minimal() +
-  
-  labs(
-    title = "Top Centre-Back Scouting Targets",
-    subtitle = "Composite Recruitment Score",
-    x = "",
-    y = "Scouting Score"
+market_targets <- data %>%
+  filter(
+    Age <= 24,
+    scouting_score >= quantile(scouting_score, 0.80)
+  ) %>%
+  arrange(desc(scouting_score)) %>%
+  select(
+    Player,
+    Squad,
+    League,
+    Age,
+    role_profile,
+    scouting_score
   )
 
-ggsave(
-  "outputs/figures/top_scouting_targets.png",
-  p1,
-  width = 11,
-  height = 8
+write.csv(
+  market_targets,
+  "outputs/tables/market_inefficiency_targets.csv",
+  row.names = FALSE
 )
 
 # =========================================================
-# AGE VS PERFORMANCE
+# PLAYER SIMILARITY MODEL
 # =========================================================
 
-p2 <- ggplot(
-  data,
-  aes(
-    x = age,
-    y = scouting_score,
-    color = league
-  )
-) +
-  
-  geom_point(size = 3, alpha = 0.8) +
-  
-  geom_text_repel(
-    aes(label = player),
-    size = 3,
-    max.overlaps = 15
-  ) +
-  
-  theme_minimal() +
-  
-  labs(
-    title = "Age vs Recruitment Value",
-    x = "Age",
-    y = "Scouting Score"
+similarity_data <- data %>%
+  select(
+    Player,
+    progressive_passes_per90,
+    progressive_carries_per90,
+    defending_score,
+    pass_completion,
+    xT_proxy
   )
 
-ggsave(
-  "outputs/figures/age_vs_scouting_value.png",
-  p2,
-  width = 11,
-  height = 8
+similarity_matrix <- similarity_data %>%
+  column_to_rownames("Player") %>%
+  scale()
+
+cosine_sim <- coop::cosine(t(similarity_matrix))
+
+cosine_sim_df <- as.data.frame(as.table(cosine_sim))
+
+colnames(cosine_sim_df) <- c(
+  "Player1",
+  "Player2",
+  "Similarity"
+)
+
+cosine_sim_df <- cosine_sim_df %>%
+  filter(Player1 != Player2) %>%
+  arrange(desc(Similarity))
+
+write.csv(
+  cosine_sim_df,
+  "outputs/tables/player_similarity.csv",
+  row.names = FALSE
 )
 
 # =========================================================
+# SCATTERPLOT:
 # PROGRESSION VS DEFENDING
 # =========================================================
 
-p3 <- ggplot(
+p1 <- ggplot(
   data,
   aes(
-    x = progression_score,
-    y = defending_score,
-    color = age
+    progression_score,
+    defending_score,
+    color = role_profile,
+    size = scouting_score
   )
 ) +
-  
-  geom_point(size = 4, alpha = 0.8) +
-  
-  geom_text_repel(
-    aes(label = player),
-    size = 3,
-    max.overlaps = 20
-  ) +
-  
+  geom_point(alpha = 0.75) +
   theme_minimal() +
-  
   labs(
-    title = "Progression vs Defensive Impact",
-    subtitle = "Centre-Back Scouting Map",
+    title = "Defender Archetypes",
     x = "Progression Score",
     y = "Defending Score"
   )
 
 ggsave(
-  "outputs/figures/progression_vs_defending.png",
-  p3,
-  width = 11,
-  height = 8
+  "outputs/figures/defender_archetypes.png",
+  p1,
+  width = 10,
+  height = 7
 )
 
 # =========================================================
-# U23 TALENT IDENTIFICATION
+# AGE VS SCOUTING VALUE
 # =========================================================
 
-u23_targets <- data %>%
-  filter(age <= 23) %>%
-  arrange(desc(scouting_score)) %>%
-  slice(1:15)
-
-write.csv(
-  u23_targets,
-  "outputs/tables/u23_scouting_targets.csv",
-  row.names = FALSE
-)
-
-# =========================================================
-# LEAGUE COMPARISON
-# =========================================================
-
-league_profiles <- data %>%
-  group_by(league) %>%
-  summarise(
-    
-    avg_xT =
-      mean(xT_per90, na.rm = TRUE),
-    
-    avg_progression =
-      mean(progressive_passes_per90, na.rm = TRUE),
-    
-    avg_defending =
-      mean(padj_interceptions, na.rm = TRUE),
-    
-    avg_duels =
-      mean(aerial_duels_won_pct, na.rm = TRUE),
-    
-    avg_age =
-      mean(age, na.rm = TRUE)
-  )
-
-write.csv(
-  league_profiles,
-  "outputs/tables/league_profiles.csv",
-  row.names = FALSE
-)
-
-# =========================================================
-# SCOUTING SHORTLIST VISUAL
-# =========================================================
-
-p4 <- ggplot(
-  u23_targets,
+p2 <- ggplot(
+  data,
   aes(
-    x = xT_per90,
-    y = padj_interceptions,
-    size = scouting_score,
-    color = league
+    Age,
+    scouting_score,
+    color = role_profile
   )
 ) +
-  
-  geom_point(alpha = 0.8) +
-  
-  geom_text_repel(
-    aes(label = player),
-    size = 3
-  ) +
-  
+  geom_point(size = 3, alpha = 0.75) +
   theme_minimal() +
-  
   labs(
-    title = "U23 Recruitment Shortlist",
-    subtitle = "Ball Progression vs Defensive Output",
-    x = "xT per90",
-    y = "PAdj Interceptions"
+    title = "Recruitment Value by Age",
+    x = "Age",
+    y = "Scouting Score"
   )
 
 ggsave(
-  "outputs/figures/u23_recruitment_shortlist.png",
-  p4,
-  width = 11,
-  height = 8
+  "outputs/figures/recruitment_value.png",
+  p2,
+  width = 10,
+  height = 7
 )
 
 # =========================================================
-# EXPORT FULL SCOUTING DATASET
+# xT PROXY RANKING
 # =========================================================
 
+xt_ranking <- data %>%
+  arrange(desc(xT_proxy)) %>%
+  select(
+    Player,
+    Squad,
+    League,
+    xT_proxy,
+    progressive_passes_per90,
+    progressive_carries_per90
+  ) %>%
+  head(20)
+
 write.csv(
-  data,
-  "outputs/tables/full_scouting_dataset.csv",
+  xt_ranking,
+  "outputs/tables/xt_proxy_ranking.csv",
   row.names = FALSE
 )
 
-cat("Scouting analysis completed successfully.\n")
+# =========================================================
+# DEFENSIVE RANKING
+# =========================================================
+
+defensive_ranking <- data %>%
+  arrange(desc(defending_score)) %>%
+  select(
+    Player,
+    Squad,
+    League,
+    defending_score,
+    tackles_per90,
+    interceptions_per90,
+    recoveries_per90
+  ) %>%
+  head(20)
+
+write.csv(
+  defensive_ranking,
+  "outputs/tables/defensive_ranking.csv",
+  row.names = FALSE
+)
+
+# =========================================================
+# EXPORT PROCESSED DATA FOR OTHER SCRIPTS
+# =========================================================
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
+
+write.csv(
+  data,
+  "data/processed/defenders_processed.csv",
+  row.names = FALSE
+)
+
+# =========================================================
+# SCOUTING DASHBOARD TABLE
+# =========================================================
+
+dashboard_table <- data %>%
+  select(
+    Player,
+    Squad,
+    League,
+    Age,
+    role_profile,
+    scouting_score,
+    progression_score,
+    defending_score,
+    xT_proxy,
+    pass_completion
+  ) %>%
+  arrange(desc(scouting_score))
+
+write.csv(
+  dashboard_table,
+  "outputs/tables/scouting_dashboard.csv",
+  row.names = FALSE
+)
+
+
+# =========================================================
+# FINAL MESSAGE
+# =========================================================
+
+cat("\n")
+cat("========================================\n")
+cat("SCOUTING ANALYSIS COMPLETED\n")
+cat("========================================\n")
+cat("Outputs generated in outputs/\n")
+cat("========================================\n")

@@ -1,88 +1,71 @@
-source("scripts/setup_packages.R")
+# =========================================================
+# scripts_similarity_engine.R
+# Player Similarity Engine (Cosine Similarity)
+# =========================================================
 
+source("scripts/setup_packages.R")
 dir.create("outputs/tables", recursive = TRUE, showWarnings = FALSE)
 
+# =========================
+# 1. LOAD DATA
+# =========================
 data <- read.csv("data/processed/defenders_processed.csv")
 
 # =========================
-# FEATURES
+# 2. SELECT FEATURES
 # =========================
-
-features <- data %>%
+similarity_data <- data %>%
   select(
+    Player,
     progressive_passes_per90,
-    carries_per90,
-    aerial_duels_won_pct,
-    padj_interceptions,
-    padj_tackles,
-    xT_per90
-  )
-
-features_scaled <- scale(features)
-
-# =========================
-# COSINE SIMILARITY
-# =========================
-
-similarity_matrix <- proxy::simil(
-  features_scaled,
-  method = "cosine"
-)
-
-similarity_matrix <- as.matrix(similarity_matrix)
-
-rownames(similarity_matrix) <- data$player
-colnames(similarity_matrix) <- data$player
+    progressive_carries_per90,
+    key_passes_per90,
+    interceptions_per90,
+    tackles_per90,
+    xT_proxy
+  ) %>%
+  filter(complete.cases(.)) %>% # Eliminar NAs para que la matriz no se rompa
+  column_to_rownames("Player")
 
 # =========================
-# FIND SIMILAR PLAYERS
+# 3. COSINE SIMILARITY
 # =========================
+# Escalamos los datos
+features_scaled <- scale(similarity_data)
 
-target_player <- "Ruben Dias"
+# Calculamos matriz
+sim_matrix <- as.matrix(proxy::simil(features_scaled, method = "cosine"))
 
+# Forzamos los nombres explícitamente para que no se pierdan
+rownames(sim_matrix) <- rownames(features_scaled)
+colnames(sim_matrix) <- rownames(features_scaled)
+
+# =========================
+# 4. FIND SIMILAR PLAYERS
+# =========================
+# Elegimos al mejor jugador de la lista como objetivo automáticamente
+target_player <- rownames(sim_matrix)[1]
+
+# Construimos la tabla forzando que todo sea texto y números legibles
 similar_players <- data.frame(
-  player = colnames(similarity_matrix),
-  similarity =
-    similarity_matrix[target_player, ]
+  Player = rownames(sim_matrix),
+  similarity = as.numeric(sim_matrix[target_player, ]),
+  stringsAsFactors = FALSE
 )
 
-similar_players <- similar_players %>%
-  filter(player != target_player) %>%
+# Filtramos y nos quedamos con el Top 10
+top_similar <- similar_players %>%
+  filter(Player != target_player) %>%
   arrange(desc(similarity)) %>%
   slice(1:10)
 
+# =========================
+# 5. SAVE OUTPUT
+# =========================
 write.csv(
-  similar_players,
+  top_similar,
   "outputs/tables/player_similarity_results.csv",
   row.names = FALSE
 )
 
-# =========================
-# VISUALIZATION
-# =========================
-
-p <- ggplot(
-  similar_players,
-  aes(
-    x = reorder(player, similarity),
-    y = similarity
-  )
-) +
-  geom_col() +
-  coord_flip() +
-  theme_minimal() +
-  labs(
-    title = paste(
-      "Most Similar Players to",
-      target_player
-    ),
-    x = "",
-    y = "Cosine Similarity"
-  )
-
-ggsave(
-  "outputs/figures/player_similarity.png",
-  p,
-  width = 10,
-  height = 7
-)
+cat("Similarity Engine completed successfully.\n")

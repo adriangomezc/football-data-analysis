@@ -48,7 +48,7 @@ The integration of contextual metrics yielded highly actionable tactical insight
 
 ## In-depth Tactical Report
 
-For a comprehensive breakdown of the player profiles, specific scouting recommendations, case studies, and tactical insights derived from the models, please read the full **[Tactical Analysis and Profiling Report](https://www.google.com/search?q=docs/TACTICAL_ANALYSIS.md)**.
+For a comprehensive breakdown of the player profiles, specific scouting recommendations, case studies, and tactical insights derived from the models, please read the full **[Tactical Analysis and Profiling Report](https://www.google.com/search?q=docs/TACTICAL_ANALYSIS.md](https://github.com/adriangomezc/football-data-analysis/blob/main/docs/TACTICAL_ANALYSIS.md)**.
 
 ---
 

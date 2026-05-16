@@ -1,384 +1,286 @@
-# =============================
-# scripts/clustering.R
-# =============================
+# =========================================================
+# scripts_clustering.R
+# Tactical Archetype Clustering for Centre-Back Profiling
+# =========================================================
 
-library(tidyverse)
-library(viridis)
-library(ggrepel)
-library(cluster)
-library(factoextra)
-library(fmsb)
-library(corrplot)
-library(scales)
+source("scripts/setup_packages.R")
 
-# -----------------------------
-# Load data
-# -----------------------------
+dir.create("outputs/figures", recursive = TRUE, showWarnings = FALSE)
+dir.create("outputs/tables", recursive = TRUE, showWarnings = FALSE)
 
-df <- read.csv("data/player_stats_2024_2025.csv")
+# =========================================================
+# LOAD DATA
+# =========================================================
 
-# -----------------------------
-# Feature engineering
-# -----------------------------
+data <- read.csv("data/processed/defenders_processed.csv")
 
-df_scouting <- df %>%
-  
-  filter(Pos == "DF") %>%
-  filter(Age <= 28) %>%
-  filter(Min >= 900) %>%
-  filter(Crs <= 15) %>%
-  
+# =========================================================
+# FEATURE ENGINEERING
+# =========================================================
+
+data <- data %>%
   mutate(
     
-    PrgP_90 = (PrgP / Min) * 90,
-    PrgC_90 = (PrgC / Min) * 90,
+    # Possession-adjusted defending
+    opponent_possession = 100 - team_possession,
     
-    KP_90 = (KP / Min) * 90,
+    padj_tackles =
+      tackles_per90 / (opponent_possession / 50),
     
-    Tkl_90 = (Tkl / Min) * 90,
-    Int_90 = (Int / Min) * 90,
-    Recov_90 = (Recov / Min) * 90,
+    padj_interceptions =
+      interceptions_per90 / (opponent_possession / 50),
     
-    Defensive_Intensity =
-      (0.45 * Tkl_90) +
-      (0.30 * Int_90) +
-      (0.25 * Recov_90),
+    padj_blocks =
+      blocks_per90 / (opponent_possession / 50),
     
-    Ball_Progression =
-      (0.70 * PrgP_90) +
-      (0.30 * PrgC_90),
+    # Progressive contribution
+    progression_score =
+      progressive_passes_per90 +
+      carries_per90,
     
-    Creative_Involvement =
-      KP_90,
+    # Defensive dominance
+    defensive_score =
+      padj_tackles +
+      padj_interceptions +
+      aerial_duels_won_pct,
     
-    Passing_Security =
-      Cmp.,
-    
-    Progressive_Defender_Index =
-      (0.6 * Ball_Progression) +
-      (0.4 * Passing_Security),
-    
-    Defensive_Aggression =
-      Tkl_90 + Int_90,
-    
-    Ball_Retention =
-      Passing_Security * Recov_90
-    
-  ) %>%
-  
-  drop_na()
+    # Ball-playing profile
+    build_up_score =
+      pass_completion_pct +
+      progressive_passes_per90 +
+      xT_per90
+  )
 
-# -----------------------------
-# PCA data
-# -----------------------------
+# =========================================================
+# CLUSTERING FEATURES
+# =========================================================
 
-pca_data <- df_scouting %>%
+clustering_data <- data %>%
   select(
-    Ball_Progression,
-    Defensive_Intensity,
-    Creative_Involvement,
-    Passing_Security,
-    Progressive_Defender_Index,
-    Defensive_Aggression,
-    Ball_Retention
+    progressive_passes_per90,
+    carries_per90,
+    xT_per90,
+    padj_interceptions,
+    padj_tackles,
+    aerial_duels_won_pct,
+    pass_completion_pct,
+    blocks_per90
   )
 
-# -----------------------------
-# Scaling
-# -----------------------------
+# Remove missing values
+complete_rows <- complete.cases(clustering_data)
 
-pca_scaled <- scale(pca_data)
+clustering_data <- clustering_data[complete_rows, ]
+data_clean <- data[complete_rows, ]
 
-# -----------------------------
-# Optimal k selection
-# -----------------------------
+# =========================================================
+# SCALING
+# =========================================================
 
-candidate_k <- 2:8
+scaled_features <- scale(clustering_data)
 
-sil_scores <- sapply(candidate_k, function(k) {
-  
-  km <- kmeans(
-    pca_scaled,
-    centers = k,
-    nstart = 25
-  )
-  
-  ss <- silhouette(
-    km$cluster,
-    dist(pca_scaled)
-  )
-  
-  mean(ss[, 3])
-  
-})
-
-k_opt <- candidate_k[which.max(sil_scores)]
-
-cat("\nOptimal k selected:", k_opt, "\n")
-
-# -----------------------------
-# Final clustering
-# -----------------------------
-
-set.seed(123)
-
-km_res <- kmeans(
-  pca_scaled,
-  centers = k_opt,
-  nstart = 25
-)
-
-# -----------------------------
-# PCA
-# -----------------------------
-
-pca_res <- prcomp(
-  pca_scaled,
-  center = TRUE,
-  scale. = TRUE
-)
-
-pca_var <- summary(pca_res)$importance[2, 1:2] * 100
-
-pc1_var <- round(pca_var[1], 1)
-pc2_var <- round(pca_var[2], 1)
-
-df_pca <- as.data.frame(pca_res$x[, 1:2])
-
-df_pca$Cluster <- factor(km_res$cluster)
-
-# -----------------------------
-# Merge clusters
-# -----------------------------
-
-df_clusters <- cbind(df_scouting, df_pca) %>%
-  mutate(
-    Cluster_Label = ifelse(Cluster == 1, "Progressive distributors", "Conservative defenders")
-  )
-
-# -----------------------------
-# Cluster profiles
-# -----------------------------
-
-cluster_profiles <- df_clusters %>%
-  group_by(Cluster) %>%
-  summarise(
-    
-    n_players = n(),
-    
-    Ball_Progression =
-      mean(Ball_Progression),
-    
-    Defensive_Intensity =
-      mean(Defensive_Intensity),
-    
-    Creative_Involvement =
-      mean(Creative_Involvement),
-    
-    Passing_Security =
-      mean(Passing_Security),
-    
-    Mean_Age =
-      mean(Age)
-    
-  )
-
-# -----------------------------
-# Export data
-# -----------------------------
-
-write.csv(
-  df_clusters,
-  "outputs/clustered_defenders.csv",
-  row.names = FALSE
-)
-
-write.csv(
-  cluster_profiles,
-  "outputs/cluster_profiles.csv",
-  row.names = FALSE
-)
-
-# -----------------------------
-# PCA cluster plot
-# -----------------------------
-
-plot2 <- ggplot(
-  df_pca,
-  aes(
-    x = PC1,
-    y = PC2,
-    color = factor(km_res$cluster)
-  )
-) +
-  
-  geom_point(
-    alpha = 0.85,
-    size = 2.5
-  ) +
-  
-  scale_color_viridis_d() +
-  
-  labs(
-    title = "PCA clustering of centre-back profiles",
-    
-    subtitle = paste0(
-      "K-means clustering (k = ",
-      k_opt,
-      ") | PC1 ",
-      pc1_var,
-      "% variance | PC2 ",
-      pc2_var,
-      "% variance"
-    ),
-    
-    x = "PC1",
-    y = "PC2",
-    color = "Cluster"
-  ) +
-  
-  theme_minimal(base_size = 13)
-
-ggsave(
-  "outputs/pca_clusters.png",
-  plot2,
-  width = 9,
-  height = 6,
-  dpi = 300
-)
-
-# -----------------------------
-# PCA biplot
-# -----------------------------
-
-biplot <- fviz_pca_biplot(
-  pca_res,
-  
-  geom.ind = "point",
-  
-  habillage = km_res$cluster,
-  
-  addEllipses = TRUE,
-  
-  label = "var",
-  
-  col.var = "black",
-  
-  repel = TRUE
-) +
-  
-  scale_color_viridis_d() +
-  
-  labs(
-    title = "PCA biplot of centre-back archetypes",
-    
-    subtitle = paste0(
-      "PC1: ",
-      pc1_var,
-      "% variance | PC2: ",
-      pc2_var,
-      "% variance"
-    )
-  ) +
-  
-  theme_minimal(base_size = 13)
-
-ggsave(
-  "outputs/pca_biplot.png",
-  biplot,
-  width = 10,
-  height = 7,
-  dpi = 300
-)
-
-# -----------------------------
-# Correlation heatmap
-# -----------------------------
-
-corr_matrix <- cor(
-  pca_data,
-  use = "pairwise.complete.obs"
-)
+# =========================================================
+# ELBOW METHOD
+# =========================================================
 
 png(
-  "outputs/correlation_heatmap.png",
+  "outputs/figures/elbow_method.png",
   width = 900,
   height = 700
 )
 
+fviz_nbclust(
+  scaled_features,
+  kmeans,
+  method = "wss"
+) +
+  theme_minimal() +
+  labs(
+    title = "Optimal Number of Clusters"
+  )
+
+dev.off()
+
+# =========================================================
+# K-MEANS CLUSTERING
+# =========================================================
+
+set.seed(123)
+
+k_clusters <- 4
+
+kmeans_model <- kmeans(
+  scaled_features,
+  centers = k_clusters,
+  nstart = 50
+)
+
+data_clean$cluster <- as.factor(kmeans_model$cluster)
+
+# =========================================================
+# PCA VISUALIZATION
+# =========================================================
+
+pca <- prcomp(scaled_features)
+
+pca_data <- data.frame(
+  PC1 = pca$x[,1],
+  PC2 = pca$x[,2],
+  player = data_clean$player,
+  cluster = data_clean$cluster
+)
+
+p <- ggplot(
+  pca_data,
+  aes(
+    x = PC1,
+    y = PC2,
+    color = cluster
+  )
+) +
+  geom_point(size = 4, alpha = 0.8) +
+  
+  geom_text_repel(
+    aes(label = player),
+    size = 3,
+    max.overlaps = 20
+  ) +
+  
+  theme_minimal() +
+  
+  labs(
+    title = "Centre-Back Tactical Archetypes",
+    subtitle = "K-Means Clustering with PCA Projection",
+    x = "Principal Component 1",
+    y = "Principal Component 2"
+  )
+
+ggsave(
+  "outputs/figures/cluster_pca_visualization.png",
+  p,
+  width = 11,
+  height = 8
+)
+
+# =========================================================
+# CLUSTER PROFILES
+# =========================================================
+
+cluster_profiles <- data_clean %>%
+  group_by(cluster) %>%
+  summarise(
+    
+    players = n(),
+    
+    progressive_passes =
+      mean(progressive_passes_per90, na.rm = TRUE),
+    
+    carries =
+      mean(carries_per90, na.rm = TRUE),
+    
+    xT =
+      mean(xT_per90, na.rm = TRUE),
+    
+    interceptions =
+      mean(padj_interceptions, na.rm = TRUE),
+    
+    tackles =
+      mean(padj_tackles, na.rm = TRUE),
+    
+    aerial_duels =
+      mean(aerial_duels_won_pct, na.rm = TRUE),
+    
+    passing =
+      mean(pass_completion_pct, na.rm = TRUE)
+  )
+
+write.csv(
+  cluster_profiles,
+  "outputs/tables/cluster_profiles.csv",
+  row.names = FALSE
+)
+
+# =========================================================
+# RADAR-STYLE SUMMARY TABLE
+# =========================================================
+
+cluster_summary <- data_clean %>%
+  select(
+    player,
+    cluster,
+    league,
+    age,
+    progressive_passes_per90,
+    carries_per90,
+    xT_per90,
+    padj_interceptions,
+    padj_tackles,
+    aerial_duels_won_pct
+  )
+
+write.csv(
+  cluster_summary,
+  "outputs/tables/player_cluster_assignments.csv",
+  row.names = FALSE
+)
+
+# =========================================================
+# CLUSTER INTERPRETATION
+# =========================================================
+
+cluster_labels <- data.frame(
+  cluster = c(1,2,3,4),
+  archetype = c(
+    "Ball-Playing Defender",
+    "Aggressive Duelist",
+    "Deep Defensive Anchor",
+    "Progressive Hybrid"
+  )
+)
+
+write.csv(
+  cluster_labels,
+  "outputs/tables/cluster_archetypes.csv",
+  row.names = FALSE
+)
+
+# =========================================================
+# SILHOUETTE ANALYSIS
+# =========================================================
+
+sil <- silhouette(
+  kmeans_model$cluster,
+  dist(scaled_features)
+)
+
+png(
+  "outputs/figures/silhouette_analysis.png",
+  width = 900,
+  height = 700
+)
+
+fviz_silhouette(sil) +
+  theme_minimal()
+
+dev.off()
+
+# =========================================================
+# CORRELATION MATRIX
+# =========================================================
+
+png(
+  "outputs/figures/feature_correlation_matrix.png",
+  width = 1000,
+  height = 900
+)
+
 corrplot(
-  corr_matrix,
+  cor(clustering_data),
   method = "color",
   type = "upper",
-  addCoef.col = "black",
-  tl.cex = 1,
-  number.cex = 0.7
+  tl.cex = 0.9
 )
 
 dev.off()
 
-# -----------------------------
-# Cluster Validation: Silhouette Plot
-# -----------------------------
-
-sil_plot <- fviz_nbclust(pca_scaled, kmeans, method = "silhouette") +
-  theme_minimal(base_size = 13) +
-  labs(
-    title = "Optimal number of clusters",
-    subtitle = "Silhouette method validation"
-  )
-
-ggsave(
-  "outputs/silhouette_plot.png",
-  sil_plot,
-  width = 8,
-  height = 6,
-  dpi = 300
-)
-
-# -----------------------------
-# Standardised Profiles Heatmap (Replaces Radar)
-# -----------------------------
-
-radar_data <- df_clusters %>%
-  group_by(Cluster_Label) %>%
-  summarise(
-    Ball_Progression = mean(Ball_Progression),
-    Defensive_Intensity = mean(Defensive_Intensity),
-    Creative_Involvement = mean(Creative_Involvement),
-    Passing_Security = mean(Passing_Security)
-  )
-
-heatmap_data <- radar_data %>%
-  column_to_rownames("Cluster_Label") %>%
-  scale() %>%
-  as.data.frame() %>%
-  rownames_to_column("Cluster_Label") %>%
-  pivot_longer(
-    cols = -Cluster_Label, 
-    names_to = "Metric", 
-    values_to = "Z_Score"
-  )
-
-heatmap_plot <- ggplot(heatmap_data, aes(x = Metric, y = Cluster_Label, fill = Z_Score)) +
-  geom_tile(color = "white", linewidth = 1) +
-  scale_fill_viridis_c(option = "mako", name = "Z-Score") +
-  theme_minimal(base_size = 13) +
-  theme(
-    axis.text.x = element_text(angle = 15, hjust = 1, face = "bold"),
-    axis.text.y = element_text(face = "bold"),
-    panel.grid = element_blank()
-  ) +
-  labs(
-    title = "Tactical Profiles: Standardised Means by Cluster",
-    x = NULL,
-    y = NULL
-  )
-
-ggsave(
-  "outputs/cluster_heatmap.png",
-  heatmap_plot,
-  width = 9,
-  height = 5,
-  dpi = 300
-)
+cat("Clustering analysis completed successfully.\n")

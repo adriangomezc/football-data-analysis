@@ -1,18 +1,31 @@
-# scripts/setup_packages.R
-
-packages <- c(
+required_packages <- c(
   "tidyverse",
+  "data.table",
+  "ggplot2",
   "ggrepel",
-  "viridis",
   "cluster",
   "factoextra",
-  "fmsb"
+  "plotly",
+  "scales",
+  "cowplot",
+  "patchwork",
+  "corrplot",
+  "dbscan",
+  "proxy",
+  "caret",
+  "randomForest",
+  "xgboost"
 )
 
-installed <- packages %in% installed.packages()
+installed <- rownames(installed.packages())
 
-if(any(!installed)) {
-  install.packages(packages[!installed])
+for(pkg in required_packages){
+  
+  if(!(pkg %in% installed)){
+    install.packages(pkg)
+  }
+  
+  library(pkg, character.only = TRUE)
 }
 
-invisible(lapply(packages, library, character.only = TRUE))
+cat("All packages loaded successfully.\n")

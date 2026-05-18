@@ -1,3 +1,4 @@
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README.es.md)
 # Identifying Modern Ball-Playing Centre-Backs
 
 This project applies a multivariate statistical scouting framework to identify, profile, and evaluate modern centre-backs and defensive profiles. Moving beyond basic descriptive statistics, this engine applies dimensionality reduction, possession-adjusted metrics, and cosine similarity algorithms to establish robust tactical archetypes and identify high-value market inefficiencies.

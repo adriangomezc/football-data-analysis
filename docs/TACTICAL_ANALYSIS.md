@@ -1,3 +1,4 @@
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](TACTICAL_ANALYSIS.es.md)
 # Tactical Analysis and Profiling of Modern Defending Profiles
 
 ## Executive Summary

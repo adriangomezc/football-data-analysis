@@ -2,66 +2,66 @@
 
 ## Resumen ejecutivo
 
-Este informe desglosa los perfiles tácticos de los defensores centrales y pivotes modernos en las principales ligas europeas, analizando datos de rendimiento longitudinales que abarcan cuatro temporadas. Al aplicar el agrupamiento k-means ($k=4$) y el análisis de componentes principales (PCA), este marco de trabajo aísla comportamientos específicos de los jugadores para eliminar sesgos y contextualizar su rendimiento.
+Este informe desglosa los perfiles tácticos de centrales y pivotes defensivos en las principales ligas europeas utilizando datos de rendimiento de las últimas temporadas. Mediante el uso de algoritmos de clústeres k-means (k=4) y el Análisis de Componentes Principales (PCA), el flujo de trabajo aísla los comportamientos de los futbolistas para contextualizar su rendimiento e identificar perfiles transferibles.
 
-**Mats Wieffer** (Brighton) emerge como el líder en el panel de contratación con una puntuación global de 5.04, seguido muy de cerca por **Eduardo Camavinga** (4.98). En el apartado constructivo, **Oleksandr Zinchenko** (Arsenal) se mantiene como el referente absoluto en la generación de peligro puro desde atrás, registrando una aproximación de amenaza esperada (proxy xT) de 8.01. 
+**Mats Wieffer** (Brighton) lidera el panel de contratación con una puntuación global de 5.04, seguido de cerca por **Eduardo Camavinga** (4.98). En la faceta de distribución, **Oleksandr Zinchenko** (Arsenal) se mantiene como el perfil de mayor volumen en progresión y ganancia de metros, registrando un índice de peligro (proxy xT) de 8.01.
 
-En el otro extremo del espectro táctico, la aplicación de métricas ajustadas por posesión (PAdj) —estimadas matemáticamente a través del volumen relativo de pases del equipo— revela que el rendimiento defensivo bruto está fuertemente distorsionado por el sistema táctico del equipo. Corregir este sesgo permite descubrir una intensidad defensiva de élite en destructores puros como Alidu Seidu (13.05), premiar a defensores con un alto volumen de acciones en equipos dominantes como Eduardo Camavinga (12.34) e identificar talentos de gran potencial que pasan desapercibidos, como Soungoutou Magassa y João Neves.
+En el plano defensivo, el uso de métricas ajustadas por posesión (PAdj)—estimadas a partir del volumen de pases del equipo frente a su liga—demuestra que la estadística tradicional penaliza a los jugadores de equipos dominantes. Corregir este sesgo permite medir la intensidad real por oportunidad, destacando la capacidad de corte de **Alidu Seidu** (13.05), premiando la actividad en escenarios de alta posesión como la de **Eduardo Camavinga** (12.34) y sacando a la luz el rendimiento de jóvenes como **Soungoutou Magassa** y **João Neves**.
 
 ---
 
-## 1. Perfiles tácticos y desglose de grupos (clusters)
+## 1. Perfiles tácticos y desglose de grupos
 
-El algoritmo de agrupamiento no supervisado segmenta al conjunto de jugadores en cuatro arquetipos tácticos distintos según la ganancia de territorio, la seguridad en el pase, el rendimiento defensivo ajustado por posesión y las métricas de conducción de balón:
+El algoritmo de agrupamiento no supervisado divide la muestra de jugadores en cuatro arquetipos tácticos según su volumen de pase, precisión, acciones defensivas ajustadas por posesión y metros avanzados mediante conducción:
 
 ### 1.1. Grupo 2: distribuidores progresivos de élite
 * **Tamaño de la muestra:** 163 jugadores.
-* **Perfil:** Defensores organizadores modernos y proactivos. Estos jugadores constituyen el núcleo de los equipos con alta posesión, funcionando como creadores de juego retrasados que destacan en la distribución romriento líneas y en la progresión en el terreno de juego.
-* **Promedios base clave:**
+* **Perfil:** Iniciadores de juego y organizadores retrasados. Suelen formar parte de equipos con propuestas asociativas elevadas, actuando como el primer escalón de la construcción y destacando en el pase vertical.
+* **Promedios del grupo:**
   * Pases progresivos por 90 minutos: 5.77
   * Media del proxy xT: 4.15
 
 ### 1.2. Grupo 3: destructores tradicionales
 * **Tamaño de la muestra:** 119 jugadores.
-* **Perfil:** Defensores marcadamente reactivos y orientados a la corrección. Normalmente se despliegan en bloques defensivos bajos o en sistemas que minimizan el riesgo durante las fases de salida de balón. Su participación con el balón es estrictamente de bajo riesgo.
-* **Promedios base clave:**
+* **Perfil:** Defensores de perfil correctivo y reactivo. Habituales en bloques bajos o en esquemas donde se reduce el riesgo con el balón, limitando sus intervenciones ofensivas a entregas de seguridad.
+* **Promedios del grupo:**
   * Entradas PAdj por 90 minutos: 4.53
   * Intercepciones PAdj por 90 minutos: 2.69
-  * Seguridad en el pase (efectividad de pases): 78.84%
+  * Precisión en el pase: 78.84%
 
 ### 1.3. Grupos 1 y 4: perfiles híbridos y de conducción
-* **Perfil:** Estos grupos capturan comportamientos tácticos intermedios, identificando perfiles de transición. Se caracterizan por una distribución equilibrada de su rendimiento o por una gran dependencia de las conducciones progresivas de balón en lugar de vías de pase puramente progresivas.
+* **Perfil:** Comportamientos intermedios de transición. El grupo 4 (222 jugadores) destaca especialmente por su tendencia a avanzar metros conduciendo el balón (promedio de 2.48 conducciones progresivas por 90 minutos) en lugar de buscar líneas de pase verticales.
 
 ---
 
 ## 2. Métricas avanzadas y estructura táctica
 
 ### 2.1. Realidades defensivas ajustadas por posesión (PAdj)
-Contar las estadísticas absolutas penaliza a los defensores de equipos dominantes, quienes por naturaleza se enfrentan a menos transiciones defensivas. Normalizar el rendimiento defensivo frente a la posesión estimada del rival saca a la luz a los recuperadores de balón de mayor intensidad por oportunidad defensiva real (incluyendo el impacto de las recuperaciones):
+Las estadísticas defensivas brutas están sesgadas por el tiempo que un equipo pasa sin el balón. Al normalizar los datos contra la posesión estimada del rival, el modelo evalúa el volumen de recuperaciones, entradas e intercepciones por oportunidad real de intervención:
 
 | Jugador | Equipo | Puntuación defensiva PAdj | Eficacia táctica |
 | :--- | :--- | :--- | :--- |
-| **Alidu Seidu** | Clermont Foot | 13.05 | Contención de transiciones de élite, volumen de duelos intenso |
-| **Mats Wieffer** | Brighton | 12.67 | Gran radio e intercepciones de alto volumen, protección central de élite |
-| **Soungoutou Magassa** | Monaco | 12.63 | Cobertura de alta intensidad, igualando el rendimiento de veteranos a los 19 años |
-| **Eduardo Camavinga** | Real Madrid | 12.34 | Disrupción defensiva de élite dentro de un marco de posesión de alta dominancia |
+| **Alidu Seidu** | Clermont Foot | 13.05 | Contención de transiciones, alto volumen de duelos y anticipación |
+| **Mats Wieffer** | Brighton | 12.67 | Gran radio de acción, interceptor y protección de la zona central |
+| **Soungoutou Magassa** | Monaco | 12.63 | Cobertura de alta intensidad, rendimiento de veterano a los 19 años |
+| **Eduardo Camavinga** | Real Madrid | 12.34 | Disrupción defensiva alta en entornos de posesión dominante |
 
-### 2.2. Eje de generación de amenaza esperada (xT)
-En lugar de medir el volumen bruto de pases, la aproximación de xT aísla a los jugadores cuyas acciones progresivas aumentan activamente la probabilidad de su equipo de crear una ocasión de gol:
+### 2.2. Eje de progresión e índice de peligro (proxy xT)
+A falta de microdatos de eventos espaciales, el proxy de xT funciona como un indicador del peligro generado mediante la combinación lineal de pases y conducciones que rompen líneas:
 
 | Jugador | Equipo | Puntuación del proxy xT | Método principal de progresión |
 | :--- | :--- | :--- | :--- |
-| **Oleksandr Zinchenko** | Arsenal | 8.01 | Pases rompelíneas de élite, iniciación por el interior |
-| **Achraf Hakimi** | Paris S-G | 7.03 | Conducciones progresivas de alto volumen, entrada al último tercio |
-| **Joshua Kimmich** | Bayern Munich | 6.60 | Distribución progresiva, control estructural desde zonas retrasadas |
-| **Leon Goretzka** | Bayern Munich | 6.12 | Conducción vertical, disrupción en bloque medio |
-| **Trent Alexander-Arnold** | Liverpool | 5.98 | Cambios de orientación diagonales de alta dificultad, progresión vertical |
+| **Oleksandr Zinchenko** | Arsenal | 8.01 | Pase vertical rompelíneas, construcción interior |
+| **Achraf Hakimi** | Paris S-G | 7.03 | Conducción progresiva por banda, llegada a último tercio |
+| **Joshua Kimmich** | Bayern Munich | 6.60 | Distribución organizada, apoyos en corto y medio alcance |
+| **Leon Goretzka** | Bayern Munich | 6.12 | Conducción vertical, ruptura de presiones en bloque medio |
+| **Trent Alexander-Arnold** | Liverpool | 5.98 | Desplazamiento en largo y cambios de orientación de alta dificultad |
 
 ---
 
 ## 3. Panel de reclutamiento: clasificación de máximo rendimiento
 
-La puntuación general `scouting_score` sintetiza la progresión del balón a través de los pesos empíricos del PCA, la seguridad en el pase, las métricas de intervención ajustadas por posesión y un modificador de edad integrado.
+La nota final (`scouting_score`) unifica la capacidad de progresión ponderada por el PCA, el acierto en el pase, las acciones de corte ajustadas por PAdj y un factor corrector por edad para identificar los perfiles de mayor valor.
 
 | Jugador | Equipo | Edad | Perfil de rol | Puntuación de scouting compuesta |
 | :--- | :--- | :--- | :--- | :--- |
@@ -75,28 +75,28 @@ La puntuación general `scouting_score` sintetiza la progresión del balón a tr
 
 ## 4. Ineficiencias del mercado y perfiles de alto potencial
 
-Al filtrar a los jugadores menores de 24 años que se sitúan en los percentiles más altos de la puntuación de scouting compuesta, el marco de trabajo revela objetivos de adquisición de alto valor antes de que alcancen su valor máximo de mercado.
+Al filtrar los jugadores menores de 24 años que se encuentran en el percentil superior del panel de contratación, el modelo aísla perfiles con un rendimiento superior a su valor de mercado esperado.
 
-* **La élite verificada:** El modelo señala con éxito a talentos de renombre mundial como **Mats Wieffer (5.04)**, **Eduardo Camavinga (4.98)** y **Alphonso Davies (4.83)**, lo que valida la precisión de la métrica para identificar líneas base de desarrollo de élite.
-* **El espacio de valor de reclutamiento:**
-  * **Soungoutou Magassa (19, Mónaco):** Un valor atípico estadístico excepcional. Con una puntuación de **4.79**, iguala a los centrales tradicionales en volumen de intervenciones PAdj, al tiempo que los supera ampliamente en salida limpia y progresión.
-  * **João Neves (19, PSG):** Registra una puntuación de **4.56**, mostrando números de progresión y retención de balón que igualan a los de jugadores consolidados en la plenitud de su carrera.
-  * **Lilian Brassier (24, Rennes) y Jon Aramburu (22, Real Sociedad):** Opciones defensivas muy eficientes que muestran una marcada infravaloración estadística en relación con su estabilidad.
+* **Validación de la élite:** El algoritmo clasifica en las posiciones más altas a futbolistas contrastados como **Mats Wieffer (5.04)**, **Eduardo Camavinga (4.98)** y **Alphonso Davies (4.83)**, lo que confirma la consistencia de la fórmula empleada.
+* **Oportunidades en el mercado de fichajes:**
+  * **Soungoutou Magassa (19, Mónaco):** Destaca con una nota de **4.79**. Registra una actividad defensiva PAdj propia de centrales veteranos de equipo replegado, pero sumando una limpieza en la salida de balón muy superior a la media de su clúster.
+  * **João Neves (19, PSG):** Con un score de **4.56**, sus registros de circulación bajo presión y retención de balón reflejan una madurez impropia de su edad.
+  * **Lilian Brassier (24, Rennes) y Jon Aramburu (22, Real Sociedad):** Alternativas fiables que muestran una regularidad defensiva sólida frente a un coste de adquisición potencialmente menor.
 
 ---
 
-## 5. Planificación de sucesiones no paramétrica y emparejamiento por similitud
+## 5. Planificación de sucesiones y emparejamiento por similitud
 
-El motor de similitud del coseno calcula la distancia en un espacio de características escalado multidimensional para determinar duplicados matemáticos de los perfiles objetivo, eliminando las conjeturas en la planificación de sucesiones.
+El motor de similitud del coseno analiza la distancia geométrica de los futbolistas dentro del espacio multidimensional estandarizado para encontrar reemplazos directos en la base de datos.
 
-### 5.1. Ajustes estructurales de alta precisión (>99% de similitud)
-* **Perfil A:** Mamadou Sarr se proyecta como un espejo estadístico exacto de **Dylan Batubinsika** con una coincidencia del 99.99%.
-* **Perfil B:** Tosin Adarabioyo registra una huella idéntica a la de **Jon Pacheco** (Real Sociedad - 99.98% de coincidencia), presentando a Pacheco como una opción de reemplazo inmediata capaz de ofrecer los mismos números base.
-* **Perfil C:** Sofyan Amrabat arroja una equivalencia táctica exacta con **Danilo** (99.97% de coincidencia).
+### 5.1. Coincidencias estadísticas directas (>99% de similitud)
+* **Mamadou Sarr** se indexa como un clon estadístico exacto de **Dylan Batubinsika** (99.99% de similitud).
+* **Tosin Adarabioyo** muestra la misma firma de rendimiento que **Jon Pacheco** (Real Sociedad - 99.98%), sugiriendo al central de la Real como un relevo viable a menor coste.
+* **Sofyan Amrabat** refleja una equivalencia de comportamiento idéntica a la de **Danilo** (99.97%).
 
 ### 5.2. Consultas de reemplazo específicas
-Al consultar al sistema por objetivos para la línea defensiva que sean progresivos y versátiles, el motor genera una lista de candidatos óptima ordenada por viabilidad técnica:
-1. **Juan David Cabal** (94.2% de similitud del coseno) - *Objetivo principal*
+Al solicitar al sistema perfiles defensivos versátiles, con movilidad y con un peso alto en la circulación desde atrás, el recomendador genera la siguiente lista de alternativas ordenadas por viabilidad técnica:
+1. **Juan David Cabal** (94.2% de similitud del coseno) - *Opción principal*
 2. **Antonee Robinson** (93.0% de similitud del coseno) - *Alternativa secundaria*
 3. **Gideon Mensah** (92.1% de similitud del coseno) - *Tercera alternativa*
 
@@ -104,6 +104,8 @@ Al consultar al sistema por objetivos para la línea defensiva que sean progresi
 
 ## 6. Conclusiones tácticas para direcciones deportivas
 
-* **El contexto importa más que la cantidad:** El volumen defensivo bruto es un indicador de la debilidad del equipo, no de la capacidad del jugador. Pasar a un marco PAdj —anclado en estimaciones reales del volumen de pases— aísla la verdadera velocidad de procesamiento y el posicionamiento. Esto queda demostrado por la promoción algorítmica de jugadores como Eduardo Camavinga y Soungoutou Magassa, cuyas acciones defensivas tienen un peso exponencialmente mayor en entornos de alta posesión.
-* **Inversión agresiva en la juventud:** Las canteras están acelerando con éxito las capacidades técnicas. Talentos como João Neves y Magassa están generando rendimientos propios de futbolistas consagrados a sus 19 años, lo que los convierte en objetivos prioritarios antes de que sus valoraciones de mercado se disparen.
-* **Planificación de contingencias automatizada:** La combinación de la similitud del coseno permite al equipo de reclutamiento establecer opciones de reemplazo inmediatas y sin el influjo del "hype" (por ejemplo, Jon Pacheco) en el momento en que un perfil titular reciba ofertas de mercado sobrevaloradas.
+* **Contexto frente a volumen:** El volumen bruto de entradas o intercepciones suele ser síntoma de un equipo sometido, no de la calidad individual del defensor. El marco PAdj basado en el volumen de pases reales equilibra la balanza, permitiendo valorar el acierto de jugadores como Eduardo Camavinga o Soungoutou Magassa, que intervienen menos veces por partido pero con una efectividad por oportunidad mucho mayor.
+* **Detección temprana:** Los procesos de formación actuales aceleran las condiciones técnicas de los jóvenes. Identificar que jugadores de 19 años como Magassa o João Neves rinden al nivel de la media de la liga permite anticipar incorporaciones antes de que entren en el radar de clubes de mayor presupuesto.
+* **Automatización de alternativas:** La incorporación de matrices de similitud matemática permite a la secretaría técnica automatizar los planes de contingencia. Contar con nombres directos y monitorizados (como Jon Pacheco) reduce el tiempo de reacción ante salidas inesperadas o rupturas en una negociación de mercado.
+
+```

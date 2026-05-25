@@ -1,98 +1,101 @@
-# Identificación de Centrales Modernos con Buena Salida de Balón (Macro-Scouting Framework)
+# Identificación de centrales modernos con buena salida de balón
 
-Este proyecto aplica un marco de *scouting* estadístico multivariante a nivel macro para identificar, perfilar y evaluar centrales modernos y perfiles defensivos en las cinco grandes ligas europeas. Utilizando datos anuales agregados de rendimiento, este motor aplica reducción de la dimensionalidad, métricas ajustadas por posesión real estimada y algoritmos de similitud del coseno para establecer arquetipos tácticos sólidos e identificar ineficiencias de alto valor en el mercado de fichajes.
+Este proyecto analiza datos de rendimiento para identificar y evaluar centrales en las grandes ligas europeas con un perfil proactivo en la circulación de juego. En lugar de usar estadísticas descriptivas tradicionales, el flujo de trabajo combina el ajuste por posesión de las métricas de corte, la reducción de dimensionalidad para ponderar variables y algoritmos de similitud para detectar perfiles interesantes o infravalorados en el mercado.
 
-El flujo de trabajo procesa registros históricos consolidados para construir indicadores tácticos compuestos, señalando aquellos perfiles que encajan en un modelo de juego proactivo y de alta posesión, sin depender de sesgos subjetivos.
+El análisis está diseñado para trabajar sobre datos anuales agregados (FBref), buscando patrones estables a lo largo de las últimas temporadas.
 
 ---
 
 ## Metodología
 
-### 1. Filtrado y Agregación de Datos
-Se filtró la base de datos longitudinal para garantizar la precisión posicional, la significación estadística y la relevancia de los perfiles:
-* **Posición principal:** Defensa Central (DF) y perfiles defensivos de primera línea.
-* **Filtro de actividad:** Umbral mínimo de 900 minutos jugados por temporada.
-* **Estabilización del perfil:** Agregación de las últimas temporadas completas para establecer un perfil de rendimiento longitudinal y estable, mitigando la varianza propia de las muestras pequeñas o rachas cortas.
+### 1. Filtrado y agregación de datos
+Para limpiar la muestra y quedarnos con perfiles con relevancia estadística, se aplicaron los siguientes filtros:
+* Posición principal: Defensa central (DF) y perfiles híbridos defensivos.
+* Mínimo de 900 minutos disputados por temporada.
+* Agregación longitudinal de los registros de las últimas temporadas para estabilizar los promedios y reducir el ruido de muestras pequeñas.
 
-### 2. Ingeniería de Variables y Métricas Contextuales
-A partir de los registros estadísticos consolidados de rendimiento (por 90 minutos), se construyeron indicadores avanzados para reflejar las exigencias del fútbol de élite:
-* **Defensa Ajustada por Posesión (PAdj):** Para cuantificar el rendimiento defensivo real, se estimó matemáticamente la posesión de cada equipo utilizando el volumen relativo de pases completados frente a la media de su respectiva liga. Las acciones defensivas (entradas e intercepciones) se normalizaron en función de la posesión del rival, aislando la verdadera intensidad defensiva por oportunidad y eliminando el sesgo de los bloques bajos que acumulan volumen por simple hundimiento en el campo.
-* **Índice de Progresión Avanzado (Exportado como `xT_proxy`):** Un indicador macro compuesto que pondera el impacto territorial y la ganancia de metros verticales del futbolista mediante la combinación indexada de sus pases y conducciones progresivas.
-* **Progresión de Balón de Variación Máxima (`progression_score`):** Una combinación ponderada de pases progresivos, conducciones progresivas y pases clave, cuyos pesos no se asignan de forma arbitraria, sino mediante modelado estadístico.
-* **Seguridad en el Pase:** Efectividad porcentual global en la entrega de pases (`pass_completion`), actuando como el umbral de fiabilidad mínimo en la primera fase de construcción.
-* **Puntuación de Scouting Compuesta (`scouting_score`):** Una métrica integrada y escalada (z-score) que equilibra la capacidad de progresión, el impacto defensivo ajustado, la seguridad asociativa y un modificador por edad para aislar el valor de mercado potencial.
+### 2. Ingeniería de variables y métricas
+Las métricas se normalizaron por 90 minutos y se construyeron los siguientes indicadores compuestos:
+* **Defensa ajustada por posesión (PAdj):** Se estimó la posesión media de cada equipo a través de su volumen de pases respecto a la media de su liga. Las métricas de corte (entradas e intercepciones) se ajustaron según la posesión del rival para evaluar la intensidad real por oportunidad, evitando el sesgo de los jugadores de equipos replegados.
+* **Proxy de xT (Expected Threat):** Al no contar con coordenadas de eventos puntuales, se calculó un índice de peligro lineal combinando pases progresivos (60%) y conducciones progresivas (40%) para medir la ganancia de territorio.
+* **Puntuación de progresión:** Un índice que mide el impacto con el balón combinando pases progresivos, conducciones y pases clave.
+* **Puntuación de scouting:** Nota global que equilibra la progresión, la defensa ajustada (incluyendo la actividad en recuperaciones), el acierto en el pase y un factor corrector por edad para priorizar el talento joven.
 
 ### 3. Estandarización
-Todas las variables creadas se estandarizaron mediante el escalado de puntuación z (*z-score*) antes de realizar cualquier análisis multivariante. Esto garantiza un peso equitativo en los algoritmos analíticos, evitando que las variables con escalas grandes (como los porcentajes de pase) eclipsen a las métricas de volumen absoluto (como las entradas por 90).
+Para evitar que las diferentes escalas de las variables distorsionen los algoritmos (por ejemplo, comparar porcentajes de acierto con volumen absoluto de entradas), todas las variables se normalizaron mediante puntuaciones z (*z-scores*) antes de introducirlas en los modelos.
 
-### 4. Agrupamiento K-Means y Proyección PCA
-Los jugadores se segmentaron en distintos roles tácticos según su perfil multivariante. El número óptimo de grupos (k=4) se seleccionó y validó estrictamente mediante la optimización de la suma de cuadrados internos (WSS) y el análisis de silueta (*silhouette*).
-Posteriormente, se utilizó el Análisis de Componentes Principales (PCA) para proyectar estos perfiles multidimensionales en un espacio visual bidimensional (2D), facilitando la interpretación de las estructuras tácticas latentes. 
+### 4. Clústeres con k-means y proyección con PCA
+Se segmentó a los jugadores en cuatro roles estadísticos. Para evitar asignar los pesos de la puntuación de progresión de forma arbitraria ("a ojo"), se utilizaron los *loadings* del primer componente principal (PC1) de un PCA. Esto asignó de forma matemática un 25.23% a los pases progresivos, un 37.27% a las conducciones progresivas y un 37.50% a los pases clave.
 
-> **Optimización Matemática de Pesos:** Para eliminar la subjetividad y el sesgo humano en el diseño de los índices, las ponderaciones del `progression_score` se extraen dinámicamente de los *loadings* del primer componente principal (PC1) de los datos: Pases Progresivos (25.23%), Conducciones Progresivas (37.27%) y Pases Clave (37.50%), maximizando la varianza explicada del perfil constructivo.
+Posteriormente, las dimensiones se proyectaron en un espacio bidimensional mediante un Análisis de Componentes Principales (PCA) para facilitar la lectura visual de los grupos.
 
-### 5. Motor de Similitud de Jugadores
-Se construyó un sistema de recomendación no paramétrico utilizando la Similitud del Coseno. Al evaluar las métricas estandarizadas en el espacio multidimensional del PCA, el motor identifica "clones" estadísticos de los objetivos de élite, proporcionando alternativas objetivas, viables y de menor coste para la secretaría técnica.
-
----
-
-## Hallazgos Clave
-
-La integración de métricas contextuales generó conclusiones tácticas muy accionables para la planificación de plantillas:
-
-1. **Capacidad de Progresión Estructurada:** El índice de progresión identifica con éxito a defensores que actúan como organizadores retrasados. **Oleksandr Zinchenko** lidera el continente en volumen de distribución vertical con un valor excepcional de 8.01, seguido de cerca por perfiles de alta proyección ofensiva como Achraf Hakimi (7.03) y Joshua Kimmich (6.60).
-2. **La Realidad del PAdj:** El ajuste por posesión relativa y la inclusión del volumen de recuperación alteran drásticamente el mapa de la destrucción. El modelo identifica correctamente la intensidad de destructores consolidados como **Alidu Seidu** (puntuación defensiva PAdj de 13.05) y **Mats Wieffer** (12.67), al tiempo que saca a la luz la agresividad de defensores en equipos de alta dominancia, como **Eduardo Camavinga** (12.34).
-3. **Arquetipos Tácticos Coherentes:** El algoritmo de agrupamiento identificó cuatro roles estables. El **Grupo 2 (Progresivos de Élite - 163 jugadores)** engloba a los directores de la salida de balón, promediando 5.77 pases progresivos por 90 y un índice de progresión medio de 4.15. Por contra, el **Grupo 3 (Destructores - 119 jugadores)** aísla a perfiles reactivos de contención con un promedio de 4.53 entradas PAdj y una menor seguridad en el pase (78.84%).
-4. **Detección de Ineficiencias Sub-24:** Al cruzar la puntuación de scouting con la edad, el marco de trabajo aísla el talento joven que sobreproduce respecto a su contexto. Adolescentes como **Soungoutou Magassa** (19 años, puntuación general de 4.79) y **João Neves** (19 años, puntuación de 4.56) surgen como auténticas anomalías estadísticas, mostrando un rendimiento de élite equiparable al de veteranos en su plenitud futbolística.
-5. **Planificación Automatizada de Sucesiones:** El motor de similitud demostró una precisión milimétrica para encontrar relevos en el mercado, localizando perfiles como el de **Juan David Cabal** con una coincidencia matemática del 94.2% respecto al perfil táctico requerido.
+### 5. Matriz de similitud
+Se desarrolló un recomendador basado en la similitud del coseno sobre las variables normalizadas. El sistema mide la distancia geométrica entre los perfiles en un espacio multidimensional para identificar "clones estadísticos", sirviendo como herramienta automática para buscar sustitutos en el mercado.
 
 ---
 
-## Informe Táctico Detallado
+## Hallazgos clave
 
-Para obtener un desglose completo de los perfiles de los jugadores, recomendaciones específicas de scouting, estudios de caso e información táctica de los modelos, consulte el **[Informe de Análisis Táctico y Perfilado](https://github.com/adriangomezc/football-data-analysis/blob/main/docs/TACTICAL_ANALYSIS.md)** completo.
-
----
-
-## Resultados
-
-### Visualizaciones
-* `outputs/figures/defender_archetypes.png`: Proyección en gráfico de dispersión del mercado según la progresión frente al rendimiento defensivo.
-* `outputs/figures/cluster_pca_visualization.png`: Proyección de los perfiles de los jugadores en el espacio de componentes principales, codificados por colores según los cuatro arquetipos tácticos.
-* `outputs/figures/recruitment_value.png`: Edad frente a la puntuación de scouting compuesta para resaltar las ineficiencias del mercado.
-* `outputs/figures/padj_defensive_profile.png`: Mapeo del rendimiento defensivo contextualizado por posesión estimada.
-
-### Exportaciones de Datos
-* `outputs/tables/top_recruitment_targets.csv`: Clasificación general basada en la puntuación de scouting compuesta.
-* `outputs/tables/market_inefficiency_targets.csv`: Lista filtrada de defensores sub-24 de alto rendimiento.
-* `outputs/tables/player_similarity_results.csv`: Lista automatizada de alternativas estadísticas para los perfiles de jugadores consultados.
-* `outputs/tables/cluster_profiles.csv`: Estadísticas resumidas que definen cada arquetipo táctico.
-* `outputs/tables/xt_proxy_ranking.csv`: Clasificación de los mejores defensores ordenados por su índice de progresión vertical.
+* **Generación de peligro:** El índice de progresión destaca a futbolistas con un rol claro de organizadores retrasados. **Oleksandr Zinchenko** lidera el volumen europeo con un proxy de 8.01, seguido de cerca por laterales y pivotes de corte asociativo como Achraf Hakimi (7.03) y Joshua Kimmich (6.60).
+* **Impacto del ajuste defensivo:** Al aplicar la corrección PAdj e incluir las recuperaciones, emergen perfiles de mucha actividad defensiva en equipos dominantes que antes quedaban ocultos por la falta de volumen. **Alidu Seidu** (13.05) y **Mats Wieffer** (12.67) lideran este registro, mientras que **Eduardo Camavinga** escala hasta una puntuación de 12.34 debido a la alta dominancia del Real Madrid.
+* **Definición de los grupos:** El clúster 2 (163 jugadores) destaca como el perfil de iniciadores de élite, promediando 5.77 pases progresivos por partido y la media de xT más alta (4.15). El clúster 3 (119 jugadores) define al destructor clásico: promedian 4.53 entradas PAdj pero registran el acierto de pase más bajo de la muestra (78.84%).
+* **Detección de talento sub-24:** Cruzando la nota de scouting con la edad, aparecen anomalías estadísticas muy marcadas en el fútbol europeo. Es el caso de **Soungoutou Magassa** (19 años, 4.79 de score) y **João Neves** (19 años, 4.56 de score), cuyos números en progresión y coberturas igualan o superan a los de futbolistas en plena madurez profesional.
+* **Eficacia del recomendador:** El buscador de similitud devuelve sustitutos directos sin el sesgo del valor de mercado. Por ejemplo, define a **Jon Pacheco** como un clon con más del 99.9% de coincidencia para ciertos perfiles de centrales zurdos de perfil asociativo, u ofrece a **Juan David Cabal** (94.2%) como la alternativa principal para cubrir roles exteriores de progresión mixta.
 
 ---
 
-## Tecnologías
+## Informe táctico detallado
 
-* **R Language**
-* **tidyverse** (dplyr, readr, tidyr)
-* **ggplot2**, **ggrepel**
-* **factoextra**, **cluster**
-* **coop** (Similitud del Coseno)
+Para ver el desglose completo de los perfiles de los jugadores, casos de estudio y las recomendaciones específicas derivadas de los modelos, consulta el **[Informe de análisis táctico y perfilado](https://github.com/adriangomezc/football-data-analysis/blob/main/docs/TACTICAL_ANALYSIS.md)**.
 
 ---
 
-## Estructura del Repositorio
+## Resultados y archivos generados
+
+El pipeline genera un total de 14 archivos de salida distribuidos entre gráficos de análisis y tablas de datos estructuradas:
+
+### Gráficos y visualizaciones (`outputs/figures/`)
+* `defender_archetypes.jpg`: Dispersión del mercado comparando la capacidad de progresión frente al volumen defensivo.
+* `cluster_pca_visualization.jpg`: Gráfico del PCA en 2D que muestra la dispersión de los jugadores coloreados por su clúster.
+* `recruitment_value.jpg`: Gráfico de dispersión de edad frente a la nota de scouting para localizar las ineficiencias del mercado.
+* `padj_defensive_profile.jpg`: Mapeo visual del volumen de entradas frente a intercepciones con la corrección de posesión aplicada.
+
+### Tablas y exportaciones de datos (`outputs/tables/`)
+* `top_recruitment_targets.csv`: Clasificación general de los mejores perfiles según el score global de scouting.
+* `market_inefficiency_targets.csv`: Registro filtrado de los jugadores sub-24 con rendimiento por encima del percentil 80.
+* `player_similarity.csv`: Matriz cruzada de similitud del coseno entre todos los jugadores de la base de datos.
+* `player_similarity_results.csv`: Historial ordenado con las mejores alternativas y porcentaje de coincidencia para perfiles específicos.
+* `cluster_profiles.csv`: Tabla con las medias estadísticas y métricas base que definen el comportamiento de cada uno de los 4 grupos.
+* `player_cluster_assignments.csv`: Listado completo de futbolistas con el ID del clúster asignado por el algoritmo.
+* `xt_proxy_ranking.csv`: Ranking de los jugadores con mayor capacidad de ganancia de metros y volumen progresivo por partido.
+* `defensive_ranking.csv`: Clasificación de los perfiles más eficientes en la destrucción basándose en la suma indexada de tackles, intercepciones y recuperaciones.
+* `padj_defensive_metrics.csv`: Base de datos de trabajo con el cálculo final del proxy de posesión de equipo y las métricas defensivas corregidas.
+* `scouting_dashboard.csv`: Matriz unificada con todas las métricas calculadas y scores finales lista para su uso en herramientas de visualización (Tableau, PowerBI).
+
+---
+
+## Tecnologías utilizadas
+
+* R
+* tidyverse (dplyr, readr, tidyr)
+* ggplot2 y ggrepel
+* factoextra y cluster (Algoritmos multivariantes)
+* proxy / coop (Cálculo de similitud del coseno)
+
+---
+
+## Estructura del repositorio
 
 ```text
 football-data-analysis/
 │
 ├── data/
-│   ├── raw/            # Contiene All_Players_1992-2025.csv
-│   └── processed/      # Dataset unificado y estandarizado
+│   ├── raw/
+│   └── processed/
 │
 ├── outputs/
-│   ├── figures/        # Gráficos del PCA, Perfiles y Scouitng
-│   └── tables/         # Reportes y rankings en formato .csv
+│   ├── figures/
+│   └── tables/
 │
 ├── scripts/
 │   ├── setup_packages.R
@@ -107,8 +110,11 @@ football-data-analysis/
 │
 ├── README.md
 └── .gitignore
-```
-Autor
-Adrián Gómez Conde Candidato a Máster en Bioestadística 
 
-Modelización estadística, análisis multivariante y analítica deportiva aplicada.
+```
+
+---
+
+## Autor
+
+**Adrián Gómez Conde** *Candidato a Máster en Bioestadística* Modelización estadística, análisis multivariante y analítica deportiva aplicada

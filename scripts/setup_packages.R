@@ -13,8 +13,6 @@ required_packages <- c(
   "dbscan",
   "proxy",
   "caret",
-  "randomForest",
-  "xgboost",
   "coop",
   "dplyr"
 )

@@ -25,14 +25,11 @@ data <- data %>%
     Min >= 900
   )
 
-# =========================================================
-# FEATURE ENGINEERING
-# =========================================================
 # =========================================================================
-# FEATURE ENGINEERING & PCA EMPIRICAL WEIGHTING (CORREGIDO)
+# FEATURE ENGINEERING & PCA EMPIRICAL WEIGHTING
 # =========================================================================
 
-# 1. Calculamos primero las métricas base per90 y renombramos el acierto de pase
+# 1. Calculamos las métricas base per90 y el acierto de pase
 data <- data %>%
   mutate(
     progressive_passes_per90 = PrgP * 90 / Min,
@@ -42,40 +39,34 @@ data <- data %>%
     interceptions_per90 = Int * 90 / Min,
     recoveries_per90 = Recov * 90 / Min,
     crosses_per90 = Crs * 90 / Min,
-    
-    # SOLUCIÓN AL ERROR: Mapeamos Cmp. a pass_completion para que exista abajo
-    pass_completion = as.numeric(Cmp.) 
+    pass_completion = as.numeric(Cmp.)
   )
 
-# 2. Seleccionamos las variables para la dimensión de progresión
+# 2. Seleccionamos las variables para el PCA de progresión
 progression_vars <- data %>% 
   select(progressive_passes_per90, progressive_carries_per90, key_passes_per90)
 
-# 3. Ejecutamos el PCA sobre las columnas existentes
 pca_progression <- prcomp(progression_vars, scale. = TRUE)
-
-# 4. Extraemos y normalizamos los loadings del Primer Componente (PC1)
 raw_loadings <- abs(pca_progression$rotation[, 1])
 prog_weights <- raw_loadings / sum(raw_loadings)
 
-cat("\n[MÉTODO PCA] Pesos estadísticos óptimos extraídos para la Progresión:\n")
-cat(paste0(" - Pases Progresivos: ", round(prog_weights[1] * 100, 2), "%\n"))
-cat(paste0(" - Conducciones Progresivas: ", round(prog_weights[2] * 100, 2), "%\n"))
-cat(paste0(" - Pases Clave (Key Passes): ", round(prog_weights[3] * 100, 2), "%\n\n"))
-
-# 5. Calculamos los scores compuestos definitivos utilizando los pesos del PCA
+# 3. Calculamos los scores compuestos definitivos con base estadística
 data <- data %>%
   mutate(
-    # Progression Score matemático basado en los pesos del PCA
+    # Tu antiguo progression_score ahora se calcula con el PCA
     progression_score = (progressive_passes_per90 * prog_weights[1]) + 
       (progressive_carries_per90 * prog_weights[2]) + 
       (key_passes_per90 * prog_weights[3]),
     
-    # Resto de scores compuestos unificados
+    # Unificamos el score defensivo sumando el volumen real
     defending_score = tackles_per90 + interceptions_per90 + recoveries_per90,
-    xT_proxy = (progressive_passes_per90 * 0.6) + (progressive_carries_per90 * 0.4),
+    
+    # CAMBIO CLAVE: Borramos el "falso xT" y lo convertimos en un índice de progresión puro
+    progression_index = (progressive_passes_per90 * 0.6) + (progressive_carries_per90 * 0.4),
     
     age_score = ifelse(Age <= 21, 1.0, ifelse(Age <= 24, 0.75, ifelse(Age <= 28, 0.5, 0.25))),
+    
+    # El scouting_score final equilibrado
     scouting_score = (progression_score * 0.4) + (defending_score * 0.3) + 
       ((pass_completion / 100) * 0.1) + (age_score * 0.2)
   )

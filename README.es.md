@@ -114,4 +114,5 @@ football-data-analysis/
 Adrián Gómez Conde
 
 Candidato a Máster en Bioestadística
+
 Modelización estadística, análisis multivariante y analítica deportiva aplicada

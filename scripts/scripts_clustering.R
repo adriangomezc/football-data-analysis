@@ -12,7 +12,17 @@ dir.create("outputs/tables", recursive = TRUE, showWarnings = FALSE)
 # LOAD DATA
 # =========================================================
 
-data <- read.csv("data/processed/defenders_processed.csv")
+if (file.exists("outputs/tables/padj_defensive_metrics.csv")) {
+  data <- read.csv("outputs/tables/padj_defensive_metrics.csv")
+  cat("Pipeline integrado con éxito: Cargados datos con ajuste de posesión real.\n")
+} else {
+  data <- read.csv("data/processed/defenders_processed.csv")
+  data$team_possession <- 50
+  data$opponent_possession <- 50
+  data$padj_tackles <- data$tackles_per90
+  data$padj_interceptions <- data$interceptions_per90
+  cat("⚠️ WARNING: No se detectó el archivo PAdj. Usando baseline temporal.\n")
+}
 
 # =========================================================
 # FEATURE ENGINEERING
@@ -20,20 +30,8 @@ data <- read.csv("data/processed/defenders_processed.csv")
 
 data <- data %>%
   mutate(
-    team_possession = 50,
-    opponent_possession = 100 - team_possession,
-    
-    padj_tackles = tackles_per90 / (opponent_possession / 50),
-    padj_interceptions = interceptions_per90 / (opponent_possession / 50),
-    
-    # Progressive contribution
-    progression_score = progressive_passes_per90 + progressive_carries_per90,
-    
-    # Defensive dominance
-    defensive_score = padj_tackles + padj_interceptions,
-    
-    # Ball-playing profile (CORREGIDO)
-    build_up_score = pass_completion + progressive_passes_per90 + xT_proxy
+    build_up_score = pass_completion + progressive_passes_per90 + xT_proxy,
+    defensive_score = padj_tackles + padj_interceptions
   )
 
 # =========================================================
@@ -43,13 +41,12 @@ data <- data %>%
 clustering_data <- data %>%
   select(
     progressive_passes_per90,
-    progressive_carries_per90, 
-    xT_proxy,                  
+    progressive_carries_per90,
+    padj_tackles,         
     padj_interceptions,
-    padj_tackles,
-    pass_completion            
-  )
-
+    xT_proxy
+  ) %>%
+  filter(complete.cases(.))
 # Remove missing values
 complete_rows <- complete.cases(clustering_data)
 
@@ -82,7 +79,7 @@ pca <- prcomp(scaled_features)
 pca_data <- data.frame(
   PC1 = pca$x[,1],
   PC2 = pca$x[,2],
-  Player = data_clean$Player, # CORREGIDO mayúscula
+  Player = data_clean$Player,
   cluster = data_clean$cluster
 )
 
@@ -96,7 +93,7 @@ p <- ggplot(
 ) +
   geom_point(size = 4, alpha = 0.8) +
   geom_text_repel(
-    aes(label = Player), # CORREGIDO mayúscula
+    aes(label = Player),
     size = 3,
     max.overlaps = 20
   ) +

@@ -59,7 +59,7 @@ data_padj %>%
 # =========================
 
 write.csv(
-  data,
+  data_padj,
   "outputs/tables/padj_defensive_metrics.csv",
   row.names = FALSE
 )

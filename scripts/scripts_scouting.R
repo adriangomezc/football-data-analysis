@@ -18,10 +18,6 @@ data <- read.csv("data/All_Players_1992-2025.csv")
 # FILTER DEFENDERS
 # =========================================================
 
-# =========================================================
-# FILTER DEFENDERS
-# =========================================================
-
 data <- data %>%
   filter(
     as.numeric(substr(Season, 1, 4)) >= 2023,
@@ -32,63 +28,57 @@ data <- data %>%
 # =========================================================
 # FEATURE ENGINEERING
 # =========================================================
+# =========================================================================
+# FEATURE ENGINEERING & PCA EMPIRICAL WEIGHTING (CORREGIDO)
+# =========================================================================
 
+# 1. Calculamos primero las métricas base per90 y renombramos el acierto de pase
 data <- data %>%
   mutate(
+    progressive_passes_per90 = PrgP * 90 / Min,
+    progressive_carries_per90 = PrgC * 90 / Min,
+    key_passes_per90 = KP * 90 / Min,
+    tackles_per90 = Tkl * 90 / Min,
+    interceptions_per90 = Int * 90 / Min,
+    recoveries_per90 = Recov * 90 / Min,
+    crosses_per90 = Crs * 90 / Min,
     
-    # Per90 metrics
-    progressive_passes_per90 = PrgP * 90/ `Min`,
-    progressive_carries_per90 = PrgC * 90/ `Min`,
-    key_passes_per90 = KP * 90/ `Min`,
-    tackles_per90 = Tkl * 90/ `Min`,
-    interceptions_per90 = Int * 90/ `Min`,
-    recoveries_per90 = Recov * 90/ `Min`,
-    crosses_per90 = Crs *90 / `Min`,
-    
-    # Passing efficiency
-    pass_completion = Cmp.,
-    
-    # Proxy possession-adjusted defending
-    defensive_actions =
-      tackles_per90 +
-      interceptions_per90 +
-      recoveries_per90,
-    
-    # Progressive profile
-    progression_score =
-      progressive_passes_per90 * 0.50 +
-      progressive_carries_per90 * 0.30 +
-      key_passes_per90 * 0.20,
-    
-    # Defensive profile
-    defending_score =
-      tackles_per90 * 0.35 +
-      interceptions_per90 * 0.35 +
-      recoveries_per90 * 0.30,
-    
-    # Ball progression proxy
-    xT_proxy =
-      progressive_passes_per90 * 0.60 +
-      progressive_carries_per90 * 0.40,
-    
-    # Age value
-    age_score =
-      case_when(
-        Age <= 21 ~ 1.00,
-        Age <= 24 ~ 0.90,
-        Age <= 27 ~ 0.75,
-        Age <= 30 ~ 0.55,
-        TRUE ~ 0.30
-      ),
-    
-    # Recruitment score
-    scouting_score =
-      as.numeric(scale(xT_proxy)) * 0.30 +
-      as.numeric(scale(defending_score)) * 0.30 +
-      as.numeric(scale(pass_completion)) * 0.20 +
-      as.numeric(scale(age_score)) * 0.20
+    # SOLUCIÓN AL ERROR: Mapeamos Cmp. a pass_completion para que exista abajo
+    pass_completion = as.numeric(Cmp.) 
   )
 
+# 2. Seleccionamos las variables para la dimensión de progresión
+progression_vars <- data %>% 
+  select(progressive_passes_per90, progressive_carries_per90, key_passes_per90)
+
+# 3. Ejecutamos el PCA sobre las columnas existentes
+pca_progression <- prcomp(progression_vars, scale. = TRUE)
+
+# 4. Extraemos y normalizamos los loadings del Primer Componente (PC1)
+raw_loadings <- abs(pca_progression$rotation[, 1])
+prog_weights <- raw_loadings / sum(raw_loadings)
+
+cat("\n[MÉTODO PCA] Pesos estadísticos óptimos extraídos para la Progresión:\n")
+cat(paste0(" - Pases Progresivos: ", round(prog_weights[1] * 100, 2), "%\n"))
+cat(paste0(" - Conducciones Progresivas: ", round(prog_weights[2] * 100, 2), "%\n"))
+cat(paste0(" - Pases Clave (Key Passes): ", round(prog_weights[3] * 100, 2), "%\n\n"))
+
+# 5. Calculamos los scores compuestos definitivos utilizando los pesos del PCA
+data <- data %>%
+  mutate(
+    # Progression Score matemático basado en los pesos del PCA
+    progression_score = (progressive_passes_per90 * prog_weights[1]) + 
+      (progressive_carries_per90 * prog_weights[2]) + 
+      (key_passes_per90 * prog_weights[3]),
+    
+    # Resto de scores compuestos unificados
+    defending_score = tackles_per90 + interceptions_per90 + recoveries_per90,
+    xT_proxy = (progressive_passes_per90 * 0.6) + (progressive_carries_per90 * 0.4),
+    
+    age_score = ifelse(Age <= 21, 1.0, ifelse(Age <= 24, 0.75, ifelse(Age <= 28, 0.5, 0.25))),
+    scouting_score = (progression_score * 0.4) + (defending_score * 0.3) + 
+      ((pass_completion / 100) * 0.1) + (age_score * 0.2)
+  )
 # =========================================================
 # AGGREGATE LAST 4 YEARS PER PLAYER
 # =========================================================

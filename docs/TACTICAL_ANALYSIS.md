@@ -107,5 +107,3 @@ Al solicitar al sistema perfiles defensivos versátiles, con movilidad y con un 
 * **Contexto frente a volumen:** El volumen bruto de entradas o intercepciones suele ser síntoma de un equipo sometido, no de la calidad individual del defensor. El marco PAdj basado en el volumen de pases reales equilibra la balanza, permitiendo valorar el acierto de jugadores como Eduardo Camavinga o Soungoutou Magassa, que intervienen menos veces por partido pero con una efectividad por oportunidad mucho mayor.
 * **Detección temprana:** Los procesos de formación actuales aceleran las condiciones técnicas de los jóvenes. Identificar que jugadores de 19 años como Magassa o João Neves rinden al nivel de la media de la liga permite anticipar incorporaciones antes de que entren en el radar de clubes de mayor presupuesto.
 * **Automatización de alternativas:** La incorporación de matrices de similitud matemática permite a la secretaría técnica automatizar los planes de contingencia. Contar con nombres directos y monitorizados (como Jon Pacheco) reduce el tiempo de reacción ante salidas inesperadas o rupturas en una negociación de mercado.
-
-```

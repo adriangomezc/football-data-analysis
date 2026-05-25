@@ -13,21 +13,19 @@ Oleksandr Zinchenko (Arsenal) emerge como el referente absoluto en la fase de sa
 El algoritmo de agrupamiento no supervisado segmenta al conjunto de jugadores en cuatro arquetipos tácticos distintos según la ganancia de territorio, la seguridad en el pase, el rendimiento defensivo ajustado por posesión y las métricas de conducción de balón:
 
 ### 1.1. Grupo 2: distribuidores progresivos de élite
-
-* **Tamaño de la muestra:** 188 jugadores.
+* **Tamaño de la muestra:** 163 jugadores.
 * **Perfil:** Defensores organizadores modernos y proactivos. Estos jugadores constituyen el núcleo de los equipos con alta posesión, funcionando como creadores de juego retrasados que destacan en la distribución rompiendo líneas y en la progresión en el terreno de juego.
 * **Promedios base clave:**
-* Pases progresivos por 90 minutos: 5.60
-* Media del proxy xT: 4.06
+  * Pases progresivos por 90 minutos: 5.77
+  * Media del proxy xT: 4.15
 
 ### 1.2. Grupo 3: destructores tradicionales
-
-* **Tamaño de la muestra:** 173 jugadores.
+* **Tamaño de la muestra:** 119 jugadores.
 * **Perfil:** Defensores marcadamente reactivos y orientados a la corrección. Normalmente se despliegan en bloques defensivos bajos o en sistemas que minimizan el riesgo durante las fases de salida de balón. Su participación con el balón es estrictamente de bajo riesgo.
 * **Promedios base clave:**
-* Entradas PAdj por 90 minutos: 2.38
-* Intercepciones PAdj por 90 minutos: 1.43
-* Seguridad en el pase (efectividad de pases): 78.00%
+  * Entradas PAdj por 90 minutos: 4.53
+  * Intercepciones PAdj por 90 minutos: 2.69
+  * Seguridad en el pase (efectividad de pases): 78.84%
 
 ### 1.3. Grupos 1 y 4: perfiles híbridos y de conducción
 
@@ -42,11 +40,11 @@ El algoritmo de agrupamiento no supervisado segmenta al conjunto de jugadores en
 Contar las estadísticas absolutas penaliza a los defensores de equipos dominantes, quienes por naturaleza se enfrentan a menos transiciones defensivas. Normalizar el rendimiento defensivo frente a la posesión estimada del rival (derivada del volumen relativo de pases de la liga) saca a la luz a los recuperadores de balón de mayor intensidad por oportunidad defensiva real:
 
 | Jugador | Equipo | Puntuación defensiva PAdj | Eficacia táctica |
-| --- | --- | --- | --- |
-| **Alidu Seidu** | Clermont Foot | 4.14 | Contención de transiciones de élite, volumen de duelos intenso |
-| **Mats Wieffer** | Brighton | 4.13 | Gran radio e intercepciones de alto volumen, protección central de élite |
-| **Soungoutou Magassa** | Monaco | 4.04 | Cobertura de alta intensidad, igualando el rendimiento de veteranos a los 19 años |
-| **Eduardo Camavinga** | Real Madrid | 3.95 | Disrupción defensiva de élite dentro de un marco de posesión de alta dominancia |
+| :--- | :--- | :--- | :--- |
+| **Alidu Seidu** | Clermont Foot | 13.05 | Contención de transiciones de élite, volumen de duelos intenso |
+| **Mats Wieffer** | Brighton | 12.67 | Gran radio e intercepciones de alto volumen, protección central de élite |
+| **Soungoutou Magassa** | Monaco | 12.63 | Cobertura de alta intensidad, igualando el rendimiento de veteranos a los 19 años |
+| **Eduardo Camavinga** | Real Madrid | 12.34 | Disrupción defensiva de élite dentro de un marco de posesión de alta dominancia |
 
 ### 2.2. Eje de generación de amenaza esperada (xT)
 
@@ -80,7 +78,7 @@ La puntuación general `scouting_score` sintetiza la progresión del balón a tr
 
 Al filtrar a los jugadores menores de 24 años que se sitúan en los percentiles más altos de la puntuación de scouting compuesta, el marco de trabajo revela objetivos de adquisición de alto valor antes de que alcancen su valor máximo de mercado.
 
-* **La élite verificada:** El modelo señala con éxito a talentos de renombre como **Eduardo Camavinga (1.82)** y **Alphonso Davies (1.70)**, lo que valida la precisión de la métrica para identificar líneas base de desarrollo de élite.
+* **La élite verificada:** El modelo señala con éxito a talentos de renombre como **Mats Wieffer (5.04)**, **Eduardo Camavinga (4.98)** y **Alphonso Davies (4.83)**, lo que valida la precisión de la métrica para identificar líneas base de desarrollo de élite.
 * **El espacio de valor de reclutamiento:**
 * **João Neves (19, PSG) y Warren Zaïre-Emery (18, PSG):** Registran números de progresión y retención de balón que igualan a los de jugadores en la plenitud de su carrera.
 * **Soungoutou Magassa (19, Mónaco):** Un valor atípico estadístico excepcional. A sus 19 años, iguala a los centrales tradicionales en volumen de intervenciones PAdj, al tempo que los supera ampliamente en rendimiento progresivo.

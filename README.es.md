@@ -67,5 +67,7 @@ El pipeline automatizado en `run_all.R` genera los siguientes *outputs*:
 ## Autor
 
 **Adrián Gómez Conde** 
+
 *Candidato a Máster en Bioestadística* 
+
 *Modelización estadística, análisis multivariante y analítica deportiva aplicada*

@@ -2,11 +2,11 @@
 
 ## Executive summary
 
-This report deconstructs the tactical profiles of modern centre-backs and defensive anchors across Europe's top leagues using longitudinal performance data. By applying K-means clustering ($k=4$) and Principal Component Analysis (PCA), the framework isolates specific player behaviors to eliminate system bias and contextualize performance.
+This report deconstructs the tactical profiles of modern centre-backs and defensive anchors across Europe's top leagues using longitudinal performance data. By applying K-means clustering ($k=4$) and Principal Component Analysis (PCA) to derive empirical progression weights, the framework isolates specific player behaviors to eliminate system bias and contextualize performance.
 
-**Mats Wieffer** (Brighton) leads the recruitment framework with an overall scouting score of 5.04, followed closely by **Eduardo Camavinga** (4.98). In the build-up phase, **Oleksandr Zinchenko** (Arsenal) remains the absolute benchmark for progressive threat, registering a continent-high progression index (xT proxy) of 8.01.
+**Mats Wieffer** (Brighton) leads the recruitment framework with an overall scouting score of 5.04, followed closely by **Eduardo Camavinga** (4.98). In the build-up phase, **Oleksandr Zinchenko** (Arsenal) remains the absolute benchmark for progressive threat, registering a continent-high Progression Index of 8.01.
 
-On the other end of the tactical spectrum, the application of possession-adjusted (PAdj) metrics—mathematically estimated via relative team pass volume—proves that raw defensive volume is heavily warped by a team's tactical setup. Correcting for this bias uncovers elite defensive intensity in pure destroyers like Alidu Seidu (13.05), rewards high-volume defenders in dominant teams like Eduardo Camavinga (12.34), and highlights high-potential, under-the-radar talents such as Soungoutou Magassa and João Neves.
+On the other end of the tactical spectrum, the application of possession-adjusted (PAdj) metrics—mathematically estimated via relative team pass volume—proves that raw defensive volume is heavily warped by a team's tactical setup. Correcting for this bias uncovers elite defensive intensity in pure destroyers like Alidu Seidu (13.05), rewards high-volume defenders in dominant teams like Eduardo Camavinga (12.34), and highlights high-potential, under-the-radar talents such as Soungoutou Magassa.
 
 ---
 
@@ -19,7 +19,7 @@ The unsupervised clustering algorithm segments the player pool into four distinc
 * **Profile:** Deep playmakers and build-up anchors. Typically deployed in high-possession structures, they function as the first line of offense, excelling at line-breaking distribution and vertical progression.
 * **Cluster averages:**
   * Progressive passes per 90 minutes: 5.77
-  * Mean progression index (xT proxy): 4.15
+  * Mean Progression Index: 4.15
 
 ### 1.2. Cluster 3: traditional destructors
 * **Sample size:** 119 players.
@@ -46,8 +46,8 @@ Counting absolute stats penalizes defenders in dominant teams who naturally face
 | **Soungoutou Magassa** | Monaco | 12.63 | High-intensity coverage, matching elite veteran output at 19 years old |
 | **Eduardo Camavinga** | Real Madrid | 12.34 | Elite defensive disruption within a high-dominance possession framework |
 
-### 2.2. Progression axis and progression index (xT proxy)
-Rather than measuring raw passing volume, the progression index isolates players whose actions actively advance territory, combining progressive passing and carrying vectors:
+### 2.2. Progression axis and Progression Index (PCA Weighted)
+Rather than measuring raw passing volume, the Progression Index isolates players whose actions actively advance territory, combining progressive passing, carrying vectors, and key passes based on empirical PCA loadings:
 
 | Player | Squad | Progression Index Score | Primary Progression Method |
 | :--- | :--- | :--- | :--- |

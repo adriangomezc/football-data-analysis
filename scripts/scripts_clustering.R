@@ -38,20 +38,16 @@ data <- data %>%
 # CLUSTERING FEATURES
 # =========================================================
 
-clustering_data <- data %>%
-  select(
-    progressive_passes_per90,
-    progressive_carries_per90,
-    padj_tackles,         
-    padj_interceptions,
-    progression_index
-  ) %>%
-  filter(complete.cases(.))
-# Remove missing values
-complete_rows <- complete.cases(clustering_data)
+# 1. Definimos las variables de interés
+vars_clustering <- c("progressive_passes_per90", "progressive_carries_per90", 
+                     "padj_tackles", "padj_interceptions", "progression_index")
 
-clustering_data <- clustering_data[complete_rows, ]
+# 2. Identificamos qué filas de la tabla original NO tienen NAs en esas columnas específicas
+complete_rows <- complete.cases(data[, vars_clustering])
+
+# 3. Filtramos ambas tablas usando exactamente el mismo índice lógico
 data_clean <- data[complete_rows, ]
+clustering_data <- data_clean[, vars_clustering]
 
 # =========================================================
 # SCALING & K-MEANS

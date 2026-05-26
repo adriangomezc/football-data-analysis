@@ -166,39 +166,6 @@ write.csv(
 )
 
 # =========================================================
-# PLAYER SIMILARITY MODEL
-# =========================================================
-
-similarity_data <- data %>%
-  select(
-    Player,
-    progressive_passes_per90,
-    progressive_carries_per90,
-    defending_score,
-    pass_completion,
-    progression_index # ¡Cambiado aquí también!
-  )
-
-similarity_matrix <- similarity_data %>%
-  column_to_rownames("Player") %>%
-  scale()
-
-cosine_sim <- coop::cosine(t(similarity_matrix))
-cosine_sim_df <- as.data.frame(as.table(cosine_sim))
-
-colnames(cosine_sim_df) <- c("Player1", "Player2", "Similarity")
-
-cosine_sim_df <- cosine_sim_df %>%
-  filter(Player1 != Player2) %>%
-  arrange(desc(Similarity))
-
-write.csv(
-  cosine_sim_df,
-  "outputs/tables/player_similarity.csv",
-  row.names = FALSE
-)
-
-# =========================================================
 # SCATTERPLOT: PROGRESSION VS DEFENDING
 # =========================================================
 

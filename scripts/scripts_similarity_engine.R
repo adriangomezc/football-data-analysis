@@ -43,8 +43,7 @@ colnames(sim_matrix) <- rownames(features_scaled)
 # =========================
 # 4. FIND SIMILAR PLAYERS
 # =========================
-# Elegimos al mejor jugador de la lista como objetivo automáticamente
-target_player <- rownames(sim_matrix)[1]
+target_player <- "Virgil van Dijk"
 
 # Construimos la tabla forzando que todo sea texto y números legibles
 similar_players <- data.frame(

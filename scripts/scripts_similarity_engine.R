@@ -22,7 +22,7 @@ similarity_data <- data %>%
     key_passes_per90,
     interceptions_per90,
     tackles_per90,
-    xT_proxy
+    progression_index
   ) %>%
   filter(complete.cases(.)) %>% # Eliminar NAs para que la matriz no se rompa
   column_to_rownames("Player")

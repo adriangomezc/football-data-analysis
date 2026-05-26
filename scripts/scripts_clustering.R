@@ -30,7 +30,7 @@ if (file.exists("outputs/tables/padj_defensive_metrics.csv")) {
 
 data <- data %>%
   mutate(
-    build_up_score = pass_completion + progressive_passes_per90 + xT_proxy,
+    build_up_score = pass_completion + progressive_passes_per90 + progression_index,
     defensive_score = padj_tackles + padj_interceptions
   )
 
@@ -44,7 +44,7 @@ clustering_data <- data %>%
     progressive_carries_per90,
     padj_tackles,         
     padj_interceptions,
-    xT_proxy
+    progression_index
   ) %>%
   filter(complete.cases(.))
 # Remove missing values
@@ -117,7 +117,7 @@ cluster_profiles <- data_clean %>%
     players = n(),
     progressive_passes = mean(progressive_passes_per90, na.rm = TRUE),
     carries = mean(progressive_carries_per90, na.rm = TRUE), 
-    xT = mean(xT_proxy, na.rm = TRUE),                       
+    xT = mean(progression_index, na.rm = TRUE),                       
     interceptions = mean(padj_interceptions, na.rm = TRUE),
     tackles = mean(padj_tackles, na.rm = TRUE),
     passing = mean(pass_completion, na.rm = TRUE)            
@@ -138,7 +138,7 @@ cluster_summary <- data_clean %>%
     Age,     
     progressive_passes_per90,
     progressive_carries_per90, 
-    xT_proxy,                  
+    progression_index,                  
     padj_interceptions,
     padj_tackles
   )

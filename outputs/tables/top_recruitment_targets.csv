@@ -1,26 +1,26 @@
-"Player","Squad","League","Age","role_profile","scouting_score","xT_proxy","defending_score","pass_completion"
-"Mats Wieffer","Brighton","Premier League",24,"Elite Progressive CB",5.04462651356346,3.93694581280788,12.679802955665,85.1
-"Eduardo Camavinga","Real Madrid","La Liga",21,"Elite Progressive CB",4.98915610022979,3.97977710012416,12.3415174491369,89.5
-"Niels Nkounkou","Eint Frankfurt","Bundesliga",22,"Elite Progressive CB",4.92175501626107,4.02902979373568,11.8258212375859,72
-"Alphonso Davies","Bayern Munich","Bundesliga",23,"Elite Progressive CB",4.83929691964386,5.59604209349972,10.0492177314211,88.7
-"Soungoutou Magassa","Monaco","Ligue 1",19,"Defensive Stopper",4.78922274703089,3.87815750371471,12.6374442793462,87.3
-"Paul Joly","Auxerre","Ligue 1",24,"Elite Progressive CB",4.74289439524615,3.72844400396432,11.595639246779,68.7
-"Achraf Hakimi","Paris S-G","Ligue 1",25,"Elite Progressive CB",4.71819253695989,7.03103184958482,8.94538460613422,87.6
-"Oleksandr Zinchenko","Arsenal","Premier League",26,"Elite Progressive CB",4.66278030160335,8.01742160278746,9.09407665505226,87.6
-"Vanderson","Monaco","Ligue 1",23,"Elite Progressive CB",4.66271375952552,3.28477743293227,11.9033523234556,75.85
-"Alidu Seidu","Clermont Foot","Ligue 1",23,"Defensive Stopper",4.66203056232951,2.08488063660477,13.0503978779841,82.4
-"Krépin Diatta","Monaco","Ligue 1",24,"Elite Progressive CB",4.59810519061729,5.01492537313433,9.92537313432836,76.5
-"Trent Alexander-Arnold","Liverpool","Premier League",25,"Elite Progressive CB",4.59309826296081,5.98110201458823,9.60834972506046,74.4
-"João Neves","Paris S-G","Ligue 1",19,"Elite Progressive CB",4.55697643112394,4.9002169197397,10.2006507592191,91.2
-"Maximilian Mittelstädt","Stuttgart","Bundesliga",27,"Elite Progressive CB",4.51878066713679,4.62060101608014,10.3926173856823,84.05
-"Nico Schlotterbeck","Dortmund","Bundesliga",24,"Elite Progressive CB",4.51261108496937,5.09526504542985,10.5931584681864,89
-"Gideon Mensah","Auxerre","Ligue 1",26,"Defensive Stopper",4.42086663375893,3.02368421052632,11.4473684210526,79.9
-"Destiny Udogie","Tottenham","Premier League",21,"Elite Progressive CB",4.41808281515171,4.57837929136549,10.0217030079013,86.5
-"Josip Stanišić","Leverkusen","Bundesliga",23,"Elite Progressive CB",4.41014878336132,5.33862014274385,9.56383822363204,89.2
-"Sergio Reguilón","Brentford","Premier League",26,"Elite Progressive CB",4.409888791769,2.93023255813953,10.9481216457961,67.2
-"Joshua Kimmich","Bayern Munich","Bundesliga",28,"Elite Progressive CB",4.403214169946,6.609375,8.23069852941176,86.1
-"Malo Gusto","Chelsea","Premier League",21,"Elite Progressive CB",4.37144534267325,4.33684204392028,9.63202245640208,86.45
-"Bradley Locko","Brest","Ligue 1",21,"Elite Progressive CB",4.35886646107996,3.36397431564718,10.6454883406556,83.4
-"Florian Grillitsch","Hoffenheim","Bundesliga",27,"Elite Progressive CB",4.34456073308407,4.07843137254902,10.8627450980392,85.3
-"Nuno Tavares","Lazio","Serie A",24,"Elite Progressive CB",4.32095926557288,5.64768683274021,8.16725978647687,78.7
-"Maximilian Wöber","Gladbach","Bundesliga",25,"Elite Progressive CB",4.31163402029843,3.90319457889642,10.9341723136496,82.4
+"Player","Squad","League","Age","role_profile","scouting_score","progression_index","defending_score","pass_completion"
+"Eduardo Camavinga","Real Madrid","La Liga",21,"Elite Progressive CB",4.98915610022979,2.49300216372183,12.3415174491369,89.5
+"Soungoutou Magassa","Monaco","Ligue 1",19,"Elite Progressive CB",4.78922274703089,1.77672365806756,12.6374442793462,87.3
+"Alidu Seidu","Clermont Foot","Ligue 1",23,"Defensive Stopper",4.69203056232951,1.28627799733571,13.0503978779841,82.4
+"Nico Schlotterbeck","Dortmund","Bundesliga",23,"Elite Progressive CB",4.59318155634986,2.31147854984633,11.3326337880378,88.8
+"Moisés Caicedo","Chelsea","Premier League",22,"Elite Progressive CB",4.30397073846865,2.1895264433068,10.5282005371531,89.7
+"Riccardo Calafiori","Bologna","Serie A",21,"Elite Progressive CB",4.2632767167938,1.57212282646726,11.1494252873563,89.6
+"Dayot Upamecano","Bayern Munich","Bundesliga",25,"Elite Progressive CB",4.20753418624847,2.32034508188686,10.0704871783124,93.25
+"Tim Siersleben","Heidenheim","Bundesliga",23,"Elite Progressive CB",4.13687279296736,1.75136879560522,10.5824175824176,81.6
+"Leonardo Balerdi","Marseille","Ligue 1",25,"Elite Progressive CB",4.11000468788669,1.46723302020822,10.8938715993447,89.95
+"Denis Zakaria","Monaco","Ligue 1",26,"Elite Progressive CB",4.09374030608994,1.73451676896841,10.5287786616752,91.3
+"Valentin Rongier","Marseille","Ligue 1",29,"Elite Progressive CB",4.07103183338549,2.37369257962251,9.73751600512164,90.3
+"Lucas Martínez Quarta","Fiorentina","Serie A",27,"Elite Progressive CB",4.05572548916787,2.31213705334307,9.66390222610214,81.7
+"Timo Hübers","Köln","Bundesliga",27,"Defensive Stopper",4.01944732451359,1.15243310610038,11.0799136069114,84.5
+"Leon Goretzka","Bayern Munich","Bundesliga",29,"Elite Progressive CB",3.95172050790834,3.36823051505386,8.01509433962264,89.9
+"Pathé Ciss","Rayo Vallecano","La Liga",30,"Elite Progressive CB",3.94824728749623,1.90840092902096,9.96728971962617,84.7
+"Warren Zaïre-Emery","Paris S-G","Ligue 1",18,"Elite Progressive CB",3.94409042973808,2.61023239566987,8.69232490490042,92.3
+"Kim Min-Jae","Bayern Munich","Bundesliga",27,"Elite Progressive CB",3.91693679013749,2.00480603795837,9.5745479165138,92.65
+"Wilfried Singo","Monaco","Ligue 1",23,"Elite Progressive CB",3.85489688472643,1.9512269446405,9.36068702290076,86.2
+"Joseph Okumu","Reims","Ligue 1",27,"Elite Progressive CB",3.84636736266533,1.75161801673445,9.71306718657182,81.8
+"Sead Kolašinac","Atalanta","Serie A",31,"Elite Progressive CB",3.83751397693707,2.25466134562935,9.21583146228443,85.9
+"Giorgio Scalvini","Atalanta","Serie A",19,"Elite Progressive CB",3.83069615779154,1.5769102057996,9.72877358490566,81.3
+"Emre Can","Dortmund","Bundesliga",30,"Elite Progressive CB",3.82279878997407,1.96203992046753,9.46510940595685,88.45
+"Mohammed Salisu","Monaco","Ligue 1",25,"Elite Progressive CB",3.79833333324603,1.88756299650917,9.31136044880786,84.9
+"Cristian Romero","Tottenham","Premier League",26,"Elite Progressive CB",3.78252765361418,1.75801076880855,9.46241115363587,90.6
+"Emmanuel Agbadou","Wolves","Premier League",27,"Elite Progressive CB",3.77379358531914,1.62347526352906,9.62545604413617,86.7666666666667

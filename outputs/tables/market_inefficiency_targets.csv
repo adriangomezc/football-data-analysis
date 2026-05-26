@@ -1,79 +1,38 @@
 "Player","Squad","League","Age","role_profile","scouting_score"
-"Mats Wieffer","Brighton","Premier League",24,"Elite Progressive CB",5.04462651356346
 "Eduardo Camavinga","Real Madrid","La Liga",21,"Elite Progressive CB",4.98915610022979
-"Niels Nkounkou","Eint Frankfurt","Bundesliga",22,"Elite Progressive CB",4.92175501626107
-"Alphonso Davies","Bayern Munich","Bundesliga",23,"Elite Progressive CB",4.83929691964386
-"Soungoutou Magassa","Monaco","Ligue 1",19,"Defensive Stopper",4.78922274703089
-"Paul Joly","Auxerre","Ligue 1",24,"Elite Progressive CB",4.74289439524615
-"Vanderson","Monaco","Ligue 1",23,"Elite Progressive CB",4.66271375952552
-"Alidu Seidu","Clermont Foot","Ligue 1",23,"Defensive Stopper",4.66203056232951
-"Krépin Diatta","Monaco","Ligue 1",24,"Elite Progressive CB",4.59810519061729
-"João Neves","Paris S-G","Ligue 1",19,"Elite Progressive CB",4.55697643112394
-"Nico Schlotterbeck","Dortmund","Bundesliga",24,"Elite Progressive CB",4.51261108496937
-"Destiny Udogie","Tottenham","Premier League",21,"Elite Progressive CB",4.41808281515171
-"Josip Stanišić","Leverkusen","Bundesliga",23,"Elite Progressive CB",4.41014878336132
-"Malo Gusto","Chelsea","Premier League",21,"Elite Progressive CB",4.37144534267325
-"Bradley Locko","Brest","Ligue 1",21,"Elite Progressive CB",4.35886646107996
-"Nuno Tavares","Lazio","Serie A",24,"Elite Progressive CB",4.32095926557288
-"Moisés Caicedo","Chelsea","Premier League",22,"Elite Progressive CB",4.27397073846865
-"Beñat Prados","Athletic Club","La Liga",22,"Elite Progressive CB",4.25140761804088
-"Wilfried Singo","Monaco","Ligue 1",23,"Elite Progressive CB",4.24442030693252
-"Yan Couto","Girona","La Liga",21,"Elite Progressive CB",4.23686519906081
-"Darlin Yongwa","Lorient","Ligue 1",22,"Elite Progressive CB",4.23354258558178
-"Dango Ouattara","Bournemouth","Premier League",21,"Elite Progressive CB",4.21278367970977
-"Nuno Mendes","Paris S-G","Ligue 1",22,"Elite Progressive CB",4.14426323652441
-"Valentín Barco","Strasbourg","Ligue 1",20,"Defensive Stopper",4.097648464789
-"Melvin Bard","Nice","Ligue 1",23,"Defensive Stopper",4.09614085513787
-"Samuel Lino","Atlético Madrid","La Liga",24,"Elite Progressive CB",4.08403952320198
-"Pedro Porro","Tottenham","Premier League",24,"Elite Progressive CB",4.05740508234686
-"Max Finkgräfe","Köln","Bundesliga",19,"Elite Progressive CB",4.04702119352858
-"Thierry Correia","Valencia","La Liga",24,"Defensive Stopper",4.04638507639213
-"Alieu Fadera","Como","Serie A",22,"Elite Progressive CB",4.02466222172164
-"Matteo Ruggeri","Atalanta","Serie A",22,"Elite Progressive CB",4.01091927012874
-"Fabiano Parisi","Fiorentina","Serie A",23,"Elite Progressive CB",3.99998690283563
-"Rodrigo Riquelme","Atlético Madrid","La Liga",23,"Elite Progressive CB",3.97154111532182
-"Djed Spence","Tottenham","Premier League",23,"Elite Progressive CB",3.95906698637959
+"Soungoutou Magassa","Monaco","Ligue 1",19,"Elite Progressive CB",4.78922274703089
+"Alidu Seidu","Clermont Foot","Ligue 1",23,"Defensive Stopper",4.69203056232951
+"Nico Schlotterbeck","Dortmund","Bundesliga",23,"Elite Progressive CB",4.59318155634986
+"Moisés Caicedo","Chelsea","Premier League",22,"Elite Progressive CB",4.30397073846865
+"Riccardo Calafiori","Bologna","Serie A",21,"Elite Progressive CB",4.2632767167938
+"Tim Siersleben","Heidenheim","Bundesliga",23,"Elite Progressive CB",4.13687279296736
 "Warren Zaïre-Emery","Paris S-G","Ligue 1",18,"Elite Progressive CB",3.94409042973808
-"Valentino Livramento","Newcastle Utd","Premier League",21,"Elite Progressive CB",3.92177153043794
-"Ian Maatsen","Dortmund","Bundesliga",22,"Elite Progressive CB",3.92044052430811
-"Formose Mendy","Lorient","Ligue 1",22,"Defensive Stopper",3.91563744828067
-"Fran Garcia","Real Madrid","La Liga",24,"Elite Progressive CB",3.90619171517576
-"Matìas Soulé","Roma","Serie A",21,"Ball Progressor",3.87787611362314
-"Alfie Doughty","Luton Town","Premier League",23,"Elite Progressive CB",3.8752993145655
-"Guela Doué","Strasbourg","Ligue 1",21,"Elite Progressive CB",3.85314216401205
-"Juanlu Sánchez","Sevilla","La Liga",20,"Elite Progressive CB",3.83895323298172
-"Giorgio Scalvini","Atalanta","Serie A",19,"Defensive Stopper",3.83069615779154
-"Neco Williams","Nott'ham Forest","Premier League",23,"Defensive Stopper",3.80682374274436
-"Nicolas Seiwald","RB Leipzig","Bundesliga",23,"Elite Progressive CB",3.78968768892382
+"Wilfried Singo","Monaco","Ligue 1",23,"Elite Progressive CB",3.85489688472643
+"Giorgio Scalvini","Atalanta","Serie A",19,"Elite Progressive CB",3.83069615779154
 "Stefan Bajcetic","Las Palmas","La Liga",19,"Defensive Stopper",3.77137222855768
-"Ismail Jakobs","Monaco","Ligue 1",23,"Elite Progressive CB",3.76149520044494
-"Issa Kaboré","Luton Town","Premier League",22,"Elite Progressive CB",3.74910431024531
-"Lorenz Assignon","Rennes","Ligue 1",24,"Elite Progressive CB",3.72864106095676
-"Lilian Raolisoa","Angers","Ligue 1",24,"Defensive Stopper",3.72682743149484
-"Nathan Patterson","Everton","Premier League",21,"Defensive Stopper",3.71652182607172
-"Quentin Merlin","Nantes","Ligue 1",22,"Elite Progressive CB",3.70557111516788
-"Joško Gvardiol","Manchester City","Premier League",22,"Elite Progressive CB",3.69836904762685
-"Lucas","Cádiz","La Liga",22,"Defensive Stopper",3.69245490399382
-"Nicola Zalewski","Roma","Serie A",21,"Ball Progressor",3.6910083184609
-"Adam Obert","Cagliari","Serie A",21,"Defensive Stopper",3.68369583736888
-"Tiago Santos","Lille","Ligue 1",21,"Elite Progressive CB",3.68236427665426
-"Anthony Oyono","Frosinone","Serie A",22,"Defensive Stopper",3.6702276839581
-"Filippo Terracciano","Hellas Verona","Serie A",20,"Defensive Stopper",3.66853916717506
-"Riccardo Calafiori","Bologna","Serie A",22,"Defensive Stopper",3.66533904692176
-"Lewis Hall","Newcastle Utd","Premier League",19,"Elite Progressive CB",3.65828139274679
-"Jon Aramburu","Real Sociedad","La Liga",22,"Defensive Stopper",3.65336620692206
-"João Ferreira","Udinese","Serie A",22,"Defensive Stopper",3.62598441021482
-"Carmona","Sevilla","La Liga",22,"Defensive Stopper",3.60076387216878
+"Odilon Kossounou","Leverkusen","Bundesliga",23,"Elite Progressive CB",3.60748477328743
 "Jérémy Jacquet","Rennes","Ligue 1",19,"Defensive Stopper",3.58734819703034
-"Odilon Kossounou","Leverkusen","Bundesliga",23,"Defensive Stopper",3.57748477328743
-"Jarell Quansah","Liverpool","Premier League",20,"Defensive Stopper",3.5671708113677
-"Álex Jiménez","Milan","Serie A",19,"Elite Progressive CB",3.55970114616601
-"Rayan Aït-Nouri","Wolves","Premier League",23,"Elite Progressive CB",3.55831097728112
-"Frans Krätzig","Heidenheim","Bundesliga",21,"Elite Progressive CB",3.55651025174231
-"Diego Moreira","Strasbourg","Ligue 1",19,"Elite Progressive CB",3.55221239723121
-"Dan-Axel Zagadou","Stuttgart","Bundesliga",24,"Defensive Stopper",3.53913973495432
-"Julian Araujo","Las Palmas","La Liga",21,"Defensive Stopper",3.53812738406274
-"Rasmus Carstensen","Köln","Bundesliga",22,"Defensive Stopper",3.53202285022381
-"Curtis Jones","Liverpool","Premier League",23,"Elite Progressive CB",3.52771052985097
-"Willian Pacho","Paris S-G","Ligue 1",22,"Defensive Stopper",3.5247585571906
-"Sael Kumbedi","Lyon","Ligue 1",19,"Defensive Stopper",3.52266037508486
+"Piero Hincapié","Leverkusen","Bundesliga",21,"Elite Progressive CB",3.5698448544396
+"Dan-Axel Zagadou","Stuttgart","Bundesliga",24,"Defensive Stopper",3.56913973495432
+"Jarell Quansah","Liverpool","Premier League",20,"Elite Progressive CB",3.5671708113677
+"Curtis Jones","Liverpool","Premier League",23,"Elite Progressive CB",3.55771052985097
+"Willian Pacho","Paris S-G","Ligue 1",22,"Defensive Stopper",3.5397585571906
+"Christian Mawissa","Toulouse","Ligue 1",19,"Defensive Stopper",3.50361360061281
+"Lucas Beraldo","Paris S-G","Ligue 1",20,"Elite Progressive CB",3.4906742671027
+"Jean-Clair Todibo","West Ham","Premier League",24,"Defensive Stopper",3.45751329464903
+"Yannik Engelhardt","Como","Serie A",23,"Elite Progressive CB",3.42591638561178
+"Mika Mármol","Las Palmas","La Liga",22,"Elite Progressive CB",3.40455170199666
+"Arthur Theate","Rennes","Ligue 1",23,"Elite Progressive CB",3.3866101607432
+"Mario Gila","Lazio","Serie A",23,"Elite Progressive CB",3.38652309358815
+"Lilian Brassier","Brest","Ligue 1",23,"Defensive Stopper",3.34571118811091
+"Warmed Omari","Rennes","Ligue 1",23,"Elite Progressive CB",3.31824539803047
+"Yannik Keitel","Freiburg","Bundesliga",23,"Defensive Stopper",3.28591457746403
+"Aurélien Tchouaméni","Real Madrid","La Liga",24,"Elite Progressive CB",3.28206353479939
+"Abdukodir Khusanov","Lens","Ligue 1",20,"Defensive Stopper",3.26391562819331
+"Abakar Sylla","Strasbourg","Ligue 1",21,"Defensive Stopper",3.25800253293522
+"Jan Paul Van Hecke","Brighton","Premier League",24,"Ball Progressor",3.25267227078813
+"Yarek Gasiorowski","Valencia","La Liga",19,"Defensive Stopper",3.23850055952088
+"Castello Lukeba","RB Leipzig","Bundesliga",20,"Elite Progressive CB",3.22975471682728
+"Dean Huijsen","Bournemouth","Premier League",19,"Elite Progressive CB",3.22348122014841
+"Eric García","Girona","La Liga",23,"Ball Progressor",3.21913398936694
+"Matteo Lovato","Salernitana","Serie A",23,"Defensive Stopper",3.21891706382741

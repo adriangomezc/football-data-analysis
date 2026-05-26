@@ -21,15 +21,14 @@ data <- read.csv("data/All_Players_1992-2025.csv")
 data <- data %>%
   filter(
     as.numeric(substr(Season, 1, 4)) >= 2023,
-    grepl("DF", Pos),
+    grepl("DF", Pos), 
+    !grepl("LB", Pos), !grepl("RB", Pos), !grepl("WB", Pos),
     Min >= 900
   )
 
 # =========================================================================
 # FEATURE ENGINEERING & PCA EMPIRICAL WEIGHTING
 # =========================================================================
-
-# 1. Calculamos las métricas base per90 y el acierto de pase
 data <- data %>%
   mutate(
     progressive_passes_per90 = PrgP * 90 / Min,
@@ -42,47 +41,49 @@ data <- data %>%
     pass_completion = as.numeric(Cmp.)
   )
 
-# 2. Seleccionamos las variables para el PCA de progresión
-progression_vars <- data %>% 
-  select(progressive_passes_per90, progressive_carries_per90, key_passes_per90)
-
-pca_progression <- prcomp(progression_vars, scale. = TRUE)
-raw_loadings <- abs(pca_progression$rotation[, 1])
+progression_vars <- data %>% select(progressive_passes_per90, progressive_carries_per90, key_passes_per90)
+pca_prog <- prcomp(progression_vars, scale. = TRUE)
+# 4. Extraemos y normalizamos los loadings correctamente
+raw_loadings <- abs(pca_prog$rotation[, 1])
 prog_weights <- raw_loadings / sum(raw_loadings)
 
-# 3. Calculamos los scores compuestos definitivos con base estadística
+# 5. Calculamos los scores compuestos con los pesos corregidos
 data <- data %>%
   mutate(
-    # Tu antiguo progression_score ahora se calcula con el PCA
-    progression_score = (progressive_passes_per90 * prog_weights[1]) + 
+    progression_index = (progressive_passes_per90 * prog_weights[1]) + 
       (progressive_carries_per90 * prog_weights[2]) + 
       (key_passes_per90 * prog_weights[3]),
     
-    # Unificamos el score defensivo sumando el volumen real
     defending_score = tackles_per90 + interceptions_per90 + recoveries_per90,
     
-    # CAMBIO CLAVE: Borramos el "falso xT" y lo convertimos en un índice de progresión puro
-    progression_index = (progressive_passes_per90 * 0.6) + (progressive_carries_per90 * 0.4),
+    age_score = case_when(
+      Age <= 21 ~ 1.00,
+      Age <= 24 ~ 0.90,
+      Age <= 27 ~ 0.75,
+      Age <= 30 ~ 0.55,
+      TRUE ~ 0.30
+    ),
     
-    age_score = ifelse(Age <= 21, 1.0, ifelse(Age <= 24, 0.75, ifelse(Age <= 28, 0.5, 0.25))),
-    
-    # El scouting_score final equilibrado
-    scouting_score = (progression_score * 0.4) + (defending_score * 0.3) + 
+    scouting_score = (progression_index * 0.4) + (defending_score * 0.3) + 
       ((pass_completion / 100) * 0.1) + (age_score * 0.2)
-  )
+  ) %>%
+
+filter(crosses_per90 < 0.5)
 # =========================================================
-# AGGREGATE LAST 4 YEARS PER PLAYER
+# AGGREGATE LAST 4 YEARS PER PLAYER (Corregido de forma segura)
 # =========================================================
 
 data <- data %>%
   group_by(Player) %>%
-  # Nos quedamos con el equipo y liga más recientes, la edad actual, y promediamos sus métricas
   summarise(
     Squad = last(Squad),
     League = last(League),
     Age = max(Age),
+    # Especificamos las variables numéricas finales de forma explícita para evitar errores de rango
     across(
-      c(progressive_passes_per90:scouting_score), 
+      c(progressive_passes_per90, progressive_carries_per90, key_passes_per90,
+        tackles_per90, interceptions_per90, recoveries_per90, crosses_per90,
+        pass_completion, defending_score, progression_index, age_score, scouting_score), 
       \(x) mean(x, na.rm = TRUE)
     )
   ) %>%
@@ -96,12 +97,12 @@ data <- data %>%
   mutate(
     role_profile =
       case_when(
-        
-        progression_score >= quantile(progression_score, 0.75) &
+        # Cambiamos progression_score por el nuevo progression_index
+        progression_index >= quantile(progression_index, 0.75) &
           defending_score >= quantile(defending_score, 0.60)
         ~ "Elite Progressive CB",
         
-        progression_score >= quantile(progression_score, 0.75)
+        progression_index >= quantile(progression_index, 0.75)
         ~ "Ball Progressor",
         
         defending_score >= quantile(defending_score, 0.75)
@@ -115,7 +116,7 @@ data <- data %>%
   )
 
 # =========================================================
-# TOP RECRUITMENT TARGETS
+# TOP RECRUITMENT TARGETS (Corregido con progression_index)
 # =========================================================
 
 top_targets <- data %>%
@@ -127,7 +128,7 @@ top_targets <- data %>%
     Age,
     role_profile,
     scouting_score,
-    xT_proxy,
+    progression_index, # ¡Cambiado xT_proxy por la variable real!
     defending_score,
     pass_completion
   ) %>%
@@ -141,7 +142,6 @@ write.csv(
 
 # =========================================================
 # MARKET INEFFICIENCY TARGETS
-# Young + High Output
 # =========================================================
 
 market_targets <- data %>%
@@ -176,7 +176,7 @@ similarity_data <- data %>%
     progressive_carries_per90,
     defending_score,
     pass_completion,
-    xT_proxy
+    progression_index # ¡Cambiado aquí también!
   )
 
 similarity_matrix <- similarity_data %>%
@@ -184,14 +184,9 @@ similarity_matrix <- similarity_data %>%
   scale()
 
 cosine_sim <- coop::cosine(t(similarity_matrix))
-
 cosine_sim_df <- as.data.frame(as.table(cosine_sim))
 
-colnames(cosine_sim_df) <- c(
-  "Player1",
-  "Player2",
-  "Similarity"
-)
+colnames(cosine_sim_df) <- c("Player1", "Player2", "Similarity")
 
 cosine_sim_df <- cosine_sim_df %>%
   filter(Player1 != Player2) %>%
@@ -204,14 +199,13 @@ write.csv(
 )
 
 # =========================================================
-# SCATTERPLOT:
-# PROGRESSION VS DEFENDING
+# SCATTERPLOT: PROGRESSION VS DEFENDING
 # =========================================================
 
 p1 <- ggplot(
   data,
   aes(
-    progression_score,
+    progression_index, # ¡Actualizado!
     defending_score,
     color = role_profile,
     size = scouting_score
@@ -220,8 +214,8 @@ p1 <- ggplot(
   geom_point(alpha = 0.75) +
   theme_minimal() +
   labs(
-    title = "Defender Archetypes",
-    x = "Progression Score",
+    title = "Defender Archetypes (Pure CB)",
+    x = "Progression Index (PCA Weighted)",
     y = "Defending Score"
   )
 
@@ -238,11 +232,7 @@ ggsave(
 
 p2 <- ggplot(
   data,
-  aes(
-    Age,
-    scouting_score,
-    color = role_profile
-  )
+  aes(Age, scouting_score, color = role_profile)
 ) +
   geom_point(size = 3, alpha = 0.75) +
   theme_minimal() +
@@ -260,24 +250,24 @@ ggsave(
 )
 
 # =========================================================
-# xT PROXY RANKING
+# PROGRESSION RANKING (Sustituye al antiguo ranking xT)
 # =========================================================
 
-xt_ranking <- data %>%
-  arrange(desc(xT_proxy)) %>%
+prog_ranking <- data %>%
+  arrange(desc(progression_index)) %>%
   select(
     Player,
     Squad,
     League,
-    xT_proxy,
+    progression_index, # ¡Actualizado!
     progressive_passes_per90,
     progressive_carries_per90
   ) %>%
   head(20)
 
 write.csv(
-  xt_ranking,
-  "outputs/tables/xt_proxy_ranking.csv",
+  prog_ranking,
+  "outputs/tables/xt_proxy_ranking.csv", # Mantenemos el nombre de salida para no romper dependencias externas
   row.names = FALSE
 )
 
@@ -307,8 +297,8 @@ write.csv(
 # =========================================================
 # EXPORT PROCESSED DATA FOR OTHER SCRIPTS
 # =========================================================
-dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
 
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
 write.csv(
   data,
   "data/processed/defenders_processed.csv",
@@ -327,9 +317,8 @@ dashboard_table <- data %>%
     Age,
     role_profile,
     scouting_score,
-    progression_score,
+    progression_index, # ¡Actualizado!
     defending_score,
-    xT_proxy,
     pass_completion
   ) %>%
   arrange(desc(scouting_score))
@@ -340,14 +329,6 @@ write.csv(
   row.names = FALSE
 )
 
-
-# =========================================================
-# FINAL MESSAGE
-# =========================================================
-
-cat("\n")
-cat("========================================\n")
+cat("\n========================================\n")
 cat("SCOUTING ANALYSIS COMPLETED\n")
-cat("========================================\n")
-cat("Outputs generated in outputs/\n")
 cat("========================================\n")

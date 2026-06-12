@@ -68,7 +68,7 @@ Sistema de recomendación no paramétrico construido sobre el espacio de caracte
 
 ## Informe táctico detallado
 
-Para desglose por jugador, casos de estudio por cluster y shortlists completas, ver el [Informe de análisis táctico](docs/TACTICAL_ANALYSIS_es.md).
+Para desglose por jugador, casos de estudio por cluster y shortlists completas, ver el [Informe de análisis táctico](/docs/TACTICAL_ANALYSIS.es.md).
 
 ---
 

@@ -1,419 +1,158 @@
 "Player","Squad","League","Age","role_profile","scouting_score","progression_index","defending_score","pass_completion"
-"Eduardo Camavinga","Real Madrid","La Liga",21,"Elite Progressive CB",4.98915610022979,2.49300216372183,12.3415174491369,89.5
-"Soungoutou Magassa","Monaco","Ligue 1",19,"Elite Progressive CB",4.78922274703089,1.77672365806756,12.6374442793462,87.3
-"Alidu Seidu","Clermont Foot","Ligue 1",23,"Defensive Stopper",4.69203056232951,1.28627799733571,13.0503978779841,82.4
-"Nico Schlotterbeck","Dortmund","Bundesliga",23,"Elite Progressive CB",4.59318155634986,2.31147854984633,11.3326337880378,88.8
-"Moisés Caicedo","Chelsea","Premier League",22,"Elite Progressive CB",4.30397073846865,2.1895264433068,10.5282005371531,89.7
-"Riccardo Calafiori","Bologna","Serie A",21,"Elite Progressive CB",4.2632767167938,1.57212282646726,11.1494252873563,89.6
-"Dayot Upamecano","Bayern Munich","Bundesliga",25,"Elite Progressive CB",4.20753418624847,2.32034508188686,10.0704871783124,93.25
-"Tim Siersleben","Heidenheim","Bundesliga",23,"Elite Progressive CB",4.13687279296736,1.75136879560522,10.5824175824176,81.6
-"Leonardo Balerdi","Marseille","Ligue 1",25,"Elite Progressive CB",4.11000468788669,1.46723302020822,10.8938715993447,89.95
-"Denis Zakaria","Monaco","Ligue 1",26,"Elite Progressive CB",4.09374030608994,1.73451676896841,10.5287786616752,91.3
-"Valentin Rongier","Marseille","Ligue 1",29,"Elite Progressive CB",4.07103183338549,2.37369257962251,9.73751600512164,90.3
-"Lucas Martínez Quarta","Fiorentina","Serie A",27,"Elite Progressive CB",4.05572548916787,2.31213705334307,9.66390222610214,81.7
-"Timo Hübers","Köln","Bundesliga",27,"Defensive Stopper",4.01944732451359,1.15243310610038,11.0799136069114,84.5
-"Leon Goretzka","Bayern Munich","Bundesliga",29,"Elite Progressive CB",3.95172050790834,3.36823051505386,8.01509433962264,89.9
-"Pathé Ciss","Rayo Vallecano","La Liga",30,"Elite Progressive CB",3.94824728749623,1.90840092902096,9.96728971962617,84.7
-"Warren Zaïre-Emery","Paris S-G","Ligue 1",18,"Elite Progressive CB",3.94409042973808,2.61023239566987,8.69232490490042,92.3
-"Kim Min-Jae","Bayern Munich","Bundesliga",27,"Elite Progressive CB",3.91693679013749,2.00480603795837,9.5745479165138,92.65
-"Wilfried Singo","Monaco","Ligue 1",23,"Elite Progressive CB",3.85489688472643,1.9512269446405,9.36068702290076,86.2
-"Joseph Okumu","Reims","Ligue 1",27,"Elite Progressive CB",3.84636736266533,1.75161801673445,9.71306718657182,81.8
-"Sead Kolašinac","Atalanta","Serie A",31,"Elite Progressive CB",3.83751397693707,2.25466134562935,9.21583146228443,85.9
-"Giorgio Scalvini","Atalanta","Serie A",19,"Elite Progressive CB",3.83069615779154,1.5769102057996,9.72877358490566,81.3
-"Emre Can","Dortmund","Bundesliga",30,"Elite Progressive CB",3.82279878997407,1.96203992046753,9.46510940595685,88.45
-"Mohammed Salisu","Monaco","Ligue 1",25,"Elite Progressive CB",3.79833333324603,1.88756299650917,9.31136044880786,84.9
-"Cristian Romero","Tottenham","Premier League",26,"Elite Progressive CB",3.78252765361418,1.75801076880855,9.46241115363587,90.6
-"Emmanuel Agbadou","Wolves","Premier League",27,"Elite Progressive CB",3.77379358531914,1.62347526352906,9.62545604413617,86.7666666666667
-"Stefan Bajcetic","Las Palmas","La Liga",19,"Defensive Stopper",3.77137222855768,1.43468908532608,9.75232198142415,71.8
-"Edmond Tapsoba","Leverkusen","Bundesliga",25,"Elite Progressive CB",3.75838019226931,2.47628096819753,8.38055934996767,88.7
-"Tom Lockyer","Luton Town","Premier League",28,"Defensive Stopper",3.73654756370503,0.977511552547438,10.5474764756202,71.3
-"Unai Núñez","Celta Vigo","La Liga",26,"Defensive Stopper",3.64812497713268,1.09961474558071,9.92859692966798,79.7
-"Roberto Gagliardini","Monza","Serie A",29,"Elite Progressive CB",3.64653842689241,1.98075284689204,8.84745762711864,90
-"Mats Hummels","Roma","Serie A",35,"Defensive Stopper",3.64509682703549,1.23447947698929,10.0076834541326,89
-"Waldemar Anton","Stuttgart","Bundesliga",27,"Elite Progressive CB",3.63715847830559,1.90026210012989,8.79417879417879,88.8
-"Odilon Kossounou","Leverkusen","Bundesliga",23,"Elite Progressive CB",3.60748477328743,2.0947366433235,8.33630038652678,88.7
-"Daniel Vivian","Athletic Club","La Liga",25,"Elite Progressive CB",3.59375996492191,1.75607963994027,8.80276036315267,85.5
-"Jérémy Jacquet","Rennes","Ligue 1",19,"Defensive Stopper",3.58734819703034,1.4149602984011,9.12621359223301,83.5
-"Piero Hincapié","Leverkusen","Bundesliga",21,"Elite Progressive CB",3.5698448544396,2.46573006062731,7.64150943396226,91.1
-"Dan-Axel Zagadou","Stuttgart","Bundesliga",24,"Defensive Stopper",3.56913973495432,1.28800797468792,9.29112181693049,86.6
-"Jarell Quansah","Liverpool","Premier League",20,"Elite Progressive CB",3.5671708113677,1.7300404737974,8.6218487394958,88.6
-"Curtis Jones","Liverpool","Premier League",23,"Elite Progressive CB",3.55771052985097,2.57338380126294,7.51752336448598,93.1
-"Thomas Partey","Arsenal","Premier League",31,"Elite Progressive CB",3.54654942565106,2.17502765779944,8.43046120843761,87.4
-"Willian Pacho","Paris S-G","Ligue 1",22,"Defensive Stopper",3.5397585571906,1.0537202033125,9.46223491955199,89.6
-"Dante","Nice","Ligue 1",40,"Elite Progressive CB",3.53740137920116,1.63575833933567,9.11182681155631,89.55
-"Christian Mawissa","Toulouse","Ligue 1",19,"Defensive Stopper",3.50361360061281,1.32068737200419,8.96729550603712,85.15
-"Marquinhos","Paris S-G","Ligue 1",30,"Elite Progressive CB",3.49150926166699,2.50125327142016,7.62119317699641,94.65
-"Lucas Beraldo","Paris S-G","Ligue 1",20,"Elite Progressive CB",3.4906742671027,1.56087170704069,8.58108528095475,92
-"Jean-Clair Todibo","West Ham","Premier League",24,"Defensive Stopper",3.45751329464903,1.23978750678684,8.97616097311431,88.75
-"Jefferson Lerma","Crystal Palace","Premier League",29,"Defensive Stopper",3.45157338811708,1.30882331198135,9.14248021108179,75.3
-"Lisandro Martínez","Manchester Utd","Premier League",26,"Elite Progressive CB",3.45118407058085,2.13140192402495,7.86407766990291,89.4
-"Kevin Danso","Lens","Ligue 1",25,"Elite Progressive CB",3.44208483202416,1.57036674107735,8.5409604519774,86.65
-"Yannik Engelhardt","Como","Serie A",23,"Elite Progressive CB",3.42591638561178,1.92010281969955,7.9639175257732,88.7
-"Marco Friedl","Werder Bremen","Bundesliga",26,"Defensive Stopper",3.41143152640052,0.760137732792244,9.56425477761206,88.1
-"Willy Boly","Nott'ham Forest","Premier League",32,"Defensive Stopper",3.40659310896827,0.809872202184228,9.82614742698192,74.8
-"Mika Mármol","Las Palmas","La Liga",22,"Elite Progressive CB",3.40455170199666,1.44770744882425,8.52422907488987,88.2
-"Stanley N'Soki","Hoffenheim","Bundesliga",25,"Defensive Stopper",3.39329390417677,1.33983567787311,8.73853211009174,85.8
-"Tuta","Eint Frankfurt","Bundesliga",25,"Defensive Stopper",3.39328684721531,1.32270494024245,8.71001623706109,86.2
-"Arthur Theate","Rennes","Ligue 1",23,"Elite Progressive CB",3.3866101607432,2.06372923461061,7.64372822299652,88
-"Mario Gila","Lazio","Serie A",23,"Elite Progressive CB",3.38652309358815,1.88007762198923,7.87947348264152,90.65
-"Thilo Kehrer","Monaco","Ligue 1",27,"Elite Progressive CB",3.38035814755112,1.81126217199853,8.05484426250567,89.4
-"Klaus Gjasula","Darmstadt 98","Bundesliga",33,"Elite Progressive CB",3.36189448198443,1.51168558133672,8.71606749816581,82.4
-"Jhon Lucumí","Bologna","Serie A",26,"Elite Progressive CB",3.36003121083235,1.4574300696113,8.44936394329275,92.25
-"Danilo Pereira","Paris S-G","Ligue 1",31,"Elite Progressive CB",3.35750637903202,2.15538248893343,7.80451127819549,94
-"Lilian Brassier","Brest","Ligue 1",23,"Defensive Stopper",3.34571118811091,1.35265021532771,8.47217033993276,83
-"Renato Tapia","Leganés","La Liga",29,"Defensive Stopper",3.34465348778744,1.12417579867651,9.02227722772277,78.3
-"Geoffrey Kondogbia","Marseille","Ligue 1",31,"Elite Progressive CB",3.3305111782166,1.59601804455141,8.46534653465346,92.5
-"Kevin Akpoguma","Hoffenheim","Bundesliga",29,"Elite Progressive CB",3.32621577171671,1.45924902425592,8.4867205400478,86.5
-"Warmed Omari","Rennes","Ligue 1",23,"Elite Progressive CB",3.31824539803047,1.78647539753875,7.77885079671656,90
-"Robin Knoche","Union Berlin","Bundesliga",31,"Defensive Stopper",3.3150643991562,0.928868744369364,9.34272300469484,80.7
-"Patrick Mainka","Heidenheim","Bundesliga",29,"Defensive Stopper",3.29205156004683,1.18225390011708,8.75,84.15
-"Yannik Keitel","Freiburg","Bundesliga",23,"Defensive Stopper",3.28591457746403,1.40399296539922,8.21739130434783,79.1
-"Joe Aribo","Southampton","Premier League",28,"Elite Progressive CB",3.28535862971848,1.71416110484762,8.00298062593145,88.8
-"Aurélien Tchouaméni","Real Madrid","La Liga",24,"Elite Progressive CB",3.28206353479939,1.60027347069129,7.89884715507624,92.3
-"Adam Webster","Brighton","Premier League",28,"Elite Progressive CB",3.27777703325388,2.20461740830953,7.31643356643357,91
-"Abdukodir Khusanov","Lens","Ligue 1",20,"Defensive Stopper",3.26391562819331,1.13953907048327,8.4,88.1
-"Abakar Sylla","Strasbourg","Ligue 1",21,"Defensive Stopper",3.25800253293522,0.846904123691444,8.77013627819549,88.2
-"John Brooks","Hoffenheim","Bundesliga",30,"Defensive Stopper",3.25451426665724,1.07483829822204,8.7719298245614,83
-"Jan Paul Van Hecke","Brighton","Premier League",24,"Ball Progressor",3.25267227078813,2.22532928909345,6.97463518383584,90.15
-"Danilo D'Ambrosio","Monza","Serie A",34,"Defensive Stopper",3.25166774146877,1.25176310367192,8.671875,89.4
-"Alessandro Buongiorno","Torino","Serie A",25,"Defensive Stopper",3.24725330494934,1.16130703685634,8.43226830068935,88.05
-"Yarek Gasiorowski","Valencia","La Liga",19,"Defensive Stopper",3.23850055952088,1.33689527419819,8.07814149947202,80.3
-"Castello Lukeba","RB Leipzig","Bundesliga",20,"Elite Progressive CB",3.22975471682728,1.52270308599792,7.76357827476038,91.6
-"Iñigo Martínez","Barcelona","La Liga",33,"Ball Progressor",3.22559585891677,3.05532699668952,6.17921686746988,89.7
-"Dean Huijsen","Bournemouth","Premier League",19,"Elite Progressive CB",3.22348122014841,2.01027721600761,7.11990111248455,83.4
-"Eric García","Girona","La Liga",23,"Ball Progressor",3.21913398936694,2.36024299977958,6.68078929818367,90.8
-"Matteo Lovato","Salernitana","Serie A",23,"Defensive Stopper",3.21891706382741,0.837742501173592,8.74340021119324,80.8
-"Calvin Bassey","Fulham","Premier League",24,"Defensive Stopper",3.21635991803575,1.07992325537328,8.38846871962146,87.85
-"El Chadaille Bitshiabu","RB Leipzig","Bundesliga",19,"Elite Progressive CB",3.21619015174888,1.65469661831025,7.56637168141593,84.4
-"Alexsandro Ribeiro","Lille","Ligue 1",24,"Elite Progressive CB",3.21414974490792,1.53078314605359,7.77162162162162,90.35
-"Oumar Solet","Udinese","Serie A",24,"Elite Progressive CB",3.2124307942242,1.62717148316815,7.64354066985646,88.5
-"Loïc Bade","Sevilla","La Liga",24,"Defensive Stopper",3.21052512253523,0.912048006276867,8.60501973341496,84.2
-"Youssouf Ndayishimiye","Nice","Ligue 1",25,"Elite Progressive CB",3.20507806559581,1.59850261014963,7.70342340511987,89.65
-"Diogo Leite","Union Berlin","Bundesliga",25,"Defensive Stopper",3.20361586142245,1.36805244477067,8.04048294504725,79.25
-"Boubakar Kouyaté","Montpellier","Ligue 1",26,"Defensive Stopper",3.20128238941089,0.840255766058358,8.77593360995851,82.4
-"Teden Mengi","Luton Town","Premier League",21,"Defensive Stopper",3.18231790315105,0.782450893965112,8.63912515188335,77.6
-"Michael Svoboda","Venezia","Serie A",25,"Defensive Stopper",3.1613587996892,1.20338330059287,8.15068493150685,84.8
-"Manuel Akanji","Manchester City","Premier League",29,"Ball Progressor",3.15971037324491,2.4130096759447,6.63668834289009,93.5
-"Ibrahima Konaté","Liverpool","Premier League",25,"Elite Progressive CB",3.15666817015427,1.93243401039998,7.09881521998094,89.05
-"Micky Van De Ven","Tottenham","Premier League",23,"Defensive Stopper",3.1555783585368,1.40364835039271,7.73923006126571,92.35
-"Woyo Coulibaly","Parma","Serie A",25,"Ball Progressor",3.1429747943873,2.22186779777637,6.72509225092251,86.7
-"Andy Pelmard","Clermont Foot","Ligue 1",23,"Defensive Stopper",3.12603757470073,1.41706181898668,7.64804282368685,84.8
-"Ozan Kabak","Hoffenheim","Bundesliga",23,"Elite Progressive CB",3.12196842647017,1.52160095224029,7.49342681858019,85.3
-"Benoît Badiashile","Chelsea","Premier League",22,"Defensive Stopper",3.1154103958097,1.00726589983816,8.1390134529148,90.8
-"Isak Hien","Atalanta","Serie A",25,"Defensive Stopper",3.1048818429938,0.62263365510376,8.67276126984098,89
-"Rico Lewis","Manchester City","Premier League",19,"Ball Progressor",3.0995587369181,2.09938614498937,6.56101426307448,91.5
-"Gleison Bremer","Juventus","Serie A",26,"Defensive Stopper",3.08683507831734,0.988576019331847,8.18434890194865,86.1
-"Gerzino Nyamsi","Strasbourg","Ligue 1",26,"Defensive Stopper",3.07876684352991,0.735658867066538,8.48901098901099,87.8
-"Yeray Álvarez","Athletic Club","La Liga",29,"Elite Progressive CB",3.07002473286625,1.66148597064119,7.37693448203257,82.35
-"Mickael Nade","Saint-Étienne","Ligue 1",25,"Defensive Stopper",3.06375658540941,1.05874098650706,8.00086730268864,90
-"Maxime Estève","Montpellier","Ligue 1",21,"Defensive Stopper",3.05796525789034,1.03412002087512,7.8772241651343,81.15
-"Andreas Christensen","Barcelona","La Liga",27,"Ball Progressor",3.05190427281896,1.86868223333592,6.86710459828196,94.3
-"Nathan Aké","Manchester City","Premier League",28,"Ball Progressor",3.04424841661801,1.84949444996814,7.00783545543585,92.1
-"Chrislain Matsima","Clermont Foot","Ligue 1",22,"Defensive Stopper",3.04033587999059,1.11674467825021,7.72396002896837,86.45
-"Norbert Gyömbér","Salernitana","Serie A",31,"Defensive Stopper",3.0375627954315,0.714020624942379,8.69318181818182,84
-"Milan Škriniar","Paris S-G","Ligue 1",28,"Defensive Stopper",3.03137082190564,0.974016833769617,8.12154696132597,95.3
-"Éder Militão","Real Madrid","La Liga",26,"Elite Progressive CB",3.03008129305413,1.57983169745409,7.19616204690832,89.3
-"Keven Schlotterbeck","Bochum","Bundesliga",27,"Balanced Defender",3.02113832954571,1.27595135475848,7.59819262547438,81.3
-"Strahinja Pavlović","Milan","Serie A",23,"Ball Progressor",3.01309603836538,1.97355983840272,6.51824034334764,88.2
-"Mouctar Diakhaby","Valencia","La Liga",26,"Defensive Stopper",3.01084206023396,0.895462559718175,8.05219012115564,87
-"Montassar Talbi","Lorient","Ligue 1",25,"Balanced Defender",3.01024706947967,1.24215669366287,7.59528130671506,84.8
-"Matej Maglica","Darmstadt 98","Bundesliga",24,"Balanced Defender",3.00408795892388,1.22534357222136,7.52650176678445,76
-"Eric Dier","Bayern Munich","Bundesliga",30,"Elite Progressive CB",2.99093858664662,1.47741584460698,7.32057416267943,93.8
-"Modibo Sagnan","Montpellier","Ligue 1",25,"Defensive Stopper",2.98197021294964,0.848308761960561,7.96865569388473,87.05
-"Sergio Ramos","Sevilla","La Liga",37,"Defensive Stopper",2.97789774477717,0.931004791025174,8.18831942789035,89
-"José Luis Palomino","Cagliari","Serie A",34,"Defensive Stopper",2.97564024234152,0.890574472643807,8.24236817761332,86.7
-"Anthony Rouault","Stuttgart","Bundesliga",23,"Elite Progressive CB",2.97502274946356,1.44953808011288,7.08391394695025,90.0333333333333
-"Nemanja Gudelj","Sevilla","La Liga",31,"Elite Progressive CB",2.97455138996426,1.53008369879126,7.38805970149254,86.1
-"Julian Chabot","Stuttgart","Bundesliga",26,"Balanced Defender",2.96863762418244,1.09670888628988,7.64301356555495,87.05
-"Kike Salas","Sevilla","La Liga",22,"Defensive Stopper",2.96148463224113,0.996067409822836,7.64819222770665,78.6
-"William Saliba","Arsenal","Premier League",23,"Possession Defender",2.95209058520443,1.27205474144407,7.23306229542266,93.35
-"Willi Orban","RB Leipzig","Bundesliga",31,"Elite Progressive CB",2.94707797255204,1.56068067701535,7.16435233915301,88.5
-"Jordan Beyer","Burnley","Premier League",23,"Defensive Stopper",2.94674024661357,0.786733112482066,7.87682333873582,89
-"Mateusz Wieteska","Cagliari","Serie A",26,"Ball Progressor",2.93246338445044,1.5075444714888,6.99481865284974,81
-"Niklas Süle","Dortmund","Bundesliga",28,"Ball Progressor",2.92968352206847,1.68240810317612,6.77923426932674,92.95
-"Santiago Mouriño","Alavés","La Liga",22,"Balanced Defender",2.92926319491364,0.946681513514487,7.64196863169281,78
-"Nicolás Valentini","Hellas Verona","Serie A",23,"Balanced Defender",2.92878526457931,1.1429828691542,7.41364038972542,67.5
-"Igor Zubeldia","Real Sociedad","La Liga",27,"Ball Progressor",2.92655414543772,1.5329580044847,6.92640314547948,85.45
-"Christoph Zimmermann","Darmstadt 98","Bundesliga",30,"Defensive Stopper",2.92335260370032,0.908299542037675,7.89344262295082,82
-"Maximiliano Caufriez","Clermont Foot","Ligue 1",26,"Ball Progressor",2.92189572002606,1.50328269970347,6.94394213381555,87.4
-"Arouna Sangante","Le Havre","Ligue 1",22,"Balanced Defender",2.91748762522303,1.25418449714118,7.16237942122186,87.1
-"Marc Guéhi","Crystal Palace","Premier League",24,"Balanced Defender",2.91739558808836,1.26558739491784,7.15320210040408,85.2
-"Ben Mee","Brentford","Premier League",33,"Balanced Defender",2.91621262378602,1.32403155946504,7.5,76.6
-"Nicolas Pallois","Nantes","Ligue 1",36,"Defensive Stopper",2.91421760454606,0.735418577552559,8.25483391175012,83.6
-"Berat Djimsiti","Atalanta","Serie A",31,"Balanced Defender",2.91137846754521,1.1363577636242,7.61411787365177,87.6
-"Axel Disasi","Chelsea","Premier League",25,"Possession Defender",2.91054121508749,1.41559305322862,7.01434664598682,90
-"Igor","Brighton","Premier League",26,"Ball Progressor",2.90373467923923,1.89276323141611,6.34659795557595,92.65
-"Ismaël Doukouré","Strasbourg","Ligue 1",21,"Ball Progressor",2.89963870239706,1.48865890280386,6.72341713758505,87.15
-"Pablo Rosario","Nice","Ligue 1",27,"Ball Progressor",2.89924606338552,1.7174047111107,6.58428059647081,87
-"Pau Navarro","Villarreal","La Liga",19,"Possession Defender",2.89668020554703,1.13833370164049,7.17248908296943,89.6
-"David García","Osasuna","La Liga",29,"Ball Progressor",2.89602810101274,1.66809595947272,6.7866323907455,82.8
-"Nico Elvedi","Gladbach","Bundesliga",27,"Possession Defender",2.89494064635228,1.25814775180643,7.17093848543235,90.4
-"Marin Pongračić","Lecce","Serie A",26,"Balanced Defender",2.89369167718063,1.19476142300345,7.26295702659752,86.9
-"Kevin Vogt","Union Berlin","Bundesliga",32,"Balanced Defender",2.88221785761725,1.38031011801582,7.27431270136973,87.8
-"Lewis Dunk","Brighton","Premier League",32,"Ball Progressor",2.88173964983459,1.85457072845718,6.62787119483906,91.55
-"Christopher Wooh","Rennes","Ligue 1",22,"Balanced Defender",2.88077162887699,1.31313509635564,6.93055863444912,86.35
-"Simon Kjær","Milan","Serie A",34,"Balanced Defender",2.88005668699771,1.23826682424063,7.45516652433817,88.2
-"Anthony Jung","Werder Bremen","Bundesliga",32,"Ball Progressor",2.87584640441017,1.83669082662078,6.63856691253952,89.6
-"Cristhian Mosquera","Valencia","La Liga",20,"Possession Defender",2.87153765758556,0.963785931454993,7.32207761667855,89.4
-"Tim Ream","Fulham","Premier League",35,"Balanced Defender",2.8676620238037,1.22754278406015,7.4251497005988,89.1
-"Ruan","Sassuolo","Serie A",24,"Defensive Stopper",2.86663808420929,0.760361701288406,7.65831134564644,85
-"Malang Sarr","Lens","Ligue 1",25,"Possession Defender",2.86443362099496,1.10410029797475,7.27797833935018,89.4
-"Illia Zabarnyi","Bournemouth","Premier League",21,"Balanced Defender",2.86062544681064,1.25006036578564,6.92933766832126,81.8
-"Philipp Lienhart","Freiburg","Bundesliga",28,"Ball Progressor",2.86050164530021,1.56993290814501,6.72659494014069,84.55
-"Mattia Viti","Sassuolo","Serie A",22,"Balanced Defender",2.86041104480758,0.992322687889048,7.30543989883987,81.85
-"Ohis Felix Uduokhai","Augsburg","Bundesliga",25,"Balanced Defender",2.85561473892776,1.1762506439644,7.17904827114002,81.4
-"Carlos Dominguez","Celta Vigo","La Liga",23,"Ball Progressor",2.85387157345719,1.47611922884734,6.6659129397275,83.65
-"Jonathan Tah","Leverkusen","Bundesliga",28,"Ball Progressor",2.85243353900738,1.46791095698254,6.80539718738122,93.65
-"Ronald Araújo","Barcelona","La Liga",24,"Ball Progressor",2.84987895484955,1.68679853885146,6.35453179769654,88.8
-"Bafodé Diakité","Lille","Ligue 1",23,"Possession Defender",2.84971056296416,1.39236590982517,6.73388066344698,92.6
-"Mark Mckenzie","Toulouse","Ligue 1",25,"Balanced Defender",2.84958329912102,1.07096786318717,7.28365384615385,86.1
-"Lucas Perrin","Strasbourg","Ligue 1",24,"Balanced Defender",2.83687088525343,1.2428105219841,6.90782225486596,87.4
-"Sinaly Diomande","Auxerre","Ligue 1",23,"Balanced Defender",2.83546721454842,1.04799065847901,7.17223650385604,84.6
-"Logan Costa","Villarreal","La Liga",23,"Ball Progressor",2.83289563881402,1.47699358154031,6.58816068732633,85.65
-"Jaydee Canvot","Toulouse","Ligue 1",18,"Balanced Defender",2.83155871147968,1.23681450021818,6.83544303797468,86.2
-"Arthur Chaves","Hoffenheim","Bundesliga",23,"Balanced Defender",2.82796638045526,0.82313277036012,7.45537757437071,82.1
-"Murillo","Nott'ham Forest","Premier League",22,"Balanced Defender",2.82615943321923,1.13109085603934,7.02007696934498,77.7
-"Leny Yoro","Manchester Utd","Premier League",18,"Possession Defender",2.82420739156518,1.16093999558179,6.89193797777489,92.25
-"Caleb Okoli","Leicester City","Premier League",23,"Balanced Defender",2.81883262486616,0.983034118788609,7.2052299245024,84.05
-"Moritz Jenz","Wolfsburg","Bundesliga",25,"Balanced Defender",2.8127231326709,0.740002758485515,7.55174009758898,86.2
-"Rasmus Nicolaisen","Toulouse","Ligue 1",26,"Balanced Defender",2.80977447466302,0.852570802042167,7.44615384615385,84.9
-"Derek Cornelius","Marseille","Ligue 1",26,"Possession Defender",2.80736839594097,1.41872380675382,6.65492957746479,93.4
-"Fikayo Tomori","Milan","Serie A",26,"Possession Defender",2.80526881689465,1.1135953065667,7.06026898089325,91.75
-"Maxence Lacroix","Wolfsburg","Bundesliga",24,"Balanced Defender",2.80491143965399,0.795647557144715,7.41150805598702,83.2
-"Stefan Savić","Atlético Madrid","La Liga",32,"Balanced Defender",2.80414588553537,1.22826808807156,7.23312883435583,82.9
-"Enzo Boyomo","Osasuna","La Liga",22,"Balanced Defender",2.80061848527447,1.06872984224542,7.02042182792099,87
-"Victor Lindelöf","Manchester Utd","Premier League",29,"Balanced Defender",2.79956218076444,1.31666750010387,6.91265060240964,89.1
-"Brendan Chardonnet","Brest","Ligue 1",29,"Balanced Defender",2.79804758932505,0.981775053986917,7.37629189243428,82.45
-"Koni De Winter","Genoa","Serie A",22,"Balanced Defender",2.79288788090452,0.94607577747826,7.1231918997107,87.5
-"Yunis Abdelhamid","Saint-Étienne","Ligue 1",36,"Balanced Defender",2.78867928459573,1.16440222186537,7.25772798616528,85.6
-"Paweł Dawidowicz","Hellas Verona","Serie A",29,"Balanced Defender",2.78555426431288,0.904283177370522,7.4381366445489,82.4
-"Javi Rodríguez","Celta Vigo","La Liga",21,"Ball Progressor",2.78116381712289,1.59117147598144,6.19331742243437,86.7
-"Alberto Dossena","Como","Serie A",25,"Balanced Defender",2.77969920776831,0.765134741136573,7.4164843710456,83.7
-"Nathan Collins","Brentford","Premier League",23,"Balanced Defender",2.77800515122294,1.18274424266796,6.80435818051917,83.6
-"Joël Schingtienne","Venezia","Serie A",21,"Balanced Defender",2.77454009118485,0.806411725288325,7.2192513368984,86.2
-"Samuel Gigot","Marseille","Ligue 1",29,"Balanced Defender",2.77321649334664,1.04166985445583,7.19582850521437,87.8
-"Virgil Van Dijk","Liverpool","Premier League",33,"Ball Progressor",2.77241085997882,1.78884977072646,6.35123650562744,91.5
-"Giangiacomo Magnani","Hellas Verona","Serie A",28,"Balanced Defender",2.77167525851402,0.920703564901503,7.31181277517807,79.85
-"Harry Maguire","Manchester Utd","Premier League",31,"Balanced Defender",2.76549104715605,1.24814750757256,6.98977348042343,84.3
-"Souleymane Touré","Lorient","Ligue 1",20,"Possession Defender",2.7640847182548,1.31591706136104,6.49439297903462,89.4
-"Amos Pieper","Werder Bremen","Bundesliga",26,"Balanced Defender",2.76400603170876,1.2762861073093,6.72897196261682,84.8
-"Fabian Schär","Newcastle Utd","Premier League",32,"Balanced Defender",2.76317198953997,1.29177316602272,7.01070907710294,83.25
-"Yerry Mina","Cagliari","Serie A",29,"Balanced Defender",2.76166350737671,0.743295397480308,7.57181782794862,82.8
-"Mory Gbane","Reims","Ligue 1",23,"Balanced Defender",2.75567478102396,1.0059369525599,6.96,85.3
-"Jonny Evans","Manchester Utd","Premier League",35,"Balanced Defender",2.74530263580879,0.91774796883233,7.43534482758621,87.6
-"Johan Vásquez","Genoa","Serie A",25,"Balanced Defender",2.74009476903921,1.20265167103603,6.74778033541598,84.7
-"Rúben Dias","Manchester City","Premier League",27,"Ball Progressor",2.73746730767673,2.19121142018118,5.39127579868086,93.6
-"Toti Gomes","Wolves","Premier League",25,"Balanced Defender",2.73470970718156,1.09808546440857,6.82158507139379,84
-"Ladislav Krejčí","Girona","La Liga",25,"Ball Progressor",2.72824833208621,1.84946919087127,5.82786885245902,90.1
-"Julien Le Cardinal","Brest","Ligue 1",26,"Balanced Defender",2.72672537456338,0.935537674434568,7.05370101596517,86.4
-"Sam Beukema","Bologna","Serie A",25,"Balanced Defender",2.72463063528955,1.2604780143216,6.5581314318697,88
-"Moïse Bombito","Nice","Ligue 1",24,"Ball Progressor",2.7219909836192,1.44882052474142,6.24087591240876,90.2
-"Raphaël Varane","Manchester Utd","Premier League",30,"Balanced Defender",2.71823012515092,1.38923440378639,6.54545454545455,88.9
-"James Tarkowski","Everton","Premier League",31,"Balanced Defender",2.71808869798355,1.04937807714471,7.11429155708557,79.05
-"Erhan Mašović","Bochum","Bundesliga",25,"Balanced Defender",2.71702271207803,0.895039785360245,7.04568932644642,80.3
-"Matthijs De Ligt","Manchester Utd","Premier League",24,"Possession Defender",2.71497462909638,1.42711670927234,6.24075981795816,91.9
-"Gautier Lloris","Le Havre","Ligue 1",29,"Balanced Defender",2.71081863371673,1.04119950130702,6.99346277731308,86.3
-"Fali Candé","Venezia","Serie A",26,"Balanced Defender",2.70573222136606,0.772104755686652,7.22363439697134,79.8
-"Konstantinos Mavropanos","West Ham","Premier League",26,"Balanced Defender",2.70454210765698,0.952547811929733,6.97474327628362,81.1
-"Saba Goglichidze","Empoli","Serie A",20,"Balanced Defender",2.6982418591259,0.600874340607183,7.26664040961008,77.9
-"Becir Omeragic","Montpellier","Ligue 1",22,"Balanced Defender",2.69566821897733,1.11978144430837,6.56351880417995,88.7
-"Jonathan Gradit","Lens","Ligue 1",31,"Ball Progressor",2.6913069224619,1.82716503342747,6.05113636363636,85.1
-"Nayef Aguerd","West Ham","Premier League",28,"Balanced Defender",2.68637599032014,1.32195928847476,6.47964091643413,83.7
-"Sepp Van Den Berg","Mainz 05","Bundesliga",22,"Balanced Defender",2.68558603773591,0.926738070020723,6.80563603242539,83.2
-"Yann Aurel Bisseck","Inter","Serie A",23,"Ball Progressor",2.68261405035955,1.88190795861909,5.5265028897064,91.9
-"Rafa Marín","Alavés","La Liga",21,"Balanced Defender",2.67928041641189,0.963297745900791,6.70487106017192,82.5
-"Aleksandar Sedlar","Alavés","La Liga",31,"Balanced Defender",2.67711673734519,0.908208862390455,7.23044397463002,84.7
-"Adam Masina","Torino","Serie A",29,"Balanced Defender",2.67709277015174,1.12854833162934,6.767578125,85.4
-"Niklas Stark","Werder Bremen","Bundesliga",29,"Balanced Defender",2.67584415753938,0.861217529972126,7.12885715183509,82.7
-"Armando Izzo","Monza","Serie A",32,"Possession Defender",2.67403627618423,1.12466237237209,6.91590442411798,89.4
-"Juan Foyth","Villarreal","La Liga",26,"Balanced Defender",2.67228978225239,1.41617435675162,6.22940013183916,87
-"Jarrad Branthwaite","Everton","Premier League",22,"Balanced Defender",2.67138993507737,0.687461074183543,7.08485168467984,80.95
-"Wesley Fofana","Chelsea","Premier League",23,"Possession Defender",2.67086330783897,1.33655588051893,6.22013651877133,90.2
-"Raúl Torrente","Granada","La Liga",21,"Balanced Defender",2.66793491889544,0.787837297238587,6.912,79.2
-"Moussa Niakhate","Lyon","Ligue 1",28,"Possession Defender",2.66394955670503,1.42966681179192,6.3059427732942,90.3
-"Thiago Silva","Chelsea","Premier League",38,"Possession Defender",2.66354283692483,1.06336154423135,6.94499406410764,94.7
-"Stefan Bell","Mainz 05","Bundesliga",32,"Balanced Defender",2.66297394257983,0.905294187925895,7.2075208913649,78.6
-"Pietro Comuzzo","Fiorentina","Serie A",19,"Balanced Defender",2.6627840180751,1.09498277246047,6.46363636363636,85.7
-"Leo Skiri Østigård","Rennes","Ligue 1",24,"Balanced Defender",2.66017321822171,1.27121540786165,6.28762351692349,85.4
-"Cenk Özkacar","Valencia","La Liga",22,"Balanced Defender",2.65684749475952,1.1737244940953,6.42052565707134,81.2
-"Max Kilman","Wolves","Premier League",27,"Balanced Defender",2.6532908584901,1.1993485384154,6.45783814374646,86.2
-"Nathaniel Adjei","Lorient","Ligue 1",20,"Balanced Defender",2.65204624616487,0.972442244535256,6.58889782783588,86.4
-"Fali","Cádiz","La Liga",29,"Balanced Defender",2.65115662471336,0.994797038815208,6.8904593639576,76.1
-"Sebastiaan Bornauw","Wolfsburg","Bundesliga",24,"Balanced Defender",2.65027703730677,0.768263347983897,6.91823899371069,87.5
-"Federico Gatti","Juventus","Serie A",26,"Possession Defender",2.6495912589476,1.21421163256263,6.39635535307517,95
-"Diego Coppola","Hellas Verona","Serie A",20,"Balanced Defender",2.64738903739719,0.555938504299341,7.15271211892485,79.2
-"Konstantinos Koulierakis","Wolfsburg","Bundesliga",20,"Balanced Defender",2.64523738992059,1.36548002261346,6.05348460291734,83
-"Malick Thiaw","Milan","Serie A",22,"Possession Defender",2.64392557075832,1.39633456507121,6.01013914909946,92.35
-"Ilario Monterisi","Frosinone","Serie A",21,"Balanced Defender",2.63852635949093,0.932756334397848,6.61674608577263,80.4
-"Miguel Ángel Rubio","Granada","La Liga",25,"Balanced Defender",2.62848313447304,0.586803990028757,7.21153846153846,80.3
-"David López","Girona","La Liga",34,"Possession Defender",2.62615901152371,1.23658334688224,6.59691890923604,92.45
-"Guillermo Maripán","Torino","Serie A",30,"Balanced Defender",2.62311438612395,1.05749223081856,6.67555831265509,87.45
-"Ferland Mendy","Real Madrid","La Liga",29,"Ball Progressor",2.61999939417967,1.5050223053034,6.04646824019438,94.05
-"Amir Rrahmani","Napoli","Serie A",30,"Ball Progressor",2.61357741131706,1.53582425348349,5.99599236641221,90.45
-"Marko Ivezić","Holstein Kiel","Bundesliga",22,"Balanced Defender",2.61155648734634,0.690384881612683,6.89800844900422,86
-"Abdoulaye Niakhate Ndiaye","Brest","Ligue 1",22,"Balanced Defender",2.60900932601068,0.63683965949066,6.95957820738137,86.4
-"Lorenzo Pirola","Salernitana","Serie A",21,"Balanced Defender",2.6089473949476,0.887850998692594,6.56768998490186,83.5
-"Karol Mets","St Pauli","Bundesliga",31,"Ball Progressor",2.60794057044406,1.66135142611015,6,83.4
-"Nicolò Casale","Lazio","Serie A",26,"Possession Defender",2.60791699021553,1.0716697205677,6.46533033996151,89.65
-"Taylor Harwood-Bellis","Southampton","Premier League",22,"Ball Progressor",2.60386024944764,1.51637186255714,5.76637168141593,87.4
-"Joachim Andersen","Fulham","Premier League",28,"Balanced Defender",2.60346338983406,1.24467850942836,6.37630662020906,82.7
-"David Zec","Holstein Kiel","Bundesliga",24,"Balanced Defender",2.59676473197665,0.741545671602876,6.77482154445165,87.7
-"Marin Šverko","Venezia","Serie A",26,"Balanced Defender",2.59522538074559,1.07318565419163,6.44583706356311,82.2
-"Anel Ahmedhodžić","Sheffield Utd","Premier League",24,"Balanced Defender",2.59376595769668,0.647726898771724,6.93091732729332,75.4
-"Ameen Al-Dakhil","Burnley","Premier League",21,"Balanced Defender",2.59190705794539,1.03890400849983,6.30681818181818,84.3
-"Ignasi Miquel","Granada","La Liga",30,"Balanced Defender",2.59118486196308,0.854995577367587,6.85828877005348,81.7
-"Omar Alderete","Getafe","La Liga",27,"Balanced Defender",2.59048950948883,1.41422967079929,6.03315880389705,64.85
-"Hauke Wahl","St Pauli","Bundesliga",30,"Ball Progressor",2.58913591549182,1.5267943341841,5.93939393939394,86.6
-"Renato Veiga","Juventus","Serie A",21,"Balanced Defender",2.58359215642156,1.16898954018474,6.09332113449222,88
-"Jan Bednarek","Southampton","Premier League",28,"Possession Defender",2.58341439093645,0.671264444350207,7.04069537732122,92.7
-"Pau Cubarsí","Barcelona","La Liga",17,"Ball Progressor",2.57805623357943,1.73977745287516,5.29881750809788,92.5
-"Carl Starfelt","Celta Vigo","La Liga",29,"Possession Defender",2.57465240720691,0.703766752920816,6.97498568679527,90.65
-"Christophe Hérelle","Metz","Ligue 1",30,"Balanced Defender",2.56675523627825,0.617403860639961,7.06864564007421,89.2
-"Chadi Riad","Betis","La Liga",20,"Possession Defender",2.56570976215122,0.449978656764369,6.98706099815157,89.6
-"Florian Lejeune","Rayo Vallecano","La Liga",33,"Balanced Defender",2.55262076599479,1.17560614320856,6.46726102903788,82.2
-"Jack Stephens","Southampton","Premier League",30,"Possession Defender",2.54727114445228,1.44093164082833,5.8963282937365,92
-"Víctor Chust","Cádiz","La Liga",23,"Balanced Defender",2.54682985775534,1.2631937431008,5.93884120171674,79.9
-"Gabriel Osho","Luton Town","Premier League",25,"Balanced Defender",2.54589570679155,0.763762055229174,6.63296961566628,85.5
-"Juan Jesus","Napoli","Serie A",33,"Possession Defender",2.53120764962196,1.11858766937599,6.44574193957187,90.05
-"Cédric Kipré","Reims","Ligue 1",27,"Balanced Defender",2.53026318882001,1.1975860542418,6.04109589041096,88.9
-"Ko Itakura","Gladbach","Bundesliga",27,"Balanced Defender",2.52750974984773,0.917478564529577,6.40722774678632,88.35
-"Robin Koch","Eint Frankfurt","Bundesliga",28,"Balanced Defender",2.52693270247992,1.10382339213404,6.22017781875435,89.35
-"Pau Torres","Aston Villa","Premier League",27,"Ball Progressor",2.52423688994001,1.83284974703083,5.17648997042561,88.15
-"David Nemeth","St Pauli","Bundesliga",23,"Balanced Defender",2.51944092676524,0.957824591129288,6.23303696771175,86.4
-"Eray Cömert","Valladolid","La Liga",26,"Balanced Defender",2.51037148783848,0.808280928639043,6.49669705460954,88.05
-"Levi Colwill","Chelsea","Premier League",21,"Balanced Defender",2.51024639247575,1.2438553428915,5.74468085106383,89.3
-"Issa Diop","Fulham","Premier League",27,"Balanced Defender",2.49841683813821,0.980742541553081,6.2278994050566,87.75
-"Dara O'Shea","Ipswich Town","Premier League",25,"Balanced Defender",2.49837295693872,1.06368318447655,6.09733227716035,78.7
-"Sven Botman","Newcastle Utd","Premier League",23,"Possession Defender",2.49167656767045,0.699750242705529,6.47058823529412,90.6
-"Marc Bartra","Betis","La Liga",33,"Balanced Defender",2.48698223666871,0.911847325830904,6.6031443544545,81.3
-"Abdul Mumin","Rayo Vallecano","La Liga",26,"Balanced Defender",2.48661483566551,0.687257031270385,6.60120674385785,81.35
-"Morato","Nott'ham Forest","Premier League",23,"Balanced Defender",2.48632858205873,0.512681984364011,6.74751929437707,77
-"Germán Pezzella","Betis","La Liga",32,"Balanced Defender",2.47828090401725,0.634641544466696,6.92808095410192,86
-"Obite N'Dicka","Roma","Serie A",24,"Possession Defender",2.47456168705754,1.24037163850227,5.69037677218877,91.3
-"Stefan De Vrij","Inter","Serie A",32,"Possession Defender",2.47439744175103,1.00917465701222,6.39309192982046,92.8
-"Axel Witsel","Atlético Madrid","La Liga",34,"Possession Defender",2.46954234933633,0.967479930114099,6.43550125763564,91.9
-"Jake O'Brien","Lyon","Ligue 1",22,"Balanced Defender",2.46592724571592,0.935432508548982,6.07851414098776,88.2
-"Nathan Zeze","Nantes","Ligue 1",19,"Balanced Defender",2.46309021511543,0.728482876340445,6.28832354859752,85.2
-"Cedric Zesiger","Wolfsburg","Bundesliga",25,"Balanced Defender",2.46017643807887,1.4337241429328,5.50795593635251,84.3
-"Édgar González","Almería","La Liga",26,"Balanced Defender",2.44812874381554,0.821774674764853,6.28072957969865,85.2
-"Jack Robinson","Sheffield Utd","Premier League",29,"Balanced Defender",2.44770911558494,0.729281021198063,6.58232235701906,71.3
-"Ezri Konsa","Aston Villa","Premier League",26,"Possession Defender",2.44762175109676,1.26895037005495,5.66013867691595,92
-"Natan","Napoli","Serie A",23,"Balanced Defender",2.4468937520967,1.14342754888851,5.73857577513764,87.95
-"John Stones","Manchester City","Premier League",29,"Ball Progressor",2.43939210524665,1.91121898492114,4.90601503759398,93.1
-"Abdel Abqar","Alavés","La Liga",25,"Balanced Defender",2.43917163430992,0.841250854526729,6.2102376416641,74.6
-"Diego Llorente","Roma","Serie A",30,"Balanced Defender",2.43476832605178,1.03000057622623,6.07956031853764,88.9
-"Alessio Romagnoli","Lazio","Serie A",29,"Possession Defender",2.43064938685695,0.989894179968064,6.11063904956574,91.5
-"Matteo Gabbia","Milan","Serie A",24,"Possession Defender",2.42523667174321,1.06583828989816,5.76033785261316,90.8
-"Trevoh Chalobah","Chelsea","Premier League",25,"Possession Defender",2.42281193399832,1.08426658354136,5.78135100193924,89.7
-"Dylan Batubinsika","Saint-Étienne","Ligue 1",28,"Possession Defender",2.41957113631334,0.824445697926216,6.29464285714286,91.4
-"Antonio Raillo","Mallorca","La Liga",32,"Balanced Defender",2.41620435981231,1.2715751989207,5.86841426748009,87.05
-"Pablo Marí","Monza","Serie A",30,"Possession Defender",2.41478322118733,0.736472450277755,6.39842524803187,90.6666666666667
-"Thomas Kristensen","Udinese","Serie A",21,"Balanced Defender",2.41183532991753,0.893658935480844,5.92557251908397,76.7
-"Ivan Ordets","Bochum","Bundesliga",32,"Balanced Defender",2.40914484905195,0.720600472521826,6.61568220014405,76.2
-"Gabriel Paulista","Valencia","La Liga",32,"Balanced Defender",2.4072064615329,0.632306926364437,6.69527896995708,85.7
-"Manuel Gulde","Freiburg","Bundesliga",32,"Balanced Defender",2.40630048903022,1.03423925384081,6.15534929164631,86
-"Francesco Acerbi","Inter","Serie A",35,"Possession Defender",2.40300240186086,1.22120826595867,5.87939698492462,90.7
-"Martin Erlic","Sassuolo","Serie A",25,"Balanced Defender",2.40290804961989,0.919988038488226,6.01604278074866,80.1
-"Nacho","Real Madrid","La Liga",33,"Possession Defender",2.40172686592794,1.06171149471677,6.08247422680412,92.3
-"Jorge Sáenz","Leganés","La Liga",27,"Balanced Defender",2.40002213134389,0.622905920075713,6.3905325443787,83.7
-"Sebastian Walukiewicz","Empoli","Serie A",23,"Balanced Defender",2.39899199609068,0.775036559569771,6.08759124087591,82.7
-"Jaka Bijol","Udinese","Serie A",25,"Balanced Defender",2.39814694125765,0.861757050081331,6.02464707075039,81.05
-"Daniele Ghilardi","Hellas Verona","Serie A",21,"Balanced Defender",2.39590359782279,1.00223607686353,5.72203055692459,78.4
-"Aïssa Mandi","Villarreal","La Liga",31,"Possession Defender",2.39496282650354,1.36362404739094,5.66037735849057,91.4
-"Mamadou Sarr","Strasbourg","Ligue 1",18,"Possession Defender",2.38841007682599,0.669928997561797,6.08879492600423,93.8
-"Marvin Friedrich","Gladbach","Bundesliga",28,"Balanced Defender",2.38237532195118,0.972828589386859,5.92447962065479,85.9
-"Benedikt Gimber","Heidenheim","Bundesliga",27,"Balanced Defender",2.38217008596419,0.448845635898191,6.57043943868305,81.5
-"Jamaal Lascelles","Newcastle Utd","Premier League",29,"Balanced Defender",2.38150685861758,0.962767146543947,6,86.4
-"Marc-Oliver Kempf","Como","Serie A",29,"Balanced Defender",2.37623203929294,1.08524740224766,5.81644359464627,87.2
-"Sebastiano Luperto","Empoli","Serie A",27,"Balanced Defender",2.36321789127197,0.943832406786295,5.84328309519149,82.7
-"Chris Richards","Crystal Palace","Premier League",24,"Balanced Defender",2.35689686491112,0.589827601871835,6.19921941387463,81.2
-"Raúl Asencio","Real Madrid","La Liga",21,"Possession Defender",2.35627652283513,0.588826037626742,6.08982035928144,93.8
-"Ethan Pinnock","Brentford","Premier League",31,"Balanced Defender",2.34377189359861,0.714906247643636,6.29469798180387,84.4
-"Leopold Querfeld","Union Berlin","Bundesliga",20,"Balanced Defender",2.33594662042097,0.887723448591074,5.66685746994848,80.8
-"Robin Le Normand","Real Sociedad","La Liga",27,"Possession Defender",2.33592926638515,1.05022804440535,5.5879601620767,89.45
-"Duje Ćaleta-Car","Lyon","Ligue 1",27,"Balanced Defender",2.32595239914087,0.842255450481822,5.83300072982712,89.15
-"Clément Lenglet","Atlético Madrid","La Liga",29,"Ball Progressor",2.32527904196816,1.54337770876803,5.03142652820317,88.5
-"Charlie Cresswell","Toulouse","Ligue 1",21,"Balanced Defender",2.32142091619121,0.773135623811369,5.76388888888889,83
-"Domingos Duarte","Getafe","La Liga",29,"Balanced Defender",2.30747482958056,1.08729051519467,5.61536207834232,77.95
-"Catena","Osasuna","La Liga",29,"Balanced Defender",2.30607137416434,0.850799541715796,5.91000519159342,82.75
-"Gabriel Magalhães","Arsenal","Premier League",26,"Possession Defender",2.30468957966642,1.29391125456638,5.1589169261329,89.45
-"Saúl Coco","Torino","Serie A",25,"Balanced Defender",2.30241856948965,0.799994901445613,5.76356869637134,88.35
-"Diego Carlos","Aston Villa","Premier League",30,"Balanced Defender",2.29976981261539,0.867411315679441,5.84801762114537,88.4
-"Christoph Klarer","Darmstadt 98","Bundesliga",23,"Balanced Defender",2.2971995559524,0.917682407298175,5.54375531011045,87
-"Aitor Paredes","Athletic Club","La Liga",24,"Balanced Defender",2.29272365906186,0.855365507621722,5.62059152004389,84.4
-"Auston Trusty","Sheffield Utd","Premier League",24,"Balanced Defender",2.28682158837295,0.588551249314967,5.98367029548989,76.3
-"Aritz Elustondo","Real Sociedad","La Liga",30,"Balanced Defender",2.26357379941303,1.27887650265063,5.18874399450927,85.4
-"Danilho Doekhi","Union Berlin","Bundesliga",26,"Balanced Defender",2.26016617039948,0.926430131881049,5.5343137254902,79.3
-"Dan Burn","Newcastle Utd","Premier League",32,"Balanced Defender",2.25812444566221,0.822190627748362,5.94849398187623,84.7
-"Copete","Mallorca","La Liga",24,"Balanced Defender",2.25615413499754,0.917999211839405,5.41884816753927,83.3
-"Jakov Medić","Bochum","Bundesliga",25,"Balanced Defender",2.25148986551111,0.487501644439033,6.06363069245165,87.4
-"Denis Vavro","Wolfsburg","Bundesliga",28,"Balanced Defender",2.25145363251056,1.10448647867583,5.37586347013409,86.9
-"Jay Idzes","Venezia","Serie A",24,"Balanced Defender",2.24945129618727,0.857253120544929,5.46850015989767,86
-"Jordan Lefort","Angers","Ligue 1",30,"Balanced Defender",2.2390810687601,0.836540907194374,5.70588235294118,82.7
-"Florent Ogier","Clermont Foot","Ligue 1",34,"Balanced Defender",2.2390581487734,0.587441236196487,6.20360551431601,83
-"Andreas Hanche-Olsen","Mainz 05","Bundesliga",27,"Balanced Defender",2.22588040551802,0.617597173728737,5.82863845342177,80.25
-"Antonio Rüdiger","Real Madrid","La Liga",31,"Possession Defender",2.21767954334724,1.16905077131359,5.24753078273933,90.8
-"Ismaël Traoré","Metz","Ligue 1",36,"Balanced Defender",2.20529755719531,0.372845244339637,6.36486486486486,86.7
-"Jakub Kiwior","Arsenal","Premier League",24,"Possession Defender",2.19973072935969,1.27136158275751,4.73262032085561,91.4
-"Matthias Ginter","Freiburg","Bundesliga",30,"Balanced Defender",2.19553158766369,1.26465032800342,4.99023818820773,82.6
-"Enrico Del Prato","Parma","Serie A",24,"Balanced Defender",2.19005800937959,0.875545430642721,5.25279945707499,84
-"Ardian Ismajli","Empoli","Serie A",27,"Balanced Defender",2.17708590852733,0.584423517998869,5.69488833775927,84.85
-"Jon Pacheco","Real Sociedad","La Liga",22,"Balanced Defender",2.17428351000295,1.05286244473214,4.95412844036697,86.9
-"Aridane Hernández","Rayo Vallecano","La Liga",35,"Balanced Defender",2.17099110851948,0.657634648192919,5.87045749747438,86.8
-"Chumi","Almería","La Liga",24,"Balanced Defender",2.16707837225104,0.841465856675246,5.21364009860312,86.4
-"Etienne Youte Kinkoue","Le Havre","Ligue 1",22,"Balanced Defender",2.16553950100761,0.727993505490296,5.32164032937164,87.85
-"César Tárrega","Valencia","La Liga",22,"Balanced Defender",2.16506508969137,0.847994515371842,5.2048909451421,84.4
-"Jean-Charles Castelletto","Nantes","Ligue 1",29,"Balanced Defender",2.16386542629416,1.04865974894151,5.15267175572519,88.6
-"Radu Drăgușin","Tottenham","Premier League",22,"Balanced Defender",2.16385340176652,0.80370969829557,5.22906507482764,83.65
-"Mattia Bani","Genoa","Serie A",30,"Balanced Defender",2.15923549068881,0.510702467469887,5.86501501233619,85.45
-"Christian Kabasele","Udinese","Serie A",33,"Balanced Defender",2.15168939162565,1.29504324650597,4.96124031007752,85.3
-"Gaby Jean","Lecce","Serie A",24,"Balanced Defender",2.14350208087061,0.904777536470481,5.05763688760807,84.3
-"Jacob Greaves","Ipswich Town","Premier League",23,"Balanced Defender",2.14146218695518,0.954461589836929,4.97959183673469,85.8
-"Craig Dawson","Wolves","Premier League",34,"Balanced Defender",2.13928134075756,0.700460093868836,5.70849101070007,86.55
-"José María Giménez","Atlético Madrid","La Liga",29,"Balanced Defender",2.13915935844856,0.678950901729405,5.56209665918932,88.95
-"Federico Fazio","Salernitana","Serie A",36,"Balanced Defender",2.13912254938325,0.576727037664775,5.91143911439114,75
-"Jubal","Auxerre","Ligue 1",30,"Balanced Defender",2.1358803683343,0.37326910265394,5.96590909090909,86.8
-"Botond Balogh","Parma","Serie A",22,"Balanced Defender",2.13583672383995,0.556502549979818,5.47978567949342,89.3
-"Sokratis Papastathopoulos","Betis","La Liga",35,"Balanced Defender",2.12981500450579,0.319104412672927,6.17957746478873,88.3
-"Nikola Milenković","Nott'ham Forest","Premier League",26,"Balanced Defender",2.1242294158719,0.708262648110892,5.35808118875848,83.5
-"Edoardo Goldaniga","Como","Serie A",30,"Balanced Defender",2.11783757741302,1.04470768760839,5.01184834123223,86.4
-"Julien Laporte","Lorient","Ligue 1",29,"Balanced Defender",2.10953006972032,0.810302897073077,5.2970297029703,86.3
-"Wout Faes","Leicester City","Premier League",26,"Balanced Defender",2.10733170925745,0.884696946323032,5.05150976909414,88
-"Luca Ranieri","Fiorentina","Serie A",25,"Balanced Defender",2.10224572767982,1.04044548168733,4.83555845001628,85.4
-"Yael Mouanga","Montpellier","Ligue 1",19,"Balanced Defender",2.09689712492247,0.741280338733244,5.04228329809725,87.7
-"Martin Valjent","Mallorca","La Liga",28,"Balanced Defender",2.09208612296193,1.0759701933983,4.88599348534202,85.9
-"Juan Berrocal","Getafe","La Liga",25,"Balanced Defender",2.09063630313938,0.597370861329154,5.41862652869238,76.1
-"Ben Davies","Tottenham","Premier League",31,"Balanced Defender",2.08386104523034,1.2906901788159,4.73328324567994,87.6
-"Daniele Rugani","Juventus","Serie A",29,"Balanced Defender",2.06320803919016,1.02184297076395,4.85256950294861,88.7
-"Christopher Jullien","Montpellier","Ligue 1",30,"Balanced Defender",2.06275535637819,0.560798974887081,5.47445255474453,86.1
-"Jannik Vestergaard","Leicester City","Premier League",31,"Possession Defender",2.0481976221207,0.667539885639643,5.43493889288282,90.7
-"César Montes","Almería","La Liga",26,"Balanced Defender",2.0387623534356,0.867243131911153,4.88255033557047,77.1
-"Saidou Sow","Strasbourg","Ligue 1",22,"Possession Defender",2.03134421839487,0.423221547951813,5.30451866404715,90.7
-"Tosin Adarabioyo","Fulham","Premier League",26,"Balanced Defender",2.0299003379144,0.969876245239747,4.68049946606167,87.8
-"Matija Nastasić","Mallorca","La Liga",31,"Balanced Defender",2.01985100715618,0.782319872404583,5.13641019398117,81
-"Kialonda","Lecce","Serie A",26,"Balanced Defender",2.00492523334779,0.517145172921703,5.20522388059702,86.5
-"Santiago Bueno","Wolves","Premier League",25,"Balanced Defender",1.9811842369687,0.396786911331056,5.28156490812092,88
-"Marash Kumbulla","Espanyol","La Liga",24,"Balanced Defender",1.98017960568198,0.677994438161888,4.81493943472409,84.5
-"Federico Baschirotto","Lecce","Serie A",27,"Balanced Defender",1.96748660613648,0.802905471337754,4.70441472533794,85
-"Simone Romagnoli","Frosinone","Serie A",33,"Balanced Defender",1.94894031784356,0.455114606763602,5.40331491712707,85.9
-"Jorge Herrando","Osasuna","La Liga",23,"Balanced Defender",1.94653472872173,0.694655168300565,4.68690887133834,82.6
-"Jon Martin","Real Sociedad","La Liga",18,"Balanced Defender",1.94222324424386,1.15183244689282,3.98230088495575,86.8
-"Luke Woolfenden","Ipswich Town","Premier League",25,"Balanced Defender",1.93346727646012,0.484758966213477,5.00421229991575,88.3
-"Juan Herzog","Las Palmas","La Liga",21,"Balanced Defender",1.93069836617247,0.466259223415971,4.85931558935361,86.4
-"Raúl Albiol","Villarreal","La Liga",38,"Balanced Defender",1.92257538699999,0.804896151802368,4.84288975426346,87.75
-"Luca Caldirola","Monza","Serie A",32,"Possession Defender",1.89500113071845,0.82944257457753,4.70808033629145,90.8
-"Abdoulaye Bamba","Angers","Ligue 1",34,"Balanced Defender",1.88078743387499,0.3969437502504,5.24503311258278,88.5
-"Giovanni Leoni","Parma","Serie A",17,"Balanced Defender",1.87673450601177,0.42588067703944,4.72894078398666,87.7
-"Sergi","Leganés","La Liga",32,"Balanced Defender",1.86847991175711,0.682426614022466,4.83936422049374,83.7
-"Javi Sánchez","Valladolid","La Liga",27,"Balanced Defender",1.85551505444109,0.547265178057321,4.66436327739388,87.3
-"Tyrone Mings","Aston Villa","Premier League",31,"Balanced Defender",1.8461916956015,1.11105066757517,4.17857142857143,88.2
-"Willy Kambwala","Villarreal","La Liga",19,"Balanced Defender",1.83171731622298,0.415549109715915,4.59265890778872,87.7
-"Cameron Burgess","Ipswich Town","Premier League",28,"Balanced Defender",1.83128905633676,0.815768228122885,4.38027255029202,80.9
-"Kurt Zouma","West Ham","Premier League",28,"Balanced Defender",1.81407332923517,0.554383111671428,4.66173361522199,83.8
-"Lautaro Valenti","Parma","Serie A",25,"Balanced Defender",1.81199746427655,0.560067568146382,4.51156812339332,84.5
-"Conor Coady","Leicester City","Premier League",31,"Possession Defender",1.73827509035513,0.502360129621776,4.62077012835473,91.1
-"Emmanuel Biumla","Angers","Ligue 1",19,"Balanced Defender",1.73062767817659,0.372536261309728,4.31137724550898,88.2
-"Álex Suárez","Las Palmas","La Liga",31,"Balanced Defender",1.71883460520161,0.612214561784505,4.42682926829268,85.9
-"Michael Keane","Everton","Premier League",31,"Balanced Defender",1.69245205843254,0.399392300514133,4.63298379408961,82.8
-"David Torres","Valladolid","La Liga",21,"Balanced Defender",1.61426892111335,0.896113002134489,3.24441240086518,82.5
-"Scott Mckenna","Las Palmas","La Liga",27,"Balanced Defender",1.56814058728646,0.618747453617611,3.61313868613139,86.7
+"Alidu Seidu","Clermont Foot","Ligue 1",23,"Defensive Stopper",4.78765987749136,1.52535128524033,13.0503978779841,82.4
+"Leonardo Balerdi","Marseille","Ligue 1",24,"Elite Progressive CB",4.63881111381113,2.10416880170087,11.7701453104359,86.1
+"Tim Siersleben","Heidenheim","Bundesliga",23,"Elite Progressive CB",4.33651055320803,2.2504631962069,10.5824175824176,81.6
+"Dan-Axel Zagadou","Stuttgart","Bundesliga",24,"Elite Progressive CB",3.77877289117741,1.81209086524565,9.29112181693049,86.6
+"Kevin Danso","Lens","Ligue 1",24,"Elite Progressive CB",3.76653134375384,2.06063768141849,8.91525423728813,87.7
+"Lucas Beraldo","Paris S-G","Ligue 1",20,"Elite Progressive CB",3.70178621380604,2.08865157379904,8.58108528095475,92
+"Willian Pacho","Paris S-G","Ligue 1",22,"Defensive Stopper",3.68761640850453,1.42336483159733,9.46223491955199,89.6
+"Joseph Okumu","Reims","Ligue 1",27,"Elite Progressive CB",3.67216080232801,2.66802368723596,7.91150442477876,81.5
+"Calvin Bassey","Fulham","Premier League",23,"Defensive Stopper",3.6175197085763,1.11001941907428,9.69170646982197,86
+"Marco Friedl","Werder Bremen","Bundesliga",26,"Defensive Stopper",3.53069240349032,1.05828992551674,9.56425477761206,88.1
+"Lilian Brassier","Brest","Ligue 1",23,"Elite Progressive CB",3.52217974884476,1.79382161716234,8.47217033993276,83
+"Jhon Lucumí","Bologna","Serie A",26,"Elite Progressive CB",3.5159840485914,1.84731216400893,8.44936394329275,92.25
+"Mats Hummels","Roma","Serie A",35,"Defensive Stopper",3.46622047003276,1.13731347016386,9.54098360655738,89
+"Robin Knoche","Union Berlin","Bundesliga",31,"Defensive Stopper",3.46515576800496,1.30409716649126,9.34272300469484,80.7
+"Thilo Kehrer","Monaco","Ligue 1",27,"Elite Progressive CB",3.44385080455203,2.2031208217032,7.74234158623584,89.9
+"Yarek Gasiorowski","Valencia","La Liga",19,"Elite Progressive CB",3.38866249397955,1.71230011034486,8.07814149947202,80.3
+"Alberto Dossena","Cagliari","Serie A",24,"Defensive Stopper",3.36650822371903,1.19135907122232,8.76721531743366,79.8
+"Nico Elvedi","Gladbach","Bundesliga",26,"Elite Progressive CB",3.33885998727089,1.95744247422074,7.72360999194198,88.8
+"Marin Pongračić","Lecce","Serie A",25,"Elite Progressive CB",3.32141959576616,1.9085680947276,7.74464119291705,84.6
+"Loïc Bade","Sevilla","La Liga",24,"Defensive Stopper",3.31575174447628,1.17511456112949,8.60501973341496,84.2
+"Andy Pelmard","Clermont Foot","Ligue 1",23,"Elite Progressive CB",3.27692714668542,1.79428574894842,7.64804282368685,84.8
+"Yeray Álvarez","Athletic Club","La Liga",28,"Elite Progressive CB",3.26680667442726,2.00692293606816,7.578125,80.6
+"Teden Mengi","Luton Town","Premier League",21,"Defensive Stopper",3.2610235444029,0.979214997094743,8.63912515188335,77.6
+"Benoît Badiashile","Chelsea","Premier League",22,"Defensive Stopper",3.24353503256372,1.32757749172319,8.1390134529148,90.8
+"Maxime Estève","Burnley","Premier League",21,"Defensive Stopper",3.23428236743103,1.39404052514748,7.9755538579068,84
+"Caleb Okoli","Frosinone","Serie A",22,"Elite Progressive CB",3.21950658834327,1.62642158410457,7.6904598490048,81.8
+"Éder Militão","Real Madrid","La Liga",26,"Elite Progressive CB",3.20898751636131,2.02709725572204,7.19616204690832,89.3
+"Cristhian Mosquera","Valencia","La Liga",20,"Elite Progressive CB",3.20131173033005,1.56220558373413,7.61976498945466,90.5
+"Isak Hien","Atalanta","Serie A",25,"Defensive Stopper",3.20056986262839,0.861853704190229,8.67276126984098,89
+"William Saliba","Arsenal","Premier League",22,"Elite Progressive CB",3.19363576123341,1.71756308729404,7.44736842105263,92.4
+"Milan Škriniar","Paris S-G","Ligue 1",28,"Defensive Stopper",3.18450808533197,1.35685999233544,8.12154696132597,95.3
+"Mickael Nade","Saint-Étienne","Ligue 1",25,"Defensive Stopper",3.17872852371633,1.34617083227434,8.00086730268864,90
+"Chrislain Matsima","Clermont Foot","Ligue 1",21,"Elite Progressive CB",3.17437120355591,1.61274580549993,7.47457627118644,86.9
+"Gabriel Osho","Luton Town","Premier League",24,"Defensive Stopper",3.16720703693768,0.86354684478191,8.53196099674973,82.2
+"Norbert Gyömbér","Salernitana","Serie A",31,"Defensive Stopper",3.12674946264041,0.936987292964665,8.69318181818182,84
+"David García","Osasuna","La Liga",29,"Ball Progressor",3.12114866443676,2.23089736803278,6.7866323907455,82.8
+"Murillo","Nott'ham Forest","Premier League",21,"Defensive Stopper",3.08127097060795,1.37180946309213,7.518823951237,76.9
+"Eray Cömert","Nantes","Ligue 1",25,"Defensive Stopper",3.07825387743603,1.11091288907879,7.98496240601504,88.4
+"Arouna Sangante","Le Havre","Ligue 1",22,"Elite Progressive CB",3.06425172767295,1.62109475326597,7.16237942122186,87.1
+"Harry Maguire","Manchester Utd","Premier League",30,"Elite Progressive CB",3.04328641516887,1.93944062957372,6.91470054446461,83.1
+"Christoph Zimmermann","Darmstadt 98","Bundesliga",30,"Defensive Stopper",3.02756563097953,1.16883211023572,7.89344262295082,82
+"David López","Girona","La Liga",33,"Defensive Stopper",3.02542045360139,1.20445189736226,7.96946564885496,92.8
+"Santiago Mouriño","Alavés","La Liga",22,"Defensive Stopper",3.01480726858198,1.16054169768533,7.64196863169281,78
+"Illia Zabarnyi","Bournemouth","Premier League",21,"Elite Progressive CB",3.00756387914934,1.61740644663239,6.92933766832126,81.8
+"Mark Mckenzie","Toulouse","Ligue 1",25,"Balanced Defender",3.00456918438306,1.45843257634226,7.28365384615385,86.1
+"Emmanuel Agbadou","Wolves","Premier League",27,"Defensive Stopper",3.003599189923,0.93645542161601,7.97872340425532,85.4
+"Moritz Jenz","Mainz 05","Bundesliga",25,"Defensive Stopper",2.99757301961231,1.04412004903077,7.81875,84.3
+"Ladislav Krejčí","Girona","La Liga",25,"Ball Progressor",2.95556559876917,2.41776235757866,5.82786885245902,90.1
+"Antonio Raillo","Mallorca","La Liga",31,"Elite Progressive CB",2.94443814677975,1.64679810043458,7.13439635535308,85.4
+"Robin Koch","Eint Frankfurt","Bundesliga",27,"Elite Progressive CB",2.93152543578134,1.60598305621742,6.83710737764792,88
+"Max Kilman","Wolves","Premier League",26,"Balanced Defender",2.89818446238382,1.46542168227535,6.92105263157895,85.7
+"Gautier Lloris","Le Havre","Ligue 1",29,"Balanced Defender",2.85693999260564,1.40650289852929,6.99346277731308,86.3
+"Leo Skiri Østigård","Rennes","Ligue 1",24,"Ball Progressor",2.85001310101165,1.74581511483652,6.28762351692349,85.4
+"Karol Mets","St Pauli","Bundesliga",31,"Ball Progressor",2.8449487549812,2.25387188745299,6,83.4
+"Jonny Evans","Manchester Utd","Premier League",35,"Balanced Defender",2.83858743334234,1.1509599626662,7.43534482758621,87.6
+"Nayef Aguerd","West Ham","Premier League",28,"Ball Progressor",2.83608501643714,1.69623185376726,6.47964091643413,83.7
+"Thiago Silva","Chelsea","Premier League",38,"Possession Defender",2.82127893933359,1.45770180025325,6.94499406410764,94.7
+"Rafa Marín","Alavés","La Liga",21,"Balanced Defender",2.80063094499724,1.26667406736415,6.70487106017192,82.5
+"Fali Candé","Metz","Ligue 1",25,"Balanced Defender",2.79626918363108,0.833721363620696,7.44726879394267,78.6
+"Robin Le Normand","Real Sociedad","La Liga",26,"Ball Progressor",2.78740850287091,1.72464063749318,6.19684082624544,88.5
+"Kevin Vogt","Union Berlin","Bundesliga",32,"Balanced Defender",2.78620607244233,1.53259648531734,6.74922492771798,88.4
+"Maxence Lacroix","Crystal Palace","Premier League",24,"Balanced Defender",2.78101271711093,0.839360098297224,7.2785622593068,81.7
+"Aleksandar Sedlar","Alavés","La Liga",31,"Balanced Defender",2.78030300049503,1.16617452026507,7.23044397463002,84.7
+"Joachim Andersen","Fulham","Premier League",28,"Ball Progressor",2.77562328607912,1.67507825004101,6.37630662020906,82.7
+"Konstantinos Mavropanos","West Ham","Premier League",26,"Balanced Defender",2.76882777552265,1.31420452438118,6.68948655256724,86.3
+"Raúl Torrente","Granada","La Liga",21,"Balanced Defender",2.76844250504698,1.03910626261744,6.912,79.2
+"Sebastiaan Bornauw","Wolfsburg","Bundesliga",24,"Balanced Defender",2.76291609374629,1.04986098908271,6.91823899371069,87.5
+"Virgil Van Dijk","Liverpool","Premier League",33,"Ball Progressor",2.75645719521078,2.27565650154046,5.64864864864865,91.6
+"Marin Šverko","Venezia","Serie A",26,"Balanced Defender",2.72630980993953,1.40089672717648,6.44583706356311,82.2
+"Jack Stephens","Southampton","Premier League",30,"Ball Progressor",2.7223116993268,1.87853302801461,5.8963282937365,92
+"Víctor Chust","Cádiz","La Liga",23,"Ball Progressor",2.71234057599744,1.67697053870605,5.93884120171674,79.9
+"Anthony Rouault","Rennes","Ligue 1",23,"Possession Defender",2.70222949076335,1.35435150468616,6.2962962962963,91.6
+"Abdoulaye Niakhate Ndiaye","Brest","Ligue 1",22,"Balanced Defender",2.70078763979014,0.866285443939312,6.95957820738137,86.4
+"Florian Lejeune","Rayo Vallecano","La Liga",33,"Ball Progressor",2.69923493813211,1.54214157355186,6.46726102903788,82.2
+"Miguel Ángel Rubio","Granada","La Liga",25,"Balanced Defender",2.69318055677326,0.748547545779302,7.21153846153846,80.3
+"Alessio Romagnoli","Lazio","Serie A",28,"Possession Defender",2.69142119552197,1.35413034260003,6.49523019493986,91.2
+"Jan Bednarek","Southampton","Premier League",28,"Possession Defender",2.67507284658634,0.900410583474933,7.04069537732122,92.7
+"Amir Rrahmani","Napoli","Serie A",30,"Ball Progressor",2.67166023624927,2.19323896408177,5.3112155020552,91
+"David Zec","Holstein Kiel","Bundesliga",24,"Balanced Defender",2.6708645052099,0.926795104686021,6.77482154445165,87.7
+"Carl Starfelt","Celta Vigo","La Liga",29,"Possession Defender",2.66304985235187,0.924760365783233,6.97498568679527,90.65
+"Cédric Kipré","Reims","Ligue 1",27,"Balanced Defender",2.65682845238394,1.51399921315163,6.04109589041096,88.9
+"Chadi Riad","Betis","La Liga",20,"Possession Defender",2.62724682870172,0.603821323140622,6.98706099815157,89.6
+"Marc Bartra","Betis","La Liga",33,"Balanced Defender",2.61429838991276,1.23013770894102,6.6031443544545,81.3
+"Becir Omeragic","Montpellier","Ligue 1",22,"Possession Defender",2.61322252300069,1.35030491784081,6.00333518621456,92.1
+"Nathan Zeze","Nantes","Ligue 1",19,"Balanced Defender",2.58702341895684,1.03831588594395,6.28832354859752,85.2
+"Nicolò Casale","Lazio","Serie A",25,"Possession Defender",2.58264544129213,1.47911809328805,5.83066067992303,91.8
+"Jake O'Brien","Lyon","Ligue 1",22,"Balanced Defender",2.57428071924112,1.20631619236198,6.07851414098776,88.2
+"Germán Pezzella","Betis","La Liga",32,"Balanced Defender",2.56941684438861,0.862481395395084,6.92808095410192,86
+"Diego Llorente","Roma","Serie A",30,"Balanced Defender",2.5630509964282,1.35070725216727,6.07956031853764,88.9
+"Manuel Gulde","Freiburg","Bundesliga",32,"Balanced Defender",2.54950789864693,1.39225777788259,6.15534929164631,86
+"Abdel Abqar","Alavés","La Liga",25,"Balanced Defender",2.54348693573871,1.35250966577795,5.91961023142509,76.6
+"Clément Lenglet","Atlético Madrid","La Liga",29,"Ball Progressor",2.54178611207829,1.65052258242695,5.61359026369168,87.5
+"Catena","Osasuna","La Liga",28,"Balanced Defender",2.53064468625768,1.1324840518715,6.28650355169692,81.7
+"Jaka Bijol","Udinese","Serie A",24,"Balanced Defender",2.52758702909657,0.781882639919929,6.521113243762,78.5
+"Pablo Marí","Monza","Serie A",30,"Possession Defender",2.52735176161963,1.0178938013585,6.39842524803187,90.6666666666667
+"Dylan Batubinsika","Saint-Étienne","Ligue 1",28,"Possession Defender",2.51476688831281,1.06243507792488,6.29464285714286,91.4
+"Ivan Ordets","Bochum","Bundesliga",32,"Balanced Defender",2.50797267119062,0.987099867122168,6.57710908113917,80
+"Gabriel Paulista","Valencia","La Liga",32,"Balanced Defender",2.50073766310327,0.866134930290372,6.69527896995708,85.7
+"Marc-Oliver Kempf","Como","Serie A",29,"Balanced Defender",2.49478553428128,1.38163113971849,5.81644359464627,87.2
+"Thomas Kristensen","Udinese","Serie A",21,"Balanced Defender",2.49146566363112,1.09273476976482,5.92557251908397,76.7
+"Jorge Sáenz","Leganés","La Liga",27,"Balanced Defender",2.48327535107238,0.831038969396929,6.3905325443787,83.7
+"Sebastian Walukiewicz","Empoli","Serie A",23,"Balanced Defender",2.4803584837451,0.978452778705821,6.08759124087591,82.7
+"Duje Ćaleta-Car","Lyon","Ligue 1",27,"Possession Defender",2.44156036839125,1.13127537360778,5.83300072982712,89.15
+"Diego Carlos","Aston Villa","Premier League",30,"Balanced Defender",2.42934102687665,1.19133935133261,5.84801762114537,88.4
+"José María Giménez","Atlético Madrid","La Liga",29,"Possession Defender",2.42601068545819,1.13706498278004,5.89794897448724,91.8
+"Aitor Paredes","Athletic Club","La Liga",24,"Balanced Defender",2.42343623686839,1.18214695213807,5.62059152004389,84.4
+"Juan Jesus","Napoli","Serie A",33,"Ball Progressor",2.42221743731419,1.65919722457039,5.36312849162011,89.6
+"Saúl Coco","Torino","Serie A",25,"Balanced Defender",2.41193756531704,1.07379239101409,5.76356869637134,88.35
+"Raúl Asencio","Real Madrid","La Liga",21,"Possession Defender",2.4098581076563,0.72277999967968,6.08982035928144,93.8
+"Denis Vavro","Wolfsburg","Bundesliga",28,"Balanced Defender",2.40325764479,1.48399650937442,5.37586347013409,86.9
+"Obite N'Dicka","Roma","Serie A",24,"Possession Defender",2.38923016156593,1.36519382496746,5.23684210526316,92.1
+"Antonio Rüdiger","Real Madrid","La Liga",31,"Ball Progressor",2.38177547278758,1.7152704148367,5.14622435617634,91.8
+"Trevoh Chalobah","Chelsea","Premier League",25,"Ball Progressor",2.35292157683956,1.57351273330768,4.94505494505495,90
+"Jarrad Branthwaite","Everton","Premier League",22,"Balanced Defender",2.35113610565501,1.02904187704074,5.59139784946237,82.1
+"Radu Drăgușin","Tottenham","Premier League",22,"Balanced Defender",2.33507297716334,1.238979567509,5.24760383386582,85.2
+"Jon Pacheco","Real Sociedad","La Liga",22,"Balanced Defender",2.30893140259234,1.38948217620562,4.95412844036697,86.9
+"Florent Ogier","Clermont Foot","Ligue 1",34,"Balanced Defender",2.30774822592109,0.75916642906572,6.20360551431601,83
+"Yerry Mina","Cagliari","Serie A",28,"Balanced Defender",2.28268688276912,0.732467206922806,6,79.7
+"Ardian Ismajli","Empoli","Serie A",27,"Balanced Defender",2.28080374271596,0.56156438071335,6.06459330143541,86.8
+"Chumi","Almería","La Liga",24,"Balanced Defender",2.27538563566292,1.11223401520495,5.21364009860312,86.4
+"Ko Itakura","Gladbach","Bundesliga",27,"Possession Defender",2.27408063553526,1.14415320174138,5.25806451612903,89
+"Craig Dawson","Wolves","Premier League",33,"Balanced Defender",2.27323617138951,0.855545724988039,5.94839293798099,86.5
+"Aridane Hernández","Rayo Vallecano","La Liga",35,"Balanced Defender",2.26832753464186,0.900975713498861,5.87045749747438,86.8
+"Ismaël Traoré","Metz","Ligue 1",36,"Balanced Defender",2.26270424455874,0.516361962748191,6.36486486486486,86.7
+"Etienne Youte Kinkoue","Le Havre","Ligue 1",22,"Balanced Defender",2.24665515209041,0.930782633197306,5.32164032937164,87.85
+"Julien Laporte","Lorient","Ligue 1",29,"Balanced Defender",2.23514658497617,1.1243441852127,5.2970297029703,86.3
+"Federico Fazio","Salernitana","Serie A",36,"Balanced Defender",2.21449901660331,0.765168205714912,5.91143911439114,75
+"Botond Balogh","Parma","Serie A",22,"Possession Defender",2.20554326722088,0.730768908432137,5.47978567949342,89.3
+"Juan Berrocal","Getafe","La Liga",25,"Balanced Defender",2.1858676591643,0.835449251391454,5.41862652869238,76.1
+"Jubal","Auxerre","Ligue 1",30,"Balanced Defender",2.18073101455768,0.485395718212388,5.96590909090909,86.8
+"Issa Diop","Fulham","Premier League",27,"Balanced Defender",2.17787776883234,0.81808407854089,5.37714712471994,87.5
+"Sokratis Papastathopoulos","Betis","La Liga",35,"Balanced Defender",2.17437087222344,0.43049408196704,6.17957746478873,88.3
+"Mattia Bani","Genoa","Serie A",29,"Balanced Defender",2.1523394272403,0.623464569835367,5.69817866435386,83.5
+"César Montes","Almería","La Liga",26,"Balanced Defender",2.15047897425379,1.14653468395663,4.88255033557047,77.1
+"Jannik Vestergaard","Leicester City","Premier League",31,"Possession Defender",2.13613486787257,0.887383000019301,5.43493889288282,90.7
+"Matteo Gabbia","Milan","Serie A",24,"Possession Defender",2.13101852286745,1.35609835177828,4.39126394052045,91.2
+"Matija Nastasić","Mallorca","La Liga",31,"Balanced Defender",2.1309424983598,1.06004860041363,5.13641019398117,81
+"Jorge Herrando","Osasuna","La Liga",22,"Balanced Defender",2.10557692154512,0.796011646928494,5.09124087591241,79.8
+"Saidou Sow","Strasbourg","Ligue 1",22,"Possession Defender",2.0911278529127,0.572680634246395,5.30451866404715,90.7
+"Federico Baschirotto","Lecce","Serie A",27,"Balanced Defender",2.06422804395222,1.04475906587711,4.70441472533794,85
+"Kialonda","Lecce","Serie A",26,"Balanced Defender",2.06085392580158,0.656966904056195,5.20522388059702,86.5
+"Santiago Bueno","Wolves","Premier League",25,"Balanced Defender",2.05065582661594,0.570465885449147,5.28156490812092,88
+"Raúl Albiol","Villarreal","La Liga",38,"Balanced Defender",2.04194394855976,1.10331755570181,4.84288975426346,87.75
+"Simone Romagnoli","Frosinone","Serie A",33,"Balanced Defender",2.01763063925372,0.626840410289,5.40331491712707,85.9
+"Juan Herzog","Las Palmas","La Liga",21,"Balanced Defender",2.01730277521148,0.682770246013502,4.85931558935361,86.4
+"Tosin Adarabioyo","Chelsea","Premier League",26,"Possession Defender",2.01143628731953,1.12030487727682,4.40738112136267,91.1
+"Tyrone Mings","Aston Villa","Premier League",31,"Balanced Defender",1.98230564751602,1.45133554736148,4.17857142857143,88.2
+"Luke Woolfenden","Ipswich Town","Premier League",25,"Balanced Defender",1.98143699908713,0.604683272781017,5.00421229991575,88.3
+"Cameron Burgess","Ipswich Town","Premier League",28,"Balanced Defender",1.93002322236394,1.06260364319083,4.38027255029202,80.9
+"Javi Sánchez","Valladolid","La Liga",27,"Balanced Defender",1.91470119295093,0.695230524331926,4.66436327739388,87.3
+"Kurt Zouma","West Ham","Premier League",28,"Balanced Defender",1.88594340446427,0.734058299744188,4.66173361522199,83.8
+"Conor Coady","Leicester City","Premier League",31,"Possession Defender",1.81350744539481,0.690441017220981,4.62077012835473,91.1
+"Álex Suárez","Las Palmas","La Liga",31,"Balanced Defender",1.80346274706237,0.823784916436404,4.42682926829268,85.9
+"Nikola Milenković","Nott'ham Forest","Premier League",26,"Balanced Defender",1.7964401389776,0.606296293389937,4.40540540540541,82.3
+"Emmanuel Biumla","Angers","Ligue 1",19,"Balanced Defender",1.77663139741438,0.487545559404204,4.31137724550898,88.2
+"David Torres","Valladolid","La Liga",21,"Balanced Defender",1.71722824403685,1.15351130944324,3.24441240086518,82.5
+"Scott Mckenna","Las Palmas","La Liga",27,"Balanced Defender",1.63570218629996,0.787651451151369,3.61313868613139,86.7

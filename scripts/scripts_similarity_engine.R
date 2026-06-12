@@ -43,7 +43,12 @@ colnames(sim_matrix) <- rownames(features_scaled)
 # =========================
 # 4. FIND SIMILAR PLAYERS
 # =========================
-target_player <- "Virgil van Dijk"
+target_player <- data %>% 
+  arrange(desc(scouting_score)) %>% 
+  slice(1) %>% 
+  pull(Player)
+
+cat("El jugador objetivo para la similitud es:", target_player, "\n")
 
 # Construimos la tabla forzando que todo sea texto y números legibles
 similar_players <- data.frame(

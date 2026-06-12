@@ -1,109 +1,131 @@
-# Tactical analysis and profiling of modern defending profiles
+# Tactical analysis and profiling of modern centre-back profiles
 
 ## Executive summary
 
-This report deconstructs the tactical profiles of modern centre-backs and defensive anchors across Europe's top leagues using longitudinal performance data. By applying K-means clustering ($k=4$) and Principal Component Analysis (PCA), the framework isolates specific player behaviors to eliminate system bias and contextualize performance.
+This report breaks down the tactical profiles of centre-backs across Europe's top five leagues using data from the 2023–24 season. A K-means clustering framework (k=4) and Principal Component Analysis isolate distinct player behaviours, while possession-adjusted metrics provide context that raw counting stats cannot.
 
-**Mats Wieffer** (Brighton) leads the recruitment framework with an overall scouting score of 5.04, followed closely by **Eduardo Camavinga** (4.98). In the build-up phase, **Oleksandr Zinchenko** (Arsenal) remains the absolute benchmark for progressive threat, registering a continent-high progression index (xT proxy) of 8.01.
+**Alidu Seidu** (Clermont Foot) leads the composite scouting framework with an overall score of 4.79, followed by **Leonardo Balerdi** (Marseille, 4.64) and **Tim Siersleben** (Heidenheim, 4.34). For pure ball progression, **Joseph Okumu** (Reims) registers the highest progression index in the sample at 2.67.
 
-On the other end of the tactical spectrum, the application of possession-adjusted (PAdj) metrics—mathematically estimated via relative team pass volume—proves that raw defensive volume is heavily warped by a team's tactical setup. Correcting for this bias uncovers elite defensive intensity in pure destroyers like Alidu Seidu (13.05), rewards high-volume defenders in dominant teams like Eduardo Camavinga (12.34), and highlights high-potential, under-the-radar talents such as Soungoutou Magassa and João Neves.
+Applying possession-adjusted (PAdj) metrics — estimated via relative team pass volume — reveals that raw defensive counts are heavily distorted by tactical context. After normalising per defensive opportunity, **Tim Siersleben** (13.15 combined PAdj tackles + interceptions) and **Alidu Seidu** (11.68) emerge as the most active defenders in the dataset relative to how little they actually defend.
 
 ---
 
 ## 1. Tactical profiles and cluster breakdown
 
-The unsupervised clustering algorithm segments the player pool into four distinct tactical archetypes based on territory gain, passing security, possession-adjusted defensive output, and ball-carrying metrics:
+K-means clustering (k=4) on z-scored progression and PAdj defensive variables segments the 157-player pool into four distinct tactical archetypes.
 
-### 1.1. Cluster 2: elite progressive distributors
-* **Sample size:** 163 players.
-* **Profile:** Deep playmakers and build-up anchors. Typically deployed in high-possession structures, they function as the first line of offense, excelling at line-breaking distribution and vertical progression.
-* **Cluster averages:**
-  * Progressive passes per 90 minutes: 5.77
-  * Mean progression index (xT proxy): 4.15
+### 1.1. Cluster 4: elite progressive distributors
+- **Sample size:** 34 players.
+- **Profile:** Primary build-up directors in high-possession structures. Highest passing volume and progression output in the sample.
+- **Cluster averages:**
+  - Progressive passes per 90: **4.21**
+  - Progression index: **1.90**
+  - Pass completion: **86.7%**
 
-### 1.2. Cluster 3: traditional destructors
-* **Sample size:** 119 players.
-* **Profile:** Reactive, cover-oriented defenders. These players usually operate in lower defensive blocks or rigid systems designed to minimize risk during build-up phases, limiting their on-ball actions to safe, short-range distribution.
-* **Cluster averages:**
-  * PAdj tackles per 90 minutes: 4.53
-  * PAdj interceptions per 90 minutes: 2.69
-  * Pass completion percentage: 78.84%
+### 1.2. Cluster 2: standard distributors
+- **Sample size:** 62 players.
+- **Profile:** The modal centre-back type. Solid passing output, moderate defensive involvement. The baseline for comparison.
+- **Cluster averages:**
+  - Progressive passes per 90: **2.86**
+  - Progression index: **1.26**
+  - Pass completion: **86.3%**
 
-### 1.3. Clusters 1 and 4: hybrid and carrying profiles
-* **Profile:** Intermediate, transitional behaviors. Cluster 4 (222 players) specifically captures ball-carrying progressors who prefer driving past pressing blocks over vertical passing lanes, averaging 2.48 progressive carries per 90 minutes.
+### 1.3. Cluster 3: high-intensity ball-winners
+- **Sample size:** 13 players.
+- **Profile:** Reactive, duel-oriented defenders with the highest PAdj defensive output in the sample. Generally deployed in lower defensive blocks.
+- **Cluster averages:**
+  - PAdj tackles per 90: **4.38**
+  - PAdj interceptions per 90: **3.41**
+  - Pass completion: **84.4%**
 
----
-
-## 2. Advanced metrics and tactical structure
-
-### 2.1. Realities of possession-adjusted (PAdj) defending
-Counting absolute stats penalizes defenders in dominant teams who naturally face fewer defensive transitions. Normalizing defensive actions against estimated opponent possession exposes the highest intensity ball-winners per true defensive opportunity, factoring in tackles, interceptions, and structural recoveries:
-
-| Player | Squad | PAdj Defending Score | Tactical Efficacy |
-| :--- | :--- | :--- | :--- |
-| **Alidu Seidu** | Clermont Foot | 13.05 | Elite transition containment, intense duel volume, and active anticipation |
-| **Mats Wieffer** | Brighton | 12.67 | Wide coverage radius, high-volume interceptions, and central protection |
-| **Soungoutou Magassa** | Monaco | 12.63 | High-intensity coverage, matching elite veteran output at 19 years old |
-| **Eduardo Camavinga** | Real Madrid | 12.34 | Elite defensive disruption within a high-dominance possession framework |
-
-### 2.2. Progression axis and progression index (xT proxy)
-Rather than measuring raw passing volume, the progression index isolates players whose actions actively advance territory, combining progressive passing and carrying vectors:
-
-| Player | Squad | Progression Index Score | Primary Progression Method |
-| :--- | :--- | :--- | :--- |
-| **Oleksandr Zinchenko** | Arsenal | 8.01 | Elite line-breaking passing, interior build-up orchestration |
-| **Achraf Hakimi** | Paris S-G | 7.03 | High-volume progressive carries, wide final-third entry |
-| **Joshua Kimmich** | Bayern Munich | 6.60 | Progressive distribution, structural tempo control from deep |
-| **Leon Goretzka** | Bayern Munich | 6.12 | Vertical ball-carrying, mid-block defensive disruption |
-| **Trent Alexander-Arnold** | Liverpool | 5.98 | High-difficulty diagonal switches, vertical long-range progression |
+### 1.4. Cluster 1: limited on-ball profiles
+- **Sample size:** 48 players.
+- **Profile:** Minimal progression contribution, moderate defensive volume. Often found in structured defensive systems with limited build-up responsibility.
+- **Cluster averages:**
+  - Progressive passes per 90: **1.82**
+  - Progression index: **0.78**
+  - Pass completion: **85.6%**
 
 ---
 
-## 3. The recruitment dashboard: top performance ranking
+## 2. Advanced metrics and tactical context
 
-The master `scouting_score` synthesizes ball progression weights derived from the PCA loadings, passing security, possession-adjusted intervention metrics, and an integrated age modifier to rank comprehensive defensive assets.
+### 2.1. Possession-adjusted (PAdj) defending
 
-| Player | Squad | Age | Role Profile | Composite Scouting Score |
-| :--- | :--- | :--- | :--- | :--- |
-| **Mats Wieffer** | Brighton | 24 | Elite Progressive CB | **5.04** |
-| **Eduardo Camavinga** | Real Madrid | 21 | Elite Progressive CB | **4.98** |
-| **Niels Nkounkou** | Eint Frankfurt | 22 | Elite Progressive CB | **4.92** |
-| **Alphonso Davies** | Bayern Munich | 23 | Elite Progressive CB | **4.83** |
-| **Soungoutou Magassa** | Monaco | 19 | Defensive Stopper | **4.79** |
+Counting raw defensive actions penalises defenders in dominant teams who naturally face fewer transitions. Dividing by `(opponent_possession / 50)` normalises each player's output to what it would be if both teams had equal possession.
+
+| Player | Squad | PAdj Tackles | PAdj Interceptions | Combined |
+|:-------|:------|:-------------|:-------------------|:---------|
+| **Tim Siersleben** | Heidenheim | 7.39 | 5.75 | **13.15** |
+| **Alidu Seidu** | Clermont Foot | 6.56 | 5.12 | **11.68** |
+| **Teden Mengi** | Luton Town | 5.02 | 5.30 | **10.33** |
+| **Gabriel Osho** | Luton Town | 5.10 | 3.86 | **8.96** |
+| **Jorge Sáenz** | Leganés | 4.31 | 2.92 | **7.23** |
+
+Siersleben and Seidu play for teams with estimated possession of ~82% and ~81% respectively. Their raw tackle numbers (2.67 and 2.55 per 90) look ordinary; the PAdj correction reveals they are the most active defenders per opportunity in the dataset.
+
+### 2.2. Progression index
+
+The progression index combines progressive passes, progressive carries, and key passes per 90, weighted by PC1 loadings from a PCA. It measures how much a defender actively advances territory rather than simply recycling possession.
+
+| Player | Squad | Progression Index | Progressive Passes/90 | Progressive Carries/90 |
+|:-------|:------|:------------------|:----------------------|:----------------------|
+| **Joseph Okumu** | Reims | 2.67 | 6.16 | 0.96 |
+| **Ladislav Krejčí** | Girona | 2.42 | 5.31 | 1.07 |
+| **Virgil Van Dijk** | Liverpool | 2.28 | 5.35 | 0.59 |
+| **Karol Mets** | St Pauli | 2.25 | 5.40 | 0.50 |
+| **Tim Siersleben** | Heidenheim | 2.25 | 4.75 | 1.19 |
+
+---
+
+## 3. The recruitment dashboard: top scouting scores
+
+The composite scouting score combines progression index (40%), defending score (30%), pass completion (10%), and an age modifier (20%).
+
+| Player | Squad | Age | Role Profile | Scouting Score |
+|:-------|:------|:----|:-------------|:---------------|
+| **Alidu Seidu** | Clermont Foot | 23 | Defensive Stopper | **4.79** |
+| **Leonardo Balerdi** | Marseille | 24 | Elite Progressive CB | **4.64** |
+| **Tim Siersleben** | Heidenheim | 23 | Elite Progressive CB | **4.34** |
+| **Dan-Axel Zagadou** | Stuttgart | 24 | Elite Progressive CB | **3.78** |
+| **Kevin Danso** | Lens | 24 | Elite Progressive CB | **3.77** |
 
 ---
 
 ## 4. Market inefficiencies and high-potential profiles
 
-Filtering players under the age of 24 who rank in the top percentiles of the composite scouting score isolates high-value acquisition targets before they hit peak market valuation.
+Filtering for players aged 24 or under above the 80th percentile scouting score:
 
-* **Validation of the elite tier:** The model successfully flags high-profile talents like **Mats Wieffer (5.04)**, **Eduardo Camavinga (4.98)**, and **Alphonso Davies (4.83)**, confirming the accuracy of the baseline metrics in identifying elite development curves.
-* **The recruitment value space:**
-  * **Soungoutou Magassa (19, Monaco):** A major statistical outlier. Posting a score of **4.79**, he matches traditional stoppers in PAdj defensive output while vastly outperforming his cluster in ball progression and clean build-up.
-  * **João Neves (19, PSG):** Registering a score of **4.56**, his metrics in circulation under pressure and structural retention match those of established, prime-age midfielders.
-  * **Lilian Brassier (24, Rennes) & Jon Aramburu (22, Real Sociedad):** Highly efficient, reliable defensive options showing statistical undervaluation relative to their defensive stability.
-
----
-
-## 5. Non-parametric succession planning and similarity matching
-
-The similarity engine calculates distance in a multi-dimensional scaled feature space using cosine similarity to determine mathematical matches of targeted profiles, reducing guesswork from squad building.
-
-### 5.1. High-precision structural fits (>99% similarity)
-* **Mamadou Sarr** projects as an exact statistical mirror to **Dylan Batubinsika** with a 99.99% match.
-* **Tosin Adarabioyo** shares an identical statistical footprint with **Jon Pacheco** (Real Sociedad - 99.98% match), presenting Pacheco as an immediate, data-backed alternative.
-* **Sofyan Amrabat** registers a near-identical behavioral equivalence to **Danilo** (99.97% match).
-
-### 5.2. Targeted replacement queries
-When querying the system for versatile back-line options showing high mobility, vertical progression, and deep possession retention, the engine generates an optimized transfer shortlist sorted by technical viability:
-1. **Juan David Cabal** (94.2% Cosine Similarity) - *Primary Target*
-2. **Antonee Robinson** (93.0% Cosine Similarity) - *Secondary Alternative*
-3. **Gideon Mensah** (92.1% Cosine Similarity) - *Tertiary Alternative*
+- **Alidu Seidu (23, Clermont Foot, 4.79):** Leads both the overall ranking and the PAdj defensive table. A rare combination of elite recovery intensity and respectable progression output.
+- **Leonardo Balerdi (24, Marseille, 4.64):** Highest defending score (11.77) among the progressive CB profiles. Strong combination of passing quality and defensive volume.
+- **Tim Siersleben (23, Heidenheim, 4.34):** Top progression index (2.25) and top raw PAdj combined score (13.15). Playing for a promoted Bundesliga side limits visibility, but the metrics are elite-level.
+- **Lucas Beraldo (20, PSG, 3.70):** Youngest high-scorer in the sample. High pass completion (92%) and above-average progression for his age group.
+- **Willian Pacho (22, PSG, 3.69):** Strong defender playing in a dominant team, which compresses his raw defensive output. PAdj correction improves his standing significantly.
+- **Yarek Gasiorowski (19, Valencia, 3.39):** Youngest qualifier in the dataset. Progressive CB profile with room for development. One to monitor.
 
 ---
 
-## 6. Tactical takeaways for recruitment boards
+## 5. Similarity engine: statistical replacement matching
 
-* **Context over counting:** Raw defensive volume is an indicator of team weakness, not individual player capability. Moving to a PAdj framework anchored in real pass volume estimations isolates true processing speed and positioning. This is proven by the algorithmic promotion of players like Eduardo Camavinga or Soungoutou Magassa, whose defensive actions hold exponentially more weight due to their high-possession environments.
-* **Early detection advantages:** Modern academy systems are significantly accelerating technical development. Prospects like Magassa and João Neves are generating prime-age statistical outputs at 19, making them high-priority targets for long-term squad planning before their market valuations catch up to their data profile.
-* **Automated contingency mapping:** Utilizing multi-dimensional similarity matrices allows the recruitment team to establish immediate, hype-free alternative shortlists (e.g., Jon Pacheco) the moment a starting profile enters contract disputes or receives overvalued market bids.
+The cosine similarity engine calculates geometric distance in the standardised feature space. The query was run against the top-ranked player, **Alidu Seidu**.
+
+### Top statistical matches for Alidu Seidu
+
+| Rank | Player | Cosine Similarity |
+|:-----|:-------|:-----------------|
+| 1 | **Murillo** | 93.0% |
+| 2 | **Santiago Mouriño** | 89.1% |
+| 3 | **Mickael Nade** | 87.3% |
+| 4 | **Arouna Sangante** | 84.6% |
+| 5 | **Tim Siersleben** | 84.1% |
+
+Murillo (93.0%) is the closest statistical profile — a Defensive Stopper with comparable PAdj intensity and progression output. Siersleben appearing at rank 5 (84.1%) makes intuitive sense given that both lead the PAdj combined ranking.
+
+---
+
+## 6. Tactical takeaways
+
+- **Context before counting.** A defender with 1.5 tackles per 90 in a team with 70% possession is doing significantly more work per opportunity than one with 3.0 tackles in a team that defends for 60 minutes a game. The PAdj correction surfaces this.
+- **The Heidenheim effect.** Tim Siersleben is a clear case of market inefficiency driven by club visibility. He leads the raw progression index and the PAdj combined defensive metric, while playing in a promoted Bundesliga side. The data suggests an elite profile that has not yet received corresponding recognition.
+- **U-20 watch.** Yarek Gasiorowski (Valencia, 19) and Lucas Beraldo (PSG, 20) both score above average despite age penalties in the formula. Removing the age modifier would push them significantly higher.
+- **Similarity as a recruitment tool.** The engine removes the subjectivity from identifying alternatives. Rather than watching footage and guessing, the similarity scores provide a ranked shortlist of players whose data profiles most closely match any target. Murillo as the closest match to Seidu is a data-backed, hype-free starting point for further scouting.

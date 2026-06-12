@@ -19,11 +19,39 @@ data <- read.csv("data/All_Players_1992-2025.csv")
 # =========================================================
 
 data <- data %>%
+  filter(grepl("DF", Pos), Min >= 900) %>%
+  mutate(
+    prg_received_per90 = PrgR * 90 / Min,
+    touches_att_3rd_per90 = Att.3rd * 90 / Min
+  )
+
+data <- data %>%
   filter(
-    as.numeric(substr(Season, 1, 4)) >= 2023,
+    as.numeric(substr(Season, 1, 4)) >= 2023)
+
+umbral_prg_rec <- quantile(data$prg_received_per90, 0.25, na.rm = TRUE)
+umbral_touches_att <- quantile(data$touches_att_3rd_per90, 0.25, na.rm = TRUE)
+
+data <- data %>%
+  filter(   
+    # 1. Filtro estricto de posición
     grepl("DF", Pos), 
-    !grepl("LB", Pos), !grepl("RB", Pos), !grepl("WB", Pos),
+    !grepl("MF", Pos),
+    !grepl("FW", Pos),
+    
     Min >= 900
+  ) %>%
+  # Creamos las variables por 90 minutos para evaluar el comportamiento
+  mutate(
+    crosses_per90 = Crs * 90 / Min,
+    prg_received_per90 = PrgR * 90 / Min,
+    touches_att_3rd_per90 = Att.3rd * 90 / Min
+  ) %>%
+  # 2. El Muro Estadístico
+  filter(
+    crosses_per90 < 0.8,
+    prg_received_per90 < umbral_prg_rec,
+    touches_att_3rd_per90 < umbral_touches_att
   )
 
 # =========================================================================

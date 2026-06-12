@@ -1,12 +1,12 @@
 # Análisis táctico y perfilado de centrales modernos
 
-## Resumen ejecutivo
+## Resumen
 
 Este informe desglosa los perfiles tácticos de centrales en las cinco grandes ligas europeas utilizando datos de la temporada 2023–24. Un framework de clustering K-means (k=4) y Análisis de Componentes Principales aísla comportamientos distintos, mientras que las métricas ajustadas por posesión aportan el contexto que las estadísticas brutas no pueden ofrecer.
 
 **Alidu Seidu** (Clermont Foot) lidera el framework de scouting compuesto con una puntuación global de 4.79, seguido de **Leonardo Balerdi** (Marsella, 4.64) y **Tim Siersleben** (Heidenheim, 4.34). En progresión pura con balón, **Joseph Okumu** (Reims) registra el índice de progresión más alto de la muestra con 2.67.
 
-La aplicación de métricas ajustadas por posesión (PAdj) — estimadas a través del volumen relativo de pases del equipo — revela que los recuentos defensivos brutos están fuertemente distorsionados por el contexto táctico. Tras normalizar por oportunidad defensiva, **Tim Siersleben** (13.15 de entradas + intercepciones PAdj combinadas) y **Alidu Seidu** (11.68) emergen como los defensores más activos del dataset en relación a lo poco que realmente defienden.
+La aplicación de métricas ajustadas por posesión (PAdj), estimadas a través del volumen relativo de pases del equipo, muestra que los recuentos defensivos brutos están distorsionados por el contexto táctico. Tras normalizar por oportunidad defensiva, **Tim Siersleben** (13.15 de entradas + intercepciones PAdj combinadas) y **Alidu Seidu** (11.68) emergen como los defensores más activos del dataset en relación a lo poco que realmente defienden.
 
 ---
 
@@ -62,7 +62,7 @@ Contar acciones defensivas brutas penaliza a los defensores de equipos dominante
 | **Gabriel Osho** | Luton Town | 5.10 | 3.86 | **8.96** |
 | **Jorge Sáenz** | Leganés | 4.31 | 2.92 | **7.23** |
 
-Siersleben y Seidu juegan en equipos con posesión estimada del ~82% y ~81% respectivamente. Sus cifras brutas de entradas (2.67 y 2.55 por 90) parecen ordinarias; la corrección PAdj revela que son los defensores más activos por oportunidad del dataset.
+Siersleben y Seidu juegan en equipos con posesión estimada del ~82% y ~81% respectivamente. Sus cifras brutas de entradas (2.67 y 2.55 por 90) parecen ordinarias pero la corrección PAdj revela que son los defensores más activos por oportunidad del dataset.
 
 ### 2.2. Índice de progresión
 
@@ -123,9 +123,9 @@ Murillo (93.0%) es el perfil estadístico más cercano: un Defensive Stopper con
 
 ---
 
-## 6. Conclusiones tácticas
+## 6. Conclusiones
 
 - **Contexto antes que volumen.** Un central con 1.5 entradas por 90 en un equipo con el 70% de posesión hace significativamente más trabajo por oportunidad que uno con 3.0 entradas en un equipo que defiende durante 60 minutos por partido. La corrección PAdj hace esto visible.
 - **El efecto Heidenheim.** Tim Siersleben es un caso claro de ineficiencia de mercado impulsada por la visibilidad del club. Lidera el índice de progresión bruto y el ranking PAdj defensivo combinado, jugando en un recién ascendido de la Bundesliga. Los datos apuntan a un perfil de élite que aún no ha recibido el reconocimiento correspondiente.
 - **Sub-20 a seguir.** Yarek Gasiorowski (Valencia, 19) y Lucas Beraldo (PSG, 20) puntúan por encima de la media a pesar de las penalizaciones por edad en la fórmula. Eliminando el factor corrector de edad, ambos subirían significativamente en el ranking.
-- **La similitud como herramienta de reclutamiento.** El motor elimina la subjetividad al identificar alternativas. En lugar de visualizar partidos e intuir, las puntuaciones de similitud proporcionan una shortlist ordenada de jugadores cuyo perfil de datos se aproxima más a cualquier objetivo. Murillo como la coincidencia más cercana a Seidu es un punto de partida basado en datos, sin sesgos de popularidad mediática.
+- **La similitud como herramienta de reclutamiento.** El motor elimina la subjetividad al identificar alternativas. En lugar de visualizar partidos e intuir, las puntuaciones de similitud proporcionan una shortlist ordenada de jugadores cuyo perfil de datos se aproxima más a cualquier objetivo. Murillo como la coincidencia más cercana a Seidu es un punto de partida basado en datos, sin sesgos de popularidad.

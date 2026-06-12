@@ -1,4 +1,4 @@
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README_es.md)
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](README.es.md)
 
 # Identifying modern centre-backs with strong ball-progression capabilities
 

@@ -142,5 +142,7 @@ football-data-analysis/
 ## Autor
 
 **Adrián Gómez Conde**
+
 Bioestadístico
+
 Modelización estadística · análisis multivariante · analítica deportiva aplicada

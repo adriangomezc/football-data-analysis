@@ -68,7 +68,7 @@ Non-parametric recommendation system built on the standardised feature space. Id
 
 ## Tactical analysis report
 
-For full player-level breakdowns, cluster case studies, and recruitment shortlists, see the [Tactical Analysis Report](TACTICAL_ANALYSIS.md).
+For full player-level breakdowns, cluster case studies, and recruitment shortlists, see the [Tactical Analysis Report](/docs/TACTICAL_ANALYSIS.md).
 
 ---
 

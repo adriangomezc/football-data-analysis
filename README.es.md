@@ -4,7 +4,7 @@
 
 > Framework estadístico multivariante en R para perfilar, clasificar y encontrar sustitutos estadísticos de centrales en las cinco grandes ligas europeas (temporada 2023–24).
 
-El pipeline combina métricas defensivas ajustadas por posesión, ponderación de variables mediante PCA, clustering K-means y similitud del coseno para ir más allá de las estadísticas brutas y detectar objetivos de reclutamiento con contexto real.
+El pipeline mezcla métricas defensivas ajustadas por posesión, ponderación de variables mediante PCA, clustering K-means y similitud del coseno para ir más allá de las estadísticas brutas y detectar objetivos de reclutamiento con contexto real.
 
 ---
 
@@ -12,7 +12,7 @@ El pipeline combina métricas defensivas ajustadas por posesión, ponderación d
 
 ### 1. Filtrado y agregación de datos
 
-La muestra se filtró para garantizar precisión posicional y relevancia estadística:
+La muestra se filtró para garantizar precisión en la posición y relevancia estadística:
 
 - Posición principal: Defensa central (DF). Se excluyen perfiles híbridos MF/FW.
 - Umbral mínimo: 900 minutos disputados.
@@ -20,14 +20,14 @@ La muestra se filtró para garantizar precisión posicional y relevancia estadí
 
 ### 2. Ingeniería de variables
 
-Todas las métricas normalizadas por 90 minutos. Indicadores compuestos clave:
+Todas las métricas normalizadas por 90 minutos:
 
-- **Índice de progresión:** Combinación ponderada de pases progresivos, conducciones progresivas y pases clave por 90. Los pesos se derivan empíricamente de los loadings del PC1 de un PCA sobre las tres variables originales.
+- **Índice de progresión:** Combinación ponderada de pases progresivos, conducciones progresivas y pases clave por 90. Los pesos se derivan de los loadings del PC1 de un PCA sobre las tres variables originales.
 - **Defending score (bruto):** Suma de entradas, intercepciones y recuperaciones por 90. Se usa en el scouting score y el ranking defensivo.
 - **Defensa ajustada por posesión (PAdj):** La posesión de equipo se estima a partir del volumen relativo de pases en la liga. Las entradas e intercepciones se dividen entre `(posesión_rival / 50)` para normalizar la intensidad defensiva por oportunidad real.
-- **Scouting score:** Métrica maestra de clasificación. Fórmula: `(índice_progresión × 0.4) + (defending_score × 0.3) + (precisión_pase / 100 × 0.1) + (age_score × 0.2)`. El age_score va de 1.0 (≤21 años) a 0.3 (>30 años).
+- **Scouting score:** `(índice_progresión × 0.4) + (defending_score × 0.3) + (precisión_pase / 100 × 0.1) + (age_score × 0.2)`. El age_score va de 1.0 (≤21 años) a 0.3 (>30 años).
 
-> **Nota:** El scouting score usa el defending score bruto (no PAdj). Las métricas PAdj se usan por separado en el clustering y el ranking defensivo ajustado. Esta es una limitación reconocida: una versión futura debería integrar PAdj en la puntuación maestra.
+> **Nota:** El scouting score usa el defending score bruto (no PAdj). Las métricas PAdj se usan por separado en el clustering y el ranking defensivo ajustado.
 
 ### 3. Estandarización
 
@@ -39,7 +39,7 @@ Jugadores segmentados en cuatro arquetipos tácticos (k=4, nstart=50, seed=123).
 
 ### 5. Motor de similitud del coseno
 
-Sistema de recomendación no paramétrico construido sobre el espacio de características estandarizado. Identifica los perfiles estadísticamente más cercanos a cualquier jugador objetivo para planificación de sucesiones y shortlists de reclutamiento.
+Sistema de recomendación no paramétrico construido sobre el espacio de características estandarizado. Identifica los perfiles estadísticamente más cercanos a cualquier jugador objetivo.
 
 ---
 
@@ -47,7 +47,7 @@ Sistema de recomendación no paramétrico construido sobre el espacio de caracte
 
 **Mejores scouting scores:** Alidu Seidu (Clermont Foot, 4.79) lidera el ranking general, seguido de Leonardo Balerdi (Marsella, 4.64) y Tim Siersleben (Heidenheim, 4.34). Los tres tienen entre 23 y 24 años.
 
-**Líderes en progresión:** Joseph Okumu (Reims, 2.67) y Ladislav Krejčí (Girona, 2.42) encabezan el índice de progresión, combinando alto volumen de pases progresivos con conducción consistente. Virgil Van Dijk (2.28) aparece como referencia de benchmarking.
+**Líderes en progresión:** Joseph Okumu (Reims, 2.67) y Ladislav Krejčí (Girona, 2.42) encabezan el índice de progresión, combinando alto volumen de pases progresivos con conducción consistente.
 
 **Defensa ajustada por posesión:** Tras normalizar por oportunidad defensiva, Tim Siersleben (padj entradas 7.39 + padj intercepciones 5.75 = 13.15) y Alidu Seidu (11.68) emergen como los recuperadores más intensos de la muestra. Ambos juegan en equipos con posesión estimada en torno al 80%, lo que significa que sus cifras brutas infravalorarían significativamente su carga defensiva real.
 
@@ -142,5 +142,5 @@ football-data-analysis/
 ## Autor
 
 **Adrián Gómez Conde**
-Candidato a Máster en Bioestadística
+Bioestadístico
 Modelización estadística · análisis multivariante · analítica deportiva aplicada

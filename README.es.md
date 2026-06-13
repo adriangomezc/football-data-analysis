@@ -51,7 +51,7 @@ Una función flexible de similitud del coseno construida sobre el espacio de car
 
 ## Informe de análisis táctico
 
-Para un desglose completo a nivel de jugador, casos de estudio por cluster y shortlists de reclutamiento, consulta el [Informe de análisis táctico](https://www.google.com/search?q=docs/TACTICAL_ANALYSIS.es.md).
+Para un desglose completo a nivel de jugador, casos de estudio por cluster y shortlists de reclutamiento, consulta el [Informe de análisis táctico](/docs/TACTICAL_ANALYSIS.es.md).
 
 ---
 

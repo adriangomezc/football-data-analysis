@@ -24,19 +24,10 @@ league_stats <- team_stats %>%
   summarise(league_avg_passes_per90 = mean(team_passes_per90, na.rm = TRUE), .groups = 'drop')
 
 # 4. Cálculo de la estimación y multiplicador logístico
-POS_MIN <- 35
-POS_MAX <- 65
-
 team_possession_df <- team_stats %>%
+  left_join(league_stats, by = "League") %>%
   mutate(
-    # Normalizamos el volumen de pases para expandir la varianza
-    min_pases = min(team_passes_per90),
-    max_pases = max(team_passes_per90),
-    
-    # Escalado Min-Max para que el rango sea [35, 65]
-    estimated_possession_proxy = POS_MIN + (team_passes_per90 - min_pases) * 
-      (POS_MAX - POS_MIN) / (max_pases - min_pases),
-    
+    estimated_possession_proxy = (team_passes_per90 / (team_passes_per90 + league_avg_passes_per90)) * 100,
     padj_multiplier = 2 / (1 + exp(-0.1 * (estimated_possession_proxy - 50)))
   ) %>%
   select(Squad, estimated_possession_proxy, padj_multiplier)

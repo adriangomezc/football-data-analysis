@@ -168,10 +168,10 @@ cat("Clustering analysis completed successfully.\n")
 # =========================================================
 
 p1 <- ggplot(
-  data,
+  data_clean,  # <--- ¡AQUÍ ESTÁ LA MAGIA! Usamos la tabla que tiene los roles
   aes(
-    progression_index, # ¡Actualizado!
-    defending_score,
+    x = progression_index,
+    y = defending_score,
     color = role_profile,
     size = scouting_score
   )
@@ -196,8 +196,12 @@ ggsave(
 # =========================================================
 
 p2 <- ggplot(
-  data,
-  aes(Age, scouting_score, color = role_profile)
+  data_clean, # <--- AQUÍ TAMBIÉN
+  aes(
+    x = Age, 
+    y = scouting_score, 
+    color = role_profile
+  )
 ) +
   geom_point(size = 3, alpha = 0.75) +
   theme_minimal() +

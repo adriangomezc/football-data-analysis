@@ -2,7 +2,7 @@
 
 # Identifying modern centre-backs with strong ball-progression capabilities
 
-> Applied multivariate scouting framework in R to profile, rank, and find statistical replacements for centre-backs and defensive profiles across Europe's top five leagues (2023–24 season).
+> Applied multivariate scouting framework in R to profile, rank, and find statistical replacements for centre-backs across Europe's top five leagues (2023–24 season).
 
 The pipeline combines possession-adjusted defensive metrics, PCA-driven feature weighting, K-means clustering, and cosine similarity to move beyond raw counting stats and surface genuinely context-aware recruitment targets.
 
@@ -11,96 +11,70 @@ The pipeline combines possession-adjusted defensive metrics, PCA-driven feature 
 ## Methodology
 
 ### 1. Data filtering and aggregation
-
 The player pool was filtered to ensure positional accuracy and statistical significance:
-
 - Primary position: Central Defender (DF). Hybrid MF/FW profiles excluded.
 - Minimum threshold: 900 minutes played.
-- Additional positional filters applied on progressive-receiving and attacking-third touch rates to remove wing-backs and overlapping fullbacks disguised as centre-backs.
+- Strict positional filters applied on progressive-receiving and attacking-third touch rates to remove wing-backs disguised as centre-backs.
+- To avoid diluting current form, only the most recent season for each player is evaluated.
 
 ### 2. Feature engineering
+All metrics normalised per 90 minutes. Key composite indicators include:
+- **Progression index:** Weighted combination of progressive passes, progressive carries, and key passes per 90. Weights are derived dynamically from the PC1 loadings of a Principal Component Analysis (0.346, 0.352, and 0.302 respectively).
+- **Possession-adjusted defending (PAdj):** Team possession is estimated using league-average passing volumes as a proxy for the opponent. We then apply the StatsBomb sigmoidal multiplier to tackles, interceptions, and recoveries to normalise defensive intensity per true defensive opportunity.
+- **Scouting score:** The master ranking metric. Formula: `(progression_index × 0.4) + (PAdj_defending_score × 0.3) + (pass_completion / 100 × 0.1) + (age_score × 0.2)`. The age curve rewards peak performance windows (24-28 years) while gently penalising decline.
 
-All metrics normalised per 90 minutes. Key composite indicators:
+### 3. Clustering and tactical roles
+Players are segmented into tactical archetypes using a K-means algorithm (k=4). Instead of hardcoding labels, the pipeline dynamically assigns tactical role names (e.g., Elite Progressive Distributor, High-Intensity Ball-Winner) by evaluating the mathematical centroids of each resulting cluster.
 
-- **Progression index:** Weighted combination of progressive passes, progressive carries, and key passes per 90. Weights derived empirically from PC1 loadings of a PCA on the three raw variables.
-- **Defending score (raw):** Sum of tackles, interceptions, and recoveries per 90. Used in the scouting score and defensive ranking.
-- **Possession-adjusted defending (PAdj):** Team possession estimated from relative league passing volume. Tackles and interceptions then divided by `(opponent_possession / 50)` to normalise defensive intensity per true defensive opportunity.
-- **Scouting score:** Master ranking metric. Formula: `(progression_index × 0.4) + (defending_score × 0.3) + (pass_completion / 100 × 0.1) + (age_score × 0.2)`. Age score runs from 1.0 (≤21) to 0.3 (>30).
-
-> **Note:** The scouting score uses the raw defending score (not PAdj). PAdj metrics are used separately in the clustering and the PAdj defensive ranking. This is an acknowledged limitation — a future iteration should integrate PAdj into the master score.
-
-### 3. Standardisation
-
-All variables z-score scaled before any multivariate analysis to prevent scale differences from distorting results.
-
-### 4. K-means clustering and PCA projection
-
-Players segmented into four tactical archetypes (k=4, nstart=50, seed=123). Cluster centres visualised via 2D PCA projection.
-
-### 5. Cosine similarity engine
-
-Non-parametric recommendation system built on the standardised feature space. Identifies the closest statistical profiles to any target player for succession planning and recruitment shortlisting.
+### 4. Similarity engine
+A flexible cosine similarity function built on the standardised feature space. It ingests any target player's name and identifies the closest statistical matches to aid in succession planning.
 
 ---
 
 ## Key findings
 
-**Top scouting scores:** Alidu Seidu (Clermont Foot, 4.79) leads overall, followed by Leonardo Balerdi (Marseille, 4.64) and Tim Siersleben (Heidenheim, 4.34). The top three are all aged 23–24.
+**Top scouting scores:** Sead Kolašinac (Atalanta, 5.08) tops the master ranking, followed closely by breakout star Riccardo Calafiori (Bologna, 4.98) and Timo Hübers (Köln, 4.84). 
 
-**Progression leaders:** Joseph Okumu (Reims, 2.67) and Ladislav Krejčí (Girona, 2.42) top the progression index, combining high progressive pass volume with consistent carrying. Virgil Van Dijk (2.28) appears here as a benchmark reference.
+**Progression leaders:** Iñigo Martínez (Barcelona, 4.31) dominates the progression index, combining massive progressive pass volume with elite carrying metrics. Nico Schlotterbeck (Dortmund, 3.90) acts as the runner-up reference point.
 
-**Possession-adjusted defending:** After normalising for defensive opportunity, Tim Siersleben (padj tackles 7.39 + padj interceptions 5.75 = 13.15) and Alidu Seidu (11.68) emerge as the most intense ball-winners in the sample. Both play for teams with estimated possession around 80%, meaning their raw numbers significantly understate their actual defensive workload.
+**Possession-adjusted defending:** After normalising for team dominance using the sigmoidal curve, Timo Hübers (13.31 combined PAdj) and Riccardo Calafiori (13.18) emerge as the most intense ball-winners in the sample.
 
-**Tactical archetypes (k=4, 157 players):**
+**U-24 market targets:** Riccardo Calafiori (21, score 4.98) is the absolute standout. Other elite young profiles highlighted by the algorithm include Nico Schlotterbeck (24, score 4.73), Alidu Seidu (23, score 4.62), and highly-rated teenager Giorgio Scalvini (19, score 4.58).
 
-| Cluster | Players | Profile | Avg prog. passes/90 | Avg PAdj tackles/90 | Avg pass% |
-|---------|---------|---------|---------------------|---------------------|-----------|
-| 1 | 48 | Reactive defenders, limited on-ball role | 1.82 | 1.86 | 85.6 |
-| 2 | 62 | Standard build-up distributors | 2.86 | 1.52 | 86.3 |
-| 3 | 13 | High-intensity ball-winners | 2.68 | 4.38 | 84.4 |
-| 4 | 34 | Elite progressive distributors | 4.21 | 1.66 | 86.7 |
-
-**U-24 market targets:** Seidu, Balerdi, and Siersleben all qualify. Younger standouts include Lucas Beraldo (PSG, age 20, score 3.70), Willian Pacho (PSG, age 22, score 3.69), and Yarek Gasiorowski (Valencia, age 19, score 3.39).
-
-**Similarity engine:** Queried against the top-ranked profile (Alidu Seidu), the engine returns Murillo (93.0% cosine similarity) as the closest statistical match, followed by Santiago Mouriño (89.1%) and Mickael Nade (87.3%).
+**Similarity engine:** Queried against our overall top-ranked profile (Sead Kolašinac), the engine returns Mario Gila (97.1% cosine similarity) as the closest tactical alternative, followed by Javi Rodríguez (95.9%) and Facundo Medina (95.3%).
 
 ---
 
 ## Tactical analysis report
 
-For full player-level breakdowns, cluster case studies, and recruitment shortlists, see the [Tactical Analysis Report](/docs/TACTICAL_ANALYSIS.md).
+For full player-level breakdowns, cluster case studies, and recruitment shortlists, see the [Tactical analysis report](docs/TACTICAL_ANALYSIS.md).
 
 ---
 
 ## Generated outputs
 
 ### Figures (`outputs/figures/`)
-
 | File | Description |
 |------|-------------|
 | `defender_archetypes.png` | Progression index vs defending score, coloured by role profile and sized by scouting score |
 | `cluster_pca_visualization.png` | 2D PCA projection with K-means cluster assignments |
 | `recruitment_value.png` | Age vs scouting score to locate market inefficiencies |
-| `padj_defensive_profile.png` | PAdj tackles vs PAdj interceptions, coloured by league |
 
 ### Tables (`outputs/tables/`)
-
 | File | Description |
 |------|-------------|
-| `scouting_dashboard.csv` | Full player list with all engineered metrics and scores |
-| `top_recruitment_targets.csv` | Top 25 players by scouting score |
-| `market_inefficiency_targets.csv` | U-24 players above 80th percentile scouting score |
+| `top_recruitment_targets.csv` | Top 25 players by overall scouting score |
+| `market_inefficiency_targets.csv` | U-24 players above the 80th percentile scouting score |
 | `xt_proxy_ranking.csv` | Top 20 players by progression index |
-| `defensive_ranking.csv` | Top 20 players by raw defending score |
-| `padj_defensive_metrics.csv` | Full dataset with team possession estimates and PAdj stats |
+| `defensive_ranking.csv` | Top 20 players by possession-adjusted defending score |
+| `padj_defensive_metrics.csv` | Full master dataset with all context estimates and PAdj stats |
 | `cluster_profiles.csv` | Mean statistics per cluster |
-| `player_cluster_assignments.csv` | Per-player cluster assignment |
-| `player_similarity_results.csv` | Top 10 cosine similarity matches for the top-ranked player |
+| `final_scouting_dashboard.csv` | Full player list with algorithm-assigned tactical roles |
+| `player_similarity_results.csv` | Top cosine similarity matches for the target query |
 
 ---
 
 ## Technologies
-
 - R
 - tidyverse (dplyr, readr, tidyr)
 - ggplot2, ggrepel
@@ -111,7 +85,9 @@ For full player-level breakdowns, cluster case studies, and recruitment shortlis
 
 ## Repository structure
 
+
 ```
+
 football-data-analysis/
 │
 ├── data/
@@ -135,6 +111,7 @@ football-data-analysis/
 │
 ├── README.md
 └── .gitignore
+
 ```
 
 ---
@@ -142,5 +119,9 @@ football-data-analysis/
 ## Author
 
 **Adrián Gómez Conde**
+
 MSc Biostatistics candidate
+
 Statistical modelling · multivariate analysis · applied sports analytics
+
+Ya tienes la versión en inglés lista. Si quieres, envíale el enlace de GitHub actualizado a ese *recruiter* del Levante UD. Con el nivel de detalle que tiene ahora el código y la documentación, no hay director de datos que le pueda poner una pega.

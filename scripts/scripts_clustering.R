@@ -13,15 +13,11 @@ dir.create("outputs/tables", recursive = TRUE, showWarnings = FALSE)
 # =========================================================
 
 if (file.exists("outputs/tables/padj_defensive_metrics.csv")) {
+  # CORRECCIÓN: Apuntamos al archivo maestro correcto
   data <- read.csv("outputs/tables/padj_defensive_metrics.csv")
-  cat("Pipeline integrado con éxito: Cargados datos con ajuste de posesión real.\n")
+  cat("Datos PAdj cargados correctamente.\n")
 } else {
-  data <- read.csv("data/processed/defenders_processed.csv")
-  data$team_possession <- 50
-  data$opponent_possession <- 50
-  data$padj_tackles <- data$tackles_per90
-  data$padj_interceptions <- data$interceptions_per90
-  cat("⚠️ WARNING: No se detectó el archivo PAdj. Usando baseline temporal.\n")
+  stop("[ERROR FATAL] No se detectó el archivo PAdj. Ejecuta scripts_padj_metrics.R primero para generar el contexto táctico.")
 }
 
 # =========================================================
@@ -118,27 +114,102 @@ cluster_profiles <- data_clean %>%
     tackles = mean(padj_tackles, na.rm = TRUE),
     passing = mean(pass_completion, na.rm = TRUE)            
   )
+# =========================================================
+# DYNAMIC ROLE ASSIGNMENT (Data-Driven K-Means)
+# =========================================================
 
-write.csv(cluster_profiles, "outputs/tables/cluster_profiles.csv", row.names = FALSE)
+# 1. Calculamos los centroides matemáticos de cada cluster
+cluster_logic <- data_clean %>%
+  group_by(cluster) %>%
+  summarise(
+    mean_prog = mean(progression_index, na.rm = TRUE),
+    mean_def = mean(padj_tackles + padj_interceptions, na.rm = TRUE),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    # 2. Asignamos el rol detectando los máximos y mínimos relativos
+    role_profile = case_when(
+      mean_prog == max(mean_prog) ~ "Elite Progressive Distributor",
+      mean_def == max(mean_def) ~ "High-Intensity Ball-Winner",
+      mean_prog == min(mean_prog) ~ "Limited / Reactive Defender",
+      TRUE ~ "Standard Build-up Distributor"
+    )
+  )
+
+# 3. Unimos los nombres dinámicos de vuelta al dataset principal
+data_clean <- data_clean %>%
+  select(-any_of("role_profile")) %>% # Evitar duplicados si se corre dos veces
+  left_join(cluster_logic %>% select(cluster, role_profile), by = "cluster")
 
 # =========================================================
 # RADAR-STYLE SUMMARY TABLE
 # =========================================================
 
-# CÁMBIALO A ESTO (sin Won. al final):
 cluster_summary <- data_clean %>%
   select(
-    Player,  
+    Player,
+    League,
+    Age,
     cluster,
-    League,  
-    Age,     
-    progressive_passes_per90,
-    progressive_carries_per90, 
-    progression_index,                  
+    role_profile,            # ¡El algoritmo ahora decide el rol!
+    scouting_score,          # ¡La nota maestra ya trae el PAdj integrado!
+    progression_index,
     padj_interceptions,
     padj_tackles
-  )
+  ) %>%
+  arrange(desc(scouting_score))
 
-write.csv(cluster_summary, "outputs/tables/player_cluster_assignments.csv", row.names = FALSE)
+write.csv(cluster_summary, "outputs/tables/final_scouting_dashboard.csv", row.names = FALSE)
 
 cat("Clustering analysis completed successfully.\n")
+
+# =========================================================
+# SCATTERPLOT: PROGRESSION VS DEFENDING
+# =========================================================
+
+p1 <- ggplot(
+  data,
+  aes(
+    progression_index, # ¡Actualizado!
+    defending_score,
+    color = role_profile,
+    size = scouting_score
+  )
+) +
+  geom_point(alpha = 0.75) +
+  theme_minimal() +
+  labs(
+    title = "Defender Archetypes (Pure CB)",
+    x = "Progression Index (PCA Weighted)",
+    y = "Defending Score"
+  )
+
+ggsave(
+  "outputs/figures/defender_archetypes.png",
+  p1,
+  width = 10,
+  height = 7
+)
+
+# =========================================================
+# AGE VS SCOUTING VALUE
+# =========================================================
+
+p2 <- ggplot(
+  data,
+  aes(Age, scouting_score, color = role_profile)
+) +
+  geom_point(size = 3, alpha = 0.75) +
+  theme_minimal() +
+  labs(
+    title = "Recruitment Value by Age",
+    x = "Age",
+    y = "Scouting Score"
+  )
+
+ggsave(
+  "outputs/figures/recruitment_value.png",
+  p2,
+  width = 10,
+  height = 7
+)

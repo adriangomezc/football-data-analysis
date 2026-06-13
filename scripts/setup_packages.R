@@ -1,31 +1,10 @@
-required_packages <- c(
-  "tidyverse",
-  "data.table",
-  "ggplot2",
-  "ggrepel",
-  "cluster",
-  "factoextra",
-  "plotly",
-  "scales",
-  "cowplot",
-  "patchwork",
-  "corrplot",
-  "dbscan",
-  "proxy",
-  "caret",
-  "coop",
-  "dplyr"
-)
-
-installed <- rownames(installed.packages())
+required_packages <- c("tidyverse", "data.table", "ggplot2", "ggrepel", "cluster", "factoextra", "proxy")
 
 for(pkg in required_packages){
-  
-  if(!(pkg %in% installed)){
-    install.packages(pkg)
+  if(!requireNamespace(pkg, quietly = TRUE)){
+    stop(paste("\n[ERROR FATAL] Falta el paquete:", pkg, 
+               "\nPor favor, instálalo manualmente ejecutando: install.packages('", pkg, "')"))
   }
-  
-  library(pkg, character.only = TRUE)
+  suppressPackageStartupMessages(library(pkg, character.only = TRUE))
 }
-
-cat("All packages loaded successfully.\n")
+cat("Todos los paquetes cargados correctamente.\n")

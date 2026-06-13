@@ -1,96 +1,37 @@
+# =========================================================
+# scripts_padj_metrics.R
+# Contexto Táctico: Generación del Diccionario de Posesión
+# =========================================================
+
 source("scripts/setup_packages.R")
+dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
 
-dir.create("outputs/tables", recursive = TRUE, showWarnings = FALSE)
+# 1. Leer TODOS los datos para calcular la posesión real de la liga
+raw_data <- read.csv("data/All_Players_1992-2025.csv") %>%
+  filter(as.numeric(substr(Season, 1, 4)) >= 2023)
 
-data <- read.csv("data/processed/defenders_processed.csv")
-
-# =========================
-# POSSESSION ADJUSTMENT
-# =========================
-raw_data <- read.csv("data/All_Players_1992-2025.csv")
-# 1. Calcular pases por 90 minutos para cada equipo
+# 2. Pases del equipo
 team_stats <- raw_data %>%
   group_by(League, Squad) %>%
   summarise(
-    team_total_passes = sum(Pass, na.rm = TRUE),
-    # Dividimos entre 11 porque X90s suma los minutos de los 11 jugadores
-    team_total_90s = sum(X90s, na.rm = TRUE) / 11, 
-    team_passes_per90 = team_total_passes / team_total_90s,
+    team_passes_per90 = sum(Pass, na.rm = TRUE) / (sum(X90s, na.rm = TRUE) / 11),
     .groups = 'drop'
   )
 
-# 2. Calcular la media de pases por 90 de cada liga (proxy del rival)
+# 3. Pases medios de la liga (Nuestro proxy del rival)
 league_stats <- team_stats %>%
   group_by(League) %>%
-  summarise(
-    league_avg_passes_per90 = mean(team_passes_per90, na.rm = TRUE),
-    .groups = 'drop'
-  )
+  summarise(league_avg_passes_per90 = mean(team_passes_per90, na.rm = TRUE), .groups = 'drop')
 
-# 3. Unir y calcular el % de posesión real de cada equipo
+# 4. Cálculo de la estimación y multiplicador logístico
 team_possession_df <- team_stats %>%
   left_join(league_stats, by = "League") %>%
   mutate(
-    # Fórmula del Proxy de Posesión:
-    team_possession = (team_passes_per90 / (team_passes_per90 + league_avg_passes_per90)) * 100,
-    opponent_possession = 100 - team_possession
+    estimated_possession_proxy = (team_passes_per90 / (team_passes_per90 + league_avg_passes_per90)) * 100,
+    padj_multiplier = 2 / (1 + exp(-0.1 * (estimated_possession_proxy - 50)))
   ) %>%
-  select(Squad, team_possession, opponent_possession)
+  select(Squad, estimated_possession_proxy, padj_multiplier)
 
-# 4. Inyectar la posesión en tus datos filtrados y calcular el PAdj REAL
-data_padj <- data %>%
-  left_join(team_possession_df, by = "Squad") %>%
-  mutate(
-    # Si un equipo domina el 65% de posesión, su rival tiene el 35%. 
-    # (35 / 50) = 0.7. El jugador defiende "menos tiempo", así que le sumamos mérito 
-    # dividiendo sus tackles entre 0.7 (su valor subirá).
-    padj_tackles = tackles_per90 / (opponent_possession / 50),
-    padj_interceptions = interceptions_per90 / (opponent_possession / 50),
-    padj_recoveries = recoveries_per90 / (opponent_possession / 50) # Opcional
-  )
-
-# Comprobación rápida para ver si funciona bien:
-data_padj %>%
-  select(Player, Squad, team_possession, tackles_per90, padj_tackles) %>%
-  head()
-
-# =========================
-# SAVE OUTPUT
-# =========================
-
-write.csv(
-  data_padj,
-  "outputs/tables/padj_defensive_metrics.csv",
-  row.names = FALSE
-)
-
-# =========================
-# VISUALIZATION
-# =========================
-
-p <- ggplot(
-  data_padj,
-  aes(
-    x = padj_interceptions,
-    y = padj_tackles,
-    color = League
-  )
-) +
-  geom_point(size = 3, alpha = 0.8) +
-  geom_text_repel(
-    aes(label = Player),
-    size = 3
-  ) +
-  theme_minimal() +
-  labs(
-    title = "Possession-Adjusted Defensive Metrics",
-    x = "PAdj Interceptions",
-    y = "PAdj Tackles"
-  )
-
-ggsave(
-  "outputs/figures/padj_defensive_profile.png",
-  p,
-  width = 10,
-  height = 7
-)
+# 5. Exportar solo el diccionario de posesión
+write.csv(team_possession_df, "data/processed/team_possession_proxy.csv", row.names = FALSE)
+cat("Diccionario de posesión (PAdj proxy) generado con éxito.\n")

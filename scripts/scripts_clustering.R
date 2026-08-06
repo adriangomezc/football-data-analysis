@@ -37,8 +37,9 @@ clustering_data <- data_clean[, vars_clustering]
 # Contexto de la muestra (se reutiliza en los subtítulos de las figuras)
 n_players   <- nrow(data_clean)
 season_span <- paste(sort(unique(data_clean$Season)), collapse = " + ")
+# Los pies van en inglés: las figuras las comparten README.md y README.es.md.
 fig_caption <- sprintf(
-  "n = %d centrales puros | Big-5 europeas | última temporada disponible por jugador (%s)",
+  "n = %d pure centre-backs | Europe's big-five leagues | most recent qualifying season per player (%s)",
   n_players, season_span
 )
 
@@ -190,7 +191,7 @@ p <- ggplot(pca_data, aes(x = PC1, y = PC2, color = role_profile)) +
     subtitle = "K-Means clustering (k = 4) projected onto the first two principal components",
     x        = sprintf("Principal Component 1 (%.1f%% var.)", var_explained[1]),
     y        = sprintf("Principal Component 2 (%.1f%% var.)", var_explained[2]),
-    caption  = paste0(fig_caption, "\nEtiquetas: top 15 por scouting score")
+    caption  = paste0(fig_caption, "\nLabelled: top 15 by scouting score")
   )
 
 ggsave("outputs/figures/cluster_pca_visualization.png", p,

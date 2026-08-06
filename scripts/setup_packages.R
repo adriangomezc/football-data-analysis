@@ -10,13 +10,13 @@
 required_packages <- c("tidyverse", "ggrepel", "proxy")
 
 # Paquetes que se usan SOLO con :: (namespace explícito), nunca library().
-# car:: carga MASS, que enmascara dplyr::select() y rompería el resto del
-# pipeline si se attachara. Se comprueba que está instalado pero no se
-# carga entero.
-#   car     -> vif() para el diagnóstico de multicolinealidad
-# cluster:: (silhouette) es un paquete "recommended" que se instala junto
-# con R, así que no hace falta declararlo ni comprobarlo aquí.
-namespaced_packages <- c("car")
+# MASS enmascara dplyr::select() y rompería el resto del pipeline si se
+# attachara (car la carga como dependencia, por eso el riesgo es real).
+#   car  -> vif() para el diagnóstico de multicolinealidad
+#   MASS -> glm.nb() para el shrinkage empírico-bayesiano Poisson-Gamma
+# cluster:: (silhouette) y mgcv:: (GAM) son paquetes "recommended" que se
+# instalan junto con R, así que no hace falta declararlos ni comprobarlos.
+namespaced_packages <- c("car", "MASS")
 
 all_packages <- c(required_packages, namespaced_packages)
 

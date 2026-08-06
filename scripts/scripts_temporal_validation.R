@@ -50,17 +50,30 @@ train <- cb_all %>%
   filter(Season == "2023-2024") %>%
   arrange(desc(Min)) %>%
   distinct(Player, .keep_all = TRUE) %>%   # transferencias a mitad de temporada -> nos quedamos con el club de más minutos
-  mutate(
-    progressive_passes_per90 = PrgP * 90 / Min,
-    progressive_carries_per90 = PrgC * 90 / Min,
-    key_passes_per90 = KP * 90 / Min,
-    tackles_per90 = Tkl * 90 / Min,
-    interceptions_per90 = Int * 90 / Min,
-    recoveries_per90 = Recov * 90 / Min,
-    pass_completion = as.numeric(Cmp.)
-  )
+  mutate(pass_completion = as.numeric(Cmp.))
 
 cat(sprintf("Train (centrales, temporada 2023-2024): %d jugadores\n", nrow(train)))
+
+# Shrinkage empírico-bayesiano (Poisson-Gamma), reestimado SOLO en train por
+# la misma razón que los pesos PCA: no filtrar información de 2024-25 al
+# ajuste. Ver scripts_scouting.R para la explicación completa del método.
+shrink_rate_nb_train <- function(count, minutes) {
+  exposure <- minutes / 90
+  fit <- MASS::glm.nb(count ~ offset(log(exposure)))
+  mu <- exp(unname(coef(fit)["(Intercept)"]))
+  theta <- fit$theta
+  (theta + count) / (theta / mu + exposure)
+}
+
+train <- train %>%
+  mutate(
+    progressive_passes_per90 = shrink_rate_nb_train(PrgP, Min),
+    progressive_carries_per90 = shrink_rate_nb_train(PrgC, Min),
+    key_passes_per90 = shrink_rate_nb_train(KP, Min),
+    tackles_per90 = shrink_rate_nb_train(Tkl, Min),
+    interceptions_per90 = shrink_rate_nb_train(Int, Min),
+    recoveries_per90 = shrink_rate_nb_train(Recov, Min)
+  )
 
 progression_vars_train <- train %>%
   select(progressive_passes_per90, progressive_carries_per90, key_passes_per90)

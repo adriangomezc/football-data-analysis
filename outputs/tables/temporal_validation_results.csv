@@ -1,9 +1,9 @@
 "model","term","estimate","OR","p_value","AIC"
 "intercept_only","(Intercept)",0.5766,1.78,0,365.2084
-"scouting_score","(Intercept)",-0.1839,0.832,0.7803,365.816
-"scouting_score","scouting_score",0.2496,1.2836,0.2422,365.816
-"4_components","(Intercept)",-5.5493,0.0039,0.036,354.1969
-"4_components","progression_index",0.4702,1.6003,0.053,354.1969
-"4_components","defending_score",-0.0456,0.9554,0.5702,354.1969
-"4_components","pass_completion",0.0345,1.0351,0.2087,354.1969
-"4_components","age_score",3.1164,22.5646,0.0015,354.1969
+"scouting_score","(Intercept)",-0.3955,0.6734,0.623,365.6956
+"scouting_score","scouting_score",0.3185,1.3751,0.2229,365.6956
+"4_components","(Intercept)",-5.516,0.004,0.0408,354.0507
+"4_components","progression_index",0.5446,1.724,0.0493,354.0507
+"4_components","defending_score",-0.0563,0.9452,0.5694,354.0507
+"4_components","pass_completion",0.0337,1.0343,0.2212,354.0507
+"4_components","age_score",3.1128,22.4842,0.0015,354.0507

@@ -1,408 +1,408 @@
 "Player","Squad","League","Season","Age","cluster","role_profile","scouting_score","progression_index","padj_interceptions","padj_tackles"
-"Sead Kolašinac","Atalanta","Serie A","2024-2025",31,"4","Elite Progressive Distributor",5.07986804646138,3.42964824097969,1.43055918327923,2.34611706057794
-"Riccardo Calafiori","Bologna","Serie A","2023-2024",21,"3","High-Intensity Ball-Winner",4.98202208607607,1.8457464752056,2.26467554180632,2.12879500929794
-"Timo Hübers","Köln","Bundesliga","2023-2024",27,"3","High-Intensity Ball-Winner",4.84488085061139,1.43988115462286,2.45271918608208,2.64737943894574
-"Nico Schlotterbeck","Dortmund","Bundesliga","2024-2025",24,"4","Elite Progressive Distributor",4.73146035740743,3.89872977939322,0.974207462431692,1.68272198056383
-"Alidu Seidu","Clermont Foot","Ligue 1","2023-2024",23,"3","High-Intensity Ball-Winner",4.6210576061091,1.47597724195048,1.90460706774843,2.43789704671799
-"Wilfried Singo","Monaco","Ligue 1","2024-2025",23,"4","Elite Progressive Distributor",4.60104402859243,2.3709187517884,2.21343257949104,1.90458152188764
-"Giorgio Scalvini","Atalanta","Serie A","2023-2024",19,"3","High-Intensity Ball-Winner",4.57645436826568,1.90949695144719,2.52545429907299,2.26862843815031
-"Lucas Martínez Quarta","Fiorentina","Serie A","2023-2024",27,"4","Elite Progressive Distributor",4.39459791766166,2.89930612535527,1.20454287297543,3.01135718243857
-"Mohammed Salisu","Monaco","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",4.36577555524835,2.39507013727337,1.68745993284256,2.95305488247448
-"Facundo Medina","Lens","Ligue 1","2024-2025",25,"4","Elite Progressive Distributor",4.27756284441386,2.95811291503331,1.24668002363509,1.71418503249825
-"Leonardo Balerdi","Marseille","Ligue 1","2023-2024",24,"3","High-Intensity Ball-Winner",4.14406244130109,1.99588201048792,1.75129171147477,2.71278520012759
-"Daniel Vivian","Athletic Club","La Liga","2024-2025",25,"4","Elite Progressive Distributor",4.11166253708848,2.74800066197118,1.70733103317531,1.45304768780877
-"Tom Lockyer","Luton Town","Premier League","2023-2024",28,"3","High-Intensity Ball-Winner",4.10712586077347,1.21691332486487,1.87976623379642,2.04322416717003
-"Jhon Lucumí","Bologna","Serie A","2024-2025",26,"2","Standard Build-up Distributor",4.1069439198951,1.78039407959079,1.05824632012455,2.15719442179236
-"Dayot Upamecano","Bayern Munich","Bundesliga","2024-2025",25,"4","Elite Progressive Distributor",4.04186745969495,2.83701733988705,1.60698122175071,1.70150952891252
-"Lutsharel Geertruida","RB Leipzig","Bundesliga","2024-2025",24,"4","Elite Progressive Distributor",4.00219871720986,2.45990775147787,1.08717835487312,2.37820265128495
-"Mohamed Simakan","RB Leipzig","Bundesliga","2023-2024",23,"4","Elite Progressive Distributor",4.00089164079606,2.23680897975016,1.43502584943832,2.37521519907032
-"Jarell Quansah","Liverpool","Premier League","2023-2024",20,"4","Elite Progressive Distributor",3.99793695913673,2.16589762250022,1.41317615416149,2.07820022670807
-"Amari'I Bell","Luton Town","Premier League","2023-2024",29,"4","Elite Progressive Distributor",3.96620612850404,2.09026777656304,1.38867968105916,2.77735936211833
-"Cristian Romero","Tottenham","Premier League","2024-2025",26,"3","High-Intensity Ball-Winner",3.92338222011679,1.96260753935903,1.37067633086385,2.28446055143975
-"Thilo Kehrer","Monaco","Ligue 1","2024-2025",27,"3","High-Intensity Ball-Winner",3.89799397944467,2.08409759910323,1.62992484281174,1.67520053288984
-"Kim Min-Jae","Bayern Munich","Bundesliga","2024-2025",27,"4","Elite Progressive Distributor",3.84439095924575,2.75953344821885,1.34739067345858,1.27455874516352
-"Unai Núñez","Celta Vigo","La Liga","2023-2024",26,"3","High-Intensity Ball-Winner",3.81970961777069,1.38737221386443,1.68007721764505,1.64776804038264
-"El Chadaille Bitshiabu","RB Leipzig","Bundesliga","2024-2025",19,"3","High-Intensity Ball-Winner",3.80545533180726,2.13187008998312,1.21712262616077,2.52787006971853
-"Mika Mármol","Las Palmas","La Liga","2023-2024",22,"3","High-Intensity Ball-Winner",3.8005119321509,1.79143536278456,1.36226425946436,2.16723859460239
-"Robin Knoche","Union Berlin","Bundesliga","2023-2024",31,"1","Limited / Reactive Defender",3.79808770912292,1.22766358918833,0.665530813313545,1.74061905020466
-"Danilo","Juventus","Serie A","2023-2024",32,"4","Elite Progressive Distributor",3.79294724606795,2.50799629719925,1.32299446172894,2.14539642442531
-"Castello Lukeba","RB Leipzig","Bundesliga","2023-2024",20,"2","Standard Build-up Distributor",3.78993692080152,1.90121008447518,0.579439764446867,0.917446293707539
-"Lisandro Martínez","Manchester Utd","Premier League","2024-2025",26,"4","Elite Progressive Distributor",3.77501845854346,2.63432768334301,1.70240514872767,2.12800643590959
-"Kevin Akpoguma","Hoffenheim","Bundesliga","2023-2024",28,"3","High-Intensity Ball-Winner",3.74613998464702,1.97227860524754,1.42371427037947,2.76833330351564
-"Paweł Dawidowicz","Hellas Verona","Serie A","2023-2024",28,"3","High-Intensity Ball-Winner",3.74547866989631,1.47977037322771,1.06691500763157,2.35610397518638
-"Christian Mawissa","Monaco","Ligue 1","2024-2025",19,"3","High-Intensity Ball-Winner",3.74503215158887,1.20424421061204,1.86888154953974,3.01896250310266
-"Kevin Danso","Lens","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",3.73768331595288,1.91280127143177,1.8346685764491,1.74293514762664
-"Dean Huijsen","Bournemouth","Premier League","2024-2025",19,"4","Elite Progressive Distributor",3.73327557547069,2.39502521381169,2.2063392358897,1.55741593121626
-"Isak Hien","Atalanta","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",3.68838455271315,0.800380384726378,1.45067430853789,2.24620538096189
-"Adam Webster","Brighton","Premier League","2023-2024",28,"4","Elite Progressive Distributor",3.68227015950309,2.73709840163011,1.3226843290902,1.15734878795393
-"Waldemar Anton","Stuttgart","Bundesliga","2023-2024",27,"4","Elite Progressive Distributor",3.67822716898332,2.35570047368929,1.1617716215166,1.13272733097868
-"César Azpilicueta","Atlético Madrid","La Liga","2023-2024",33,"4","Elite Progressive Distributor",3.67148645898783,2.8381122470125,1.09141784551402,1.70534038361566
-"Youssouf Ndayishimiye","Nice","Ligue 1","2024-2025",25,"2","Standard Build-up Distributor",3.66964291214716,1.73371666597467,1.07870249830292,2.05467142533889
-"Bernardo","Bochum","Bundesliga","2024-2025",29,"3","High-Intensity Ball-Winner",3.65939355198523,2.05542163923682,1.45014295276458,2.56563753181426
-"Abdukodir Khusanov","Lens","Ligue 1","2024-2025",20,"3","High-Intensity Ball-Winner",3.65915825687482,1.49259842320945,2.6419227500867,1.5241862019731
-"Iñigo Martínez","Barcelona","La Liga","2024-2025",33,"4","Elite Progressive Distributor",3.64173847412741,4.31319015776781,0.598389021664006,0.831095863422231
-"Mario Gila","Lazio","Serie A","2024-2025",23,"4","Elite Progressive Distributor",3.63777876110449,2.4852427269018,0.930201790531432,1.82718208854388
-"Dante","Nice","Ligue 1","2024-2025",40,"3","High-Intensity Ball-Winner",3.63323732434168,1.86610803378881,1.71801497693051,1.61695527240519
-"Marco Friedl","Werder Bremen","Bundesliga","2024-2025",26,"3","High-Intensity Ball-Winner",3.62705578933315,1.08957358125619,1.39205198498232,2.5384477373207
-"Michael Svoboda","Venezia","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",3.62505763801382,1.43482151491857,1.71090304495856,2.02197632586012
-"Joseph Okumu","Reims","Ligue 1","2024-2025",27,"4","Elite Progressive Distributor",3.60018341560562,2.52927768278861,1.29584582913321,1.55501499495985
-"Odilon Kossounou","Atalanta","Serie A","2024-2025",23,"2","Standard Build-up Distributor",3.59550889703312,1.66202623068908,1.25833257369404,1.54871701377728
-"Diogo Leite","Union Berlin","Bundesliga","2024-2025",25,"3","High-Intensity Ball-Winner",3.59250125627068,1.80497766967094,2.19716860353972,2.46699632678144
-"Arthur Theate","Rennes","Ligue 1","2023-2024",23,"4","Elite Progressive Distributor",3.59234193728909,2.57200551588903,1.20584156681945,1.16694345176076
-"Reinildo Mandava","Atlético Madrid","La Liga","2024-2025",30,"3","High-Intensity Ball-Winner",3.57675290220241,1.65294509930676,1.65046503099517,1.85677315986956
-"Dan-Axel Zagadou","Stuttgart","Bundesliga","2023-2024",24,"2","Standard Build-up Distributor",3.56472912034815,1.70533310341853,1.15377594621366,1.21146474352435
-"Willi Orban","RB Leipzig","Bundesliga","2024-2025",31,"2","Standard Build-up Distributor",3.56104783080909,1.79565741381226,0.999872599833663,1.80929327588949
-"Marquinhos","Paris S-G","Ligue 1","2023-2024",29,"4","Elite Progressive Distributor",3.55876911792877,2.83736399114893,0.927025249115565,1.03608704312916
-"Willy Boly","Nott'ham Forest","Premier League","2023-2024",32,"3","High-Intensity Ball-Winner",3.55388663201805,0.950651615450216,1.57050211562524,2.88972389275045
-"Danilo Pereira","Paris S-G","Ligue 1","2023-2024",31,"4","Elite Progressive Distributor",3.545238356158,2.75203572310005,0.966276561447276,0.924264537036524
-"Oumar Solet","Udinese","Serie A","2024-2025",24,"2","Standard Build-up Distributor",3.53552944373695,1.8648530637218,0.998086847657743,1.9374627042768
-"Patrick Mainka","Heidenheim","Bundesliga","2024-2025",29,"3","High-Intensity Ball-Winner",3.52749582881123,1.31645411844969,2.23854873306154,1.90935038996425
-"Illia Zabarnyi","Bournemouth","Premier League","2024-2025",21,"3","High-Intensity Ball-Winner",3.52728252840632,1.78078817835563,1.38463410052836,1.75612129823109
-"Warmed Omari","Rennes","Ligue 1","2023-2024",23,"4","Elite Progressive Distributor",3.50557687049795,2.24952779214972,1.4230962731854,1.37997214369494
-"Jan Paul Van Hecke","Brighton","Premier League","2024-2025",24,"4","Elite Progressive Distributor",3.4562824476765,3.12446932761166,0.767317886652735,1.43872103747388
-"Stanley N'Soki","Hoffenheim","Bundesliga","2024-2025",25,"3","High-Intensity Ball-Winner",3.45296297142903,1.62440435661165,1.724735746677,1.45939178564977
-"Woyo Coulibaly","Parma","Serie A","2024-2025",25,"4","Elite Progressive Distributor",3.44105925250578,2.42924047719848,0.721864382428441,1.17302962144622
-"Nehuén Pérez","Udinese","Serie A","2023-2024",23,"3","High-Intensity Ball-Winner",3.42522404961759,1.47586100228126,1.36424180535858,2.18278688857373
-"Mathias Jørgensen","Brentford","Premier League","2023-2024",33,"2","Standard Build-up Distributor",3.41922389574963,1.75174429991592,1.04305257324302,1.47765781209428
-"Yeray Álvarez","Athletic Club","La Liga","2024-2025",29,"4","Elite Progressive Distributor",3.41329644340501,2.23281843327022,1.8085997273074,1.32985274066721
-"Teden Mengi","Luton Town","Premier League","2023-2024",21,"3","High-Intensity Ball-Winner",3.40445539930385,0.938871363545692,2.20568903898,2.08960014219158
-"Marc Guéhi","Crystal Palace","Premier League","2024-2025",24,"2","Standard Build-up Distributor",3.39741079525148,1.73271235320292,0.961462750513033,2.09461527790339
-"Lilian Brassier","Rennes","Ligue 1","2024-2025",24,"4","Elite Progressive Distributor",3.39471884469757,2.56183666070463,1.59223791559534,1.08561676063319
-"Berat Djimsiti","Atalanta","Serie A","2024-2025",31,"3","High-Intensity Ball-Winner",3.3833283205191,1.78158154530716,1.64991159138205,2.18613285858121
-"Lucas Beraldo","Paris S-G","Ligue 1","2024-2025",20,"2","Standard Build-up Distributor",3.3804763982445,2.27624244997326,0.875233099298069,1.58375513206317
-"Sam Beukema","Bologna","Serie A","2024-2025",25,"2","Standard Build-up Distributor",3.37887987778266,1.95431073207135,1.05970574655439,1.90747034379791
-"Gerzino Nyamsi","Strasbourg","Ligue 1","2023-2024",26,"1","Limited / Reactive Defender",3.37521097888099,0.898828561955282,0.886045163138794,1.59488129364983
-"Kevin Vogt","Union Berlin","Bundesliga","2024-2025",32,"2","Standard Build-up Distributor",3.37377208275706,1.887463709261,0.646131513257475,0.8615086843433
-"Maxime Estève","Burnley","Premier League","2023-2024",21,"3","High-Intensity Ball-Winner",3.35267955655331,1.3342238497729,1.96680259912046,1.96680259912046
-"John Brooks","Hoffenheim","Bundesliga","2023-2024",30,"3","High-Intensity Ball-Winner",3.34559177564815,1.38882773912737,1.52223640799832,1.57861553422048
-"Micky Van De Ven","Tottenham","Premier League","2024-2025",23,"2","Standard Build-up Distributor",3.30468298625248,1.86616584656833,0.910568934789216,0.910568934789216
-"Leny Yoro","Manchester Utd","Premier League","2024-2025",18,"3","High-Intensity Ball-Winner",3.30394442192702,1.95164616142444,1.43928126281113,2.31884203452904
-"Eric García","Girona","La Liga","2023-2024",22,"4","Elite Progressive Distributor",3.2890812134323,3.25051400327488,0.797828925879035,1.46268636411156
-"Mickael Nade","Saint-Étienne","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",3.2870209679325,1.28730383585149,1.33722408631761,2.39079457856784
-"Yarek Gasiorowski","Valencia","La Liga","2024-2025",19,"3","High-Intensity Ball-Winner",3.28682808808256,1.63537031519644,2.39850505929818,1.75275369717944
-"Nicolò Casale","Bologna","Serie A","2024-2025",26,"3","High-Intensity Ball-Winner",3.27493163331505,1.19857371350568,2.00967307579893,1.30037669610519
-"Alexsandro Ribeiro","Lille","Ligue 1","2024-2025",24,"4","Elite Progressive Distributor",3.27307772365166,2.43460262523905,0.772321797521554,0.915344352618138
-"Kike Salas","Sevilla","La Liga","2023-2024",21,"3","High-Intensity Ball-Winner",3.26436074127503,1.48404340009643,1.40074612414748,2.20886888807871
-"Luca Marianucci","Empoli","Serie A","2024-2025",20,"3","High-Intensity Ball-Winner",3.2616318318929,1.24665152341817,1.74952789733285,2.57825163817473
-"Boubakar Kouyaté","Montpellier","Ligue 1","2023-2024",26,"3","High-Intensity Ball-Winner",3.25741533811142,1.07202488589208,1.31436092427097,2.22081673411303
-"Malang Sarr","Lens","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",3.24387732678121,1.40248814527569,1.57370849734407,1.50217629291934
-"Emmanuel Agbadou","Wolves","Premier League","2024-2025",27,"1","Limited / Reactive Defender",3.2377670153638,0.895863244589033,0.833286949609021,2.08321737402255
-"Yerson Mosquera","Villarreal","La Liga","2023-2024",22,"3","High-Intensity Ball-Winner",3.22597589390403,1.22803763439561,1.19642914604823,1.90021099666483
-"Ben Mee","Brentford","Premier League","2023-2024",33,"2","Standard Build-up Distributor",3.21888648795806,1.60051753700365,0.965629973303011,1.93125994660602
-"Mattia Viti","Empoli","Serie A","2024-2025",22,"3","High-Intensity Ball-Winner",3.2122202146909,1.30230971954241,1.83702577285633,2.48763906740962
-"Ozan Kabak","Hoffenheim","Bundesliga","2023-2024",23,"3","High-Intensity Ball-Winner",3.20708316744992,1.88624353476573,1.74903762566679,1.82508273982621
-"Chrislain Matsima","Augsburg","Bundesliga","2024-2025",22,"3","High-Intensity Ball-Winner",3.19682874440583,1.25139635916926,1.84858481472541,1.10204094724015
-"Koni De Winter","Genoa","Serie A","2024-2025",22,"1","Limited / Reactive Defender",3.1947635486054,1.0024587410157,1.21471901753833,1.6034291031506
-"Jean-Charles Castelletto","Nantes","Ligue 1","2023-2024",28,"2","Standard Build-up Distributor",3.18859271391078,1.68134221954735,1.17148017050553,1.24469768116213
-"Nicolás Valentini","Hellas Verona","Serie A","2024-2025",23,"3","High-Intensity Ball-Winner",3.18734461361632,1.41400773349929,1.26572124742828,2.95334957733266
-"Gleison Bremer","Juventus","Serie A","2023-2024",26,"1","Limited / Reactive Defender",3.18079376567199,1.28203081995203,1.08475348648126,1.57289255539783
-"Johan Vásquez","Genoa","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",3.17999711530719,1.42995515238527,1.70563965961482,1.9103164187686
-"Willian Pacho","Paris S-G","Ligue 1","2024-2025",22,"3","High-Intensity Ball-Winner",3.17289182227012,0.856108693674332,1.57249509755063,2.20149313657088
-"Montassar Talbi","Lorient","Ligue 1","2023-2024",25,"2","Standard Build-up Distributor",3.17240770352123,1.54394187052122,1.30754463387111,1.55270925272194
-"Andy Pelmard","Clermont Foot","Ligue 1","2023-2024",23,"2","Standard Build-up Distributor",3.16809846052821,1.71666946232392,0.951296749275004,1.47018588524319
-"David García","Osasuna","La Liga","2023-2024",29,"2","Standard Build-up Distributor",3.16711026051943,2.11574277014406,0.705004483793798,1.13584055722334
-"Jonathan Gradit","Lens","Ligue 1","2024-2025",31,"4","Elite Progressive Distributor",3.1662761934126,2.28211710135405,1.17272849346889,2.06400214850524
-"Jordan Beyer","Burnley","Premier League","2023-2024",23,"3","High-Intensity Ball-Winner",3.16354499972756,0.927339965489038,1.23635013013923,2.70451590967957
-"Maxence Lacroix","Crystal Palace","Premier League","2024-2025",24,"3","High-Intensity Ball-Winner",3.15018245135845,0.800049761810523,1.82033039045303,2.292267899089
-"Lucas Perrin","Strasbourg","Ligue 1","2023-2024",24,"2","Standard Build-up Distributor",3.14385484732563,1.57135244627475,0.994921663904949,1.67004707869759
-"Joël Schingtienne","Venezia","Serie A","2024-2025",21,"3","High-Intensity Ball-Winner",3.14132277642241,0.990158846233502,1.27506775300023,2.45905923792901
-"Matteo Lovato","Salernitana","Serie A","2023-2024",23,"3","High-Intensity Ball-Winner",3.13457342706872,1.07219639296511,1.58145317601044,2.37217976401566
-"Anthony Jung","Werder Bremen","Bundesliga","2024-2025",32,"4","Elite Progressive Distributor",3.12562830121413,2.34538973195412,1.16540024311458,1.58494433063582
-"Toti Gomes","Wolves","Premier League","2024-2025",25,"3","High-Intensity Ball-Winner",3.12344569022938,1.44420878879932,0.936411788246557,2.2848447633216
-"Lukas Klostermann","RB Leipzig","Bundesliga","2024-2025",28,"2","Standard Build-up Distributor",3.12089533181133,1.70994937795442,1.38144997160292,1.55413121805329
-"Fali","Cádiz","La Liga","2023-2024",29,"1","Limited / Reactive Defender",3.11849811281044,1.24312020988153,1.09622309024207,1.66463506296019
-"Fali Candé","Venezia","Serie A","2024-2025",26,"1","Limited / Reactive Defender",3.10744613367496,1.13017358891133,1.00183894878589,1.66973158130982
-"Cristhian Mosquera","Valencia","La Liga","2024-2025",20,"2","Standard Build-up Distributor",3.10408584533747,1.48671637637475,0.921251190006699,1.47400190401072
-"Moritz Jenz","Mainz 05","Bundesliga","2024-2025",25,"3","High-Intensity Ball-Winner",3.10215424419454,0.984531580441802,1.75110907339411,2.10133088807294
-"Eray Cömert","Nantes","Ligue 1","2023-2024",25,"3","High-Intensity Ball-Winner",3.10108353461638,1.05441438397705,1.6277408684919,1.89903101324055
-"Yerry Mina","Cagliari","Serie A","2024-2025",29,"3","High-Intensity Ball-Winner",3.10052829575324,1.17215784561587,1.12264764786405,2.0025606691629
-"Éder Militão","Real Madrid","La Liga","2024-2025",26,"2","Standard Build-up Distributor",3.0915188165565,1.9358765105965,1.08686304656955,1.72086649040178
-"Moïse Bombito","Nice","Ligue 1","2024-2025",24,"2","Standard Build-up Distributor",3.07125590761886,1.79140263300656,0.814932179374831,1.67513836871493
-"Florian Lejeune","Rayo Vallecano","La Liga","2024-2025",33,"2","Standard Build-up Distributor",3.06762834181491,1.6523878162819,1.22767903741273,1.37739599319478
-"Jeffrey Gouweleeuw","Augsburg","Bundesliga","2024-2025",33,"2","Standard Build-up Distributor",3.06629602672176,1.8879431221008,1.0781439118857,1.54020558840814
-"Milan Škriniar","Paris S-G","Ligue 1","2023-2024",28,"1","Limited / Reactive Defender",3.06576739153957,1.27867476852714,0.617414281395569,1.23482856279114
-"Manuel Akanji","Manchester City","Premier League","2024-2025",29,"4","Elite Progressive Distributor",3.06101777726823,3.28524049322744,0.339691964880287,0.71712748141394
-"Arnau Martinez","Girona","La Liga","2023-2024",20,"4","Elite Progressive Distributor",3.05962432677308,2.68579555193873,0.565102035332531,1.41275508833133
-"Sinaly Diomande","Auxerre","Ligue 1","2024-2025",23,"3","High-Intensity Ball-Winner",3.05872379841075,1.33768483059995,1.44454830075534,1.87791279098194
-"Lewis Dunk","Brighton","Premier League","2024-2025",32,"4","Elite Progressive Distributor",3.05732971346043,2.5029443423357,0.590223275991044,0.771830437834442
-"Calvin Bassey","Fulham","Premier League","2024-2025",24,"2","Standard Build-up Distributor",3.05504520123863,1.60216007977022,0.585256520476735,1.58019260528718
-"Tim Oermann","Bochum","Bundesliga","2024-2025",20,"3","High-Intensity Ball-Winner",3.04966024088016,1.15816857920261,0.988067091664336,2.24560702650986
-"Tim Ream","Fulham","Premier League","2023-2024",35,"2","Standard Build-up Distributor",3.04629522390648,1.57697659646182,1.49623964067322,1.19699171253858
-"Nicolas Pallois","Nantes","Ligue 1","2024-2025",36,"3","High-Intensity Ball-Winner",3.04030601266825,0.936608228676812,1.25221182330686,2.72803290077566
-"Eric Dier","Bayern Munich","Bundesliga","2024-2025",30,"2","Standard Build-up Distributor",3.03957765105606,1.86764992478218,1.1365365160466,1.07970969024427
-"Carlos Dominguez","Celta Vigo","La Liga","2024-2025",23,"4","Elite Progressive Distributor",3.02522871893471,2.18665343590262,0.996167715204017,1.76245057305326
-"Sergio Ramos","Sevilla","La Liga","2023-2024",37,"3","High-Intensity Ball-Winner",3.02218726551965,1.18266062964922,1.40851591790478,1.54593210501744
-"Norbert Gyömbér","Salernitana","Serie A","2023-2024",31,"1","Limited / Reactive Defender",3.02160193221385,0.891586582288378,1.08729897811501,1.70185927009306
-"Ilario Monterisi","Frosinone","Serie A","2023-2024",21,"1","Limited / Reactive Defender",3.01798418759744,1.17407403561532,0.559988783543533,1.60996775268766
-"Ohis Felix Uduokhai","Augsburg","Bundesliga","2023-2024",25,"2","Standard Build-up Distributor",3.0137470171961,1.43046303881492,1.42814653614916,1.14872656168519
-"Victor Lindelöf","Manchester Utd","Premier League","2023-2024",29,"2","Standard Build-up Distributor",3.00808890178178,1.50632665769724,0.841748328903093,1.05218541112887
-"Mark Mckenzie","Toulouse","Ligue 1","2024-2025",25,"2","Standard Build-up Distributor",3.00484250394926,1.37930898276879,0.790336898325386,1.86806903240546
-"Marin Šverko","Venezia","Serie A","2024-2025",26,"3","High-Intensity Ball-Winner",3.00131531951978,1.333751265165,1.46374320896918,1.82967901121148
-"Christopher Wooh","Rennes","Ligue 1","2024-2025",22,"3","High-Intensity Ball-Winner",2.98904485400661,1.60235797108826,1.41080471155179,2.20821607025497
-"Anel Ahmedhodžić","Sheffield Utd","Premier League","2023-2024",24,"3","High-Intensity Ball-Winner",2.98408781986571,0.756189702229692,1.33678441054102,2.51630006690074
-"Mats Hummels","Roma","Serie A","2024-2025",35,"3","High-Intensity Ball-Winner",2.98297312852586,1.08180737789696,2.10970806225237,2.43427853336812
-"Raphaël Varane","Manchester Utd","Premier League","2023-2024",30,"2","Standard Build-up Distributor",2.98054897382522,1.72302343100255,1.0162198007121,1.21946376085452
-"Christophe Hérelle","Metz","Ligue 1","2023-2024",30,"1","Limited / Reactive Defender",2.97173621788678,0.82509523063138,1.12558966565397,2.00104829449594
-"Maximiliano Caufriez","Clermont Foot","Ligue 1","2023-2024",26,"2","Standard Build-up Distributor",2.97162906544979,1.74956622630432,0.93487620699753,1.9736275481059
-"Enzo Boyomo","Osasuna","La Liga","2024-2025",22,"3","High-Intensity Ball-Winner",2.97104818081323,1.36198759317649,1.34659711467634,2.08110463177252
-"Nathan Aké","Manchester City","Premier League","2023-2024",28,"2","Standard Build-up Distributor",2.96679123466209,2.2725263585392,0.521164144181335,0.967876267765337
-"Víctor Chust","Cádiz","La Liga","2023-2024",23,"2","Standard Build-up Distributor",2.96402687355486,1.59250206207433,0.610254377668737,1.60885245021758
-"Virgil Van Dijk","Liverpool","Premier League","2024-2025",33,"2","Standard Build-up Distributor",2.9569140463065,2.15680603122061,1.66355871600992,1.1288434144353
-"Saba Goglichidze","Empoli","Serie A","2024-2025",20,"3","High-Intensity Ball-Winner",2.95543738699815,0.733141610242092,1.27937015472753,2.48120272432007
-"Pau Navarro","Villarreal","La Liga","2024-2025",19,"2","Standard Build-up Distributor",2.95423344678278,1.49172584197578,0.377706504108213,2.17181239862222
-"Alessandro Buongiorno","Napoli","Serie A","2024-2025",25,"2","Standard Build-up Distributor",2.95260833995698,1.8408807120352,1.42913421793252,1.59246384283909
-"Julien Le Cardinal","Brest","Ligue 1","2024-2025",26,"3","High-Intensity Ball-Winner",2.95095864204712,1.13998439605113,2.25964941850865,1.84880406968889
-"Benoît Badiashile","Chelsea","Premier League","2023-2024",22,"1","Limited / Reactive Defender",2.94511158259951,1.26245100964515,1.06578405557427,1.24341473150332
-"Rasmus Nicolaisen","Toulouse","Ligue 1","2023-2024",26,"1","Limited / Reactive Defender",2.9448514712015,1.11090691379303,1.28753065618099,1.53277459069166
-"Karol Mets","St Pauli","Bundesliga","2024-2025",31,"2","Standard Build-up Distributor",2.93963096776193,2.13297174181011,1.22202818069192,1.32386386241625
-"Gian Marco Ferrari","Sassuolo","Serie A","2023-2024",31,"4","Elite Progressive Distributor",2.93837687723633,2.58010787863436,0.970559698229215,0.854092534441709
-"Jonny Evans","Manchester Utd","Premier League","2023-2024",35,"3","High-Intensity Ball-Winner",2.93771485460778,1.10338498179242,1.53917390792721,1.47225330323472
-"Abakar Sylla","Strasbourg","Ligue 1","2024-2025",21,"3","High-Intensity Ball-Winner",2.9277928114775,0.716227699954626,1.12033415785507,2.74991111473518
-"Javi Rodríguez","Celta Vigo","La Liga","2024-2025",21,"2","Standard Build-up Distributor",2.92161472137538,1.91659618483009,1.18792131340328,1.90787362455679
-"Harry Maguire","Manchester Utd","Premier League","2024-2025",31,"3","High-Intensity Ball-Winner",2.91634799512318,1.16782797457926,2.11953314520915,1.58964985890687
-"Nathan Zeze","Nantes","Ligue 1","2024-2025",19,"3","High-Intensity Ball-Winner",2.90758413794207,1.00620009287757,1.37215038489769,2.26703107070053
-"Fabian Schär","Newcastle Utd","Premier League","2024-2025",32,"2","Standard Build-up Distributor",2.90682931791507,1.49166904158705,1.45567095438157,1.16453676350526
-"Nayef Aguerd","Real Sociedad","La Liga","2024-2025",28,"2","Standard Build-up Distributor",2.90335408234314,1.87071022048821,0.701465802411558,1.61876723633436
-"Stefan Bell","Mainz 05","Bundesliga","2024-2025",32,"3","High-Intensity Ball-Winner",2.90009552637373,1.09433649169133,1.8210233632325,1.43080407111125
-"Daley Blind","Girona","La Liga","2023-2024",33,"4","Elite Progressive Distributor",2.89292976556232,2.8546190078514,0.495529076137318,1.10904126564066
-"Jack Robinson","Sheffield Utd","Premier League","2023-2024",29,"1","Limited / Reactive Defender",2.87860579269724,0.880289599160362,1.19133125513574,1.55234072638899
-"Igor Zubeldia","Real Sociedad","La Liga","2024-2025",27,"2","Standard Build-up Distributor",2.8682626330705,1.7396435733305,1.29748700476573,1.42305026329144
-"Ronald Araújo","Barcelona","La Liga","2023-2024",24,"2","Standard Build-up Distributor",2.86730183510145,2.0628377621816,0.49740900148335,1.11917025333754
-"Souleymane Touré","Lorient","Ligue 1","2023-2024",20,"2","Standard Build-up Distributor",2.86720234856279,1.5706189045499,1.58072009735905,1.09772228983267
-"Abdul Mumin","Rayo Vallecano","La Liga","2024-2025",26,"1","Limited / Reactive Defender",2.86609647632321,0.818780110226575,1.13531028194661,1.82636871443585
-"Julian Chabot","Stuttgart","Bundesliga","2024-2025",26,"2","Standard Build-up Distributor",2.85728405758031,1.65021136986887,1.40380310917235,1.36686092208887
-"Nathan Collins","Brentford","Premier League","2024-2025",23,"2","Standard Build-up Distributor",2.85426914009771,1.53100394090254,0.939306457161688,1.10506642019022
-"Edmond Tapsoba","Leverkusen","Bundesliga","2024-2025",25,"4","Elite Progressive Distributor",2.85388740226349,2.73515298928417,0.634620837026664,1.03125886016833
-"Marc Bartra","Betis","La Liga","2024-2025",33,"3","High-Intensity Ball-Winner",2.85291563461729,1.16517671163184,1.54681782140326,1.54681782140326
-"Arthur Chaves","Hoffenheim","Bundesliga","2024-2025",23,"3","High-Intensity Ball-Winner",2.84584981150428,1.01867211869707,1.46928905467664,2.02523626455429
-"Sebastiaan Bornauw","Wolfsburg","Bundesliga","2023-2024",24,"1","Limited / Reactive Defender",2.84345684215601,0.99252051678953,1.17760834660374,1.70098983398319
-"Konstantinos Koulierakis","Wolfsburg","Bundesliga","2024-2025",20,"2","Standard Build-up Distributor",2.84316619518974,1.67769546666267,1.2518053068537,1.51733976588327
-"Modibo Sagnan","Montpellier","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",2.83738234536394,1.00953461675962,1.18360012237013,2.32638644741714
-"Axel Disasi","Chelsea","Premier League","2023-2024",25,"2","Standard Build-up Distributor",2.83269069501276,1.75089708233554,0.552934884202551,1.01371395437134
-"Raúl Torrente","Granada","La Liga","2023-2024",21,"1","Limited / Reactive Defender",2.83242198370397,0.987845935965425,0.824268045225549,2.17307030104917
-"Hauke Wahl","St Pauli","Bundesliga","2024-2025",30,"2","Standard Build-up Distributor",2.82695590386248,1.88957302829982,0.956638222258829,1.11093470971993
-"Niklas Süle","Dortmund","Bundesliga","2024-2025",28,"2","Standard Build-up Distributor",2.82497677048135,1.91707030847763,0.333398806965314,1.1668958243786
-"Germán Pezzella","Betis","La Liga","2023-2024",32,"1","Limited / Reactive Defender",2.8245201314109,0.816025175607151,1.1022756165291,1.20894745038675
-"Murillo","Nott'ham Forest","Premier League","2024-2025",22,"2","Standard Build-up Distributor",2.82282905686649,1.45160446370799,1.02009728383548,1.50180989009112
-"Joachim Andersen","Fulham","Premier League","2024-2025",28,"2","Standard Build-up Distributor",2.81943448290241,1.58705436140784,1.18406253376203,0.940284953281612
-"Santiago Mouriño","Alavés","La Liga","2024-2025",22,"3","High-Intensity Ball-Winner",2.81729939418823,1.11670457884949,1.28844818082388,1.91045764742851
-"Jean-Clair Todibo","West Ham","Premier League","2024-2025",24,"3","High-Intensity Ball-Winner",2.81600859420572,0.833684023122125,1.25132696510699,2.26201412923186
-"Ignasi Miquel","Granada","La Liga","2023-2024",30,"1","Limited / Reactive Defender",2.81570424805463,1.05672626589008,1.40875904059119,1.47137055350635
-"Max Geschwill","Holstein Kiel","Bundesliga","2024-2025",23,"3","High-Intensity Ball-Winner",2.81485257670346,1.76780192627365,1.68204752861835,1.45777452480257
-"Chadi Riad","Betis","La Liga","2023-2024",20,"1","Limited / Reactive Defender",2.81001590541504,0.572407369853006,1.04570273852973,1.5912867760235
-"Miguel Ángel Rubio","Granada","La Liga","2023-2024",25,"1","Limited / Reactive Defender",2.80805447406447,0.715370360576742,1.68119939294255,1.20085670924468
-"Pietro Comuzzo","Fiorentina","Serie A","2024-2025",19,"3","High-Intensity Ball-Winner",2.80702127898002,1.34855296933756,1.21255490814567,1.79792624311255
-"Benedikt Gimber","Heidenheim","Bundesliga","2024-2025",27,"3","High-Intensity Ball-Winner",2.80637347000618,0.649264368423836,1.16914095193592,2.71542414643182
-"Pau Cubarsí","Barcelona","La Liga","2024-2025",17,"4","Elite Progressive Distributor",2.80626597553445,2.6774096402718,0.505895480500255,1.07502789606304
-"Ameen Al-Dakhil","Burnley","Premier League","2023-2024",21,"2","Standard Build-up Distributor",2.80586553797869,1.29243708341468,1.08356254303396,1.08356254303396
-"Abdoulaye Niakhate Ndiaye","Brest","Ligue 1","2024-2025",22,"1","Limited / Reactive Defender",2.80310848287837,0.819368924761979,0.608044698048217,2.70856274585115
-"Ibrahima Konaté","Liverpool","Premier League","2024-2025",25,"2","Standard Build-up Distributor",2.80219820045883,1.81291700329975,0.656906102911005,1.54566141861413
-"Keven Schlotterbeck","Augsburg","Bundesliga","2024-2025",27,"2","Standard Build-up Distributor",2.79543063378909,1.63511177199377,1.048812317411,1.32849560205394
-"Caleb Okoli","Leicester City","Premier League","2024-2025",23,"3","High-Intensity Ball-Winner",2.79052585969661,0.969211313218205,1.2598460323865,2.09974338731084
-"Max Rosenfelder","Freiburg","Bundesliga","2024-2025",21,"2","Standard Build-up Distributor",2.79026487008222,1.43979006719096,0.478841911434072,1.84696165838856
-"José Luis Palomino","Cagliari","Serie A","2024-2025",34,"3","High-Intensity Ball-Winner",2.78807736567306,1.14946501088532,1.58636397134736,1.94690123756267
-"Mateusz Wieteska","Cagliari","Serie A","2023-2024",26,"2","Standard Build-up Distributor",2.78039444120494,1.72987591776787,1.13085409054974,1.13085409054974
-"William Saliba","Arsenal","Premier League","2024-2025",23,"2","Standard Build-up Distributor",2.77456779925898,1.64190351976012,0.538588385632257,1.59011809091428
-"Ivan Ordets","Bochum","Bundesliga","2024-2025",32,"3","High-Intensity Ball-Winner",2.77448799589589,0.938698316811571,2.18969008421621,0.961327354046143
-"Matej Maglica","Darmstadt 98","Bundesliga","2023-2024",24,"2","Standard Build-up Distributor",2.773857902712,1.48520819612818,0.983169993749672,1.56413408096539
-"Marin Pongračić","Fiorentina","Serie A","2024-2025",26,"1","Limited / Reactive Defender",2.77265018533514,1.03538853274842,0.807493115431369,1.21123967314705
-"Arouna Sangante","Le Havre","Ligue 1","2024-2025",22,"2","Standard Build-up Distributor",2.77220147504119,1.54588970537855,1.3199211262857,1.57133467414964
-"Axel Witsel","Atlético Madrid","La Liga","2023-2024",34,"1","Limited / Reactive Defender",2.76118559748552,1.21753838669478,0.558062376631855,1.22076144888218
-"Leo Skiri Østigård","Hoffenheim","Bundesliga","2024-2025",24,"2","Standard Build-up Distributor",2.74460457298423,1.79934762512557,0.842402672387422,0.842402672387422
-"Myles Lewis-Skelly","Arsenal","Premier League","2024-2025",17,"4","Elite Progressive Distributor",2.74306333346035,2.62827180222055,0.398531800325403,1.25252851530841
-"Tim Siersleben","Heidenheim","Bundesliga","2024-2025",24,"3","High-Intensity Ball-Winner",2.74236946370846,1.16832337180541,1.70447873075752,1.78970266729539
-"Konstantinos Mavropanos","West Ham","Premier League","2024-2025",26,"3","High-Intensity Ball-Winner",2.73790407825368,1.25766686122554,1.71801520505567,1.50326330442371
-"Federico Gatti","Juventus","Serie A","2024-2025",26,"2","Standard Build-up Distributor",2.73641056777875,1.45517859997207,0.718976587611508,1.11840802517346
-"Yann Aurel Bisseck","Inter","Serie A","2024-2025",23,"4","Elite Progressive Distributor",2.73514598786031,2.4934962259683,0.819370248568028,0.819370248568028
-"Diego Llorente","Betis","La Liga","2024-2025",30,"3","High-Intensity Ball-Winner",2.73330662891571,1.15304040547006,1.67949205560641,1.40608637213559
-"Nathaniel Adjei","Lorient","Ligue 1","2023-2024",20,"1","Limited / Reactive Defender",2.73285230751611,1.17132016790548,1.30412587276083,0.941868685882819
-"Diego Coppola","Hellas Verona","Serie A","2024-2025",20,"3","High-Intensity Ball-Winner",2.73009439195955,0.581269060618683,2.34342213326387,2.14813695549188
-"Derek Cornelius","Marseille","Ligue 1","2024-2025",26,"2","Standard Build-up Distributor",2.72902384416778,1.78924327798659,0.768856236876952,1.31803926321763
-"Cenk Özkacar","Valencia","La Liga","2023-2024",22,"2","Standard Build-up Distributor",2.72847831115705,1.44400311172857,0.984040561297698,1.42139192187445
-"Cedric Zesiger","Wolfsburg","Bundesliga","2023-2024",25,"2","Standard Build-up Distributor",2.72511984567887,1.82993225396167,0.859423472047102,1.088603064593
-"Chancel Mbemba","Marseille","Ligue 1","2023-2024",28,"2","Standard Build-up Distributor",2.71115375348344,2.16221725131994,0.459352907396872,1.16604968800744
-"Loïc Bade","Sevilla","La Liga","2024-2025",24,"1","Limited / Reactive Defender",2.70775034578302,0.888224789858487,0.93358337173441,1.51304891281094
-"Giangiacomo Magnani","Hellas Verona","Serie A","2024-2025",28,"3","High-Intensity Ball-Winner",2.7033389142811,1.04990965067975,1.52068781858473,1.78904449245262
-"Philipp Lienhart","Freiburg","Bundesliga","2024-2025",28,"4","Elite Progressive Distributor",2.70319396986321,2.11168644855523,1.11039957223938,0.678577516368511
-"Clément Lenglet","Atlético Madrid","La Liga","2024-2025",29,"2","Standard Build-up Distributor",2.70266364236968,1.57207712817778,1.08290843913736,1.32902399348676
-"Erhan Mašović","Bochum","Bundesliga","2024-2025",25,"1","Limited / Reactive Defender",2.7014852732032,1.32087563992044,1.31064483947243,1.52908564605117
-"Christoph Zimmermann","Darmstadt 98","Bundesliga","2023-2024",30,"3","High-Intensity Ball-Winner",2.69479670805185,1.11551756695146,1.30618016531765,2.05256883121345
-"Sven Botman","Newcastle Utd","Premier League","2023-2024",23,"1","Limited / Reactive Defender",2.69345170752707,0.889446874295807,0.620325138729924,1.37850030828872
-"Aleksandar Sedlar","Alavés","La Liga","2023-2024",31,"1","Limited / Reactive Defender",2.67995657616919,1.11331935390367,1.1289067916623,1.21574577563632
-"Anthony Rouault","Rennes","Ligue 1","2024-2025",23,"1","Limited / Reactive Defender",2.67712125653058,1.27778083586083,0.735062322425981,1.10259348363897
-"David Nemeth","St Pauli","Bundesliga","2024-2025",23,"1","Limited / Reactive Defender",2.66735779216613,1.1918027142664,0.771987853970097,1.84419320670634
-"Omar Alderete","Getafe","La Liga","2024-2025",27,"2","Standard Build-up Distributor",2.66221841462448,1.53987763401067,1.20590394681496,1.29634674282608
-"Sebastian Walukiewicz","Empoli","Serie A","2023-2024",23,"1","Limited / Reactive Defender",2.6547746837388,0.936638883903564,0.718496089991862,1.86808983397884
-"Renato Veiga","Juventus","Serie A","2024-2025",21,"3","High-Intensity Ball-Winner",2.64834983415681,1.44893164830231,1.52408857305774,1.3636581969464
-"Dylan Batubinsika","Saint-Étienne","Ligue 1","2024-2025",28,"3","High-Intensity Ball-Winner",2.64752759551089,1.01370166859072,1.80768865709006,1.20512577139338
-"Aridane Hernández","Rayo Vallecano","La Liga","2024-2025",35,"1","Limited / Reactive Defender",2.64750597572272,1.26805959915887,0.582800637629603,1.26273471486414
-"Strahinja Pavlović","Milan","Serie A","2024-2025",23,"4","Elite Progressive Distributor",2.63635211815012,2.33588082604059,0.55853818774672,1.81524911017684
-"Thomas Kristensen","Udinese","Serie A","2023-2024",21,"3","High-Intensity Ball-Winner",2.63630261400582,1.05165232641363,1.35819586521185,1.63920190629016
-"Nico Elvedi","Gladbach","Bundesliga","2024-2025",27,"1","Limited / Reactive Defender",2.63486521799359,1.16174305388399,1.20265477480254,1.52336271474989
-"Jaka Bijol","Udinese","Serie A","2024-2025",25,"2","Standard Build-up Distributor",2.63218368908749,1.37418717993158,1.25894752839496,1.42459851897324
-"Auston Trusty","Sheffield Utd","Premier League","2023-2024",24,"3","High-Intensity Ball-Winner",2.63027902191543,0.691558922380212,1.41729904198279,1.90323014209117
-"Cédric Kipré","Reims","Ligue 1","2024-2025",27,"3","High-Intensity Ball-Winner",2.62783546288859,1.4493328213862,1.28377493647827,1.68495460412772
-"Nathaniel Clyne","Crystal Palace","Premier League","2023-2024",32,"1","Limited / Reactive Defender",2.62679125264628,1.06490769357865,0.785050863180484,1.88412207163316
-"Jamaal Lascelles","Newcastle Utd","Premier League","2023-2024",29,"1","Limited / Reactive Defender",2.6257315320326,1.17784151879758,0.439396973267029,1.23031152514768
-"Max Kilman","West Ham","Premier League","2024-2025",27,"2","Standard Build-up Distributor",2.6210714673316,1.4731874942835,0.996915782443818,1.0231504082976
-"Logan Costa","Villarreal","La Liga","2024-2025",23,"2","Standard Build-up Distributor",2.61979523533393,1.74288284707643,0.702122372731502,1.270507150657
-"Mattia Bani","Genoa","Serie A","2024-2025",30,"1","Limited / Reactive Defender",2.61444676695446,0.67823200669847,1.5144088189456,1.30789852545302
-"Yoann Salmier","Le Havre","Ligue 1","2023-2024",30,"1","Limited / Reactive Defender",2.60694554853385,1.21794279039837,1.04718232212972,1.09704814699304
-"Rafa Marín","Alavés","La Liga","2023-2024",21,"1","Limited / Reactive Defender",2.60036144444141,1.20462857566283,1.10967638219445,1.07604982515826
-"José María Giménez","Atlético Madrid","La Liga","2024-2025",29,"1","Limited / Reactive Defender",2.59838411570383,1.07061061045599,1.31107319417503,1.2625149277241
-"Aïssa Mandi","Villarreal","La Liga","2023-2024",31,"2","Standard Build-up Distributor",2.59606534436075,1.75672046275184,0.621705584480005,1.01027157478001
-"Mamadou Sarr","Strasbourg","Ligue 1","2024-2025",18,"1","Limited / Reactive Defender",2.59164228103286,0.835203665469771,1.02279209106508,1.51373229477631
-"Morato","Nott'ham Forest","Premier League","2024-2025",23,"1","Limited / Reactive Defender",2.58339804388301,0.686502974945725,0.995978849953297,2.19115346989725
-"Thiago Silva","Chelsea","Premier League","2023-2024",38,"1","Limited / Reactive Defender",2.57972711642916,1.37752429516399,0.815118843717141,0.909171017992195
-"Rúben Dias","Manchester City","Premier League","2024-2025",27,"4","Elite Progressive Distributor",2.57872014608282,2.85106753877511,0.669445293085668,0.569028499122818
-"Daniele Ghilardi","Hellas Verona","Serie A","2024-2025",21,"3","High-Intensity Ball-Winner",2.57709007580736,1.20407097077265,1.40857495154907,2.06590992893863
-"Jay Idzes","Venezia","Serie A","2024-2025",24,"1","Limited / Reactive Defender",2.57156206597145,1.05713218104535,1.04573147708256,1.47055988964735
-"Leopold Querfeld","Union Berlin","Bundesliga","2024-2025",20,"1","Limited / Reactive Defender",2.5676754583209,1.08263437903414,1.06735189174053,1.40441038386912
-"Igor","Brighton","Premier League","2024-2025",26,"2","Standard Build-up Distributor",2.56327309818916,1.93925344836513,0.393639665057022,0.492049581321278
-"Ladislav Krejčí","Girona","La Liga","2024-2025",25,"4","Elite Progressive Distributor",2.56299362040003,2.30137103202676,0.977209642574624,0.661053581741658
-"Robin Koch","Eint Frankfurt","Bundesliga","2024-2025",28,"1","Limited / Reactive Defender",2.56243668490249,1.30252559244728,0.911349093128144,0.874895129403018
-"Becir Omeragic","Montpellier","Ligue 1","2024-2025",22,"2","Standard Build-up Distributor",2.559480236545,1.2969049514572,0.631445481319655,1.554327338633
-"Natan","Betis","La Liga","2024-2025",23,"1","Limited / Reactive Defender",2.55383578513681,0.980975891438569,1.26659111110431,1.58323888888039
-"Moussa Niakhate","Lyon","Ligue 1","2024-2025",28,"2","Standard Build-up Distributor",2.55246545267973,1.73148980258694,0.689166462323277,1.29563294916776
-"Pablo Marí","Fiorentina","Serie A","2024-2025",30,"3","High-Intensity Ball-Winner",2.55069972048984,0.822556625565152,2.09441994686301,1.17287517024329
-"Lorenzo Pirola","Salernitana","Serie A","2023-2024",21,"1","Limited / Reactive Defender",2.55026339886616,1.11320016668658,1.0468295012595,1.63305402196482
-"Jonathan Tah","Leverkusen","Bundesliga","2024-2025",28,"2","Standard Build-up Distributor",2.54266162403867,1.96654656374056,0.803532544659518,0.424086620792524
-"Wesley Fofana","Chelsea","Premier League","2024-2025",23,"2","Standard Build-up Distributor",2.53364096185192,1.50210551985205,0.946353191553721,0.87875653501417
-"Jakov Medić","Bochum","Bundesliga","2024-2025",25,"1","Limited / Reactive Defender",2.53204008489318,0.61436944089207,1.36406267863579,0.806037037375696
-"Ismaël Traoré","Metz","Ligue 1","2023-2024",36,"1","Limited / Reactive Defender",2.52684555793137,0.487144622495329,1.36642529231416,0.865402685132303
-"Brendan Chardonnet","Brest","Ligue 1","2024-2025",29,"1","Limited / Reactive Defender",2.52073536476169,0.838501338169365,1.13260222333989,1.75748620863086
-"Danilo D'Ambrosio","Monza","Serie A","2024-2025",35,"2","Standard Build-up Distributor",2.52020369659041,1.37935676830394,1.00093314003867,1.86840852807219
-"Denis Vavro","Wolfsburg","Bundesliga","2024-2025",28,"2","Standard Build-up Distributor",2.51716567462039,1.40660081518224,1.40753147157046,0.798869213594047
-"Marvin Friedrich","Gladbach","Bundesliga","2024-2025",28,"2","Standard Build-up Distributor",2.51488874039513,1.56707087675595,0.432704405831384,1.29811321749415
-"Aritz Elustondo","Real Sociedad","La Liga","2024-2025",30,"2","Standard Build-up Distributor",2.511165365387,1.53305534518212,0.716983154779989,1.30360573596362
-"Manuel Gulde","Freiburg","Bundesliga","2023-2024",32,"1","Limited / Reactive Defender",2.50665132727988,1.31906690602709,1.04346700289824,1.5443311642894
-"Yunis Abdelhamid","Saint-Étienne","Ligue 1","2024-2025",36,"1","Limited / Reactive Defender",2.50285599515769,0.837788820893148,1.26641856325142,1.53779396966244
-"Gabriel Paulista","Valencia","La Liga","2023-2024",32,"1","Limited / Reactive Defender",2.50277913851577,0.818482629217796,1.49975852832973,0.624899386804054
-"Martin Erlic","Sassuolo","Serie A","2023-2024",25,"1","Limited / Reactive Defender",2.50154010819043,1.15658496089697,0.94336326604354,1.24658717298611
-"Alessio Romagnoli","Lazio","Serie A","2024-2025",29,"1","Limited / Reactive Defender",2.49352955439421,1.23420257168847,0.886063954288027,1.63581037714713
-"Gautier Lloris","Le Havre","Ligue 1","2024-2025",29,"1","Limited / Reactive Defender",2.49317290197077,1.31040681131009,0.960421551702791,1.92084310340558
-"Carl Starfelt","Celta Vigo","La Liga","2024-2025",29,"1","Limited / Reactive Defender",2.48571109934287,1.12979487970894,1.23587584619906,1.59467851122459
-"Amir Rrahmani","Napoli","Serie A","2024-2025",30,"2","Standard Build-up Distributor",2.48536124744001,2.0837587853075,0.622772119395675,0.899559728015975
-"Marc-Oliver Kempf","Como","Serie A","2024-2025",29,"2","Standard Build-up Distributor",2.48460121082895,1.32105080513596,1.10584554890652,1.00531413536957
-"Ardian Ismajli","Empoli","Serie A","2024-2025",27,"3","High-Intensity Ball-Winner",2.47902316536405,0.530874907554395,2.19788756077255,1.17743976469958
-"Christian Kabasele","Udinese","Serie A","2024-2025",33,"2","Standard Build-up Distributor",2.47470529624851,1.56502116757978,1.1837268546371,1.43738260920219
-"Nacho","Real Madrid","La Liga","2023-2024",33,"2","Standard Build-up Distributor",2.47222119298711,1.29359058819146,0.875839809005355,0.875839809005355
-"Danilho Doekhi","Union Berlin","Bundesliga","2024-2025",26,"1","Limited / Reactive Defender",2.47135722651818,1.22603640521461,1.41116624035623,1.18666252029956
-"Sepp Van Den Berg","Brentford","Premier League","2024-2025",22,"1","Limited / Reactive Defender",2.47040542081872,1.16035024246923,0.767264794064788,1.42492033183461
-"Jorge Sáenz","Leganés","La Liga","2024-2025",27,"1","Limited / Reactive Defender",2.45893529212206,0.78850395074972,1.29849563320984,1.92177353715057
-"Niklas Stark","Werder Bremen","Bundesliga","2024-2025",29,"1","Limited / Reactive Defender",2.45887300823251,1.03390884646066,1.51243053773092,1.38639465958667
-"Gianluca Mancini","Roma","Serie A","2023-2024",27,"2","Standard Build-up Distributor",2.45163644108156,2.02137547867459,0.931626988371626,0.879869933462091
-"Simon Kjær","Milan","Serie A","2023-2024",34,"2","Standard Build-up Distributor",2.43818646575269,1.58242082452359,0.777946869525961,1.33362320490165
-"Gaby Jean","Lecce","Serie A","2024-2025",24,"1","Limited / Reactive Defender",2.43013573151555,1.14336867124585,0.649418562698927,1.01020665308722
-"Bafodé Diakité","Lille","Ligue 1","2024-2025",23,"1","Limited / Reactive Defender",2.42873463560863,1.21336494824754,0.753893294760736,0.865581190280845
-"Levi Colwill","Chelsea","Premier League","2024-2025",21,"2","Standard Build-up Distributor",2.42866274632574,1.55580296592506,0.8302217492295,1.18243703678141
-"Enrico Del Prato","Parma","Serie A","2024-2025",24,"1","Limited / Reactive Defender",2.42472469676156,1.07022759780552,0.630620920448599,1.09528896709494
-"Matthijs De Ligt","Manchester Utd","Premier League","2024-2025",24,"1","Limited / Reactive Defender",2.40918818076068,0.987184380227969,1.44798158132553,1.31634689211412
-"James Tarkowski","Everton","Premier League","2024-2025",31,"1","Limited / Reactive Defender",2.40749420315859,1.04498691106711,1.1704183413465,1.82699448405307
-"Abdel Abqar","Alavés","La Liga","2024-2025",25,"1","Limited / Reactive Defender",2.40431646197909,1.29184049356315,1.30078663204937,1.20072612189173
-"Charlie Cresswell","Toulouse","Ligue 1","2024-2025",21,"1","Limited / Reactive Defender",2.3970874159522,0.978281604056803,0.968628387173201,1.2107854839665
-"Patric","Lazio","Serie A","2023-2024",30,"2","Standard Build-up Distributor",2.3945130827374,1.51954670427489,0.339776533561654,0.736182489383585
-"Francesco Acerbi","Inter","Serie A","2024-2025",36,"2","Standard Build-up Distributor",2.3838014088913,1.62296429771594,1.20405429234018,1.06512495091631
-"Jon Pacheco","Real Sociedad","La Liga","2023-2024",22,"2","Standard Build-up Distributor",2.38342071152214,1.32061783025238,0.622330785484596,1.55582696371149
-"Sokratis Papastathopoulos","Betis","La Liga","2023-2024",35,"1","Limited / Reactive Defender",2.37805088025346,0.407793746812748,0.519649585007272,1.81877354752545
-"Radu Drăgușin","Tottenham","Premier League","2024-2025",22,"1","Limited / Reactive Defender",2.37517207469945,1.18328051283447,1.10730128052443,0.738200853682951
-"Antonio Rüdiger","Real Madrid","La Liga","2024-2025",31,"2","Standard Build-up Distributor",2.37350894205754,1.63589726139733,0.333744283396628,0.741653963103618
-"Catena","Osasuna","La Liga","2024-2025",29,"1","Limited / Reactive Defender",2.37269902217384,1.08184135398667,1.04084103739455,1.36796250628998
-"Fikayo Tomori","Milan","Serie A","2024-2025",26,"2","Standard Build-up Distributor",2.36325850770355,1.52589209567172,0.81694537190826,1.63389074381652
-"Botond Balogh","Parma","Serie A","2024-2025",22,"1","Limited / Reactive Defender",2.35397725134316,0.695091334380152,1.1910938117274,1.71517508888745
-"Alberto Dossena","Como","Serie A","2024-2025",25,"1","Limited / Reactive Defender",2.3524322549943,0.757570157061865,1.05636022297372,1.58454033446058
-"Ben Davies","Tottenham","Premier League","2024-2025",31,"2","Standard Build-up Distributor",2.35151317634098,1.58925761308534,0.833262932061055,1.18045582041983
-"Chumi","Almería","La Liga","2023-2024",24,"1","Limited / Reactive Defender",2.34831306484425,1.0568605726169,0.542514508301768,1.31753523444715
-"Sebastiano Luperto","Cagliari","Serie A","2024-2025",27,"1","Limited / Reactive Defender",2.34329063916874,1.20389453073091,0.793916413438191,1.15478751045555
-"Stefan De Vrij","Inter","Serie A","2024-2025",32,"2","Standard Build-up Distributor",2.34095765759849,1.58723487396076,1.05525125496344,0.825848808232256
-"Craig Dawson","Wolves","Premier League","2024-2025",34,"1","Limited / Reactive Defender",2.3283691428328,0.892454439344209,0.907519000217858,1.51253166702976
-"Miloš Veljković","Werder Bremen","Bundesliga","2024-2025",28,"2","Standard Build-up Distributor",2.32807383235595,2.29097379071539,0.171967320616635,0.859836603083173
-"Andreas Hanche-Olsen","Mainz 05","Bundesliga","2024-2025",27,"1","Limited / Reactive Defender",2.32742289180429,0.936577520746031,0.872826952470586,1.52744716682353
-"Wout Faes","Leicester City","Premier League","2024-2025",26,"1","Limited / Reactive Defender",2.31861583945465,1.1239617610398,0.872717500232214,1.40977442345204
-"Matthias Ginter","Freiburg","Bundesliga","2024-2025",30,"2","Standard Build-up Distributor",2.31546193746988,1.60414358712909,0.633870552810953,1.00084824128045
-"Simone Romagnoli","Frosinone","Serie A","2023-2024",33,"1","Limited / Reactive Defender",2.31468665472532,0.59186876895597,1.09834632448149,1.3255903916156
-"Jannik Vestergaard","Leicester City","Premier League","2024-2025",31,"1","Limited / Reactive Defender",2.30952883372427,0.842580709022237,1.08685495245421,1.49442555962454
-"Jubal","Auxerre","Ligue 1","2024-2025",30,"1","Limited / Reactive Defender",2.30432395735613,0.462672318867616,0.886883347528133,2.12852003406752
-"Raúl Asencio","Real Madrid","La Liga","2024-2025",21,"1","Limited / Reactive Defender",2.29657386815232,0.695521430931238,0.813954121901983,1.11918691761523
-"Adam Masina","Torino","Serie A","2024-2025",30,"2","Standard Build-up Distributor",2.29526157311286,1.48755274792872,0.879409747667051,1.07483413603751
-"Robin Le Normand","Atlético Madrid","La Liga","2024-2025",27,"1","Limited / Reactive Defender",2.28953711810108,0.995266441831162,0.451269059206895,1.21842645985862
-"Jordan Lefort","Angers","Ligue 1","2024-2025",30,"1","Limited / Reactive Defender",2.28883141673772,1.05573881866971,0.8873324477085,1.44191522752631
-"Marko Ivezić","Holstein Kiel","Bundesliga","2024-2025",22,"1","Limited / Reactive Defender",2.2883198716333,0.87392149072376,1.17124106126726,1.25799965839817
-"Armando Izzo","Monza","Serie A","2024-2025",32,"1","Limited / Reactive Defender",2.28280542646387,1.19878691400545,1.35033485216716,1.20029764637081
-"Jake O'Brien","Lyon","Ligue 1","2023-2024",22,"1","Limited / Reactive Defender",2.27113271798811,1.1508289134981,0.380650288147219,0.697858861603235
-"Julien Laporte","Lorient","Ligue 1","2023-2024",29,"1","Limited / Reactive Defender",2.27049670874227,1.06019737317896,0.544900166796809,1.13933671239333
-"David Zec","Holstein Kiel","Bundesliga","2024-2025",24,"1","Limited / Reactive Defender",2.26664010357158,0.889260510780163,0.792960065730224,1.07282832422324
-"Kialonda","Lecce","Serie A","2024-2025",26,"1","Limited / Reactive Defender",2.26567404952817,0.628534950342587,1.49484737151926,1.58827533223921
-"Juan Jesus","Napoli","Serie A","2024-2025",33,"2","Standard Build-up Distributor",2.25880670319386,1.56188605049586,0.658337007654149,1.82871391015041
-"Florent Ogier","Clermont Foot","Ligue 1","2023-2024",34,"1","Limited / Reactive Defender",2.25434964571108,0.723956661928,0.822353991203024,1.73608064809527
-"Taylor Harwood-Bellis","Southampton","Premier League","2024-2025",22,"2","Standard Build-up Distributor",2.25292601825878,1.83635199172991,0.680102332357358,0.634762176866867
-"Luca Ranieri","Fiorentina","Serie A","2024-2025",25,"1","Limited / Reactive Defender",2.24207233408816,1.20994626889179,0.838695497835968,1.25804324675395
-"Juan Cruz Armada","Osasuna","La Liga","2024-2025",32,"2","Standard Build-up Distributor",2.23985979427257,1.33246679803752,0.55143447224354,1.59303291981467
-"César Montes","Almería","La Liga","2023-2024",26,"1","Limited / Reactive Defender",2.23797605147608,1.08950465466603,0.580268594010528,1.16053718802106
-"Jack Stephens","Southampton","Premier League","2024-2025",30,"2","Standard Build-up Distributor",2.23625662440891,1.78882177897102,0.599394244200239,1.56764648483139
-"Guillermo Maripán","Torino","Serie A","2024-2025",30,"2","Standard Build-up Distributor",2.23606162581917,1.52374607205986,1.0951421262535,1.06843134268634
-"Edoardo Goldaniga","Como","Serie A","2024-2025",30,"2","Standard Build-up Distributor",2.23565362582528,1.28823673613913,1.14209562021744,1.17670457840585
-"Jarrad Branthwaite","Everton","Premier League","2024-2025",22,"1","Limited / Reactive Defender",2.22725317209388,0.976222285564024,0.896921687231697,1.1958955829756
-"César Tárrega","Valencia","La Liga","2024-2025",22,"1","Limited / Reactive Defender",2.21943063368612,1.04837545281381,0.635142284882534,1.41463508905655
-"Ko Itakura","Gladbach","Bundesliga","2024-2025",27,"1","Limited / Reactive Defender",2.21856919972174,1.09865530302157,0.858957018371519,1.22708145481646
-"Saidou Sow","Strasbourg","Ligue 1","2024-2025",22,"1","Limited / Reactive Defender",2.21845725714055,0.54235391724821,1.42567974186773,0.855407845120635
-"Santiago Bueno","Wolves","Premier League","2024-2025",25,"1","Limited / Reactive Defender",2.21576083024432,0.53503169564922,0.870579874739715,2.37958499095522
-"Daniele Rugani","Juventus","Serie A","2023-2024",29,"1","Limited / Reactive Defender",2.20789253889465,1.32756464449636,0.664765631763799,0.81249132771131
-"Issa Diop","Fulham","Premier League","2024-2025",27,"1","Limited / Reactive Defender",2.20328151224024,0.783657939049847,0.604619376232612,1.74667819800532
-"Ethan Pinnock","Brentford","Premier League","2024-2025",31,"1","Limited / Reactive Defender",2.20271586977987,0.830152519602795,1.18536136656055,1.7286519929008
-"Juan Berrocal","Getafe","La Liga","2024-2025",25,"1","Limited / Reactive Defender",2.19866675218937,0.786930755182093,1.26390191415354,1.1796417865433
-"David López","Girona","La Liga","2024-2025",34,"2","Standard Build-up Distributor",2.19609885250385,1.95682342053952,0.404202666194623,0.923891808444854
-"Aitor Paredes","Athletic Club","La Liga","2024-2025",24,"1","Limited / Reactive Defender",2.19197382035149,0.889593402175048,1.15024922924553,0.784260838121953
-"Trevoh Chalobah","Chelsea","Premier League","2024-2025",25,"2","Standard Build-up Distributor",2.18333994446733,1.49365419642843,0.870585510597301,0.957644061657031
-"Gabriel Osho","Auxerre","Ligue 1","2024-2025",25,"1","Limited / Reactive Defender",2.17862440731068,1.05489293012202,0.679479188626149,1.30233511153345
-"Domingos Duarte","Getafe","La Liga","2024-2025",29,"1","Limited / Reactive Defender",2.17073791173583,0.866796417660508,0.867258354865118,1.34906855201241
-"Jakub Kiwior","Arsenal","Premier League","2024-2025",24,"2","Standard Build-up Distributor",2.1582095705242,1.59313049200157,0.416799109736804,1.52826340236828
-"Christopher Jullien","Montpellier","Ligue 1","2023-2024",30,"1","Limited / Reactive Defender",2.14096320928419,0.725737399635027,0.850436399696095,1.13391519959479
-"Duje Ćaleta-Car","Lyon","Ligue 1","2024-2025",27,"1","Limited / Reactive Defender",2.13975420207034,1.01764093733661,0.806498792853165,0.948822109239017
-"Malick Thiaw","Milan","Serie A","2024-2025",22,"2","Standard Build-up Distributor",2.13865975492277,1.80358016690025,0.54044600392436,0.864713606278975
-"Andrea Carboni","Monza","Serie A","2024-2025",23,"1","Limited / Reactive Defender",2.13773889164988,0.903823005870258,0.900428671390335,2.00095260308963
-"Juan Herzog","Las Palmas","La Liga","2024-2025",21,"1","Limited / Reactive Defender",2.13559497528042,0.638647009013981,1.3468193000069,0.897879533337932
-"Christoph Klarer","Darmstadt 98","Bundesliga","2023-2024",23,"1","Limited / Reactive Defender",2.13146437291333,1.10552809995093,0.676949788312463,1.19272105559815
-"Pau Torres","Aston Villa","Premier League","2024-2025",27,"4","Elite Progressive Distributor",2.12943427763741,2.16125160641338,0.353417073502529,0.74217585435531
-"Jan Bednarek","Southampton","Premier League","2024-2025",28,"1","Limited / Reactive Defender",2.1272084312141,0.853712409484411,1.41699182113702,0.910923313588085
-"Yael Mouanga","Montpellier","Ligue 1","2024-2025",19,"1","Limited / Reactive Defender",2.12232320072574,0.914837052835753,0.923703383390843,1.29318473674718
-"Jon Martin","Real Sociedad","La Liga","2024-2025",18,"2","Standard Build-up Distributor",2.11961618446756,1.4304582311374,0.735369187007352,1.15558015101155
-"Obite N'Dicka","Roma","Serie A","2024-2025",24,"2","Standard Build-up Distributor",2.11030116058684,1.30540343693251,0.716403901706144,0.694694692563533
-"Federico Fazio","Salernitana","Serie A","2023-2024",36,"1","Limited / Reactive Defender",2.10520466376,0.72681491789667,1.04386284053268,1.1052665370346
-"Diego Carlos","Aston Villa","Premier League","2023-2024",30,"1","Limited / Reactive Defender",2.10015347689793,1.12528841525985,0.511053543511916,1.06141889806321
-"Gabriel Magalhães","Arsenal","Premier League","2024-2025",26,"2","Standard Build-up Distributor",2.08624619864582,1.94235552428234,0.527745635350198,0.824602555234684
-"Giovanni Leoni","Parma","Serie A","2024-2025",17,"1","Limited / Reactive Defender",2.0565282870416,0.567486501215091,1.22367752901235,1.14209902707819
-"Marash Kumbulla","Espanyol","La Liga","2024-2025",24,"1","Limited / Reactive Defender",2.04150872003024,0.869463330741893,1.00447788643477,1.50671682965215
-"Dan Burn","Newcastle Utd","Premier League","2024-2025",32,"1","Limited / Reactive Defender",2.02872735149748,0.88826272285639,0.769538482910905,1.11155558642686
-"Lautaro Valenti","Parma","Serie A","2024-2025",25,"1","Limited / Reactive Defender",2.0217680481143,0.690767489556548,0.817200584606491,1.06864691833156
-"Álex Suárez","Las Palmas","La Liga","2024-2025",31,"1","Limited / Reactive Defender",2.02002595831398,0.780586695910327,0.519961064444849,1.59988019829184
-"Copete","Mallorca","La Liga","2024-2025",24,"1","Limited / Reactive Defender",2.00952768646305,1.16403278855014,0.776465496656915,1.32455878841474
-"Jorge Herrando","Osasuna","La Liga","2024-2025",23,"1","Limited / Reactive Defender",2.00141519319941,1.02758586500324,0.803065136737298,1.13767561037784
-"Sergi","Leganés","La Liga","2024-2025",32,"1","Limited / Reactive Defender",1.99491929905351,0.888121684226764,1.15771183205764,1.18739675082835
-"Leandro Cabrera","Espanyol","La Liga","2024-2025",33,"1","Limited / Reactive Defender",1.99305763984389,0.932822754233674,0.918123227549298,1.22416430339906
-"Conor Coady","Leicester City","Premier League","2024-2025",31,"1","Limited / Reactive Defender",1.97727804760253,0.652033298520205,0.716656873732113,0.716656873732113
-"Javi Sánchez","Valladolid","La Liga","2024-2025",27,"1","Limited / Reactive Defender",1.97490629533568,0.665142612800842,0.999812174753573,1.18159620652695
-"Jacob Greaves","Ipswich Town","Premier League","2024-2025",23,"1","Limited / Reactive Defender",1.96888663162493,1.19307276859,0.691885464698565,1.31787707561632
-"Dara O'Shea","Ipswich Town","Premier League","2024-2025",25,"1","Limited / Reactive Defender",1.94998767175008,0.853633744960622,0.767899787053341,1.14021483532163
-"Martin Valjent","Mallorca","La Liga","2024-2025",28,"2","Standard Build-up Distributor",1.94355343530127,1.32749898657718,0.454661536268161,0.757769227113602
-"Federico Baschirotto","Lecce","Serie A","2024-2025",27,"1","Limited / Reactive Defender",1.93957061051982,0.797970297035529,0.673555496933091,1.0835457994141
-"Ezri Konsa","Aston Villa","Premier League","2024-2025",26,"2","Standard Build-up Distributor",1.92077595712976,1.26801535994869,0.583571516464666,0.82672631499161
-"Kurt Zouma","West Ham","Premier League","2023-2024",28,"1","Limited / Reactive Defender",1.91760340923363,0.697370964496522,0.897523711555906,0.711829150544339
-"Raúl Albiol","Villarreal","La Liga","2024-2025",38,"1","Limited / Reactive Defender",1.88799838437783,0.970178179096824,0.436842370913034,0.72807061818839
-"Antonio Raillo","Mallorca","La Liga","2024-2025",32,"2","Standard Build-up Distributor",1.88498680436562,1.4639982284036,0.631096298315472,0.674620180957919
-"Tosin Adarabioyo","Chelsea","Premier League","2024-2025",26,"1","Limited / Reactive Defender",1.86854669820975,1.05889011970441,0.618492616116322,0.955852224907044
-"Abdoulaye Bamba","Angers","Ligue 1","2024-2025",34,"1","Limited / Reactive Defender",1.85548165895103,0.458727716516461,1.06766366949032,1.23624214362037
-"Etienne Youte Kinkoue","Le Havre","Ligue 1","2024-2025",22,"1","Limited / Reactive Defender",1.8490822116225,1.04367547110931,0.977370167321075,0.640345971693118
-"Nikola Milenković","Nott'ham Forest","Premier League","2024-2025",26,"1","Limited / Reactive Defender",1.83023838438101,0.578483142124934,0.732448229925113,1.38351332319188
-"Willy Kambwala","Villarreal","La Liga","2024-2025",19,"1","Limited / Reactive Defender",1.82248694649098,0.526625156206516,0.774349054975656,1.31639339345861
-"Matija Nastasić","Leganés","La Liga","2024-2025",31,"1","Limited / Reactive Defender",1.81493551180132,0.910560132129391,0.873622938817391,1.04002730811594
-"Tyrone Mings","Aston Villa","Premier League","2024-2025",31,"2","Standard Build-up Distributor",1.80526356604405,1.38174846417002,0.446189055296942,0.446189055296942
-"Saúl Coco","Torino","Serie A","2024-2025",25,"1","Limited / Reactive Defender",1.79099164439229,0.964140463380699,0.83484108077038,1.01059709777467
-"Luca Caldirola","Monza","Serie A","2023-2024",32,"1","Limited / Reactive Defender",1.78753351132592,1.02507898395835,0.989712964718295,0.853200831653703
-"Scott Mckenna","Las Palmas","La Liga","2024-2025",27,"1","Limited / Reactive Defender",1.76293660278413,0.753039625178121,0.359097197791782,0.837893461514159
-"Matteo Gabbia","Milan","Serie A","2024-2025",24,"2","Standard Build-up Distributor",1.75814534081391,1.28621149970726,0.45355273377667,0.634973827287338
-"Michael Keane","Everton","Premier League","2024-2025",31,"1","Limited / Reactive Defender",1.73986808477746,0.497216889771884,1.2722778556728,0.954208391754599
-"Cameron Burgess","Ipswich Town","Premier League","2024-2025",28,"1","Limited / Reactive Defender",1.73663374309477,1.0125183123924,0.660007549063524,0.801437738148565
-"Luke Woolfenden","Ipswich Town","Premier League","2024-2025",25,"1","Limited / Reactive Defender",1.72205874517437,0.57984782943061,1.16285720477981,0.550827097000964
-"David Torres","Valladolid","La Liga","2024-2025",21,"1","Limited / Reactive Defender",1.71847788975319,1.10057165048566,0.663832819705951,0.862982665617736
-"Emmanuel Biumla","Angers","Ligue 1","2024-2025",19,"1","Limited / Reactive Defender",1.69322078247703,0.464007094679083,0.508090810252247,1.20671567434909
+"Sead Kolašinac","Atalanta","Serie A","2024-2025",31,"4","Elite Progressive Distributor",4.74733768987994,3.16047273055513,1.39865037701312,2.17411980234662
+"Riccardo Calafiori","Bologna","Serie A","2023-2024",21,"3","High-Intensity Ball-Winner",4.64788681865141,1.77286002377527,1.99294159203512,2.02878347589608
+"Timo Hübers","Köln","Bundesliga","2023-2024",27,"3","High-Intensity Ball-Winner",4.5641306980829,1.45667387397199,2.17090110915615,2.44038105360886
+"Nico Schlotterbeck","Dortmund","Bundesliga","2024-2025",24,"4","Elite Progressive Distributor",4.43997379604955,3.617557985466,1.00605376803484,1.61240047688121
+"Wilfried Singo","Monaco","Ligue 1","2024-2025",23,"3","High-Intensity Ball-Winner",4.3536771633929,2.28565578012189,1.94022783606893,1.87028820844276
+"Giorgio Scalvini","Atalanta","Serie A","2023-2024",19,"3","High-Intensity Ball-Winner",4.33290151376255,1.86694331908057,2.20765569365461,2.14881489243417
+"Lucas Martínez Quarta","Fiorentina","Serie A","2023-2024",27,"3","High-Intensity Ball-Winner",4.13242173960211,2.7638640305618,1.18196309773118,2.59589850373172
+"Facundo Medina","Lens","Ligue 1","2024-2025",25,"4","Elite Progressive Distributor",4.11101417456911,2.78800166165692,1.23762822967156,1.69578777749108
+"Mohammed Salisu","Monaco","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",4.00491123629633,2.25756415201666,1.51336905992318,2.41191878412673
+"Alidu Seidu","Clermont Foot","Ligue 1","2023-2024",23,"3","High-Intensity Ball-Winner",3.9929463632273,1.43888275871315,1.52240315121319,1.99382639522511
+"Jhon Lucumí","Bologna","Serie A","2024-2025",26,"3","High-Intensity Ball-Winner",3.98089800535339,1.75724106554906,1.12201391475566,2.05753849403477
+"Daniel Vivian","Athletic Club","La Liga","2024-2025",25,"4","Elite Progressive Distributor",3.96545958573405,2.65795426838286,1.5640275608345,1.48312130948894
+"Mohamed Simakan","RB Leipzig","Bundesliga","2023-2024",23,"3","High-Intensity Ball-Winner",3.84262514333371,2.12428174322449,1.39277107514895,2.19292559547856
+"Leonardo Balerdi","Marseille","Ligue 1","2023-2024",24,"3","High-Intensity Ball-Winner",3.83410474507742,1.97154466133381,1.52083180157814,2.31336134410006
+"Lutsharel Geertruida","RB Leipzig","Bundesliga","2024-2025",24,"3","High-Intensity Ball-Winner",3.83355108162627,2.30626710289254,1.16460423371702,2.15153394315676
+"Thilo Kehrer","Monaco","Ligue 1","2024-2025",27,"3","High-Intensity Ball-Winner",3.81609473742945,2.05999050485772,1.54350170793252,1.70625581085288
+"Dayot Upamecano","Bayern Munich","Bundesliga","2024-2025",25,"4","Elite Progressive Distributor",3.78917850624784,2.70178044863759,1.40398702400367,1.59317200958776
+"Castello Lukeba","RB Leipzig","Bundesliga","2023-2024",20,"1","Standard Build-up Distributor",3.77060502565985,1.88213417731835,0.79175211103657,1.1591787379286
+"Jarell Quansah","Liverpool","Premier League","2023-2024",20,"3","High-Intensity Ball-Winner",3.74897548838084,2.07385536879359,1.32474428270296,1.89107755954506
+"Tom Lockyer","Luton Town","Premier League","2023-2024",28,"2","Limited / Reactive Defender",3.72309032230131,1.26547740179339,1.56614961569309,1.84507436907079
+"Amari'I Bell","Luton Town","Premier League","2023-2024",29,"3","High-Intensity Ball-Winner",3.70834567181421,1.99218914173947,1.31206795682703,2.37083323954231
+"Mika Mármol","Las Palmas","La Liga","2023-2024",22,"3","High-Intensity Ball-Winner",3.70179608900257,1.78931639350604,1.32669721498279,2.05018585745097
+"Kim Min-Jae","Bayern Munich","Bundesliga","2024-2025",27,"4","Elite Progressive Distributor",3.70160623905608,2.68097571282126,1.25237118969964,1.30381002662194
+"Robin Knoche","Union Berlin","Bundesliga","2023-2024",31,"2","Limited / Reactive Defender",3.66867895242267,1.28238948361786,0.839825715301995,1.70484261568793
+"Unai Núñez","Celta Vigo","La Liga","2023-2024",26,"2","Limited / Reactive Defender",3.66303304119564,1.39885059636194,1.53808057664823,1.6123917936292
+"Cristian Romero","Tottenham","Premier League","2024-2025",26,"3","High-Intensity Ball-Winner",3.65002844478936,1.88377349471966,1.27614733113828,1.99452407538391
+"El Chadaille Bitshiabu","RB Leipzig","Bundesliga","2024-2025",19,"3","High-Intensity Ball-Winner",3.63732979918651,2.03534440084085,1.25217594758328,2.18735554944467
+"Dean Huijsen","Bournemouth","Premier League","2024-2025",19,"3","High-Intensity Ball-Winner",3.63574204296352,2.2903909952378,1.95229708614626,1.60676408166694
+"Danilo","Juventus","Serie A","2023-2024",32,"3","High-Intensity Ball-Winner",3.61572762867146,2.38996039734191,1.25461539883251,1.96141165381123
+"Paweł Dawidowicz","Hellas Verona","Serie A","2023-2024",28,"3","High-Intensity Ball-Winner",3.59869410264953,1.51138279203113,1.09681583023186,2.12850055693044
+"Iñigo Martínez","Barcelona","La Liga","2024-2025",33,"4","Elite Progressive Distributor",3.59694543135758,4.06789268505058,0.710699957209248,0.973689572093661
+"Lisandro Martínez","Manchester Utd","Premier League","2024-2025",26,"3","High-Intensity Ball-Winner",3.59189023032735,2.49514059554955,1.50819376347398,1.93163729014873
+"Isak Hien","Atalanta","Serie A","2024-2025",25,"2","Limited / Reactive Defender",3.58992806522637,0.881875141403012,1.41720830080067,2.124508520016
+"Waldemar Anton","Stuttgart","Bundesliga","2023-2024",27,"4","Elite Progressive Distributor",3.57905060368882,2.30392391939378,1.12884811304537,1.19339084366555
+"Youssouf Ndayishimiye","Nice","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",3.55717147443915,1.71862128349628,1.12273924410989,1.92584184536233
+"Christian Mawissa","Monaco","Ligue 1","2024-2025",19,"3","High-Intensity Ball-Winner",3.55200191302853,1.26198134195579,1.65996141851105,2.56151579225094
+"Mario Gila","Lazio","Serie A","2024-2025",23,"4","Elite Progressive Distributor",3.54797218580258,2.39233704497556,0.976715044745859,1.74955258161347
+"Adam Webster","Brighton","Premier League","2023-2024",28,"4","Elite Progressive Distributor",3.54699007980552,2.53003609203899,1.24892744225308,1.33719920425538
+"Odilon Kossounou","Atalanta","Serie A","2024-2025",23,"3","High-Intensity Ball-Winner",3.53802888075914,1.65436763173091,1.29198915926667,1.6623493230452
+"Willi Orban","RB Leipzig","Bundesliga","2024-2025",31,"3","High-Intensity Ball-Winner",3.51787834570668,1.77262595452032,1.08658172590789,1.79368956494446
+"Arthur Theate","Rennes","Ligue 1","2023-2024",23,"4","Elite Progressive Distributor",3.5169104143782,2.49287863000535,1.17351931141403,1.25470481510858
+"Bernardo","Bochum","Bundesliga","2024-2025",29,"3","High-Intensity Ball-Winner",3.51531019630248,2.0157974098366,1.37038760914887,2.2602892916676
+"César Azpilicueta","Atlético Madrid","La Liga","2023-2024",33,"4","Elite Progressive Distributor",3.51132185635473,2.54318888671696,1.12952451568658,1.6686496508657
+"Dante","Nice","Ligue 1","2024-2025",40,"3","High-Intensity Ball-Winner",3.51066017324812,1.84630283242517,1.55697529240146,1.62600144643664
+"Kevin Danso","Lens","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",3.51043684736726,1.81406021168016,1.54785490454401,1.6978874162696
+"Illia Zabarnyi","Bournemouth","Premier League","2024-2025",21,"3","High-Intensity Ball-Winner",3.4880945814398,1.76193878243744,1.36185521336383,1.75285394124007
+"Danilo Pereira","Paris S-G","Ligue 1","2023-2024",31,"4","Elite Progressive Distributor",3.47320692782085,2.67559943373085,0.985170771422486,1.06790446251283
+"Joseph Okumu","Reims","Ligue 1","2024-2025",27,"4","Elite Progressive Distributor",3.46878956840682,2.43498072105718,1.21807585242,1.5213520739788
+"Michael Svoboda","Venezia","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",3.45029004719693,1.42501455198406,1.52093045222657,1.88993814044111
+"Diogo Leite","Union Berlin","Bundesliga","2024-2025",25,"3","High-Intensity Ball-Winner",3.44862781550749,1.76794558139533,1.93192927625077,2.24972322656656
+"Jan Paul Van Hecke","Brighton","Premier League","2024-2025",24,"4","Elite Progressive Distributor",3.4467725301133,3.00707412920163,0.860244952848954,1.46873114619692
+"Marco Friedl","Werder Bremen","Bundesliga","2024-2025",26,"2","Limited / Reactive Defender",3.4361154404392,1.15105344871024,1.29947622328692,2.2261917727925
+"Marquinhos","Paris S-G","Ligue 1","2023-2024",29,"4","Elite Progressive Distributor",3.4342905553741,2.65472223516634,0.964175409010113,1.16585302793876
+"Patrick Mainka","Heidenheim","Bundesliga","2024-2025",29,"3","High-Intensity Ball-Winner",3.42993444831501,1.33785783670949,2.00529502711706,1.8556217734986
+"Abdukodir Khusanov","Lens","Ligue 1","2024-2025",20,"3","High-Intensity Ball-Winner",3.41516027687158,1.52067330801913,1.94640202539856,1.58095159018324
+"Warmed Omari","Rennes","Ligue 1","2023-2024",23,"3","High-Intensity Ball-Winner",3.41227710792406,2.19514502781533,1.321305230105,1.41040515263321
+"Oumar Solet","Udinese","Serie A","2024-2025",24,"3","High-Intensity Ball-Winner",3.40751094122464,1.7344374056497,1.07054476356227,1.83005741771285
+"Kevin Akpoguma","Hoffenheim","Bundesliga","2023-2024",28,"3","High-Intensity Ball-Winner",3.40319535280126,1.8774725945171,1.25835850423005,2.17319264650558
+"Dan-Axel Zagadou","Stuttgart","Bundesliga","2023-2024",24,"1","Standard Build-up Distributor",3.39234057257934,1.71038398111705,1.10411530686383,1.27934537357022
+"Sam Beukema","Bologna","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",3.37508949711321,1.93042503544671,1.11668308312131,1.87490827199419
+"Marc Guéhi","Crystal Palace","Premier League","2024-2025",24,"3","High-Intensity Ball-Winner",3.37216061345901,1.7055018640561,1.03671658540425,2.01522604204903
+"Kevin Vogt","Union Berlin","Bundesliga","2024-2025",32,"1","Standard Build-up Distributor",3.36654075481431,1.86085000447389,0.870089579960808,1.16351852128764
+"Woyo Coulibaly","Parma","Serie A","2024-2025",25,"4","Elite Progressive Distributor",3.36616037327176,2.15849057536322,0.940681086183396,1.37550518006704
+"Nehuén Pérez","Udinese","Serie A","2023-2024",23,"3","High-Intensity Ball-Winner",3.36121790482013,1.48765518951121,1.32812896002373,2.06327111169184
+"Reinildo Mandava","Atlético Madrid","La Liga","2024-2025",30,"3","High-Intensity Ball-Winner",3.35520387658312,1.61323891467029,1.42139881627728,1.73684030785443
+"Berat Djimsiti","Atalanta","Serie A","2024-2025",31,"3","High-Intensity Ball-Winner",3.34424474330672,1.74914356960392,1.56771821343021,2.090366235711
+"Yeray Álvarez","Athletic Club","La Liga","2024-2025",29,"3","High-Intensity Ball-Winner",3.3339682178838,2.17112220712112,1.58688925974226,1.41026990852872
+"Lucas Beraldo","Paris S-G","Ligue 1","2024-2025",20,"1","Standard Build-up Distributor",3.29363346007699,2.21289363595667,0.922692930803359,1.52437824371612
+"Lilian Brassier","Rennes","Ligue 1","2024-2025",24,"4","Elite Progressive Distributor",3.281769603802,2.37518706794802,1.3785364481311,1.25133535539585
+"Mathias Jørgensen","Brentford","Premier League","2023-2024",33,"1","Standard Build-up Distributor",3.27511119757927,1.67541911035777,1.09521133134799,1.51789433525631
+"Teden Mengi","Luton Town","Premier League","2023-2024",21,"2","Limited / Reactive Defender",3.26986051269548,0.98632968703964,1.92344423893384,1.95587167788312
+"Micky Van De Ven","Tottenham","Premier League","2024-2025",23,"1","Standard Build-up Distributor",3.25660931441724,1.82079363523388,1.01578678757016,1.20120444789322
+"Willy Boly","Nott'ham Forest","Premier League","2023-2024",32,"2","Limited / Reactive Defender",3.25394663890054,0.981435905252747,1.38866996962461,2.35800740870322
+"Gerzino Nyamsi","Strasbourg","Ligue 1","2023-2024",26,"2","Limited / Reactive Defender",3.24946117262336,0.986812744539498,1.02280293271926,1.59932050946653
+"Stanley N'Soki","Hoffenheim","Bundesliga","2024-2025",25,"3","High-Intensity Ball-Winner",3.24429509361726,1.5777062598584,1.45037018790619,1.45117971889276
+"Alexsandro Ribeiro","Lille","Ligue 1","2024-2025",24,"4","Elite Progressive Distributor",3.22448870400915,2.37866003304518,0.816457686216602,1.00593331870416
+"Nicolò Casale","Bologna","Serie A","2024-2025",26,"2","Limited / Reactive Defender",3.22370927288737,1.25418507719309,1.65130511564886,1.53112273261765
+"Eric García","Girona","La Liga","2023-2024",22,"4","Elite Progressive Distributor",3.2091758100663,3.12667152412063,0.813559480705111,1.38714075345311
+"Maxime Estève","Burnley","Premier League","2023-2024",21,"3","High-Intensity Ball-Winner",3.2005150499585,1.37186042704057,1.63587347656464,1.81092936391629
+"John Brooks","Hoffenheim","Bundesliga","2023-2024",30,"2","Limited / Reactive Defender",3.19187950772082,1.42413198983341,1.34958309822874,1.52752033357017
+"Koni De Winter","Genoa","Serie A","2024-2025",22,"2","Limited / Reactive Defender",3.18714758594508,1.06499323246885,1.23136836812019,1.63787146441683
+"Mickael Nade","Saint-Étienne","Ligue 1","2024-2025",25,"3","High-Intensity Ball-Winner",3.18654079291259,1.30475317986922,1.28188673291506,2.15673061562758
+"Malang Sarr","Lens","Ligue 1","2024-2025",25,"2","Limited / Reactive Defender",3.18423546337764,1.41737857947369,1.42922480837437,1.55731523432629
+"Leny Yoro","Manchester Utd","Premier League","2024-2025",18,"3","High-Intensity Ball-Winner",3.17395526135798,1.88165063567074,1.30700255325226,1.98384394401063
+"David García","Osasuna","La Liga","2023-2024",29,"1","Standard Build-up Distributor",3.17362793734069,2.08385806804558,0.822444714312785,1.240784097722
+"Lukas Klostermann","RB Leipzig","Bundesliga","2024-2025",28,"3","High-Intensity Ball-Winner",3.15897922628931,1.71331557057948,1.35253315201291,1.61953578653395
+"Emmanuel Agbadou","Wolves","Premier League","2024-2025",27,"2","Limited / Reactive Defender",3.15750638749513,0.973539039145304,0.977903104604942,1.90557141919974
+"Johan Vásquez","Genoa","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",3.15661369166019,1.43707943546209,1.60405349120737,1.86737716472235
+"Jonathan Gradit","Lens","Ligue 1","2024-2025",31,"3","High-Intensity Ball-Winner",3.15060251815344,2.19992836428276,1.18490373823993,1.93930572867748
+"Jean-Charles Castelletto","Nantes","Ligue 1","2023-2024",28,"1","Standard Build-up Distributor",3.14611575181541,1.65832278168222,1.15311886791073,1.31137282911643
+"Lucas Perrin","Strasbourg","Ligue 1","2023-2024",24,"1","Standard Build-up Distributor",3.13802858920392,1.58133727467596,1.04293260375008,1.65397624290051
+"Mattia Viti","Empoli","Serie A","2024-2025",22,"3","High-Intensity Ball-Winner",3.13658899786086,1.33027375081888,1.66991814654491,2.26794598226304
+"Chrislain Matsima","Augsburg","Bundesliga","2024-2025",22,"2","Limited / Reactive Defender",3.13547231040353,1.28442356146263,1.65217328184021,1.20598013057846
+"Gleison Bremer","Juventus","Serie A","2023-2024",26,"2","Limited / Reactive Defender",3.13330534060054,1.31288005980051,1.08218848876027,1.54727660422232
+"Andy Pelmard","Clermont Foot","Ligue 1","2023-2024",23,"1","Standard Build-up Distributor",3.12854796152177,1.71041069273275,0.975725410314214,1.46076435391499
+"Fali","Cádiz","La Liga","2023-2024",29,"2","Limited / Reactive Defender",3.12544956331108,1.27922220723672,1.14138339124418,1.67770531896694
+"Lewis Dunk","Brighton","Premier League","2024-2025",32,"4","Elite Progressive Distributor",3.12330941217241,2.4266658216068,0.764618427399513,1.01021494142397
+"Ben Mee","Brentford","Premier League","2023-2024",33,"3","High-Intensity Ball-Winner",3.12208033286436,1.56151173430204,1.04597793513977,1.78140374864304
+"Boubakar Kouyaté","Montpellier","Ligue 1","2023-2024",26,"2","Limited / Reactive Defender",3.120017280976,1.12532517336486,1.23505585186886,1.97727135487014
+"Ozan Kabak","Hoffenheim","Bundesliga","2023-2024",23,"3","High-Intensity Ball-Winner",3.11238679851559,1.85408064516234,1.55101259217318,1.71684046454278
+"Montassar Talbi","Lorient","Ligue 1","2023-2024",25,"1","Standard Build-up Distributor",3.11171056746705,1.54311669700917,1.24692430893881,1.53573325746548
+"Kike Salas","Sevilla","La Liga","2023-2024",21,"3","High-Intensity Ball-Winner",3.11109830006878,1.48652628116342,1.27566034665092,1.93264591910368
+"Fali Candé","Venezia","Serie A","2024-2025",26,"2","Limited / Reactive Defender",3.11026899587648,1.18391734177124,1.09562084769776,1.67896720210462
+"Maxence Lacroix","Crystal Palace","Premier League","2024-2025",24,"2","Limited / Reactive Defender",3.10780434851392,0.850725049575466,1.69804058257494,2.1701212514262
+"Luca Marianucci","Empoli","Serie A","2024-2025",20,"3","High-Intensity Ball-Winner",3.1038163890562,1.27232553755957,1.49698915258769,2.14879826869662
+"Moïse Bombito","Nice","Ligue 1","2024-2025",24,"1","Standard Build-up Distributor",3.10332305153807,1.78657849141672,0.933529092782165,1.66672207110339
+"Anthony Jung","Werder Bremen","Bundesliga","2024-2025",32,"4","Elite Progressive Distributor",3.09416303116068,2.29290020191583,1.1384254102978,1.54745842133036
+"Toti Gomes","Wolves","Premier League","2024-2025",25,"3","High-Intensity Ball-Winner",3.09300187620128,1.44190657114944,1.0048795316094,2.1170655746915
+"Cristhian Mosquera","Valencia","La Liga","2024-2025",20,"1","Standard Build-up Distributor",3.08365470866281,1.5143570064209,0.953515005398175,1.46870659224121
+"Joël Schingtienne","Venezia","Serie A","2024-2025",21,"2","Limited / Reactive Defender",3.07603833998833,1.07190054012802,1.26413331918727,2.12115292847354
+"Florian Lejeune","Rayo Vallecano","La Liga","2024-2025",33,"1","Standard Build-up Distributor",3.07132938845721,1.6415295438487,1.22572987707937,1.4351991102549
+"Ilario Monterisi","Frosinone","Serie A","2023-2024",21,"2","Limited / Reactive Defender",3.06945712264892,1.21606716219643,0.829831299372319,1.64598499391488
+"Manuel Akanji","Manchester City","Premier League","2024-2025",29,"4","Elite Progressive Distributor",3.06479265923825,3.09937763169814,0.525538768623873,0.883657187324224
+"Yerson Mosquera","Villarreal","La Liga","2023-2024",22,"2","Limited / Reactive Defender",3.06101289058148,1.24995625356308,1.13733839070444,1.70472316302498
+"Calvin Bassey","Fulham","Premier League","2024-2025",24,"1","Standard Build-up Distributor",3.05414015753165,1.61221130743896,0.704507280643859,1.56039177601771
+"Yarek Gasiorowski","Valencia","La Liga","2024-2025",19,"3","High-Intensity Ball-Winner",3.05051481643639,1.60130099072239,1.74200185507685,1.60561752094071
+"Jeffrey Gouweleeuw","Augsburg","Bundesliga","2024-2025",33,"1","Standard Build-up Distributor",3.04037643018961,1.85446991536407,1.0857764717445,1.53183245894282
+"Nicolás Valentini","Hellas Verona","Serie A","2024-2025",23,"3","High-Intensity Ball-Winner",3.03963068634919,1.40411331331602,1.22089544039597,2.348233842953
+"Víctor Chust","Cádiz","La Liga","2023-2024",23,"1","Standard Build-up Distributor",3.03742336040032,1.58857016368676,0.827570786758726,1.64318317982986
+"Willian Pacho","Paris S-G","Ligue 1","2024-2025",22,"2","Limited / Reactive Defender",3.03435375001075,0.93604386836126,1.40720812427331,1.96265866695801
+"Jordan Beyer","Burnley","Premier League","2023-2024",23,"2","Limited / Reactive Defender",3.03205689676384,1.00672746327249,1.20673877029038,2.23414945460726
+"Tim Oermann","Bochum","Bundesliga","2024-2025",20,"2","Limited / Reactive Defender",3.0277522370337,1.18496650624079,1.05540280461834,2.07442343378989
+"Milan Škriniar","Paris S-G","Ligue 1","2023-2024",28,"1","Standard Build-up Distributor",3.02378180972352,1.34058340117703,0.765305061079019,1.28966841657893
+"Carlos Dominguez","Celta Vigo","La Liga","2024-2025",23,"3","High-Intensity Ball-Winner",3.01742657401879,2.09718522781484,1.04516479618696,1.65012949612449
+"Sinaly Diomande","Auxerre","Ligue 1","2024-2025",23,"2","Limited / Reactive Defender",3.01381631753092,1.3709073667612,1.34850919128846,1.77606747015049
+"Marin Šverko","Venezia","Serie A","2024-2025",26,"3","High-Intensity Ball-Winner",3.01380970728193,1.37210032214033,1.36735020611388,1.76991587508525
+"Eray Cömert","Nantes","Ligue 1","2023-2024",25,"2","Limited / Reactive Defender",3.01138501638336,1.11148676364939,1.46197067917755,1.77479161337849
+"Moritz Jenz","Mainz 05","Bundesliga","2024-2025",25,"2","Limited / Reactive Defender",3.00170506098901,1.06637449283117,1.52851805738137,1.90399675722226
+"Raphaël Varane","Manchester Utd","Premier League","2023-2024",30,"1","Standard Build-up Distributor",3.00166719622116,1.71559483084658,1.0660888433042,1.3473299402473
+"Victor Lindelöf","Manchester Utd","Premier League","2023-2024",29,"1","Standard Build-up Distributor",2.99803034066454,1.45163907614526,0.964257347632654,1.24985540273702
+"Tim Ream","Fulham","Premier League","2023-2024",35,"1","Standard Build-up Distributor",2.99618947645178,1.60720749134769,1.34577768934323,1.30664293733505
+"Ohis Felix Uduokhai","Augsburg","Bundesliga","2023-2024",25,"1","Standard Build-up Distributor",2.99311030880905,1.4359963762445,1.35169469000895,1.23167618956993
+"Yerry Mina","Cagliari","Serie A","2024-2025",29,"2","Limited / Reactive Defender",2.98954157598585,1.21192483800149,1.07806465428474,1.82004425372479
+"Eric Dier","Bayern Munich","Bundesliga","2024-2025",30,"1","Standard Build-up Distributor",2.9885461547032,1.83836609559781,1.09051600037784,1.19282431563039
+"Mark Mckenzie","Toulouse","Ligue 1","2024-2025",25,"1","Standard Build-up Distributor",2.98467395136653,1.41110562676315,0.873371452932817,1.76801146080712
+"Virgil Van Dijk","Liverpool","Premier League","2024-2025",33,"3","High-Intensity Ball-Winner",2.98284751231201,2.12807583554793,1.56521158501794,1.23673257915733
+"Christophe Hérelle","Metz","Ligue 1","2023-2024",30,"2","Limited / Reactive Defender",2.97360012329033,0.937294634730237,1.16637856647971,1.88608903058143
+"Gian Marco Ferrari","Sassuolo","Serie A","2023-2024",31,"4","Elite Progressive Distributor",2.97277437337817,2.48558309352027,1.00211911720382,1.02537316400573
+"Éder Militão","Real Madrid","La Liga","2024-2025",26,"1","Standard Build-up Distributor",2.9701206330806,1.81416917174231,1.06357273205852,1.5691156592787
+"Anel Ahmedhodžić","Sheffield Utd","Premier League","2023-2024",24,"2","Limited / Reactive Defender",2.96132657514488,0.810416712167469,1.32077613926481,2.318018018298
+"Karol Mets","St Pauli","Bundesliga","2024-2025",31,"1","Standard Build-up Distributor",2.96046893327915,2.02396006734671,1.17129607300048,1.42140699660787
+"Sergio Ramos","Sevilla","La Liga","2023-2024",37,"2","Limited / Reactive Defender",2.95445667345906,1.22599938162764,1.31449308664534,1.51674818685319
+"Nayef Aguerd","Real Sociedad","La Liga","2024-2025",28,"1","Standard Build-up Distributor",2.94503783159121,1.82436702034746,0.860209372333606,1.60411148231023
+"Enzo Boyomo","Osasuna","La Liga","2024-2025",22,"3","High-Intensity Ball-Winner",2.94223818819266,1.39264907445421,1.29281324927263,1.95149650192011
+"Nathan Aké","Manchester City","Premier League","2023-2024",28,"4","Elite Progressive Distributor",2.94048500179382,2.18526155474426,0.648710213563174,1.05673949366603
+"Nicolas Pallois","Nantes","Ligue 1","2024-2025",36,"2","Limited / Reactive Defender",2.92697553170926,1.00939995549755,1.20569040384758,2.35105583084046
+"Rasmus Nicolaisen","Toulouse","Ligue 1","2023-2024",26,"2","Limited / Reactive Defender",2.92237607377577,1.15749902576736,1.24192491529276,1.52214792025407
+"Saba Goglichidze","Empoli","Serie A","2024-2025",20,"2","Limited / Reactive Defender",2.92147313591262,0.807333878906492,1.25949877103352,2.26106462756014
+"Christopher Wooh","Rennes","Ligue 1","2024-2025",22,"3","High-Intensity Ball-Winner",2.92134758253235,1.60658062475537,1.2874866889048,1.93255976526023
+"Fabian Schär","Newcastle Utd","Premier League","2024-2025",32,"1","Standard Build-up Distributor",2.91743703937335,1.51104841535419,1.38526488578797,1.25981704058717
+"Norbert Gyömbér","Salernitana","Serie A","2023-2024",31,"2","Limited / Reactive Defender",2.91634608021673,0.961315311630986,1.06359576697845,1.59380358618126
+"Pau Navarro","Villarreal","La Liga","2024-2025",19,"1","Standard Build-up Distributor",2.91410336623494,1.52955818916765,0.719771330836273,1.80863562819933
+"Arnau Martinez","Girona","La Liga","2023-2024",20,"4","Elite Progressive Distributor",2.91325920111864,2.41407518086066,0.690317807641852,1.30855002278618
+"Maximiliano Caufriez","Clermont Foot","Ligue 1","2023-2024",26,"3","High-Intensity Ball-Winner",2.90580078584947,1.68117637481623,0.977757096787871,1.78359148691445
+"Javi Rodríguez","Celta Vigo","La Liga","2024-2025",21,"3","High-Intensity Ball-Winner",2.90261476520476,1.86487563749726,1.1663748124311,1.80154393995883
+"Jack Robinson","Sheffield Utd","Premier League","2023-2024",29,"2","Limited / Reactive Defender",2.90089937562892,0.914383692316786,1.21160771785148,1.59359596030918
+"Matteo Lovato","Salernitana","Serie A","2023-2024",23,"2","Limited / Reactive Defender",2.89904180614032,1.15566695899519,1.30337304354498,1.89164543388475
+"Igor Zubeldia","Real Sociedad","La Liga","2024-2025",27,"3","High-Intensity Ball-Winner",2.8980487695835,1.7351382386713,1.25841022762303,1.46586811543084
+"Niklas Süle","Dortmund","Bundesliga","2024-2025",28,"1","Standard Build-up Distributor",2.88978302152346,1.8351335043169,0.679755843683711,1.29912473491252
+"Nathan Collins","Brentford","Premier League","2024-2025",23,"1","Standard Build-up Distributor",2.887875008582,1.53267328812623,0.985527614727772,1.20041447087541
+"Ronald Araújo","Barcelona","La Liga","2023-2024",24,"1","Standard Build-up Distributor",2.88455825016641,1.99983162613359,0.660623550648419,1.19735665439547
+"Abdul Mumin","Rayo Vallecano","La Liga","2024-2025",26,"2","Limited / Reactive Defender",2.88371219620002,0.905800220645698,1.16152092489596,1.77279842939389
+"Ameen Al-Dakhil","Burnley","Premier League","2023-2024",21,"1","Standard Build-up Distributor",2.87945639770548,1.33794175310123,1.12260243652936,1.31120773612755
+"Jonny Evans","Manchester Utd","Premier League","2023-2024",35,"2","Limited / Reactive Defender",2.87263773978412,1.13754496994157,1.3799975920487,1.50061992358261
+"Abakar Sylla","Strasbourg","Ligue 1","2024-2025",21,"2","Limited / Reactive Defender",2.87176038761619,0.889475593171914,1.15191522685751,2.19621831014064
+"Ibrahima Konaté","Liverpool","Premier League","2024-2025",25,"1","Standard Build-up Distributor",2.86921385745683,1.78436422470386,0.803863818609808,1.57016528557044
+"Alessandro Buongiorno","Napoli","Serie A","2024-2025",25,"3","High-Intensity Ball-Winner",2.86898430903279,1.80560204349438,1.27743469778836,1.50095885272021
+"Daley Blind","Girona","La Liga","2023-2024",33,"4","Elite Progressive Distributor",2.86674770753735,2.74956059941692,0.581619760974647,1.12150222067931
+"Julien Le Cardinal","Brest","Ligue 1","2024-2025",26,"2","Limited / Reactive Defender",2.86633590027544,1.17893794999925,1.81617550901712,1.73747881061746
+"Hauke Wahl","St Pauli","Bundesliga","2024-2025",30,"1","Standard Build-up Distributor",2.86254724734563,1.86943002276773,0.995861693039478,1.20522754707038
+"Souleymane Touré","Lorient","Ligue 1","2023-2024",20,"1","Standard Build-up Distributor",2.86176834106199,1.55438062076524,1.43211888952355,1.21748098587824
+"Marc Bartra","Betis","La Liga","2024-2025",33,"2","Limited / Reactive Defender",2.86134313033535,1.21341421606341,1.44211352946539,1.57211515860215
+"Pau Cubarsí","Barcelona","La Liga","2024-2025",17,"4","Elite Progressive Distributor",2.85848546838669,2.60272235593185,0.638282469919704,1.15056404011959
+"Konstantinos Koulierakis","Wolfsburg","Bundesliga","2024-2025",20,"3","High-Intensity Ball-Winner",2.85837650375682,1.65800566612683,1.22297240287696,1.52672090659404
+"Germán Pezzella","Betis","La Liga","2023-2024",32,"2","Limited / Reactive Defender",2.85300660929444,0.88319354177071,1.12783175664005,1.31180532078299
+"Benoît Badiashile","Chelsea","Premier League","2023-2024",22,"1","Standard Build-up Distributor",2.85087962420758,1.28442783664905,1.02655129182398,1.27158904488087
+"Joachim Andersen","Fulham","Premier League","2024-2025",28,"1","Standard Build-up Distributor",2.85041930485962,1.60255365755635,1.1622017144952,1.08158063115824
+"Harry Maguire","Manchester Utd","Premier League","2024-2025",31,"2","Limited / Reactive Defender",2.84867080771498,1.18186900788461,1.78209029673631,1.57465636578335
+"Nathan Zeze","Nantes","Ligue 1","2024-2025",19,"2","Limited / Reactive Defender",2.84698185094435,1.10251858774664,1.27048304124709,1.98151150801215
+"Stefan Bell","Mainz 05","Bundesliga","2024-2025",32,"2","Limited / Reactive Defender",2.84586866533159,1.13758313641374,1.55558758600364,1.47600272803382
+"Sebastiaan Bornauw","Wolfsburg","Bundesliga","2023-2024",24,"2","Limited / Reactive Defender",2.84462739091561,1.07531414343198,1.16519800893886,1.64417325638404
+"Axel Disasi","Chelsea","Premier League","2023-2024",25,"1","Standard Build-up Distributor",2.84084620845513,1.75074476298891,0.662907573315544,1.09070730167048
+"Chadi Riad","Betis","La Liga","2023-2024",20,"2","Limited / Reactive Defender",2.83734054902888,0.676509274839123,1.0931804499346,1.60309301749609
+"Julian Chabot","Stuttgart","Bundesliga","2024-2025",26,"1","Standard Build-up Distributor",2.83357695897226,1.65516637269027,1.29446266698349,1.37344596075032
+"Cedric Zesiger","Wolfsburg","Bundesliga","2023-2024",25,"1","Standard Build-up Distributor",2.82777331259724,1.82552227366985,0.962955742009412,1.25219310681587
+"Murillo","Nott'ham Forest","Premier League","2024-2025",22,"1","Standard Build-up Distributor",2.82734093488467,1.44986413317871,1.03935520162948,1.50103922987534
+"Leo Skiri Østigård","Hoffenheim","Bundesliga","2024-2025",24,"1","Standard Build-up Distributor",2.82681850484883,1.76721280129086,0.952093305655041,1.13456937560074
+"Raúl Torrente","Granada","La Liga","2023-2024",21,"2","Limited / Reactive Defender",2.8266772058964,1.07051881541634,0.961274006311314,1.91552077812956
+"Edmond Tapsoba","Leverkusen","Bundesliga","2024-2025",25,"4","Elite Progressive Distributor",2.82541722534735,2.65239313703966,0.68225671910155,1.0491261238446
+"Keven Schlotterbeck","Augsburg","Bundesliga","2024-2025",27,"1","Standard Build-up Distributor",2.8248184438719,1.60061066954537,1.07430915848133,1.39993347134138
+"Axel Witsel","Atlético Madrid","La Liga","2023-2024",34,"1","Standard Build-up Distributor",2.81795249795421,1.25843700327338,0.715164569170882,1.31501206809727
+"Erhan Mašović","Bochum","Bundesliga","2024-2025",25,"2","Limited / Reactive Defender",2.81262370046442,1.36338421763917,1.2632672946738,1.58809068891442
+"Igor","Brighton","Premier League","2024-2025",26,"1","Standard Build-up Distributor",2.81090159866166,1.87287115962987,0.768201166595145,1.00945725553815
+"Ignasi Miquel","Granada","La Liga","2023-2024",30,"2","Limited / Reactive Defender",2.80931071164925,1.08223978704787,1.34687667568984,1.49019685577437
+"Marin Pongračić","Fiorentina","Serie A","2024-2025",26,"2","Limited / Reactive Defender",2.80807875021211,1.08615115835805,0.935974932469385,1.33517456193938
+"Pietro Comuzzo","Fiorentina","Serie A","2024-2025",19,"2","Limited / Reactive Defender",2.80616922228161,1.36247558866765,1.18694717652683,1.71954980148587
+"Miguel Ángel Rubio","Granada","La Liga","2023-2024",25,"2","Limited / Reactive Defender",2.79960480115079,0.823913186390579,1.482284024935,1.32891281943623
+"Caleb Okoli","Leicester City","Premier League","2024-2025",23,"2","Limited / Reactive Defender",2.79904573755781,1.09497415373245,1.2132863865826,1.86460286405841
+"Benedikt Gimber","Heidenheim","Bundesliga","2024-2025",27,"2","Limited / Reactive Defender",2.79855961492902,0.729711366679664,1.18557751249426,2.45447239976879
+"Abdoulaye Niakhate Ndiaye","Brest","Ligue 1","2024-2025",22,"2","Limited / Reactive Defender",2.79791588079717,0.923073049873301,0.800177939520209,2.31684194746619
+"Aridane Hernández","Rayo Vallecano","La Liga","2024-2025",35,"1","Standard Build-up Distributor",2.79589404104899,1.3313925645114,0.884332381622429,1.44325369543304
+"Arthur Chaves","Hoffenheim","Bundesliga","2024-2025",23,"2","Limited / Reactive Defender",2.78730128262758,1.06963446881843,1.34824648242963,1.85567789387555
+"Ivan Ordets","Bochum","Bundesliga","2024-2025",32,"2","Limited / Reactive Defender",2.78369627186269,0.993280608393813,1.86678003480334,1.18352080801843
+"Tim Siersleben","Heidenheim","Bundesliga","2024-2025",24,"2","Limited / Reactive Defender",2.77993659614851,1.18480382128067,1.49761557430414,1.73863284209842
+"Modibo Sagnan","Montpellier","Ligue 1","2024-2025",25,"2","Limited / Reactive Defender",2.77816993193153,1.05329510620404,1.14923469976969,2.06897666792459
+"Clément Lenglet","Atlético Madrid","La Liga","2024-2025",29,"1","Standard Build-up Distributor",2.77608197348847,1.57247877470101,1.11650748892714,1.41633843060841
+"Federico Gatti","Juventus","Serie A","2024-2025",26,"1","Standard Build-up Distributor",2.77272713555416,1.45737424967307,0.823943109956252,1.21521951913356
+"Anthony Rouault","Rennes","Ligue 1","2024-2025",23,"1","Standard Build-up Distributor",2.77140119672407,1.35061376632465,0.909640080349499,1.28352671733682
+"Yann Aurel Bisseck","Inter","Serie A","2024-2025",23,"4","Elite Progressive Distributor",2.76975565923455,2.35547362365351,0.873365932460978,0.992879139706774
+"Sven Botman","Newcastle Utd","Premier League","2023-2024",23,"2","Limited / Reactive Defender",2.76965345288765,0.970207699381435,0.837792682371293,1.45527566085096
+"Max Rosenfelder","Freiburg","Bundesliga","2024-2025",21,"1","Standard Build-up Distributor",2.76919544386117,1.40079911734583,0.719985806654239,1.66816656286987
+"William Saliba","Arsenal","Premier League","2024-2025",23,"1","Standard Build-up Distributor",2.76787454827481,1.64942881353344,0.635483554475446,1.52278787381143
+"Nathaniel Adjei","Lorient","Ligue 1","2023-2024",20,"1","Standard Build-up Distributor",2.76742332102818,1.2177313845101,1.21808387097482,1.17200972503814
+"Diego Llorente","Betis","La Liga","2024-2025",30,"2","Limited / Reactive Defender",2.76192279027733,1.19295555126446,1.55194510678982,1.46498808726282
+"Myles Lewis-Skelly","Arsenal","Premier League","2024-2025",17,"4","Elite Progressive Distributor",2.7607573212432,2.41078568229164,0.622435703402564,1.26835451503976
+"Jean-Clair Todibo","West Ham","Premier League","2024-2025",24,"2","Limited / Reactive Defender",2.75996355306871,0.921022598527445,1.19209911279234,1.99818067492284
+"Jamaal Lascelles","Newcastle Utd","Premier League","2023-2024",29,"1","Standard Build-up Distributor",2.75769583281115,1.2375078369349,0.772525468779154,1.3855871575558
+"Cenk Özkacar","Valencia","La Liga","2023-2024",22,"1","Standard Build-up Distributor",2.755613460444,1.47195688197549,1.0153093724502,1.43124355479056
+"Nathaniel Clyne","Crystal Palace","Premier League","2023-2024",32,"2","Limited / Reactive Defender",2.7507927947803,1.12527227318155,0.989628387951321,1.82743907676464
+"Philipp Lienhart","Freiburg","Bundesliga","2024-2025",28,"4","Elite Progressive Distributor",2.75065899476212,2.07559812642848,1.09424827206551,0.858058124236479
+"Chancel Mbemba","Marseille","Ligue 1","2023-2024",28,"1","Standard Build-up Distributor",2.74076208143108,2.11655660518321,0.60553603347156,1.20263432611332
+"Giangiacomo Magnani","Hellas Verona","Serie A","2024-2025",28,"2","Limited / Reactive Defender",2.73985783447836,1.15202418267121,1.35595381191479,1.69394615716952
+"Santiago Mouriño","Alavés","La Liga","2024-2025",22,"2","Limited / Reactive Defender",2.73840713705042,1.14190475541223,1.19417281836825,1.73249721728163
+"Derek Cornelius","Marseille","Ligue 1","2024-2025",26,"1","Standard Build-up Distributor",2.72139333600087,1.76055346444916,0.842085419365752,1.30855870647442
+"Sebastian Walukiewicz","Empoli","Serie A","2023-2024",23,"2","Limited / Reactive Defender",2.7205558670154,1.00091861314539,0.869401416428641,1.79695874628291
+"Konstantinos Mavropanos","West Ham","Premier League","2024-2025",26,"2","Limited / Reactive Defender",2.71578410160343,1.2833043317995,1.51790322952157,1.48917593993118
+"Mattia Bani","Genoa","Serie A","2024-2025",30,"2","Limited / Reactive Defender",2.71162797202528,0.794199651371268,1.42142711496471,1.46104697016597
+"Loïc Bade","Sevilla","La Liga","2024-2025",24,"2","Limited / Reactive Defender",2.7099901725851,0.9483519449312,0.965552076273269,1.49342404031982
+"Aïssa Mandi","Villarreal","La Liga","2023-2024",31,"1","Standard Build-up Distributor",2.70898486386567,1.74128995474143,0.819994666116505,1.1987301266134
+"Mateusz Wieteska","Cagliari","Serie A","2023-2024",26,"1","Standard Build-up Distributor",2.70688903722584,1.63121648495487,1.04440553628856,1.20853707656166
+"David Nemeth","St Pauli","Bundesliga","2024-2025",23,"2","Limited / Reactive Defender",2.70604054061738,1.23663483277729,0.877635572070641,1.74895680303914
+"Arouna Sangante","Le Havre","Ligue 1","2024-2025",22,"1","Standard Build-up Distributor",2.70164464710833,1.54302220328585,1.16526121093022,1.45689949477096
+"Matej Maglica","Darmstadt 98","Bundesliga","2023-2024",24,"1","Standard Build-up Distributor",2.70100599333536,1.46245846003633,0.964030083375445,1.45910277218488
+"Diego Coppola","Hellas Verona","Serie A","2024-2025",20,"2","Limited / Reactive Defender",2.69097618929365,0.662678420680286,2.06088037017361,2.0157547412981
+"Thomas Kristensen","Udinese","Serie A","2023-2024",21,"2","Limited / Reactive Defender",2.68562772175206,1.09588231026816,1.31027864661743,1.63590488857019
+"Omar Alderete","Getafe","La Liga","2024-2025",27,"1","Standard Build-up Distributor",2.68523855655244,1.53418654276657,1.17991855109092,1.33993796543898
+"Jaka Bijol","Udinese","Serie A","2024-2025",25,"2","Limited / Reactive Defender",2.68237276283943,1.37536850317813,1.24531604815219,1.47158699937914
+"Renato Veiga","Juventus","Serie A","2024-2025",21,"1","Standard Build-up Distributor",2.6794958400545,1.46762436217449,1.31750600325897,1.40425939927416
+"Logan Costa","Villarreal","La Liga","2024-2025",23,"1","Standard Build-up Distributor",2.67665892407464,1.74289217210712,0.796003533054516,1.31248179953979
+"José María Giménez","Atlético Madrid","La Liga","2024-2025",29,"2","Limited / Reactive Defender",2.67599552385243,1.14186735774045,1.27222034998212,1.36949205080168
+"Auston Trusty","Sheffield Utd","Premier League","2023-2024",24,"2","Limited / Reactive Defender",2.67382686850651,0.749491943693545,1.37965308415818,1.85805877688624
+"Dylan Batubinsika","Saint-Étienne","Ligue 1","2024-2025",28,"2","Limited / Reactive Defender",2.67308573694071,1.06974789364342,1.59900106098625,1.31064316961621
+"Max Geschwill","Holstein Kiel","Bundesliga","2024-2025",23,"1","Standard Build-up Distributor",2.66302912341931,1.67893516819108,1.34598518655537,1.34898827026133
+"Mats Hummels","Roma","Serie A","2024-2025",35,"2","Limited / Reactive Defender",2.65619786632018,1.16884550933719,1.50623359775209,1.84139424288914
+"Rúben Dias","Manchester City","Premier League","2024-2025",27,"4","Elite Progressive Distributor",2.65589147777942,2.74730723670116,0.744957577847532,0.763692635054389
+"Aleksandar Sedlar","Alavés","La Liga","2023-2024",31,"1","Standard Build-up Distributor",2.65503215632432,1.18810621178523,1.06795894461286,1.28686441234023
+"Mamadou Sarr","Strasbourg","Ligue 1","2024-2025",18,"2","Limited / Reactive Defender",2.65253847204359,0.900313898928448,1.06819684756995,1.53861160504763
+"Leopold Querfeld","Union Berlin","Bundesliga","2024-2025",20,"2","Limited / Reactive Defender",2.65181742205745,1.1024242971839,1.11370499912314,1.47974475289034
+"Max Kilman","West Ham","Premier League","2024-2025",27,"1","Standard Build-up Distributor",2.65115866228166,1.46103884033208,1.01384242783665,1.11416345118065
+"Robin Koch","Eint Frankfurt","Bundesliga","2024-2025",28,"1","Standard Build-up Distributor",2.64943703919602,1.32825124459817,0.975225968147673,1.05112108642287
+"Jay Idzes","Venezia","Serie A","2024-2025",24,"2","Limited / Reactive Defender",2.64596678163093,1.09172018067567,1.09253102934327,1.52022657726046
+"Jakov Medić","Bochum","Bundesliga","2024-2025",25,"2","Limited / Reactive Defender",2.64564831878127,0.731148165138803,1.31014016560723,1.10664402208119
+"Aritz Elustondo","Real Sociedad","La Liga","2024-2025",30,"1","Standard Build-up Distributor",2.64323697149538,1.52228563618016,0.889902531420561,1.40651545698277
+"Gaby Jean","Lecce","Serie A","2024-2025",24,"1","Standard Build-up Distributor",2.64011192090408,1.21720151760291,0.879886099140413,1.26441038565947
+"Nico Elvedi","Gladbach","Bundesliga","2024-2025",27,"2","Limited / Reactive Defender",2.63627297764313,1.19285871463441,1.15583253149715,1.49283650269302
+"Cédric Kipré","Reims","Ligue 1","2024-2025",27,"2","Limited / Reactive Defender",2.63478625490304,1.43911831385199,1.22194860529965,1.61917470373822
+"José Luis Palomino","Cagliari","Serie A","2024-2025",34,"2","Limited / Reactive Defender",2.63467049890813,1.23677628731051,1.29495966876163,1.65167267619585
+"Marvin Friedrich","Gladbach","Bundesliga","2024-2025",28,"1","Standard Build-up Distributor",2.62684260542509,1.54179633877948,0.729792398314183,1.35561303282277
+"Natan","Betis","La Liga","2024-2025",23,"2","Limited / Reactive Defender",2.62304662784053,1.03286108038318,1.24802547441855,1.59733846021603
+"Becir Omeragic","Montpellier","Ligue 1","2024-2025",22,"1","Standard Build-up Distributor",2.6182755724444,1.32275350625042,0.78016698680332,1.51958238197399
+"Morato","Nott'ham Forest","Premier League","2024-2025",23,"2","Limited / Reactive Defender",2.61735133413101,0.881413646594305,1.0513969132664,1.84811747250933
+"Christian Kabasele","Udinese","Serie A","2024-2025",33,"1","Standard Build-up Distributor",2.61622515268424,1.52477736895466,1.19165683582165,1.52012270592497
+"Rafa Marín","Alavés","La Liga","2023-2024",21,"1","Standard Build-up Distributor",2.61613918151722,1.24085494393834,1.08110275152435,1.1525025530929
+"Daniele Ghilardi","Hellas Verona","Serie A","2024-2025",21,"2","Limited / Reactive Defender",2.60881743474525,1.22911325270657,1.33270063434256,1.91785110069052
+"Ismaël Traoré","Metz","Ligue 1","2023-2024",36,"2","Limited / Reactive Defender",2.60830270616304,0.598206446373542,1.32859612566789,1.09756198491918
+"Miloš Veljković","Werder Bremen","Bundesliga","2024-2025",28,"1","Standard Build-up Distributor",2.59910743646194,2.16721400356397,0.603081195128583,1.14153255231111
+"Denis Vavro","Wolfsburg","Bundesliga","2024-2025",28,"1","Standard Build-up Distributor",2.59850609789768,1.42465807997999,1.33612076756899,0.998989123297009
+"Pablo Marí","Fiorentina","Serie A","2024-2025",30,"2","Limited / Reactive Defender",2.59643039450012,0.973313731074139,1.6517999586885,1.33075374825347
+"Thiago Silva","Chelsea","Premier League","2023-2024",38,"1","Standard Build-up Distributor",2.59186486234743,1.39505386893605,0.85653286875451,1.01455124540768
+"Yoann Salmier","Le Havre","Ligue 1","2023-2024",30,"1","Standard Build-up Distributor",2.58781088835064,1.24254303960168,1.01377630360198,1.16935315487784
+"Strahinja Pavlović","Milan","Serie A","2024-2025",23,"4","Elite Progressive Distributor",2.57981309343061,2.23395866911884,0.637422454351367,1.57750823559696
+"Ladislav Krejčí","Girona","La Liga","2024-2025",25,"4","Elite Progressive Distributor",2.57977749726363,2.24255827052562,0.944578981883995,0.795174818856703
+"Christoph Zimmermann","Darmstadt 98","Bundesliga","2023-2024",30,"2","Limited / Reactive Defender",2.57561449766635,1.17548112065783,1.14354085927513,1.71780018140516
+"Patric","Lazio","Serie A","2023-2024",30,"1","Standard Build-up Distributor",2.5711695584437,1.53808724408641,0.622607274575784,1.01186033089536
+"Yunis Abdelhamid","Saint-Étienne","Ligue 1","2024-2025",36,"2","Limited / Reactive Defender",2.56764530523577,0.959372344052431,1.20852693196665,1.54336250143051
+"Lorenzo Pirola","Salernitana","Serie A","2023-2024",21,"2","Limited / Reactive Defender",2.56612888449531,1.17644861628408,1.03782294173938,1.55480030814699
+"Moussa Niakhate","Lyon","Ligue 1","2024-2025",28,"1","Standard Build-up Distributor",2.56348276009465,1.71811048116555,0.747579863690283,1.28351285587507
+"Jonathan Tah","Leverkusen","Bundesliga","2024-2025",28,"1","Standard Build-up Distributor",2.56117566643722,1.96652132270724,0.805414497304558,0.579728330133756
+"Wesley Fofana","Chelsea","Premier League","2024-2025",23,"1","Standard Build-up Distributor",2.56036676096493,1.44703266000703,0.956672855543943,1.06652884372813
+"Martin Erlic","Sassuolo","Serie A","2023-2024",25,"1","Standard Build-up Distributor",2.55985877350859,1.2113271863328,0.978936438603372,1.30144646112475
+"Brendan Chardonnet","Brest","Ligue 1","2024-2025",29,"2","Limited / Reactive Defender",2.55739427772207,0.889960276934163,1.13880357202422,1.70569153194475
+"Gabriel Paulista","Valencia","La Liga","2023-2024",32,"2","Limited / Reactive Defender",2.55682599893244,0.930669609421853,1.32846011323443,0.945300263431197
+"Sepp Van Den Berg","Brentford","Premier League","2024-2025",22,"1","Standard Build-up Distributor",2.55528559724898,1.19646954209931,0.869767647193346,1.46129766908561
+"Alessio Romagnoli","Lazio","Serie A","2024-2025",29,"2","Limited / Reactive Defender",2.54427552077756,1.25772908259958,0.944813607971068,1.60446701030781
+"Jon Pacheco","Real Sociedad","La Liga","2023-2024",22,"1","Standard Build-up Distributor",2.54012044405381,1.35639990168122,0.826085260478053,1.56292657073598
+"Manuel Gulde","Freiburg","Bundesliga","2023-2024",32,"1","Standard Build-up Distributor",2.53979755202443,1.3579661702112,1.04420662140742,1.50578644853824
+"Nacho","Real Madrid","La Liga","2023-2024",33,"1","Standard Build-up Distributor",2.53893180502698,1.31540096589748,0.932640238424915,1.05578807574694
+"Danilho Doekhi","Union Berlin","Bundesliga","2024-2025",26,"2","Limited / Reactive Defender",2.53880871073888,1.23792615323113,1.36248452152331,1.28598604475685
+"Radu Drăgușin","Tottenham","Premier League","2024-2025",22,"1","Standard Build-up Distributor",2.53796747949626,1.22440934661613,1.11750671267537,1.06825822197712
+"Amir Rrahmani","Napoli","Serie A","2024-2025",30,"1","Standard Build-up Distributor",2.53532991173618,2.05915602586349,0.695106628104682,0.983092574800454
+"Marc-Oliver Kempf","Como","Serie A","2024-2025",29,"1","Standard Build-up Distributor",2.53418013342341,1.32898280347682,1.09717957648395,1.11903361779462
+"Carl Starfelt","Celta Vigo","La Liga","2024-2025",29,"2","Limited / Reactive Defender",2.52839572711822,1.16735259136348,1.19880748957374,1.56830118356676
+"Ben Davies","Tottenham","Premier League","2024-2025",31,"1","Standard Build-up Distributor",2.52514347021215,1.5895212967039,0.955420712024318,1.32162585378773
+"Ardian Ismajli","Empoli","Serie A","2024-2025",27,"2","Limited / Reactive Defender",2.5240282892013,0.628664839296879,1.93048643716478,1.29659109891282
+"Enrico Del Prato","Parma","Serie A","2024-2025",24,"1","Standard Build-up Distributor",2.52347491697744,1.08828351872041,0.765920311130717,1.21746109598784
+"Sokratis Papastathopoulos","Betis","La Liga","2023-2024",35,"2","Limited / Reactive Defender",2.51985079072471,0.602908317846779,0.826815644341525,1.73668016554309
+"Craig Dawson","Wolves","Premier League","2024-2025",34,"2","Limited / Reactive Defender",2.50808469955996,1.00202950417321,1.04943076821068,1.56578605426321
+"Niklas Stark","Werder Bremen","Bundesliga","2024-2025",29,"2","Limited / Reactive Defender",2.50148899714964,1.10772514708214,1.38145695648133,1.41046359510534
+"Gautier Lloris","Le Havre","Ligue 1","2024-2025",29,"2","Limited / Reactive Defender",2.48679060949818,1.34153321355329,0.959591372712531,1.7691026123507
+"Antonio Rüdiger","Real Madrid","La Liga","2024-2025",31,"1","Standard Build-up Distributor",2.48639721674639,1.62673501301461,0.536751759901439,0.928289351327175
+"Jorge Sáenz","Leganés","La Liga","2024-2025",27,"2","Limited / Reactive Defender",2.48242196138463,0.88855584395915,1.21929366261581,1.7611299421694
+"Gianluca Mancini","Roma","Serie A","2023-2024",27,"1","Standard Build-up Distributor",2.48213326368247,1.98350651505507,0.926071179400795,0.963057895611559
+"Matthijs De Ligt","Manchester Utd","Premier League","2024-2025",24,"2","Limited / Reactive Defender",2.48179884267318,1.03819723416349,1.35464937440257,1.38385912711824
+"Andreas Hanche-Olsen","Mainz 05","Bundesliga","2024-2025",27,"2","Limited / Reactive Defender",2.47424752037913,1.02917552926747,0.985993350669201,1.53625968312736
+"Bafodé Diakité","Lille","Ligue 1","2024-2025",23,"1","Standard Build-up Distributor",2.4717721327434,1.25573932135939,0.801855533769972,0.966642014863019
+"Charlie Cresswell","Toulouse","Ligue 1","2024-2025",21,"2","Limited / Reactive Defender",2.46840296959368,1.03196380416653,1.00253029798674,1.28139863089302
+"Chumi","Almería","La Liga","2023-2024",24,"1","Standard Build-up Distributor",2.46643340685518,1.10831891151813,0.71096438632174,1.38358932611489
+"Levi Colwill","Chelsea","Premier League","2024-2025",21,"1","Standard Build-up Distributor",2.46196080740811,1.54943568943254,0.861884688742608,1.21140556266811
+"Botond Balogh","Parma","Serie A","2024-2025",22,"2","Limited / Reactive Defender",2.45342411407376,0.790367069801427,1.19302268259939,1.68710079571202
+"Robin Le Normand","Atlético Madrid","La Liga","2024-2025",27,"1","Standard Build-up Distributor",2.44660189752171,1.05726496875985,0.672754340358607,1.3329520052172
+"Jannik Vestergaard","Leicester City","Premier League","2024-2025",31,"2","Limited / Reactive Defender",2.443815283932,0.94126959678568,1.1147045575527,1.52279261076988
+"Saidou Sow","Strasbourg","Ligue 1","2024-2025",22,"2","Limited / Reactive Defender",2.44039211504079,0.721321442218207,1.31084822028485,1.2048190581656
+"Jon Martin","Real Sociedad","La Liga","2024-2025",18,"1","Standard Build-up Distributor",2.43444975249479,1.42813688177414,0.95129610776944,1.36363162877306
+"Abdel Abqar","Alavés","La Liga","2024-2025",25,"1","Standard Build-up Distributor",2.43370931121865,1.3078004217722,1.2202333635618,1.24364695692646
+"Catena","Osasuna","La Liga","2024-2025",29,"2","Limited / Reactive Defender",2.4324229609369,1.11217029772345,1.05890962984778,1.40122498241456
+"Danilo D'Ambrosio","Monza","Serie A","2024-2025",35,"1","Standard Build-up Distributor",2.42816433206274,1.36809548373284,0.952176014288429,1.57416647047399
+"Simone Romagnoli","Frosinone","Serie A","2023-2024",33,"2","Limited / Reactive Defender",2.42403193000475,0.677983068050188,1.13907192341401,1.41932547912366
+"Stefan De Vrij","Inter","Serie A","2024-2025",32,"1","Standard Build-up Distributor",2.42176183782892,1.61204725132906,1.0252921977784,0.991648239738479
+"Wout Faes","Leicester City","Premier League","2024-2025",26,"2","Limited / Reactive Defender",2.41734515178159,1.16950605153168,0.942892686567794,1.44756023987689
+"Julien Laporte","Lorient","Ligue 1","2023-2024",29,"1","Standard Build-up Distributor",2.41614316299622,1.13930388634757,0.732797055644932,1.25573185604499
+"Daniele Rugani","Juventus","Serie A","2023-2024",29,"1","Standard Build-up Distributor",2.41427227053504,1.37137935924685,0.843579355760555,1.08733350724694
+"Alberto Dossena","Como","Serie A","2024-2025",25,"2","Limited / Reactive Defender",2.41038160077371,0.83827306143753,1.06184071986868,1.54157413645285
+"Matthias Ginter","Freiburg","Bundesliga","2024-2025",30,"1","Standard Build-up Distributor",2.4103351351428,1.60202989735753,0.743125204603598,1.10813269414759
+"César Montes","Almería","La Liga","2023-2024",26,"1","Standard Build-up Distributor",2.40749819399313,1.14432753819489,0.775973213649795,1.29468019604323
+"James Tarkowski","Everton","Premier League","2024-2025",31,"2","Limited / Reactive Defender",2.40645292991708,1.05701665685453,1.13452464924428,1.72350240826133
+"Francesco Acerbi","Inter","Serie A","2024-2025",36,"1","Standard Build-up Distributor",2.40641100109917,1.57741576598114,1.12170286251656,1.15007774700518
+"Juan Cruz Armada","Osasuna","La Liga","2024-2025",32,"1","Standard Build-up Distributor",2.39890415053984,1.37489618055333,0.768543207504279,1.56433624364702
+"Raúl Asencio","Real Madrid","La Liga","2024-2025",21,"2","Limited / Reactive Defender",2.38063288442352,0.776026545706893,0.894467102021682,1.21991742082007
+"Sebastiano Luperto","Cagliari","Serie A","2024-2025",27,"1","Standard Build-up Distributor",2.37705317589044,1.22849486481986,0.829481222826827,1.18451772184832
+"Simon Kjær","Milan","Serie A","2023-2024",34,"1","Standard Build-up Distributor",2.37318301192206,1.57584551098983,0.786134115356777,1.22381320370322
+"Juan Herzog","Las Palmas","La Liga","2024-2025",21,"2","Limited / Reactive Defender",2.36999524796068,0.799730887821605,1.28803699421495,1.19402888063183
+"Kialonda","Lecce","Serie A","2024-2025",26,"2","Limited / Reactive Defender",2.36940823135329,0.708643297405706,1.41385283842639,1.60963876061016
+"Juan Berrocal","Getafe","La Liga","2024-2025",25,"2","Limited / Reactive Defender",2.36774874688262,0.935771374699708,1.18599300006522,1.31899645911525
+"Aitor Paredes","Athletic Club","La Liga","2024-2025",24,"2","Limited / Reactive Defender",2.36335904114763,0.978439325482364,1.15343477086573,1.04337833473584
+"Gabriel Osho","Auxerre","Ligue 1","2024-2025",25,"1","Standard Build-up Distributor",2.36170449206295,1.1280637075678,0.846870253480053,1.39010430647972
+"Jubal","Auxerre","Ligue 1","2024-2025",30,"2","Limited / Reactive Defender",2.35670540701625,0.547260541949696,0.954184520294675,1.98357989472649
+"Juan Jesus","Napoli","Serie A","2024-2025",33,"1","Standard Build-up Distributor",2.35554783333122,1.59277391857037,0.798635420532914,1.59057742336504
+"Florent Ogier","Clermont Foot","Ligue 1","2023-2024",34,"2","Limited / Reactive Defender",2.35090010215141,0.883221243353199,0.937374698200966,1.58708372930121
+"Trevoh Chalobah","Chelsea","Premier League","2024-2025",25,"1","Standard Build-up Distributor",2.35030874666813,1.49666683955466,0.920558193649543,1.1337661579977
+"Issa Diop","Fulham","Premier League","2024-2025",27,"2","Limited / Reactive Defender",2.3468679535344,0.884902733822761,0.807378198832559,1.64501452353556
+"Santiago Bueno","Wolves","Premier League","2024-2025",25,"2","Limited / Reactive Defender",2.34570833533134,0.678687199832263,0.986655281382555,2.11873283377847
+"Jake O'Brien","Lyon","Ligue 1","2023-2024",22,"1","Standard Build-up Distributor",2.34549537863796,1.18871972023227,0.531983670413447,0.847571280250248
+"Jordan Lefort","Angers","Ligue 1","2024-2025",30,"2","Limited / Reactive Defender",2.33765582837256,1.08887686993112,0.922435258468209,1.43412440293045
+"Yael Mouanga","Montpellier","Ligue 1","2024-2025",19,"2","Limited / Reactive Defender",2.32742851221678,1.02834182687116,0.99582069528693,1.36883339399678
+"Luca Ranieri","Fiorentina","Serie A","2024-2025",25,"1","Standard Build-up Distributor",2.32611120038906,1.20749525635965,0.905161040043524,1.31814295083935
+"Edoardo Goldaniga","Como","Serie A","2024-2025",30,"1","Standard Build-up Distributor",2.32347550468758,1.31867897830142,1.1235274380545,1.24863108430781
+"Fikayo Tomori","Milan","Serie A","2024-2025",26,"1","Standard Build-up Distributor",2.32189988532569,1.50513241040597,0.809440746079032,1.43517112481996
+"Giovanni Leoni","Parma","Serie A","2024-2025",17,"2","Limited / Reactive Defender",2.30979962095799,0.737220900169038,1.21219815706225,1.34659707421309
+"Christopher Jullien","Montpellier","Ligue 1","2023-2024",30,"2","Limited / Reactive Defender",2.30608557271908,0.859355116225269,0.944350678192062,1.2660748057243
+"César Tárrega","Valencia","La Liga","2024-2025",22,"1","Standard Build-up Distributor",2.30502725964453,1.09593832500396,0.736743122424755,1.42242844552262
+"Ethan Pinnock","Brentford","Premier League","2024-2025",31,"2","Limited / Reactive Defender",2.30474049392357,0.886524265055828,1.17597622345544,1.67737307140926
+"Jarrad Branthwaite","Everton","Premier League","2024-2025",22,"2","Limited / Reactive Defender",2.3041913230936,1.03717583485016,0.930320059684297,1.2449573195455
+"Jakub Kiwior","Arsenal","Premier League","2024-2025",24,"1","Standard Build-up Distributor",2.30087063811999,1.56740520830723,0.659478404469179,1.42411175828736
+"Domingos Duarte","Getafe","La Liga","2024-2025",29,"2","Limited / Reactive Defender",2.29777004962747,0.957612533440156,0.943350522888038,1.39323643927173
+"Ko Itakura","Gladbach","Bundesliga","2024-2025",27,"1","Standard Build-up Distributor",2.29517132632808,1.12853417933807,0.905919989592203,1.2736053044034
+"Marko Ivezić","Holstein Kiel","Bundesliga","2024-2025",22,"2","Limited / Reactive Defender",2.28981529164763,0.955033420785794,1.06690675595479,1.23500896452489
+"David Zec","Holstein Kiel","Bundesliga","2024-2025",24,"2","Limited / Reactive Defender",2.28574375609326,0.938627115905767,0.825542334172256,1.11650133905553
+"Adam Masina","Torino","Serie A","2024-2025",30,"1","Standard Build-up Distributor",2.2806450717527,1.50042688101773,0.842247228546802,1.06274563662447
+"Taylor Harwood-Bellis","Southampton","Premier League","2024-2025",22,"1","Standard Build-up Distributor",2.27858347274575,1.79866995956355,0.705700521577604,0.737106853589475
+"Armando Izzo","Monza","Serie A","2024-2025",32,"2","Limited / Reactive Defender",2.27606364545264,1.21051832832934,1.22489053273453,1.20339843994195
+"David López","Girona","La Liga","2024-2025",34,"1","Standard Build-up Distributor",2.26582731698784,1.94585648885459,0.529407008686608,0.98801398846653
+"Lautaro Valenti","Parma","Serie A","2024-2025",25,"2","Limited / Reactive Defender",2.25376004361663,0.792258960575337,0.958848965310122,1.27000408048291
+"Pau Torres","Aston Villa","Premier League","2024-2025",27,"4","Elite Progressive Distributor",2.24892046322189,2.10356037801868,0.516802868231203,0.87725470063967
+"Jack Stephens","Southampton","Premier League","2024-2025",30,"1","Standard Build-up Distributor",2.24698945758627,1.75991682454448,0.67313025692995,1.37034504904555
+"Jorge Herrando","Osasuna","La Liga","2024-2025",23,"1","Standard Build-up Distributor",2.24555956366994,1.12635593509902,0.930567603511818,1.28693731746897
+"Duje Ćaleta-Car","Lyon","Ligue 1","2024-2025",27,"1","Standard Build-up Distributor",2.23401821104519,1.09974328600743,0.848270895468844,1.05581046317569
+"Guillermo Maripán","Torino","Serie A","2024-2025",30,"1","Standard Build-up Distributor",2.22871418271471,1.53736054533167,1.00168736939411,1.05968209321249
+"Malick Thiaw","Milan","Serie A","2024-2025",22,"1","Standard Build-up Distributor",2.21289326831894,1.78974397785532,0.627130809405688,0.935494766354449
+"Federico Fazio","Salernitana","Serie A","2023-2024",36,"2","Limited / Reactive Defender",2.2090677651996,0.841942021649976,1.03356198235854,1.21412007105117
+"Gabriel Magalhães","Arsenal","Premier League","2024-2025",26,"1","Standard Build-up Distributor",2.20782859180132,1.89610819586355,0.647615033652154,0.952608182129017
+"Conor Coady","Leicester City","Premier League","2024-2025",31,"2","Limited / Reactive Defender",2.20749937426069,0.77359892014483,0.870791103780421,1.0072053864908
+"Christoph Klarer","Darmstadt 98","Bundesliga","2023-2024",23,"1","Standard Build-up Distributor",2.19090855422424,1.1197973574688,0.747976550444745,1.2107781215097
+"Álex Suárez","Las Palmas","La Liga","2024-2025",31,"2","Limited / Reactive Defender",2.18514641113969,0.857396594470059,0.706891666864262,1.60838609929561
+"Diego Carlos","Aston Villa","Premier League","2023-2024",30,"1","Standard Build-up Distributor",2.1799296273225,1.18705955607819,0.63343223627081,1.10173570070736
+"Obite N'Dicka","Roma","Serie A","2024-2025",24,"1","Standard Build-up Distributor",2.17646183583961,1.32339739923813,0.757343641089841,0.805462285497749
+"Raúl Albiol","Villarreal","La Liga","2024-2025",38,"1","Standard Build-up Distributor",2.16142656109103,1.09220282082401,0.708982944374527,1.03054094553375
+"Andrea Carboni","Monza","Serie A","2024-2025",23,"2","Limited / Reactive Defender",2.15447288344162,0.968884032976678,0.898644121431125,1.77313470042738
+"Dan Burn","Newcastle Utd","Premier League","2024-2025",32,"2","Limited / Reactive Defender",2.14527164895231,0.92951888648457,0.854755862685758,1.20906090343978
+"Marash Kumbulla","Espanyol","La Liga","2024-2025",24,"2","Limited / Reactive Defender",2.13719409526887,0.937722835866153,1.02115596878451,1.49510009660545
+"Javi Sánchez","Valladolid","La Liga","2024-2025",27,"2","Limited / Reactive Defender",2.13107385486552,0.744318497018834,1.03967642599817,1.28699795586556
+"Jan Bednarek","Southampton","Premier League","2024-2025",28,"2","Limited / Reactive Defender",2.12106089672609,0.917513721478507,1.24764983557997,0.950257988203734
+"Copete","Mallorca","La Liga","2024-2025",24,"1","Standard Build-up Distributor",2.09736717623542,1.23886541372698,0.805799688433859,1.2631070582199
+"Federico Baschirotto","Lecce","Serie A","2024-2025",27,"2","Limited / Reactive Defender",2.09308986184991,0.855440283825467,0.791088727027712,1.20274873932632
+"Leandro Cabrera","Espanyol","La Liga","2024-2025",33,"2","Limited / Reactive Defender",2.09197052050415,0.973478731643223,0.956295770910739,1.27909094100237
+"Sergi","Leganés","La Liga","2024-2025",32,"2","Limited / Reactive Defender",2.09097894823995,0.947245924652,1.13789066638176,1.24947274284088
+"Willy Kambwala","Villarreal","La Liga","2024-2025",19,"2","Limited / Reactive Defender",2.07782768399657,0.704834735554787,0.90313298973749,1.36878165800094
+"Tosin Adarabioyo","Chelsea","Premier League","2024-2025",26,"1","Standard Build-up Distributor",2.0745721465839,1.14735628901787,0.757640201924033,1.09442954155337
+"Jacob Greaves","Ipswich Town","Premier League","2024-2025",23,"1","Standard Build-up Distributor",2.05292837127219,1.23068461570873,0.750186788882141,1.28541170780068
+"Kurt Zouma","West Ham","Premier League","2023-2024",28,"2","Limited / Reactive Defender",2.05171936506796,0.768953475965686,0.941162767836271,0.889577271101596
+"David Torres","Valladolid","La Liga","2024-2025",21,"1","Standard Build-up Distributor",2.04832120533765,1.17367077257807,0.849077359883564,1.12245209965894
+"Martin Valjent","Mallorca","La Liga","2024-2025",28,"1","Standard Build-up Distributor",2.03561632585445,1.3550286160155,0.554837178995713,0.8551112640928
+"Tyrone Mings","Aston Villa","Premier League","2024-2025",31,"1","Standard Build-up Distributor",2.03405570680805,1.40406330613439,0.639560197916004,0.772776423811071
+"Dara O'Shea","Ipswich Town","Premier League","2024-2025",25,"2","Limited / Reactive Defender",2.01368462696285,0.918905776082171,0.795624537124189,1.15456056411428
+"Ezri Konsa","Aston Villa","Premier League","2024-2025",26,"1","Standard Build-up Distributor",2.00841179186196,1.29251909994271,0.65308065443268,0.909802747580526
+"Matija Nastasić","Leganés","La Liga","2024-2025",31,"2","Limited / Reactive Defender",1.99856621702797,0.993999644869378,0.934806691906514,1.16333058656864
+"Scott Mckenna","Las Palmas","La Liga","2024-2025",27,"1","Standard Build-up Distributor",1.99752213137208,0.823599722937573,0.589553139304415,1.04835334820817
+"Abdoulaye Bamba","Angers","Ligue 1","2024-2025",34,"2","Limited / Reactive Defender",1.99370333548027,0.572559724445692,1.05664655809296,1.29965420497582
+"Etienne Youte Kinkoue","Le Havre","Ligue 1","2024-2025",22,"1","Standard Build-up Distributor",1.98638374917924,1.1002022385539,0.971596724659618,0.822267401442008
+"Michael Keane","Everton","Premier League","2024-2025",31,"2","Limited / Reactive Defender",1.98165512831244,0.676730712176943,1.15460365627259,1.1511657640221
+"Antonio Raillo","Mallorca","La Liga","2024-2025",32,"1","Standard Build-up Distributor",1.95944139186762,1.45764062596919,0.681032153460198,0.779463856983355
+"Emmanuel Biumla","Angers","Ligue 1","2024-2025",19,"2","Limited / Reactive Defender",1.9543218969587,0.628234577029284,0.725049447577294,1.28688607272101
+"Nikola Milenković","Nott'ham Forest","Premier League","2024-2025",26,"2","Limited / Reactive Defender",1.94584926443974,0.637862473297602,0.813558298311614,1.40770319599431
+"Luke Woolfenden","Ipswich Town","Premier League","2024-2025",25,"2","Limited / Reactive Defender",1.90939351853335,0.743665243871194,1.04308525331356,0.830991947717832
+"Cameron Burgess","Ipswich Town","Premier League","2024-2025",28,"1","Standard Build-up Distributor",1.90267492137813,1.05889852754455,0.745963439897255,0.949086751030904
+"Luca Caldirola","Monza","Serie A","2023-2024",32,"1","Standard Build-up Distributor",1.89599981214179,1.07562875510855,0.960976989076821,0.958469403192226
+"Matteo Gabbia","Milan","Serie A","2024-2025",24,"1","Standard Build-up Distributor",1.88691717274193,1.33017870270843,0.556595484558735,0.764883381908947
+"Saúl Coco","Torino","Serie A","2024-2025",25,"1","Standard Build-up Distributor",1.84731938195078,1.02547390576779,0.817737224267903,1.01680456001767

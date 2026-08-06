@@ -38,8 +38,9 @@ clustering_data <- data_clean[, vars_clustering]
 n_players   <- nrow(data_clean)
 season_span <- paste(sort(unique(data_clean$Season)), collapse = " + ")
 # Los pies van en inglés: las figuras las comparten README.md y README.es.md.
+# Se parten en dos líneas: en una sola, el texto desborda el ancho del lienzo.
 fig_caption <- sprintf(
-  "n = %d pure centre-backs | Europe's big-five leagues | most recent qualifying season per player (%s)",
+  "n = %d pure centre-backs | Europe's big-five leagues\nMost recent qualifying season per player (%s)",
   n_players, season_span
 )
 

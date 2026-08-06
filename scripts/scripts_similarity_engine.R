@@ -78,6 +78,15 @@ target_player <- data %>% arrange(desc(scouting_score)) %>% slice(1) %>% pull(Pl
 cat("Buscando perfiles similares a:", target_player, "\n")
 top_similar <- get_similar_cb(target_player, sim_matrix, top_n = 10)
 
+# Añadimos contexto (equipo, liga y temporada de la muestra) para que la tabla
+# sea legible por sí sola: recuerda que la muestra mezcla dos campañas.
+top_similar <- top_similar %>%
+  left_join(
+    data %>% select(Player, Squad, League, Season, Age, scouting_score),
+    by = "Player"
+  ) %>%
+  mutate(target = target_player, .before = 1)
+
 write.csv(
   top_similar,
   "outputs/tables/player_similarity_results.csv",

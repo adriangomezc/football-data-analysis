@@ -40,7 +40,8 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-docs/
+# NOTE: 'docs/' is NOT ignored here. This repository uses docs/ for the
+# tactical analysis reports, which are part of the published deliverable.
 
 # translation temp files
 po/*~

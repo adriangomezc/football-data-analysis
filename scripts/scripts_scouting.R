@@ -51,6 +51,9 @@ cb_filtered_data <- base_defenders %>%
 # 3. ISOLATE CURRENT FORM & FEATURE ENGINEERING
 # =========================================================
 
+# NOTA METODOLÓGICA: cada jugador entra con su temporada válida MÁS RECIENTE.
+# Esto prioriza el estado de forma actual, pero implica que la muestra final
+# mezcla temporadas y no es un corte transversal de una única campaña.
 cb_current_form <- cb_filtered_data %>%
   arrange(Player, desc(Season)) %>%
   group_by(Player) %>%
@@ -131,30 +134,46 @@ write.csv(scored_data, "data/processed/defenders_processed.csv", row.names = FAL
 # OUTPUT TABLES (Bug de la variable 'data' corregido)
 # =========================================================
 
+# Se incluye 'Season' en todos los rankings: la muestra mezcla campañas y sin
+# esa columna las tablas no son interpretables de forma inequívoca.
+
 top_targets <- scored_data %>%
   arrange(desc(scouting_score)) %>%
-  select(Player, Squad, League, Age, scouting_score, progression_index, defending_score, pass_completion) %>%
+  select(Player, Squad, League, Season, Age, scouting_score, progression_index, defending_score, pass_completion) %>%
   head(25)
 write.csv(top_targets, "outputs/tables/top_recruitment_targets.csv", row.names = FALSE)
 
 market_targets <- scored_data %>%
   filter(Age <= 24, scouting_score >= quantile(scouting_score, 0.80, na.rm = TRUE)) %>%
   arrange(desc(scouting_score)) %>%
-  select(Player, Squad, League, Age, scouting_score)
+  select(Player, Squad, League, Season, Age, scouting_score)
 write.csv(market_targets, "outputs/tables/market_inefficiency_targets.csv", row.names = FALSE)
 
 prog_ranking <- scored_data %>%
   arrange(desc(progression_index)) %>%
-  select(Player, Squad, League, progression_index, progressive_passes_per90, progressive_carries_per90) %>%
+  select(Player, Squad, League, Season, progression_index, progressive_passes_per90, progressive_carries_per90) %>%
   head(20)
 write.csv(prog_ranking, "outputs/tables/xt_proxy_ranking.csv", row.names = FALSE)
 
 defensive_ranking <- scored_data %>%
   arrange(desc(defending_score)) %>%
-  select(Player, Squad, League, defending_score, padj_tackles, padj_interceptions, padj_recoveries) %>%
+  select(Player, Squad, League, Season, defending_score, padj_tackles, padj_interceptions, padj_recoveries) %>%
   head(20)
 write.csv(defensive_ranking, "outputs/tables/defensive_ranking.csv", row.names = FALSE)
 
+# =========================================================
+# SAMPLE FUNNEL (trazabilidad de la muestra final)
+# =========================================================
+
 cat("\n========================================\n")
+cat("EMBUDO DE LA MUESTRA\n")
+cat("========================================\n")
+cat(sprintf("  Jugador-temporada desde 2023-24 ........ %5d\n", nrow(raw_data)))
+cat(sprintf("  Pos. DF pura y >= 900 minutos .......... %5d\n", nrow(base_defenders)))
+cat(sprintf("  Tras filtros posicionales .............. %5d\n", nrow(cb_filtered_data)))
+cat(sprintf("  Temporada mas reciente por jugador ..... %5d\n", nrow(scored_data)))
+cat("  Reparto por temporada:\n")
+print(table(scored_data$Season))
+cat("========================================\n")
 cat("SCOUTING ANALYSIS COMPLETED\n")
 cat("========================================\n")

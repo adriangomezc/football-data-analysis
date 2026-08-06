@@ -1,40 +1,47 @@
 # =========================================================
 # RUN_ALL.R - MASTER EXECUTION PIPELINE
 # =========================================================
+# Uso (desde la raíz del repositorio):
+#   Rscript scripts/run_all.R
+# Los pasos son dependientes entre sí: si uno falla, la ejecución se detiene.
 
 rm(list = ls())
 
 cat("Iniciando el Pipeline de Scouting Analytics...\n")
 cat("====================================================\n\n")
 
+run_step <- function(n, total, description, path) {
+  cat(sprintf("[%d/%d] %s\n", n, total, description))
+  tryCatch(
+    source(path),
+    error = function(e) {
+      stop(sprintf("El pipeline se detuvo en '%s': %s", path, conditionMessage(e)),
+           call. = FALSE)
+    }
+  )
+  cat("\n")
+}
+
 # 1. SETUP
-cat("[1/5] Instalando y cargando paquetes requeridos...\n")
-source("scripts/setup_packages.R")
+run_step(1, 5, "Comprobando paquetes requeridos...",
+         "scripts/setup_packages.R")
 
-# 2. DATA PREP & PAdj METRICS (La ÚNICA fuente de verdad de la posesión)
-cat("[2/5] Calculando estimaciones de posesión y métricas PAdj...\n")
-tryCatch({
-  source("scripts/scripts_padj_metrics.R")
-}, error = function(e) cat("  -> ERROR en scripts_padj_metrics.R:", conditionMessage(e), "\n"))
+# 2. DATA PREP & PAdj METRICS (la única fuente de verdad de la posesión)
+run_step(2, 5, "Calculando estimaciones de posesión y multiplicadores PAdj...",
+         "scripts/scripts_padj_metrics.R")
 
-# 3. SCOUTING PRINCIPAL (Cálculo de PCA y Scores)
-cat("[3/5] Calculando Índice de Progresión (PCA) y Scouting Score...\n")
-tryCatch({
-  source("scripts/scripts_scouting.R")
-}, error = function(e) cat("  -> ERROR en scripts_scouting.R:", conditionMessage(e), "\n"))
+# 3. SCOUTING PRINCIPAL (pesos PCA y scores compuestos)
+run_step(3, 5, "Calculando índice de progresión (PCA) y scouting score...",
+         "scripts/scripts_scouting.R")
 
 # 4. CLUSTERING Y VISUALIZACIÓN
-cat("[4/5] Clasificando roles tácticos y generando dashboards...\n")
-tryCatch({
-  source("scripts/scripts_clustering.R")
-}, error = function(e) cat("  -> ERROR en scripts_clustering.R:", conditionMessage(e), "\n"))
+run_step(4, 5, "Clasificando roles tácticos y generando figuras...",
+         "scripts/scripts_clustering.R")
 
 # 5. SIMILARITY ENGINE
-cat("[5/5] Construyendo Motor de Similitud...\n")
-tryCatch({
-  source("scripts/scripts_similarity_engine.R")
-}, error = function(e) cat("  -> ERROR en scripts_similarity_engine.R:", conditionMessage(e), "\n"))
+run_step(5, 5, "Construyendo el motor de similitud...",
+         "scripts/scripts_similarity_engine.R")
 
-cat("\n====================================================\n")
-cat("EJECUCIÓN DEL PIPELINE FINALIZADA.\n")
-cat("Revisa la carpeta 'outputs/' para ver las tablas y gráficos.\n")
+cat("====================================================\n")
+cat("EJECUCIÓN DEL PIPELINE FINALIZADA CORRECTAMENTE.\n")
+cat("Revisa la carpeta 'outputs/' para ver las tablas y figuras.\n")

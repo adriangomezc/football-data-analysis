@@ -1,11 +1,11 @@
-"Player","similarity"
-"Mario Gila",0.971396616984887
-"Javi Rodríguez",0.959250595699508
-"Facundo Medina",0.953126518874667
-"Mohamed Simakan",0.942343440458527
-"Lutsharel Geertruida",0.940217820651905
-"César Azpilicueta",0.938777735180665
-"Nico Schlotterbeck",0.913956886833379
-"Lisandro Martínez",0.906945804200924
-"Arnau Martinez",0.886921585449805
-"Jan Paul Van Hecke",0.873499417817756
+"target","Player","similarity","Squad","League","Season","Age","scouting_score"
+"Sead Kolašinac","Mario Gila",0.971396616984887,"Lazio","Serie A","2024-2025",23,3.63777876110449
+"Sead Kolašinac","Javi Rodríguez",0.959250595699508,"Celta Vigo","La Liga","2024-2025",21,2.92161472137538
+"Sead Kolašinac","Facundo Medina",0.953126518874667,"Lens","Ligue 1","2024-2025",25,4.27756284441386
+"Sead Kolašinac","Mohamed Simakan",0.942343440458527,"RB Leipzig","Bundesliga","2023-2024",23,4.00089164079606
+"Sead Kolašinac","Lutsharel Geertruida",0.940217820651905,"RB Leipzig","Bundesliga","2024-2025",24,4.00219871720986
+"Sead Kolašinac","César Azpilicueta",0.938777735180665,"Atlético Madrid","La Liga","2023-2024",33,3.67148645898783
+"Sead Kolašinac","Nico Schlotterbeck",0.913956886833379,"Dortmund","Bundesliga","2024-2025",24,4.73146035740743
+"Sead Kolašinac","Lisandro Martínez",0.906945804200924,"Manchester Utd","Premier League","2024-2025",26,3.77501845854346
+"Sead Kolašinac","Arnau Martinez",0.886921585449805,"Girona","La Liga","2023-2024",20,3.05962432677308
+"Sead Kolašinac","Jan Paul Van Hecke",0.873499417817756,"Brighton","Premier League","2024-2025",24,3.4562824476765

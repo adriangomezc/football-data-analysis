@@ -14,6 +14,8 @@ This report breaks down the tactical profiles of centre-backs across Europe's to
 
 Applying the sigmoidal curve for possession-adjusted metrics reveals that defensive counts are heavily dictated by team dominance. After normalising for true defensive opportunity, **Timo Hübers** (13.31 combined PAdj) and **Riccardo Calafiori** (13.18) emerge as the most active defenders in the sample.
 
+Two questions a good analyst should ask before trusting any of this — *is the model internally sound?* and *does it predict anything real?* — are answered directly in sections 6 and 7, including where the answers are only partial.
+
 ---
 
 ## 1. Tactical profiles and cluster breakdown
@@ -119,10 +121,81 @@ The cosine similarity engine scans the standardised feature space to find the cl
 
 ---
 
-## 6. Tactical takeaways
+## 6. Statistical robustness checks
+
+Before trusting a ranking, it is worth asking whether the machinery producing it is sound: are the inputs redundant with each other, is the number of clusters defensible, and are there players whose profile is so unusual that they're distorting the picture? All three are checked directly rather than assumed.
+
+### 6.1. Multivariate outlier screening
+
+A Mahalanobis distance (D²) screen was run on the seven variables that feed the filtering and scoring stages, using the standard cutoff k + 3√(2k) for k = 7 variables (D² > 18.2). 20 of 407 players (4.9%) exceed it.
+
+| Player | Squad | Season | D² |
+|:-------|:------|:-------|---:|
+| Woyo Coulibaly | Parma | 2024–25 | 46.10 |
+| Alidu Seidu | Clermont Foot | 2023–24 | 31.23 |
+| César Azpilicueta | Atlético Madrid | 2023–24 | 29.95 |
+| Iñigo Martínez | Barcelona | 2024–25 | 26.07 |
+| Nicolás Valentini | Hellas Verona | 2024–25 | 24.58 |
+
+Notice who's on that list: **Alidu Seidu and Iñigo Martínez are two of the standout names in sections 3 and 4 of this report.** That's not a contradiction — it's exactly what a well-behaved outlier screen should do. "Statistically unusual" and "data error" produce the same D², and the only way to tell them apart is to look. Here, the look confirms both are unusual because they're genuinely exceptional, not because of a data problem. Players are flagged, never silently dropped, for this reason. Full list: [`qc_mahalanobis_outliers.csv`](../outputs/tables/qc_mahalanobis_outliers.csv).
+
+### 6.2. Are the composite's inputs redundant with each other?
+
+A variance inflation factor (VIF) check was run on three groups: the three inputs of the progression index, the three PAdj inputs of the defending score, and the four top-level pillars of the scouting score itself. Every single VIF came back ≤ 1.75 — nowhere near the conventional concern threshold of 10. None of the variables feeding the model are quietly duplicating another one's signal. Full table: [`vif_diagnostics.csv`](../outputs/tables/vif_diagnostics.csv).
+
+### 6.3. Is k = 4 the right number of clusters?
+
+The elbow (WSS) and silhouette methods were run across k = 2 to 8:
+
+| k | WSS | Mean silhouette |
+|--:|----:|-----------------:|
+| 2 | 1352.8 | **0.335** (statistical optimum) |
+| 3 | 1083.0 | 0.265 |
+| **4** | **910.4** | **0.241 (used in the pipeline)** |
+| 5 | 793.0 | 0.233 |
+| 6 | 721.0 | 0.238 |
+| 7 | 667.8 | 0.228 |
+| 8 | 616.0 | 0.212 |
+
+The honest answer is that k = 2 is the statistical optimum, and k = 4's silhouette (0.241) sits right at the boundary Kaufman & Rousseeuw's rule of thumb calls "weak structure" (below 0.25). k = 4 was kept anyway, deliberately, because k = 2 collapses the sample into a coarse "progressive vs. limited" split that discards the tactical granularity — ball-winning intensity vs. distribution style — that the rest of this report is built on.
+
+That choice needed a second check: does an algorithm that has never heard of K-means still find roughly the same four groups? Cutting a Ward's-method hierarchical dendrogram at the same k = 4 and comparing to the K-means labels gives an **Adjusted Rand Index of 0.419** and **75.2%** of players landing in each other's dominant matching group (cophenetic correlation of the dendrogram itself: 0.586). That's moderate agreement — nowhere near perfect, but well above the ~0 expected from two unrelated methods finding nothing in common. The four archetypes are a real, if not sharply separated, feature of the data, not a K-means artefact. Full contingency table: [`kmeans_vs_hierarchical_agreement.csv`](../outputs/tables/kmeans_vs_hierarchical_agreement.csv).
+
+---
+
+## 7. Predictive validation: does the score predict anything real?
+
+Every check so far asks whether the model is *internally* coherent. This section asks a harder question: refit using **only 2023-24 data**, does the resulting score say anything true about what happened in **2024-25** — a season it never saw? This is a genuine temporal train/test split (fit on the past, evaluate on the future), not a random k-fold, because leaking future information into the fit would defeat the point.
+
+**Setup.** 278 centre-backs active in 2023-24, scored using PCA weights re-estimated on that season alone. Outcome: did they play ≥ 900 minutes in 2024-25 (`retained`)? 64.0% did.
+
+| Model | Predictor(s) | Result | AIC |
+|:------|:--------------|:-------|----:|
+| Intercept only | — | baseline | 365.2 |
+| Logistic regression | `scouting_score` | OR = 1.28 (95% CI 0.85–1.97), **p = 0.24, not significant** | 365.8 |
+| Logistic regression | 4 components separately | `age_score` OR = 22.6 (**p = 0.001**); `progression_index` OR = 1.60 (p = 0.053); `defending_score`, `pass_completion` n.s. | 354.2 |
+
+**The composite score does not significantly predict next-season retention** (McFadden pseudo-R² = 0.004). Among the players who were retained, the score doesn't predict how much they played either (Spearman ρ = −0.01, p = 0.90 vs. 2024-25 minutes).
+
+**Why this isn't a failure of the score.** Decomposing the composite shows exactly where the (limited) signal lives: `age_score` alone is a strong, highly significant predictor of retention — younger players are simply more likely to still be playing next season, an unremarkable career-stage effect. But `age_score` carries only **20%** of the composite's weight, by design, because the score is built to rank *footballing ability*, not to predict *survival in the sample*. An 80%-ability-weighted score diluting a strong but narrow age signal into non-significance is exactly what should happen if the weighting is doing its job. A likelihood-ratio test makes this precise: the unconstrained 4-parameter model fits significantly better than the constrained single-score model (χ², **p < 0.001**) — the fixed 40/30/10/20 weighting is a real, measurable constraint on this specific prediction task, not a free equivalent representation of the same information.
+
+As a purely descriptive (non-causal) cross-check, retention rate does line up with the algorithm's own archetypes:
+
+| Archetype | n | Retention rate |
+|:----------|--:|----------------:|
+| Elite Progressive Distributor | 34 | 70.6% |
+| Standard Build-up Distributor | 86 | 69.8% |
+| High-Intensity Ball-Winner | 59 | 66.1% |
+| Limited / Reactive Defender | 99 | 55.6% |
+
+**What this validation does and doesn't show.** "Played 900+ minutes next season" is a weak, indirect proxy for scouting quality — it's shaped at least as much by injuries, squad depth, and a manager's system as by ability, and an excellent scouting profile is no guarantee of a starting shirt at the buying club. The null result on the composite score does not mean the ranking is wrong; it means crude next-season retention is the wrong target to validate a *quality* ranking against, and that limitation is now measured and disclosed rather than quietly assumed away. Full model output: [`temporal_validation_results.csv`](../outputs/tables/temporal_validation_results.csv); figure: [`temporal_validation.png`](../outputs/figures/temporal_validation.png).
+
+---
+
+## 8. Tactical takeaways
 
 - **The system effect.** The dominant presence of Gasperini's Atalanta (Kolašinac, Scalvini) and of Calafiori in Thiago Motta's 2023–24 Bologna highlights how man-marking and proactive defensive systems drastically elevate their centre-backs' PAdj metrics.
 - **Pure centre-backs vs inverted full-backs.** The strict attacking-third touch and progressive-reception filters cleaned the database of "fake centre-backs", allowing true progressive defenders (like Schlotterbeck or Iñigo Martínez) to lead the ranking without competition from overlapping full-backs.
 - **The adjustment does real work.** Alidu Seidu and Calafiori illustrate the two sides of it: Seidu's numbers hold up *despite* a possession multiplier below 1, while high-possession sides see their defenders' raw counts corrected upwards. Ranking on unadjusted tackles and interceptions would have produced a materially different shortlist.
 - **Similarity as a succession plan.** The engine removes visual bias. Identifying Mario Gila or Javi Rodríguez as twin profiles to Kolašinac provides the scouting department with a purely objective shortlist, ready to be filtered by financial viability.
-- **Read this as a shortlisting tool.** The composite weights encode a recruitment philosophy rather than a fitted model, and the sample spans two seasons. See the [limitations section](../README.md#limitations) of the main README before treating any ordering as definitive.
+- **Read this as a well-audited shortlisting tool, not a signing decision.** Sections 6 and 7 show a model that is internally coherent (no redundant inputs, a disclosed and cross-validated clustering choice) but whose composite score does not predict crude next-season playing time — a limitation of what "playing time" measures, not evidence the ranking is arbitrary. See the [limitations section](../README.md#limitations) of the main README before treating any ordering as definitive.

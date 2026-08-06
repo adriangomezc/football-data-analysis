@@ -45,14 +45,88 @@ fig_caption <- sprintf(
 )
 
 # =========================================================
-# SCALING & K-MEANS
+# SCALING
 # =========================================================
 
 scaled_features <- scale(clustering_data)
 
-set.seed(123)
-k_clusters <- 4
+# =========================================================
+# SELECCIÓN DE K: MÉTODO DEL CODO + MÉTODO DE LA SILUETA
+# =========================================================
+# k=4 no se fija a priori sin contraste: se compara primero contra los dos
+# criterios estándar (WSS / codo, y ancho de silueta medio). silhouette()
+# viene del paquete 'cluster' (recommended, se instala con R).
 
+k_range <- 2:8
+
+wss_by_k <- sapply(k_range, function(k) {
+  set.seed(123)
+  kmeans(scaled_features, centers = k, nstart = 50)$tot.withinss
+})
+
+sil_by_k <- sapply(k_range, function(k) {
+  set.seed(123)
+  km <- kmeans(scaled_features, centers = k, nstart = 50)
+  mean(cluster::silhouette(km$cluster, dist(scaled_features))[, 3])
+})
+
+k_selection <- data.frame(k = k_range, wss = round(wss_by_k, 1),
+                          mean_silhouette = round(sil_by_k, 4))
+cat("Selección de k - método del codo y de la silueta:\n")
+print(k_selection)
+write.csv(k_selection, "outputs/tables/cluster_k_selection.csv", row.names = FALSE)
+
+k_optimo_silueta <- k_range[which.max(sil_by_k)]
+cat(sprintf("k que maximiza la silueta media: %d (silueta = %.3f)\n",
+           k_optimo_silueta, max(sil_by_k)))
+
+# DECISIÓN: se mantiene k=4 salvo que el criterio estadístico apunte a una
+# estructura claramente mejor. k=2-3 suele colapsar la separación
+# progresión/defensa en un único eje (progresivo vs. limitado), perdiendo la
+# granularidad táctica de cuatro roles que sostiene el resto del informe.
+# Se documenta explícitamente el trade-off en vez de ocultarlo.
+k_clusters <- 4
+cat(sprintf(
+  "Se elige k=%d (silueta = %.3f) frente al óptimo estadístico k=%d (silueta = %.3f):\n",
+  k_clusters, sil_by_k[k_range == k_clusters], k_optimo_silueta, max(sil_by_k)
+))
+cat("prioriza la granularidad táctica (4 roles interpretables) sobre el máximo absoluto de silueta.\n")
+
+# Los paneles van en inglés (misma convención que el resto de figuras, que se
+# insertan en README.md y README.es.md por igual). El orden se fija a mano:
+# WSS primero (introducción pedagógica habitual), silueta después.
+k_selection_long <- k_selection %>%
+  pivot_longer(cols = c(wss, mean_silhouette), names_to = "metodo", values_to = "valor") %>%
+  mutate(metodo = factor(
+    recode(metodo,
+      wss = "Elbow method (WSS)",
+      mean_silhouette = "Silhouette method (mean width)"
+    ),
+    levels = c("Elbow method (WSS)", "Silhouette method (mean width)")
+  ))
+
+p_k <- ggplot(k_selection_long, aes(x = k, y = valor)) +
+  geom_line(color = "#4C72B0", linewidth = 0.8) +
+  geom_point(size = 2.5, color = "#4C72B0") +
+  geom_vline(xintercept = k_clusters, linetype = "dashed", color = "grey40") +
+  facet_wrap(~metodo, scales = "free_y") +
+  scale_x_continuous(breaks = k_range) +
+  theme_minimal(base_size = 12) +
+  labs(
+    title    = "K selection diagnostics",
+    subtitle = sprintf("Dashed line: k = %d, the value used in the pipeline", k_clusters),
+    x        = "Number of clusters (k)",
+    y        = NULL,
+    caption  = fig_caption
+  )
+
+ggsave("outputs/figures/cluster_k_selection.png", p_k, width = 10, height = 5, dpi = 200)
+
+# =========================================================
+# K-MEANS FINAL
+# =========================================================
+
+set.seed(123)
 kmeans_model <- kmeans(
   scaled_features,
   centers = k_clusters,
@@ -60,6 +134,48 @@ kmeans_model <- kmeans(
 )
 
 data_clean$cluster <- as.factor(kmeans_model$cluster)
+
+# =========================================================
+# VALIDACIÓN CRUZADA DE MÉTODO: K-MEANS VS. CLUSTERING JERÁRQUICO
+# =========================================================
+# Si un algoritmo completamente distinto (jerárquico aglomerativo, enlace de
+# Ward) recupera aproximadamente la misma partición, es evidencia de que los
+# 4 arquetipos son una estructura real de los datos y no un artefacto de
+# K-Means. Se reporta también la correlación cofenética (bondad del propio
+# dendrograma) y el Índice de Rand Ajustado (Hubert & Arabie, 1985) entre
+# ambas particiones, calculado a mano a partir de la tabla de contingencia
+# para no depender de un paquete adicional (mclust) solo para un número.
+
+dist_matrix <- dist(scaled_features, method = "euclidean")
+hc_model <- hclust(dist_matrix, method = "ward.D2")
+hc_clusters <- cutree(hc_model, k = k_clusters)
+
+cophenetic_cor <- cor(dist_matrix, cophenetic(hc_model))
+cat(sprintf("Correlacion cofenetica del dendrograma (ward.D2): %.3f\n", cophenetic_cor))
+
+agreement_table <- table(KMeans = kmeans_model$cluster, Jerarquico = hc_clusters)
+cat("Tabla de contingencia K-Means vs. Jerarquico:\n")
+print(agreement_table)
+
+adjusted_rand_index <- function(tab) {
+  n <- sum(tab)
+  sum_comb <- function(x) sum(choose(x, 2))
+  index_sum <- sum_comb(as.vector(tab))
+  expected  <- sum_comb(rowSums(tab)) * sum_comb(colSums(tab)) / choose(n, 2)
+  max_index <- 0.5 * (sum_comb(rowSums(tab)) + sum_comb(colSums(tab)))
+  (index_sum - expected) / (max_index - expected)
+}
+
+ari_value <- adjusted_rand_index(agreement_table)
+row_max_agreement <- sum(apply(agreement_table, 1, max)) / sum(agreement_table) * 100
+
+cat(sprintf("Acuerdo simple (moda por fila): %.1f%%\n", row_max_agreement))
+cat(sprintf("Indice de Rand Ajustado (K-Means vs. Jerarquico): %.3f\n", ari_value))
+
+write.csv(
+  as.data.frame.matrix(agreement_table),
+  "outputs/tables/kmeans_vs_hierarchical_agreement.csv"
+)
 
 # =========================================================
 # DYNAMIC ROLE ASSIGNMENT (Data-Driven K-Means)
@@ -189,7 +305,7 @@ p <- ggplot(pca_data, aes(x = PC1, y = PC2, color = role_profile)) +
   theme(legend.position = "bottom", legend.title = element_blank()) +
   labs(
     title    = "Centre-Back Tactical Archetypes",
-    subtitle = "K-Means clustering (k = 4) projected onto the first two principal components",
+    subtitle = sprintf("K-Means clustering (k = %d) projected onto the first two principal components", k_clusters),
     x        = sprintf("Principal Component 1 (%.1f%% var.)", var_explained[1]),
     y        = sprintf("Principal Component 2 (%.1f%% var.)", var_explained[2]),
     caption  = paste0(fig_caption, "\nLabelled: top 15 by scouting score")

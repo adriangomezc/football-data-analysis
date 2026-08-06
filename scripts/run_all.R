@@ -23,24 +23,28 @@ run_step <- function(n, total, description, path) {
 }
 
 # 1. SETUP
-run_step(1, 5, "Comprobando paquetes requeridos...",
+run_step(1, 6, "Comprobando paquetes requeridos...",
          "scripts/setup_packages.R")
 
 # 2. DATA PREP & PAdj METRICS (la única fuente de verdad de la posesión)
-run_step(2, 5, "Calculando estimaciones de posesión y multiplicadores PAdj...",
+run_step(2, 6, "Calculando estimaciones de posesión y multiplicadores PAdj...",
          "scripts/scripts_padj_metrics.R")
 
 # 3. SCOUTING PRINCIPAL (pesos PCA y scores compuestos)
-run_step(3, 5, "Calculando índice de progresión (PCA) y scouting score...",
+run_step(3, 6, "Calculando índice de progresión (PCA) y scouting score...",
          "scripts/scripts_scouting.R")
 
 # 4. CLUSTERING Y VISUALIZACIÓN
-run_step(4, 5, "Clasificando roles tácticos y generando figuras...",
+run_step(4, 6, "Clasificando roles tácticos y generando figuras...",
          "scripts/scripts_clustering.R")
 
 # 5. SIMILARITY ENGINE
-run_step(5, 5, "Construyendo el motor de similitud...",
+run_step(5, 6, "Construyendo el motor de similitud...",
          "scripts/scripts_similarity_engine.R")
+
+# 6. VALIDACIÓN TEMPORAL (train 2023-24 / test 2024-25)
+run_step(6, 6, "Validando el score fuera de muestra (GLM train/test temporal)...",
+         "scripts/scripts_temporal_validation.R")
 
 cat("====================================================\n")
 cat("EJECUCIÓN DEL PIPELINE FINALIZADA CORRECTAMENTE.\n")

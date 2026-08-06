@@ -14,6 +14,8 @@ Este informe desglosa los perfiles tácticos de centrales en las cinco grandes l
 
 La aplicación de la curva sigmoidea para las métricas ajustadas por posesión revela que los recuentos defensivos están fuertemente condicionados por el dominio del equipo. Tras normalizar por oportunidad real, **Timo Hübers** (13,31 PAdj combinado) y **Riccardo Calafiori** (13,18) emergen como los defensores más activos de la muestra.
 
+Dos preguntas que cualquier analista serio debería hacerse antes de fiarse de todo esto —¿es el modelo internamente sólido? y ¿predice algo real?— se responden directamente en las secciones 6 y 7, incluso cuando la respuesta es solo parcial.
+
 ---
 
 ## 1. Perfiles tácticos y desglose de grupos
@@ -119,10 +121,81 @@ El algoritmo de similitud del coseno rastrea el espacio de características esta
 
 ---
 
-## 6. Conclusiones
+## 6. Comprobaciones de robustez estadística
+
+Antes de fiarse de un ranking conviene preguntarse si la maquinaria que lo produce es sólida: ¿son redundantes las variables de entrada entre sí?, ¿está justificado el número de clusters?, ¿hay jugadores tan atípicos que están distorsionando el cuadro? Las tres preguntas se comprueban directamente en vez de darse por supuestas.
+
+### 6.1. Cribado de outliers multivariantes
+
+Se aplicó un cribado por distancia de Mahalanobis (D²) sobre las siete variables que alimentan el filtrado y el scoring, con el límite estándar k + 3√(2k) para k = 7 (D² > 18,2). 20 de 407 jugadores (4,9%) lo superan.
+
+| Jugador | Equipo | Temporada | D² |
+|:--------|:-------|:----------|---:|
+| Woyo Coulibaly | Parma | 2024–25 | 46,10 |
+| Alidu Seidu | Clermont Foot | 2023–24 | 31,23 |
+| César Azpilicueta | Atlético Madrid | 2023–24 | 29,95 |
+| Iñigo Martínez | Barcelona | 2024–25 | 26,07 |
+| Nicolás Valentini | Hellas Verona | 2024–25 | 24,58 |
+
+Fíjate en quién aparece en esa lista: **Alidu Seidu e Iñigo Martínez son dos de los nombres destacados de las secciones 3 y 4 de este informe.** No es una contradicción, es exactamente lo que debe hacer un buen cribado de outliers. "Estadísticamente atípico" y "error de datos" producen el mismo D², y la única forma de distinguirlos es mirar. Aquí, al mirar, se confirma que ambos son atípicos porque son genuinamente excepcionales, no por un problema de datos. Por eso se marcan, nunca se eliminan en silencio. Listado completo: [`qc_mahalanobis_outliers.csv`](../outputs/tables/qc_mahalanobis_outliers.csv).
+
+### 6.2. ¿Son redundantes entre sí las variables del compuesto?
+
+Se aplicó un chequeo de factor de inflación de la varianza (VIF) sobre tres grupos: las tres variables del índice de progresión, las tres variables PAdj del defending score, y los cuatro pilares del scouting_score en sí mismo. Todos los VIF salieron ≤ 1,75 — muy lejos del umbral de alarma habitual (10). Ninguna de las variables del modelo está duplicando en silencio la señal de otra. Tabla completa: [`vif_diagnostics.csv`](../outputs/tables/vif_diagnostics.csv).
+
+### 6.3. ¿Es k = 4 el número correcto de clusters?
+
+Se ejecutaron el método del codo (WSS) y el de la silueta para k = 2 a 8:
+
+| k | WSS | Silueta media |
+|--:|----:|---------------:|
+| 2 | 1352,8 | **0,335 (óptimo estadístico)** |
+| 3 | 1083,0 | 0,265 |
+| **4** | **910,4** | **0,241 (el usado en el pipeline)** |
+| 5 | 793,0 | 0,233 |
+| 6 | 721,0 | 0,238 |
+| 7 | 667,8 | 0,228 |
+| 8 | 616,0 | 0,212 |
+
+La respuesta honesta es que k = 2 es el óptimo estadístico, y la silueta de k = 4 (0,241) está justo en el límite de lo que la regla de Kaufman & Rousseeuw llama "estructura débil" (por debajo de 0,25). Se mantuvo k = 4 de forma deliberada porque k = 2 colapsa la muestra en una división gruesa "progresivo vs. limitado" que descarta la granularidad táctica —intensidad recuperadora vs. estilo de distribución— sobre la que se construye el resto de este informe.
+
+Esa decisión necesitaba una segunda comprobación: ¿un algoritmo que nunca ha oído hablar de K-means encuentra aproximadamente los mismos cuatro grupos? Cortar un dendrograma jerárquico (enlace de Ward) en el mismo k = 4 y compararlo con las etiquetas de K-means da un **Índice de Rand Ajustado de 0,419** y un **75,2%** de jugadores que caen en el grupo dominante correspondiente (correlación cofenética del propio dendrograma: 0,586). Es un acuerdo moderado —lejos de perfecto, pero muy por encima del ~0 esperable de dos métodos no relacionados que no coincidieran en nada. Los cuatro arquetipos son un rasgo real, aunque no nítidamente separado, de los datos, y no un artefacto de K-means. Tabla de contingencia completa: [`kmeans_vs_hierarchical_agreement.csv`](../outputs/tables/kmeans_vs_hierarchical_agreement.csv).
+
+---
+
+## 7. Validación predictiva: ¿predice el score algo real?
+
+Todas las comprobaciones anteriores preguntan si el modelo es *internamente* coherente. Esta sección plantea una pregunta más difícil: reajustado usando **solo datos de 2023-24**, ¿dice el score resultante algo cierto sobre lo que ocurrió en **2024-25**, una temporada que nunca vio? Es una partición Train/Test temporal genuina (se ajusta con el pasado, se evalúa con el futuro), no un k-fold aleatorio, porque filtrar información futura al ajuste anularía el sentido de la prueba.
+
+**Planteamiento.** 278 centrales activos en 2023-24, puntuados con pesos PCA reestimados solo en esa temporada. Outcome: ¿jugó ≥ 900 minutos en 2024-25 (`retained`)? El 64,0% sí.
+
+| Modelo | Predictor(es) | Resultado | AIC |
+|:-------|:---------------|:----------|----:|
+| Solo intercepto | — | referencia | 365,2 |
+| Regresión logística | `scouting_score` | OR = 1,28 (IC95% 0,85–1,97), **p = 0,24, no significativo** | 365,8 |
+| Regresión logística | 4 componentes por separado | `age_score` OR = 22,6 (**p = 0,001**); `progression_index` OR = 1,60 (p = 0,053); `defending_score`, `pass_completion` n.s. | 354,2 |
+
+**El score compuesto no predice de forma significativa la retención la temporada siguiente** (pseudo-R² de McFadden = 0,004). Entre los jugadores que sí fueron retenidos, el score tampoco predice cuánto jugaron (ρ de Spearman = −0,01, p = 0,90 frente a minutos de 2024-25).
+
+**Por qué esto no es un fallo del score.** Descomponer el compuesto muestra exactamente dónde vive la (limitada) señal: `age_score` por sí solo es un predictor fuerte y muy significativo de la retención —los jugadores más jóvenes tienen sencillamente más probabilidad de seguir jugando la temporada siguiente, un efecto de etapa de carrera nada llamativo—. Pero `age_score` solo pesa un **20%** del compuesto, por diseño, porque el score está construido para clasificar *capacidad futbolística*, no para predecir *supervivencia en la muestra*. Que un score ponderado al 80% hacia la capacidad diluya una señal de edad fuerte pero estrecha hasta la no significación es exactamente lo que debería ocurrir si la ponderación está haciendo su trabajo. Un test de razón de verosimilitud lo precisa: el modelo de 4 parámetros sin restringir ajusta significativamente mejor que el compuesto de un único parámetro (χ², **p < 0,001**) — la ponderación fija 40/30/10/20 es una restricción real y medible para esta tarea de predicción concreta, no una representación gratuita de la misma información.
+
+Como contraste puramente descriptivo (no causal), la tasa de retención sí se alinea con los propios arquetipos del algoritmo:
+
+| Arquetipo | n | Tasa de retención |
+|:----------|--:|--------------------:|
+| Elite Progressive Distributor | 34 | 70,6% |
+| Standard Build-up Distributor | 86 | 69,8% |
+| High-Intensity Ball-Winner | 59 | 66,1% |
+| Limited / Reactive Defender | 99 | 55,6% |
+
+**Qué muestra esta validación y qué no.** "Jugar 900+ minutos la temporada siguiente" es un proxy débil e indirecto de la calidad de scouting: depende al menos tanto de lesiones, profundidad de plantilla y el sistema de un entrenador como de la capacidad del jugador, y un gran perfil de scouting no garantiza titularidad en el club comprador. El resultado nulo del score compuesto no significa que el ranking esté mal; significa que la retención bruta de la temporada siguiente es el objetivo equivocado para validar un ranking de *calidad*, y esa limitación ahora está medida y declarada en vez de darse por hecha en silencio. Salida completa del modelo: [`temporal_validation_results.csv`](../outputs/tables/temporal_validation_results.csv); figura: [`temporal_validation.png`](../outputs/figures/temporal_validation.png).
+
+---
+
+## 8. Conclusiones
 
 - **El efecto de los sistemas de autor.** La presencia dominante de la Atalanta de Gasperini (Kolašinac, Scalvini) y de Calafiori en el Bologna de Thiago Motta de 2023–24 subraya cómo los sistemas de marcaje al hombre y proactividad defensiva elevan drásticamente las métricas PAdj de sus centrales.
 - **Centrales vs laterales invertidos.** El filtro estricto de toques en el último tercio y de recepciones progresivas ha limpiado la base de datos de "falsos centrales", permitiendo que los verdaderos defensores progresivos (como Schlotterbeck o Iñigo Martínez) lideren el ranking sin la competencia de laterales ofensivos.
 - **El ajuste hace trabajo real.** Alidu Seidu y Calafiori ilustran sus dos caras: los números de Seidu se sostienen *pese* a un multiplicador de posesión inferior a 1, mientras que los equipos de alta posesión ven corregidos al alza los conteos brutos de sus centrales. Ordenar por entradas e intercepciones sin ajustar habría producido una shortlist materialmente distinta.
 - **La similitud como plan de sucesión.** El motor elimina el sesgo visual. Identificar a Mario Gila o Javi Rodríguez como perfiles gemelos a Kolašinac proporciona al departamento de scouting una preselección puramente objetiva, lista para ser filtrada por viabilidad económica.
-- **Léase como herramienta de preselección.** Los pesos del compuesto codifican una filosofía de reclutamiento, no un modelo ajustado, y la muestra abarca dos temporadas. Consulta la [sección de limitaciones](../README.es.md#limitaciones) del README principal antes de tomar cualquier orden como definitivo.
+- **Léase como una herramienta de preselección bien auditada, no como una decisión de fichaje.** Las secciones 6 y 7 muestran un modelo internamente coherente (sin variables redundantes, con una elección de clustering declarada y contrastada) pero cuyo score compuesto no predice los minutos brutos de la temporada siguiente — una limitación de lo que miden "los minutos", no una prueba de que el ranking sea arbitrario. Consulta la [sección de limitaciones](../README.es.md#limitaciones) del README principal antes de tomar cualquier orden como definitivo.
